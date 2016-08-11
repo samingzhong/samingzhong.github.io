@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>关于Git与Tower的一些使用备忘 | 小明童鞋的乐园</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Git是目前最流行的版本管理工具，Git的功能相当强大，以git为核心的可视化工具有免费的Github的 Github Desktop、SourceTree以及收费Tower等。嗯我个人对比使用过之后，觉得还是Tower比较符合我自己。本文将会介绍下我在进行项目版本管理的时候比较重要的一些操作存做备忘。
+
+纠正上一次的提交日志。
+Workingspace － Working Copy － 勾上 A">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于Git与Tower的一些使用备忘">
+<meta property="og:url" content="http://github.com/2016/08/02/2016-08-02-some-reminders-about-git-tower/index.html">
+<meta property="og:site_name" content="小明童鞋的乐园">
+<meta property="og:description" content="Git是目前最流行的版本管理工具，Git的功能相当强大，以git为核心的可视化工具有免费的Github的 Github Desktop、SourceTree以及收费Tower等。嗯我个人对比使用过之后，觉得还是Tower比较符合我自己。本文将会介绍下我在进行项目版本管理的时候比较重要的一些操作存做备忘。
+
+纠正上一次的提交日志。
+Workingspace － Working Copy － 勾上 A">
+<meta property="og:image" content="http://github.com/assert/images/2016/messCommits.png">
+<meta property="og:image" content="http://github.com/assert/images/2016/solution.png">
+<meta property="og:image" content="http://github.com/assert/images/2016/squash_commits_and_logs_before.png">
+<meta property="og:image" content="http://github.com/assert/images/2016/squash_commits_with_discards_after_log.png">
+<meta property="og:image" content="http://github.com/assert/images/2016/rebase_after0.png">
+<meta property="og:image" content="http://github.com/assert/images/2016/rebase_after1.png">
+<meta property="og:updated_time" content="2016-08-11T08:05:47.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="关于Git与Tower的一些使用备忘">
+<meta name="twitter:description" content="Git是目前最流行的版本管理工具，Git的功能相当强大，以git为核心的可视化工具有免费的Github的 Github Desktop、SourceTree以及收费Tower等。嗯我个人对比使用过之后，觉得还是Tower比较符合我自己。本文将会介绍下我在进行项目版本管理的时候比较重要的一些操作存做备忘。
+
+纠正上一次的提交日志。
+Workingspace － Working Copy － 勾上 A">
+<meta name="twitter:image" content="http://github.com/assert/images/2016/messCommits.png">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">小明童鞋的乐园</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">如果每个人都能理解你，那你得普通成什么样子。</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://github.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2016-08-02-some-reminders-about-git-tower" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/08/02/2016-08-02-some-reminders-about-git-tower/" class="article-date">
+  <time datetime="2016-08-02T08:17:15.000Z" itemprop="datePublished">2016-08-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/能工巧匠集/">能工巧匠集</a>►<a class="article-category-link" href="/categories/能工巧匠集/工欲善其事必先利其器/">工欲善其事必先利其器</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      关于Git与Tower的一些使用备忘
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Git是目前最流行的版本管理工具，Git的功能相当强大，以git为核心的可视化工具有免费的Github的 Github Desktop、SourceTree以及收费<a href="http://xclient.info/s/tower.html" target="_blank" rel="external">Tower</a>等。嗯我个人对比使用过之后，觉得还是Tower比较符合我自己。本文将会介绍下我在进行项目版本管理的时候比较重要的一些操作存做备忘。</p>
+<ol>
+<li><p>纠正上一次的提交日志。</p>
+<p>Workingspace － Working Copy － 勾上 Amend Commit xxx选项，如果本次暂存区没有东西要提交，那么就是直接修改上次的提交日志。如果有，那么就是合并此次以及上次的提交，日志本次为准。</p>
+</li>
+<li><p>合并多个commit。<br>方法1：回退版本，保留变更内容，提交新版本、日志。此法简单粗暴，有些情况不大适合使用。</p>
+<p>​<br>方法2：概括起来就是，r－重新编辑日志。f－向前合并commit，丢弃本次commit的日志。p－保留commit与日志，一般情况都能解决commit的合并需求。</p>
+<ul>
+<li><p>前提</p>
+<p>你的commits都还没有被push出去，你想根据功能合并多个commit。</p>
+</li>
+<li><p>问题</p>
+<p>很多时候我们的commit会显得很杂乱，开发一个功能的时候出现多次的commit，如下图：<img src="/assert/images/2016/messCommits.png" alt=""></p>
+<p>在我们把代码push出去之前，最好能整理好你的commit，否则可能影响日志的可读性。如何才能合并像上图的<code>功能1.0</code>和<code>功能1.1</code>成简洁的<code>功能1开发</code>呢（现实中，功能1中间常常会有N多个小commit，比如说实现了一个节点功能然后就commit了相应的代码，长期以往，一个完整的功能1，就有可能堆积了n多个commit，嗯，你也许会感觉很差）。</p>
+</li>
+<li><p>解决方案</p>
+<p><code>git rebase -i origin/master</code></p>
+<p>上面这条指令敲完之后，通过下边的提示，修改对各个commit的操作，如下图：</p>
+<p><img src="/assert/images/2016/solution.png" alt=""></p>
+<p>ps：这里的功能1.1对应的最佳选择是f（丢弃该条commit的log，并将该条commit向前合并），这里是想演示一下s的使用。另外，所见到的commit，最下边的是最新的。</p>
+<p>第一行：r－reword，意思是：对应的commit会被使用，但是log会被重写编辑。</p>
+<p>第二行：s－squash，意思是：这个commit会被使用，但是会与前一个commit合并，日志也会跟上条日志合并。</p>
+<p>所以，第一个r，第二个s，就构成了一个commit合并，而且还有机会重写日志，所以我们写：功能1开发。(这里我没有把第二个commit的日志删掉（使用#注释或者删掉该日志），见下图，所以结果这个日子也被保留了下来。)</p>
+<p><img src="/assert/images/2016/squash_commits_and_logs_before.png" alt=""></p>
+<p>这样就完成了<code>功能1开发</code>的commit合并（日志的出错让我知道下回该用f而不是s）。</p>
+<p>然后。</p>
+<p>第三行：r，同上。</p>
+<p>第四行：f，commit向前合并，该条commit的日志被丢弃。</p>
+<p>修改完第三个comimt的message后：</p>
+<p><img src="/assert/images/2016/squash_commits_with_discards_after_log.png" alt=""></p>
+<p>全部编辑完之后效果：</p>
+<p><img src="/assert/images/2016/rebase_after0.png" alt=""></p>
+<p>展开合并失误的功能1（第二个commit的message应该去掉）：</p>
+<p><img src="/assert/images/2016/rebase_after1.png" alt=""></p>
+<p>至此，自定义commit的合并结束。</p>
+<p>​</p>
+</li>
+</ul>
+</li>
+<li><p>本地回滚到某一个版本。</p>
+<p>History，选中你希望回滚的版本，右键，Reset Head to “xxxx”。</p>
+<p>说明：若要保留旧版本到当前版本的修改内容，记得勾上Keep Changes。否则修改内容应该是会被丢弃的。</p>
+</li>
+<li><p>关于文件忽略，根据使用情境会有所不同。</p>
+<ul>
+<li><p>文件/文件夹之前已经被添加进Git中管理了，现在想把它们忽略掉（这些文件的变化git不去做管理）。</p>
+<p>你可能需要动用git命令: <code>git rm -r --cache _site/</code> 递归的把仓库根目录下的_site目录及其子目录的所有内容剔除git的管理，也就是以后这个文件还会在本地，但是服务器上的这会被删除。注意：除此之外，还需要把 _site/目录添加到 .gitignore 配置文件中，这样关于 _site目录的所有修改，git都不会监控。通常这种做法的目的是，不希望本地的数据被提交上到服务器上。</p>
+</li>
+<li><p>其它一般的情况，直接配置.gitignore文件一般都能解决。</p>
+</li>
+</ul>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://github.com/2016/08/02/2016-08-02-some-reminders-about-git-tower/" data-id="cirq0kc6s000x8h87cnxs0q9w" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tower/">Tower</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/08/09/2016-08-09-develope-tools-reminders/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          开发工具备忘
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/07/30/2016-07-30-July-imagnation-run-wild/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">7月杂谈</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/杂谈集/">杂谈集</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/能工巧匠集/">能工巧匠集</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/能工巧匠集/iOS开发/">iOS开发</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/能工巧匠集/工欲善其事必先利其器/">工欲善其事必先利其器</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/读书笔记/">读书笔记</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/读书笔记/《iOS7-Programing-Cookbook》/">《iOS7 Programing Cookbook》</a><span class="category-list-count">2</span></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/08/09/2016-08-09-develope-tools-reminders/">开发工具备忘</a>
+          </li>
+        
+          <li>
+            <a href="/2016/08/02/2016-08-02-some-reminders-about-git-tower/">关于Git与Tower的一些使用备忘</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/30/2016-07-30-July-imagnation-run-wild/">7月杂谈</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/30/2016-07-30-iOS7-programming-cookbook-note-chapter4/">《iOS7 Programing Cookbook》第4章 构造并使用tableview－笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/29/2016-07-29-the-place-where-dreams-bred/">博客诞生记</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CocoaPods/">CocoaPods</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Retain-Cycle/">Retain Cycle</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tower/">Tower</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xcode插件/">Xcode插件</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂谈/">杂谈</a><span class="tag-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/CocoaPods/" style="font-size: 10px;">CocoaPods</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Retain-Cycle/" style="font-size: 10px;">Retain Cycle</a> <a href="/tags/Tower/" style="font-size: 10px;">Tower</a> <a href="/tags/Xcode插件/" style="font-size: 10px;">Xcode插件</a> <a href="/tags/杂谈/" style="font-size: 20px;">杂谈</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 Saming<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
