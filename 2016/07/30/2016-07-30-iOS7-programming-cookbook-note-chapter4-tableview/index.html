@@ -3,17 +3,39 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: 杂谈 | 小明童鞋的技术博客</title>
+  <title>《iOS7 Programing Cookbook》第4章 构造并使用tableview－笔记 | 小明童鞋的技术博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="点点滴滴">
-<meta property="og:type" content="website">
-<meta property="og:title" content="小明童鞋的技术博客">
-<meta property="og:url" content="https://samingzhong.github.io/tags/杂谈/index.html">
+  <meta name="description" content="1. 在tableview里使用不同类型的附加说明控件
+问题
+你想通过在不同的table view cell里展示不同的附加说明控件，以达到抓住用户注意力的效果。
+
+解决方案
+ 使用UITableViewCell类里的accessoryType属性。
+ cell.accessoryType = UITableViewAccessoryDetailDisclosureButton;
+ 可以通过以下的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《iOS7 Programing Cookbook》第4章 构造并使用tableview－笔记">
+<meta property="og:url" content="https://samingzhong.github.io/2016/07/30/2016-07-30-iOS7-programming-cookbook-note-chapter4-tableview/index.html">
 <meta property="og:site_name" content="小明童鞋的技术博客">
-<meta property="og:description" content="点点滴滴">
+<meta property="og:description" content="1. 在tableview里使用不同类型的附加说明控件
+问题
+你想通过在不同的table view cell里展示不同的附加说明控件，以达到抓住用户注意力的效果。
+
+解决方案
+ 使用UITableViewCell类里的accessoryType属性。
+ cell.accessoryType = UITableViewAccessoryDetailDisclosureButton;
+ 可以通过以下的">
+<meta property="og:updated_time" content="2016-08-14T10:16:19.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小明童鞋的技术博客">
-<meta name="twitter:description" content="点点滴滴">
+<meta name="twitter:title" content="《iOS7 Programing Cookbook》第4章 构造并使用tableview－笔记">
+<meta name="twitter:description" content="1. 在tableview里使用不同类型的附加说明控件
+问题
+你想通过在不同的table view cell里展示不同的附加说明控件，以达到抓住用户注意力的效果。
+
+解决方案
+ 使用UITableViewCell类里的accessoryType属性。
+ cell.accessoryType = UITableViewAccessoryDetailDisclosureButton;
+ 可以通过以下的">
   
   
     <link rel="icon" href="/favicon.png">
@@ -62,58 +84,88 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2016/07/30/2016-07-30-July-imagnation-run-wild/" class="archive-article-date">
-  <time datetime="2016-07-30T08:51:15.000Z" itemprop="datePublished">7月 30</time>
+        <section id="main"><article id="post-2016-07-30-iOS7-programming-cookbook-note-chapter4-tableview" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/30/2016-07-30-iOS7-programming-cookbook-note-chapter4-tableview/" class="article-date">
+  <time datetime="2016-07-30T08:51:15.000Z" itemprop="datePublished">2016-07-30</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/读书笔记/">读书笔记</a>►<a class="article-category-link" href="/categories/读书笔记/《iOS7-Programing-Cookbook》/">《iOS7 Programing Cookbook》</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/30/2016-07-30-July-imagnation-run-wild/">7月杂谈</a>
+    <h1 class="article-title" itemprop="name">
+      《iOS7 Programing Cookbook》第4章 构造并使用tableview－笔记
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2016/07/29/2016-07-29-the-place-where-dreams-bred/" class="archive-article-date">
-  <time datetime="2016-07-29T08:17:15.000Z" itemprop="datePublished">7月 29</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/29/2016-07-29-the-place-where-dreams-bred/">博客诞生记</a>
-    </h1>
-  
+        <h3 id="1-在tableview里使用不同类型的附加说明控件"><a href="#1-在tableview里使用不同类型的附加说明控件" class="headerlink" title="1. 在tableview里使用不同类型的附加说明控件"></a>1. 在tableview里使用不同类型的附加说明控件</h3><ul>
+<li><p>问题</p>
+<p>你想通过在不同的table view cell里展示不同的附加说明控件，以达到抓住用户注意力的效果。</p>
+</li>
+<li><p>解决方案</p>
+<p> 使用UITableViewCell类里的accessoryType属性。</p>
+<p> <code>cell.accessoryType = UITableViewAccessoryDetailDisclosureButton;</code></p>
+<p> 可以通过以下的协议方法来捕捉用户对cell的accessory的点击行为：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- (<span class="keyword">void</span>) tableView:(<span class="built_in">UITableView</span> *)tableViewaccessoryButtonTappedForRowWithIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="2-创建自定义的表格视图单元附加说明控件（accessory）"><a href="#2-创建自定义的表格视图单元附加说明控件（accessory）" class="headerlink" title="2. 创建自定义的表格视图单元附加说明控件（accessory）"></a>2. 创建自定义的表格视图单元附加说明控件（accessory）</h3><ul>
+<li><p>问题</p>
+<p>系统SDK内置的accessory不合你胃口，你想自定义它。</p>
+</li>
+<li><p>解决方案</p>
+<p>利用UITableViewCell里的accessoryView属性。把你自定义的UIView对象赋值进去即可。</p>
+</li>
+<li><p>讨论</p>
+<p>关于触发自定义accessory时如何获取到相应的cell，可以通过一层层的查找自定义的accessory的父视图所属的类，直至找到UITableViewCell类的父级视图对象。代码如下：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">- (<span class="built_in">UIView</span> *) superviewOfType:(Class)paramSuperviewClass forView:(<span class="built_in">UIView</span> *)paramView&#123;</div><div class="line">    <span class="keyword">if</span> (paramView.superview != <span class="literal">nil</span>) &#123;</div><div class="line">        <span class="keyword">if</span> ([paramView.superview isKindOfClass:paramSuperviewClass])&#123;</div><div class="line">            <span class="keyword">return</span> paramView.superview;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            <span class="keyword">return</span> [<span class="keyword">self</span> superviewOfType:paramSuperviewClass forView:paramView.superview];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="keyword">return</span> <span class="literal">nil</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+</ul>
 
-    </header>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://samingzhong.github.io/2016/07/30/2016-07-30-iOS7-programming-cookbook-note-chapter4-tableview/" data-id="cirveb2h5000by087fh34gp9s" class="article-share-link">Share</a>
+      
+      
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/07/30/2016-07-30-July-imagnation-run-wild/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          7月杂谈
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/07/29/2016-07-29-the-place-where-dreams-bred/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">博客诞生记</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
