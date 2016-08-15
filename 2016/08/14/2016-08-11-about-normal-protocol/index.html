@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>关于常见的协议－归/解档、深/浅拷贝 | 小明童鞋的技术博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="NSCoding很多时候，我们需要将我们的处于内存里的对象保存到磁盘里，方便下次使用这个对象。其中，这个保存过程叫做归档－archive。相反，把磁盘里的数据变成对象，则称为解档－unarchive。
+而unarchive中包含把二进制数据转化成对象的过程，称为序列化；相反，把一个对象变成磁盘里的文件这个归档过程中，对象转变成二进制数据这个过程，就就反序列化。
+或者这样理解：序列化是把看似凌乱的二">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于常见的协议－归/解档、深/浅拷贝">
+<meta property="og:url" content="https://samingzhong.github.io/2016/08/14/2016-08-11-about-normal-protocol/index.html">
+<meta property="og:site_name" content="小明童鞋的技术博客">
+<meta property="og:description" content="NSCoding很多时候，我们需要将我们的处于内存里的对象保存到磁盘里，方便下次使用这个对象。其中，这个保存过程叫做归档－archive。相反，把磁盘里的数据变成对象，则称为解档－unarchive。
+而unarchive中包含把二进制数据转化成对象的过程，称为序列化；相反，把一个对象变成磁盘里的文件这个归档过程中，对象转变成二进制数据这个过程，就就反序列化。
+或者这样理解：序列化是把看似凌乱的二">
+<meta property="og:updated_time" content="2016-08-14T09:33:41.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="关于常见的协议－归/解档、深/浅拷贝">
+<meta name="twitter:description" content="NSCoding很多时候，我们需要将我们的处于内存里的对象保存到磁盘里，方便下次使用这个对象。其中，这个保存过程叫做归档－archive。相反，把磁盘里的数据变成对象，则称为解档－unarchive。
+而unarchive中包含把二进制数据转化成对象的过程，称为序列化；相反，把一个对象变成磁盘里的文件这个归档过程中，对象转变成二进制数据这个过程，就就反序列化。
+或者这样理解：序列化是把看似凌乱的二">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">小明童鞋的技术博客</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">如果每个人都能理解你，那你得普通成什么样子。</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://samingzhong.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2016-08-11-about-normal-protocol" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/08/14/2016-08-11-about-normal-protocol/" class="article-date">
+  <time datetime="2016-08-14T08:56:57.000Z" itemprop="datePublished">2016-08-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/能工巧匠集/">能工巧匠集</a>►<a class="article-category-link" href="/categories/能工巧匠集/iOS开发/">iOS开发</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      关于常见的协议－归/解档、深/浅拷贝
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="NSCoding"><a href="#NSCoding" class="headerlink" title="NSCoding"></a>NSCoding</h3><p>很多时候，我们需要将我们的处于内存里的对象保存到磁盘里，方便下次使用这个对象。其中，这个保存过程叫做归档－archive。相反，把磁盘里的数据变成对象，则称为解档－unarchive。</p>
+<p>而unarchive中包含把二进制数据转化成对象的过程，称为序列化；相反，把一个对象变成磁盘里的文件这个归档过程中，对象转变成二进制数据这个过程，就就反序列化。</p>
+<p>或者这样理解：序列化是把看似凌乱的二进制数据变成有序的结构体（内存里的对象其实就是以结构体的形式存在的），反序列化就是把有序的结构体对象变成看似凌乱的二进制数据。</p>
+<p>NSCoding协议声明了一个可被归档与解档的类所必须实现的方法。遵循这个协议就必须实现里边的两个个方法:</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 归档</span></div><div class="line">- (<span class="keyword">void</span>)encodeWithCoder:(<span class="built_in">NSCoder</span> *)encoder</div><div class="line">  </div><div class="line"><span class="comment">// 解档</span></div><div class="line">- (<span class="keyword">instancetype</span>)initWithCoder:(<span class="built_in">NSCoder</span> *)decoder</div></pre></td></tr></table></figure>
+<p>通常，它们是这么实现的：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 归档</span></div><div class="line">- (<span class="keyword">void</span>)encodeWithCoder:(<span class="built_in">NSCoder</span> *)coder &#123;</div><div class="line">    [coder encodeObject:<span class="keyword">self</span>.firstName forKey:ASCPersonFirstName];<span class="comment">// object -&gt; </span></div><div class="line">    [coder encodeObject:<span class="keyword">self</span>.lastName forKey:ASCPersonLastName];</div><div class="line">    [coder encodeFloat:<span class="keyword">self</span>.height forKey:ASCPersonHeight];<span class="comment">// float -&gt; 注意区别！</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 解档</span></div><div class="line">- (<span class="keyword">id</span>)initWithCoder:(<span class="built_in">NSCoder</span> *)coder &#123;</div><div class="line">  <span class="keyword">self</span> = [<span class="keyword">super</span> init];</div><div class="line">  <span class="keyword">if</span> (<span class="keyword">self</span>) &#123;</div><div class="line">      _firstName = [coder decodeObjectForKey:ASCPersonFirstName]; <span class="comment">// -&gt; object</span></div><div class="line">      _lastName = [coder decodeObjectForKey:ASCPersonLastName];</div><div class="line">      _height = [coder decodeFloatForKey:ASCPersonHeight]; <span class="comment">// -&gt; float 注意区别！</span></div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  <span class="keyword">return</span> <span class="keyword">self</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>另外，需要归档 、解档的时候通常这么写：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 1.归档</span></div><div class="line">MyObject *object = [MyObject new];</div><div class="line"><span class="built_in">NSString</span> * documentDir= [<span class="built_in">NSSearchPathForDirectoriesInDomains</span>(<span class="built_in">NSDocumentDirectory</span>, <span class="built_in">NSUserDomainMask</span>, <span class="literal">YES</span>) firstObject];</div><div class="line"><span class="built_in">NSString</span> * archivePath = [documentDir stringByAppendingPathComponent:<span class="string">@"objFile"</span>];</div><div class="line"></div><div class="line">[<span class="built_in">NSKeyedArchiver</span> archiveRootObject:object toFile:archivePath];    </div><div class="line"></div><div class="line"><span class="comment">// 2.解档</span></div><div class="line">MyObject *object1 = [<span class="built_in">NSKeyedUnarchiver</span> unarchiveObjectWithFile:archivePath];</div></pre></td></tr></table></figure>
+<h3 id="NSCopying-NSMutableCopying"><a href="#NSCopying-NSMutableCopying" class="headerlink" title="NSCopying/NSMutableCopying"></a>NSCopying/NSMutableCopying</h3><h4 id="NSCopying"><a href="#NSCopying" class="headerlink" title="NSCopying"></a>NSCopying</h4><p>这个协议主要是用于实现自定义对象的拷贝，且是不可变的拷贝。里边也就只有一个必须实现的方法：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 浅拷贝/指针拷贝</span></div><div class="line">- (<span class="keyword">id</span>)copyWithZone:(<span class="built_in">NSZone</span> *)zone</div></pre></td></tr></table></figure>
+<p>你要想一个自定义的对象能得到合适的拷贝，那么你得遵循这个协议并实现这个方法，然后 自定义的类对象<code>[aCustomInstance copy]</code>  才可能正确工作。</p>
+<blockquote>
+<p>ps：对象调用copy方法，其实就是简单的调用了copyWithZone:方法。</p>
+</blockquote>
+<p>一般的实现可能是：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 情况1－父类没有实现copyWithZone:</span></div><div class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">MyBaseObject</span> : <span class="title">NSObject</span></span></div><div class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">copy</span>) <span class="built_in">NSString</span> *name;</div><div class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">strong</span>) <span class="built_in">NSDate</span> *date;</div><div class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">assign</span>) <span class="built_in">NSInteger</span> value;</div><div class="line"></div><div class="line">- (<span class="keyword">id</span>)copyWithZone:(<span class="built_in">NSZone</span> *)zone &#123;</div><div class="line">    <span class="comment">//MyObject *newObject = [MyObject new];//这种做法的问题就是：当被子类调用时，返回的对象会有问题。我们希望返回的是－目标对象。</span></div><div class="line">  	MyObject *newObject = [[<span class="keyword">self</span> <span class="keyword">class</span> new]];<span class="comment">// 创建一个目标类的对象，通过newObject指针完成对MyObject对象的拷贝工作。</span></div><div class="line">  	<span class="keyword">if</span>(newObject)&#123;</div><div class="line">      newObject.name = _name;</div><div class="line">  	  newObject.date = _date;</div><div class="line">  	  newObject.value = _value;  </div><div class="line">	&#125;</div><div class="line">  </div><div class="line">    <span class="keyword">return</span> newObject;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/*===========================================================================*/</span></div><div class="line"></div><div class="line"><span class="comment">// 情况2 － 父类实现了copyWithZone:,假设MySubClass里有p1，</span></div><div class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">MySubObject</span> : <span class="title">MyBaseObject</span></span></div><div class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">copy</span>)<span class="built_in">NSString</span> *property1;</div><div class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">copy</span>)<span class="built_in">NSString</span> *property2;</div><div class="line"><span class="keyword">@end</span></div><div class="line"></div><div class="line">- (<span class="keyword">id</span>)copyWithZone:(<span class="built_in">NSZone</span> *)zone &#123;</div><div class="line">  MySubObject *newObject = [<span class="keyword">super</span> copyWithZone:zone];</div><div class="line">  <span class="keyword">if</span> (newObject)&#123;<span class="comment">//完成本类中自定义属性（实例变量）的拷贝工作。</span></div><div class="line">    newObject.property1 = _property1;</div><div class="line">    newObject.property2 = _property2;</div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  <span class="keyword">return</span> newObject;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>当MyObject类里又包含其它自定义的类，可变数组，不可变数组等情况时，则更为复杂，需要根据类设计初衷来考虑这个方法的实现。</p>
+<h4 id="NSMutableCopying"><a href="#NSMutableCopying" class="headerlink" title="NSMutableCopying"></a>NSMutableCopying</h4>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://samingzhong.github.io/2016/08/14/2016-08-11-about-normal-protocol/" data-id="cirudovci000gcn8702tllnw3" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NSCoding，NSCopying-NSMutableCopying/">NSCoding，NSCopying/NSMutableCopying</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/08/11/hello-world 15-44-33-600/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/i哦说/">i哦说</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/杂谈集/">杂谈集</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/能工巧匠集/">能工巧匠集</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/能工巧匠集/iOS开发/">iOS开发</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/能工巧匠集/工欲善其事必先利其器/">工欲善其事必先利其器</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/读书笔记/">读书笔记</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/读书笔记/《iOS7-Programing-Cookbook》/">《iOS7 Programing Cookbook》</a><span class="category-list-count">2</span></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/08/14/2016-08-11-about-normal-protocol/">关于常见的协议－归/解档、深/浅拷贝</a>
+          </li>
+        
+          <li>
+            <a href="/2016/08/11/hello-world 15-44-33-600/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2016/08/09/2016-08-09-develope-tools-reminders/">开发工具备忘</a>
+          </li>
+        
+          <li>
+            <a href="/2016/08/02/2016-08-02-some-reminders-about-git-tower/">关于Git与Tower的一些使用备忘</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/30/2016-07-30-July-imagnation-run-wild/">7月杂谈</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NSCoding，NSCopying-NSMutableCopying/">NSCoding，NSCopying/NSMutableCopying</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Retain-Cycle/">Retain Cycle</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tower/">Tower</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS开发/">iOS开发</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发工具备忘/">开发工具备忘</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技术笔记/">技术笔记</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂谈/">杂谈</a><span class="tag-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/NSCoding，NSCopying-NSMutableCopying/" style="font-size: 10px;">NSCoding，NSCopying/NSMutableCopying</a> <a href="/tags/Retain-Cycle/" style="font-size: 10px;">Retain Cycle</a> <a href="/tags/Tower/" style="font-size: 10px;">Tower</a> <a href="/tags/iOS开发/" style="font-size: 10px;">iOS开发</a> <a href="/tags/开发工具备忘/" style="font-size: 10px;">开发工具备忘</a> <a href="/tags/技术笔记/" style="font-size: 10px;">技术笔记</a> <a href="/tags/杂谈/" style="font-size: 20px;">杂谈</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 小明童鞋<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
