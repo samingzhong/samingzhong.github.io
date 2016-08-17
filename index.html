@@ -1535,10 +1535,366 @@ int main(int argc, char * argv[]) {
 
 
   
+    <article id="post-Git、Tower的一些使用备忘" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/08/02/Git、Tower的一些使用备忘/" class="article-date">
+  <time datetime="2016-08-02T08:17:15.000Z" itemprop="datePublished">2016-08-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/能工巧匠集/">能工巧匠集</a>►<a class="article-category-link" href="/categories/能工巧匠集/工欲善其事必先利其器/">工欲善其事必先利其器</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/08/02/Git、Tower的一些使用备忘/">关于Git与Tower的一些使用备忘</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Git是目前最流行的版本管理工具，Git的功能相当强大，以git为核心的可视化工具有免费的Github的 Github Desktop、SourceTree以及收费<a href="http://xclient.info/s/tower.html" target="_blank" rel="external">Tower</a>等。嗯我个人对比使用过之后，觉得还是Tower比较符合我自己。本文将会介绍下我在进行项目版本管理的时候比较重要的一些操作存做备忘。</p>
+<h2 id="本地回滚到某一个版本。"><a href="#本地回滚到某一个版本。" class="headerlink" title="本地回滚到某一个版本。"></a>本地回滚到某一个版本。</h2><p>History，选中你希望回滚的版本，右键，Reset Head to “xxxx”。</p>
+<p>说明：若要保留旧版本到当前版本的修改内容，记得勾上Keep Changes。否则修改内容应该是会被丢弃的。</p>
+<h2 id="关于文件忽略，根据使用情境会有所不同。"><a href="#关于文件忽略，根据使用情境会有所不同。" class="headerlink" title="关于文件忽略，根据使用情境会有所不同。"></a>关于文件忽略，根据使用情境会有所不同。</h2><ul>
+<li><p>文件/文件夹之前已经被添加进Git中管理了，现在想把它们忽略掉（这些文件的变化git不去做管理）。</p>
+<p>你可能需要动用git命令: <code>git rm -r --cache _site/</code> 递归的把仓库根目录下的_site目录及其子目录的所有内容剔除git的管理，也就是以后这个文件还会在本地，但是服务器上的这会被删除。注意：除此之外，还需要把 _site/目录添加到 .gitignore 配置文件中，这样关于 _site目录的所有修改，git都不会监控。通常这种做法的目的是，不希望本地的数据被提交上到服务器上。</p>
+</li>
+<li><p>其它一般的情况，直接配置.gitignore文件一般都能解决。</p>
+</li>
+</ul>
+<h2 id="纠正上一次的提交日志。"><a href="#纠正上一次的提交日志。" class="headerlink" title="纠正上一次的提交日志。"></a>纠正上一次的提交日志。</h2><p>Workingspace － Working Copy － 勾上 Amend Commit xxx选项，如果本次暂存区没有东西要提交，那么就是直接修改上次的提交日志。如果有，那么就是合并此次以及上次的提交，日志本次为准。</p>
+<h2 id="合并多个commit。"><a href="#合并多个commit。" class="headerlink" title="合并多个commit。"></a>合并多个commit。</h2><p>方法1：回退版本，保留变更内容，提交新版本、日志。此法简单粗暴，有些情况不大适合使用。</p>
+<p>​<br>方法2：概括起来就是，r－重新编辑日志。f－向前合并commit，丢弃本次commit的日志。p－保留commit与日志，一般情况都能解决commit的合并需求。</p>
+<ul>
+<li><p>前提</p>
+<p>你的commits都还没有被push出去，你想根据功能合并多个commit。</p>
+</li>
+<li><p>问题</p>
+<p>很多时候我们的commit会显得很杂乱，开发一个功能的时候出现多次的commit，如下图：<img src="/assert/images/2016/messCommits.png" alt=""></p>
+<p>在我们把代码push出去之前，最好能整理好你的commit，否则可能影响日志的可读性。如何才能合并像上图的<code>功能1.0</code>和<code>功能1.1</code>成简洁的<code>功能1开发</code>呢（现实中，功能1中间常常会有N多个小commit，比如说实现了一个节点功能然后就commit了相应的代码，长期以往，一个完整的功能1，就有可能堆积了n多个commit，嗯，你也许会感觉很差）。</p>
+</li>
+<li><p>解决方案</p>
+<p><code>git rebase -i origin/master</code></p>
+<p>上面这条指令敲完之后，通过下边的提示，修改对各个commit的操作，如下图：</p>
+<p><img src="/assert/images/2016/solution.png" alt=""></p>
+<p>ps：这里的功能1.1对应的最佳选择是f（丢弃该条commit的log，并将该条commit向前合并），这里是想演示一下s的使用。另外，所见到的commit，最下边的是最新的。</p>
+<p>第一行：r－reword，意思是：对应的commit会被使用，但是log会被重写编辑。</p>
+<p>第二行：s－squash，意思是：这个commit会被使用，但是会与前一个commit合并，日志也会跟上条日志合并。</p>
+<p>所以，第一个r，第二个s，就构成了一个commit合并，而且还有机会重写日志，所以我们写：功能1开发。(这里我没有把第二个commit的日志删掉（使用#注释或者删掉该日志），见下图，所以结果这个日子也被保留了下来。)</p>
+<p><img src="/assert/images/2016/squash_commits_and_logs_before.png" alt=""></p>
+<p>这样就完成了<code>功能1开发</code>的commit合并（日志的出错让我知道下回该用f而不是s）。</p>
+<p>然后。</p>
+<p>第三行：r，同上。</p>
+<p>第四行：f，commit向前合并，该条commit的日志被丢弃。</p>
+<p>修改完第三个comimt的message后：</p>
+<p><img src="/assert/images/2016/squash_commits_with_discards_after_log.png" alt=""></p>
+<p>全部编辑完之后效果：</p>
+<p><img src="/assert/images/2016/rebase_after0.png" alt=""></p>
+<p>展开合并失误的功能1（第二个commit的message应该去掉）：</p>
+<p><img src="/assert/images/2016/rebase_after1.png" alt=""></p>
+<p>至此，自定义commit的合并结束。</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+ 
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tower/">Tower</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-7月杂谈" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/30/7月杂谈/" class="article-date">
+  <time datetime="2016-07-30T08:51:15.000Z" itemprop="datePublished">2016-07-30</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/杂谈集/">杂谈集</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/30/7月杂谈/">7月杂谈</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="感受"><a href="#感受" class="headerlink" title="感受"></a>感受</h3><ol>
+<li><p>谈谈幸福感</p>
+<p>现如今的中国，普通民众的幸福指数相对较低，而直接影响这个指数的是：我们需要工作多长时间才能换来属于自己的车子、房子。当前的中国社会，一个普通大学生毕业后到攒足自己房子首付的钱需要多少年，我们可以大体算一算。北上广深，其中的广州是房价最低的城市，郊区黄埔、萝岗、番禺、南沙等地的楼盘均价算1.5w一方，80平的小三房，其它凌杂的不算了，就算120w。三成首付36w。好，就拿这36w说说。普通的家庭，36w可是天文数字，如果你毕业后的目标就是这笔钱，那么三五年内，你的日子将会过的很不像样。再说下去就想哭了。<br>幸福感真的低得快到马路边上了。。。</p>
+<p>不过，坦白来说，两个人一起生活、一起为我们的房子、车子、甚至是以后的孩子奋斗，相互体谅，可能这就是再平凡不过的幸福感了吧。。。</p>
+</li>
+<li><p>关于结婚</p>
+<p>如今毕业两年，业已到了成家的年纪（其实主要是女方再不结婚就已经严重晚婚晚育了）。关于结婚相关事宜比如求婚、婚纱照、酒席、婚礼等的花销，我简单算了一笔，得上到10w（当然，份子钱我没算进去）。嗯，先不说房子车子什么的，就连结个婚，感觉都很辛苦。但是，想想结婚是人生第一件大事，就算辛苦，咬咬牙也就过去了。</p>
+</li>
+</ol>
+<h3 id="一些事"><a href="#一些事" class="headerlink" title="一些事"></a>一些事</h3><ol>
+<li>身边早我毕业两三年的同事，已经付了40w的首付。想想自己，哎。。。还是不想了，还是好好敲代码，练好手艺吧。</li>
+<li><p>一哥们今天去下订思域10。不得不说的是，本田对于自家员工的购车补贴真是令人羡慕，每月1500的油费封顶补贴、1000的月供补助。嗯，关于买车的需求，还是应该好好衡量下了。但肯定是等到年后再考虑了，毕竟一个月3k的车贷，油费和停车费1.5k，加起来4.5k可不是小数目，尤其是现在差不多每月3.2k的房租水电的情况下，是万万不能想象的。。。</p>
+</li>
+<li><p>七月初，女票急性肠胃炎；七月末，急性寻麻疹。这都什么跟什么，累死我了。。。</p>
+</li>
+</ol>
+<h3 id="一些小计划"><a href="#一些小计划" class="headerlink" title="一些小计划"></a>一些小计划</h3><p>暂无。攒钱结婚算么。。。</p>
+<h3 id="一些好音乐"><a href="#一些好音乐" class="headerlink" title="一些好音乐"></a>一些好音乐</h3><ol>
+<li><a href="http://music.163.com/#/m/song?id=287002" target="_blank" rel="external">Be True</a> － 容祖儿</li>
+<li><a href="http://music.163.com/#/m/song?id=287879" target="_blank" rel="external">独照</a> － 容祖儿</li>
+</ol>
+<h3 id="其它链接"><a href="#其它链接" class="headerlink" title="其它链接"></a>其它链接</h3><ul>
+<li><a href="http://xclient.info/s/tower.html" target="_blank" rel="external">Tower</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+ 
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂谈/">杂谈</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-《iOS7 Programming Cookbook》第四章TableView－读书笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/30/《iOS7 Programming Cookbook》第四章TableView－读书笔记/" class="article-date">
+  <time datetime="2016-07-30T08:51:15.000Z" itemprop="datePublished">2016-07-30</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/读书笔记/">读书笔记</a>►<a class="article-category-link" href="/categories/读书笔记/《iOS7-Programing-Cookbook》/">《iOS7 Programing Cookbook》</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/30/《iOS7 Programming Cookbook》第四章TableView－读书笔记/">《iOS7 Programing Cookbook》第4章 构造并使用tableview－笔记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-在tableview里使用不同类型的附加说明控件"><a href="#1-在tableview里使用不同类型的附加说明控件" class="headerlink" title="1. 在tableview里使用不同类型的附加说明控件"></a>1. 在tableview里使用不同类型的附加说明控件</h3><ul>
+<li><p>问题</p>
+<p>你想通过在不同的table view cell里展示不同的附加说明控件，以达到抓住用户注意力的效果。</p>
+</li>
+<li><p>解决方案</p>
+<p> 使用UITableViewCell类里的accessoryType属性。</p>
+<p> <code>cell.accessoryType = UITableViewAccessoryDetailDisclosureButton;</code></p>
+<p> 可以通过以下的协议方法来捕捉用户对cell的accessory的点击行为：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- (<span class="keyword">void</span>) tableView:(<span class="built_in">UITableView</span> *)tableViewaccessoryButtonTappedForRowWithIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="2-创建自定义的表格视图单元附加说明控件（accessory）"><a href="#2-创建自定义的表格视图单元附加说明控件（accessory）" class="headerlink" title="2. 创建自定义的表格视图单元附加说明控件（accessory）"></a>2. 创建自定义的表格视图单元附加说明控件（accessory）</h3><ul>
+<li><p>问题</p>
+<p>系统SDK内置的accessory不合你胃口，你想自定义它。</p>
+</li>
+<li><p>解决方案</p>
+<p>利用UITableViewCell里的accessoryView属性。把你自定义的UIView对象赋值进去即可。</p>
+</li>
+<li><p>讨论</p>
+<p>关于触发自定义accessory时如何获取到相应的cell，可以通过一层层的查找自定义的accessory的父视图所属的类，直至找到UITableViewCell类的父级视图对象。代码如下：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">- (<span class="built_in">UIView</span> *) superviewOfType:(Class)paramSuperviewClass forView:(<span class="built_in">UIView</span> *)paramView&#123;</div><div class="line">    <span class="keyword">if</span> (paramView.superview != <span class="literal">nil</span>) &#123;</div><div class="line">        <span class="keyword">if</span> ([paramView.superview isKindOfClass:paramSuperviewClass])&#123;</div><div class="line">            <span class="keyword">return</span> paramView.superview;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            <span class="keyword">return</span> [<span class="keyword">self</span> superviewOfType:paramSuperviewClass forView:paramView.superview];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="keyword">return</span> <span class="literal">nil</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+ 
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-开篇" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/29/开篇/" class="article-date">
+  <time datetime="2016-07-29T08:17:15.000Z" itemprop="datePublished">2016-07-29</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/杂谈集/">杂谈集</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/29/开篇/">博客诞生记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="更新－2016-8-14"><a href="#更新－2016-8-14" class="headerlink" title="更新－2016.8.14"></a>更新－2016.8.14</h3><p>折腾无止境，最后选择了Hexo来生成博客，原因是Hexo对主题的支持很方便，还有整个博客的界面、管理也是很给力。<br>唯一觉得不够方便的是：每次更新博客，整个public文件夹的东西似乎都会引起改动，比较影响上传速度。</p>
+<p>我是跟着<a href="https://hexo.io/" target="_blank" rel="external">这里</a>一步步来整起来的。另外，评论、分享等可能需要自定义，比如说<a href="http://blog.sunnyxx.com/2014/03/07/hexo_customize/" target="_blank" rel="external">这个</a>。</p>
+<hr>
+<p>嗯～是的。万能的Github里还有一个叫做Github Pages的衍生项目，我是通过它找到了Jekyll，最后打造出这个博客的。免费、无限流量、简单易用是它的优点，所以，今后有地儿写(fa)字(lao)了(sao)。</p>
+<p>关于Github Pages，官网有一句话概括很到位的话：</p>
+<blockquote>
+<p><a href="http://pages.github.com/" target="_blank" rel="external">GitHub Pages</a> <strong>基于 Jekyll 构建</strong>，你可以轻而易举地在 GitHub 上免费发布网站——<a href="https://help.github.com/articles/about-supported-custom-domains/" target="_blank" rel="external">自定义域名</a>等等。</p>
+</blockquote>
+<p>嗯～直接贴链接实在点：</p>
+<ul>
+<li><a href="https://pages.github.com/" target="_blank" rel="external">Github Pages基础教程</a></li>
+<li><a href="http://jekyllcn.com/" target="_blank" rel="external">Jekyll介绍</a></li>
+<li><a href="https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/" target="_blank" rel="external">使用Jekyll建立Github Pages个人网站</a></li>
+</ul>
+<p>ps1：关于Jekyll的一个配置文件Gemfile，建议source配置改为 ‘<a href="https://ruby.taobao.org/" target="_blank" rel="external">https://ruby.taobao.org/</a>‘ 在国内会合适些。</p>
+<p>ps2：关于Web开发相关的一些基础，我查了一些挺有帮助的资料，比如说这个<a href="https://developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web" target="_blank" rel="external">mozilla MDN－了解Web开发－Web开发入门</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+ 
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂谈/">杂谈</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-《iOS7 Programming Cookbook》第一章UIViewController与view－读书笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/06/20/《iOS7 Programming Cookbook》第一章UIViewController与view－读书笔记/" class="article-date">
+  <time datetime="2016-06-19T16:10:15.000Z" itemprop="datePublished">2016-06-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/读书笔记/">读书笔记</a>►<a class="article-category-link" href="/categories/读书笔记/《iOS7-Programing-Cookbook》/">《iOS7 Programing Cookbook》</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/20/《iOS7 Programming Cookbook》第一章UIViewController与view－读书笔记/">《iOS7 Programing Cookbook》第1章 实现控制器及其视图－笔记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-使用UIViewController呈现以及管理视图-1-9"><a href="#1-使用UIViewController呈现以及管理视图-1-9" class="headerlink" title="1. 使用UIViewController呈现以及管理视图(1.9)"></a>1. 使用UIViewController呈现以及管理视图(1.9)</h3><p>一般来说有两种方法加载视图控制器（当然其中也包含了视图）。</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 1</span></div><div class="line"><span class="keyword">self</span>.viewController = [[ViewController alloc] initWithNibName:<span class="literal">nil</span> bundle:<span class="literal">nil</span>];</div><div class="line"><span class="comment">// 不加载任何nib文件以呈现视图，相当于[ViewController new];</span></div><div class="line"></div><div class="line"><span class="comment">// 2</span></div><div class="line"><span class="keyword">self</span>.viewController = [[ViewController alloc]initWithNibName:<span class="string">@"ViewController"</span>bundle:<span class="literal">nil</span>];</div><div class="line"><span class="comment">// 如果希望controller的视图是使用Interface Builder设计的，可以使用此法。</span></div></pre></td></tr></table></figure>
+<h3 id="2-在导航栏-Navigation-Bar-上显示图片-1-14"><a href="#2-在导航栏-Navigation-Bar-上显示图片-1-14" class="headerlink" title="2. 在导航栏(Navigation Bar)上显示图片(1.14)"></a>2. 在导航栏(Navigation Bar)上显示图片(1.14)</h3><p>导航栏中间位置显示一张图片（一般情况下是显示controller的title）。</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">self</span>.navigationItem.titleView <span class="comment">// 可以在导航栏的中央显示一个自定义的视图。</span></div></pre></td></tr></table></figure>
+<p>除此之外，还可以自定义的视图有：</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">leftBarButtonItems/leftBarButtonItem (左边栏一个或多个barbuttonitem)</div><div class="line">rightBarButtonItems/rightBarButtonItem (右边栏一个或多个barbuttonitem)</div><div class="line"><span class="string">setLeftBarButtonItems:</span><span class="string">animated:</span>/<span class="string">setLeftBarButtonItem:</span><span class="string">animated:</span></div><div class="line"><span class="string">setRightBarButtonItems:</span><span class="string">animated:</span>/<span class="string">setRightBarButtonItem:</span><span class="string">animated:</span></div></pre></td></tr></table></figure>
+<h3 id="3-使用UITabBarController来呈现多个视图控制器-1-16"><a href="#3-使用UITabBarController来呈现多个视图控制器-1-16" class="headerlink" title="3.  使用UITabBarController来呈现多个视图控制器(1.16)"></a>3.  使用UITabBarController来呈现多个视图控制器(1.16)</h3><p>设置包含的控制器：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[[tabBarController setViewControllers:@[firstViewController, secondViewController]];</div></pre></td></tr></table></figure>
+<p>当然，这几个ViewController可以是UINavigationController或者其他UIViewController的子类。</p>
+<h3 id="4-构造并使用自定义风格的文本-1-26"><a href="#4-构造并使用自定义风格的文本-1-26" class="headerlink" title="4. 构造并使用自定义风格的文本(1.26)"></a>4. 构造并使用自定义风格的文本(1.26)</h3><ul>
+<li><p>问题</p>
+<p>你想要在不为每个属性创建单独的UI组件情况下能够在你的UI组件上显示丰富格式的文本。比如，你可能想要在一个UILabel里显示一个句子，这个句子里边有一个加粗的字。</p>
+</li>
+<li><p>解决办法</p>
+<p>使用 <code>NSAttributedString</code>     或者其可变的版本－<code>NSMutableAttributedString</code> ，把它设置成UI组件的文本，比如说UILabel组件的attributedString属性，或者直接使用Attributed String的内置方法把文本绘制在画板上。</p>
+</li>
+<li><p>讨论</p>
+<p>很多程序都会有这样的需求，要求能在一行文本里显示混合风格的字符串。比如第一个字是斜体，但第二个字是加粗，其它的是常规字体等。为了能实现这个效果，有些人必须使用<code>webview</code> ，但是，那并不是最优化的方案，因为 <code>webview</code> 在渲染字体的时候相当慢，这会严重影响你app的性能。iOS7里边，我们可以开始使用 <code>属性字符串</code> 。我不知道苹果在搞什么鬼，Mac开发早就能用上这个特性了，而iOS要在iOS7才能使用。</p>
+<p>构造属性字符串的最好方法就是：使用 <code>NSMutableAttributedString</code> 里的 <code>initWithString:</code> 方法，传一个NSString字符串进去。然后，对不同的部分设置不同的属性，我们使用  <code>NSMutableAttributedString</code> 中的 <code>setAttributes:range:</code> 方法。这个方法需要两个参数：</p>
+<ul>
+<li><p>setAttributes：一个字典对象，键是字符属性，值取决于对应的键。以下是一些很重要的键：</p>
+<ul>
+<li><p>NSFontAttributeName</p>
+<p>这个键的值是一个UIFont的对象，可以为指定范围的字符串定义这种字体。</p>
+</li>
+<li><p>NSForegroundColorAttributeName</p>
+<p>该键对应的值是UIColor对象。可以为指定范围的文本设置颜色。</p>
+</li>
+<li><p>NSBackgroundColorAttributeName</p>
+<p>可以为指定范围的文本设置背景颜色。</p>
+</li>
+<li><p>NSShadowAttributeName</p>
+<p>该键对应一个NSShadow对象，为指定范围的字符串定义阴影。</p>
+</li>
+</ul>
+</li>
+<li><p>range：一个NSRange对象，定义了目标字符串的范围，包括起点，长度。</p>
+</li>
+</ul>
+<p>下边举个例子：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">NSString</span> *string = <span class="string">@"小明童鞋"</span>;</div><div class="line"><span class="built_in">NSMutableAttributedString</span> *result = [[<span class="built_in">NSMutableAttributedString</span> alloc]initWithString:string];</div><div class="line"></div><div class="line"><span class="built_in">NSDictionary</span> *attributesForFirstWord = @&#123;</div><div class="line">                         <span class="built_in">NSFontAttributeName</span> : [<span class="built_in">UIFont</span> boldSystemFontOfSize:<span class="number">60.0</span>f],</div><div class="line">                         <span class="built_in">NSForegroundColorAttributeName</span> : [<span class="built_in">UIColor</span> redColor],</div><div class="line">                         <span class="built_in">NSBackgroundColorAttributeName</span> : [<span class="built_in">UIColor</span> blackColor]</div><div class="line">                         &#125;;</div><div class="line"></div><div class="line"><span class="built_in">NSShadow</span> *shadow = [[<span class="built_in">NSShadow</span> alloc] init];</div><div class="line">shadow.shadowColor = [<span class="built_in">UIColor</span> darkGrayColor];</div><div class="line">shadow.shadowOffset = <span class="built_in">CGSizeMake</span>(<span class="number">4.0</span>f, <span class="number">4.0</span>f);</div><div class="line"><span class="built_in">NSDictionary</span> *attributesForSecondWord = @&#123;</div><div class="line">                          <span class="built_in">NSFontAttributeName</span> : [<span class="built_in">UIFont</span> boldSystemFontOfSize:<span class="number">60.0</span>f],</div><div class="line">                          <span class="built_in">NSForegroundColorAttributeName</span> : [<span class="built_in">UIColor</span> whiteColor],</div><div class="line">                          <span class="built_in">NSBackgroundColorAttributeName</span> : [<span class="built_in">UIColor</span> redColor],</div><div class="line">                          <span class="built_in">NSShadowAttributeName</span> : shadow</div><div class="line">                          &#125;;</div><div class="line"><span class="comment">/* Find the string "iOS" in the whole string and sets its attribute */</span></div><div class="line">[result setAttributes:attributesForFirstWord range:[string rangeOfString:<span class="string">@"小明"</span>]];</div><div class="line"><span class="comment">/* Do the same thing for the string "SDK" */</span></div><div class="line">[result setAttributes:attributesForSecondWord range:[string rangeOfString:<span class="string">@"童鞋"</span>]];</div></pre></td></tr></table></figure>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+ 
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
 
 
   <nav id="page-nav">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">向后一页 &raquo;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">向后一页 &raquo;</a>
   </nav>
 </section>
         
