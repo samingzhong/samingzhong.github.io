@@ -27,7 +27,7 @@
 <meta property="og:image" content="http://i.imgur.com/eAH5YWn.png">
 <meta property="og:image" content="http://i.imgur.com/7mJlUj1.png">
 <meta property="og:image" content="http://i.imgur.com/w6tzFxz.png">
-<meta property="og:updated_time" content="2016-08-17T03:47:51.000Z">
+<meta property="og:updated_time" content="2016-08-17T04:12:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《招聘一个靠谱的 iOS》—参考答案（上）">
 <meta name="twitter:description" content="《招聘一个靠谱的 iOS》—参考答案（上）
@@ -146,12 +146,11 @@
 <ol>
 <li>22–55题，请看下篇。</li>
 </ol>
-<p>###1. 风格纠错题<br><img src="http://i.imgur.com/O7Zev94.png" alt="enter image description here"><br>修改完的代码：</p>
+<h3 id="1-风格纠错题"><a href="#1-风格纠错题" class="headerlink" title="1. 风格纠错题"></a>1. 风格纠错题</h3><p><img src="http://i.imgur.com/O7Zev94.png" alt="enter image description here"><br>修改完的代码：</p>
 <p>修改方法有很多种，现给出一种做示例：</p>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// .h文件</span></div><div class="line"><span class="comment">// http://weibo.com/luohanchenyilong/</span></div><div class="line"><span class="comment">// https://github.com/ChenYilong</span></div><div class="line"><span class="comment">// 修改完的代码，这是第一种修改方法，后面会给出第二种修改方法</span></div><div class="line"></div><div class="line"><span class="keyword">typedef</span> <span class="built_in">NS_ENUM</span>(<span class="built_in">NSInteger</span>, CYLSex) &#123;</div><div class="line">    CYLSexMan,</div><div class="line">    CYLSexWoman</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">CYLUser</span> : <span class="title">NSObject</span>&lt;<span class="title">NSCopying</span>&gt;</span></div><div class="line"></div><div class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">readonly</span>, <span class="keyword">copy</span>) <span class="built_in">NSString</span> *name;</div><div class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">readonly</span>, <span class="keyword">assign</span>) <span class="built_in">NSUInteger</span> age;</div><div class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">readonly</span>, <span class="keyword">assign</span>) CYLSex sex;</div><div class="line"></div><div class="line">- (<span class="keyword">instancetype</span>)initWithName:(<span class="built_in">NSString</span> *)name age:(<span class="built_in">NSUInteger</span>)age sex:(CYLSex)sex;</div><div class="line">+ (<span class="keyword">instancetype</span>)userWithName:(<span class="built_in">NSString</span> *)name age:(<span class="built_in">NSUInteger</span>)age sex:(CYLSex)sex;</div><div class="line"></div><div class="line"><span class="keyword">@end</span></div></pre></td></tr></table></figure>
 <p>下面对具体修改的地方，分两部分做下介绍：<strong><em>硬伤部分</em></strong>和<strong><em>优化部分</em></strong><br>。因为<strong><em>硬伤部分</em></strong>没什么技术含量，为了节省大家时间，放在后面讲，大神请直接看<strong><em>优化部分</em></strong>。</p>
-<p>####<strong><em>优化部分</em></strong></p>
-<ol>
+<h3 id="优化部分"><a href="#优化部分" class="headerlink" title="#优化部分"></a>#<strong><em>优化部分</em></strong></h3><ol>
 <li>enum 建议使用 <code>NS_ENUM</code> 和 <code>NS_OPTIONS</code> 宏来定义枚举类型，参见官方的 <a href="https://developer.apple.com/library/ios/releasenotes/ObjectiveC/ModernizationObjC/AdoptingModernobjc/AdoptingModernobjc.html" target="_blank" rel="external">Adopting Modern objc</a> 一文：</li>
 </ol>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//定义一个枚举</span></div><div class="line"><span class="keyword">typedef</span> <span class="built_in">NS_ENUM</span>(<span class="built_in">NSInteger</span>, CYLSex) &#123;</div><div class="line">    CYLSexMan,</div><div class="line">    CYLSexWoman</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
@@ -205,8 +204,7 @@
 </ol>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">readwrite</span>, <span class="keyword">copy</span>) <span class="built_in">NSString</span> *name;</div></pre></td></tr></table></figure>
 <p> 属性的参数应该按照下面的顺序排列： 原子性，读写 和 内存管理。 这样做你的属性更容易修改正确，并且更好阅读。这在<a href="https://github.com/oa414/objc-zen-book-cn#属性定义" target="_blank" rel="external">《禅与objc编程艺术 &gt;》</a>里有介绍。而且习惯上修改某个属性的修饰符时，一般从属性名从右向左搜索需要修动的修饰符。最可能从最右边开始修改这些属性的修饰符，根据经验这些修饰符被修改的可能性从高到底应为：内存管理 &gt; 读写权限 &gt;原子操作。</p>
-<p>####<strong><em>硬伤部分</em></strong></p>
-<ol>
+<h3 id="硬伤部分"><a href="#硬伤部分" class="headerlink" title="#硬伤部分"></a>#<strong><em>硬伤部分</em></strong></h3><ol>
 <li>在-和(void)之间应该有一个空格</li>
 <li>enum 中驼峰命名法和下划线命名法混用错误：枚举类型的命名规则和函数的命名规则相同：命名时使用驼峰命名法，勿使用下划线命名法。</li>
 <li>enum 左括号前加一个空格，或者将左括号换到下一行</li>
@@ -221,7 +219,7 @@
 
 </li>
 </ol>
-<p>###2. 什么情况使用 weak 关键字，相比 assign 有什么不同？<br>什么情况使用 weak 关键字？</p>
+<h3 id="2-什么情况使用-weak-关键字，相比-assign-有什么不同？"><a href="#2-什么情况使用-weak-关键字，相比-assign-有什么不同？" class="headerlink" title="2. 什么情况使用 weak 关键字，相比 assign 有什么不同？"></a>2. 什么情况使用 weak 关键字，相比 assign 有什么不同？</h3><p>什么情况使用 weak 关键字？</p>
 <ol>
 <li><p>在 ARC 中,在有可能出现循环引用的时候,往往要通过让其中一端使用 weak 来解决,比如: delegate 代理属性</p>
 </li>
@@ -235,7 +233,7 @@
 <li><p>assigin 可以用非 OC 对象,而 weak 必须用于 OC 对象</p>
 </li>
 </ol>
-<p>###3. 怎么用 copy 关键字？<br>用途：</p>
+<h3 id="3-怎么用-copy-关键字？"><a href="#3-怎么用-copy-关键字？" class="headerlink" title="3. 怎么用 copy 关键字？"></a>3. 怎么用 copy 关键字？</h3><p>用途：</p>
 <ol>
 <li>NSString、NSArray、NSDictionary 等等经常使用copy关键字，是因为他们有对应的可变类型：NSMutableString、NSMutableArray、NSMutableDictionary；</li>
 <li><p>block 也经常使用 copy 关键字，具体原因见<a href="https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithBlocks/WorkingwithBlocks.html#//apple_ref/doc/uid/TP40011210-CH8-SW12" target="_blank" rel="external">官方文档：<strong><em>Objects Use Properties to Keep Track of Blocks</em></strong></a>：</p>
@@ -249,7 +247,7 @@
 <p>用 <code>@property</code> 声明 NSString、NSArray、NSDictionary 经常使用 copy 关键字，是因为他们有对应的可变类型：NSMutableString、NSMutableArray、NSMutableDictionary，他们之间可能进行赋值操作，为确保对象中的字符串值不会无意间变动，应该在设置新属性值时拷贝一份。</p>
 </blockquote>
 <p>该问题在下文中也有论述：<strong><em>用@property声明的NSString（或NSArray，NSDictionary）经常使用copy关键字，为什么？如果改用strong关键字，可能造成什么问题？</em></strong></p>
-<p>###4. 这个写法会出什么问题： <code>@property (copy) NSMutableArray *array;</code><br>两个问题：1、添加,删除,修改数组内的元素的时候,程序会因为找不到对应的方法而崩溃.因为 copy 就是复制一个不可变 NSArray 的对象；2、使用了 atomic 属性会严重影响性能 ； </p>
+<h3 id="4-这个写法会出什么问题：-property-copy-NSMutableArray-array"><a href="#4-这个写法会出什么问题：-property-copy-NSMutableArray-array" class="headerlink" title="4. 这个写法会出什么问题： @property (copy) NSMutableArray *array;"></a>4. 这个写法会出什么问题： <code>@property (copy) NSMutableArray *array;</code></h3><p>两个问题：1、添加,删除,修改数组内的元素的时候,程序会因为找不到对应的方法而崩溃.因为 copy 就是复制一个不可变 NSArray 的对象；2、使用了 atomic 属性会严重影响性能 ； </p>
 <p>第1条的相关原因在下文中有论述<strong><em>《用@property声明的NSString（或NSArray，NSDictionary）经常使用 copy 关键字，为什么？如果改用strong关键字，可能造成什么问题？》</em></strong> 以及上文<strong><em>《怎么用 copy 关键字？》</em></strong>也有论述。</p>
 <p>比如下面的代码就会发生崩溃</p>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// .h文件</span></div><div class="line"><span class="comment">// http://weibo.com/luohanchenyilong/</span></div><div class="line"><span class="comment">// https://github.com/ChenYilong</span></div><div class="line"><span class="comment">// 下面的代码就会发生崩溃</span></div><div class="line"></div><div class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">copy</span>) <span class="built_in">NSMutableArray</span> *mutableArray;</div></pre></td></tr></table></figure>
@@ -264,8 +262,7 @@
 <p>在iOS开发中，你会发现，几乎所有属性都声明为 nonatomic。</p>
 <p>一般情况下并不要求属性必须是“原子的”，因为这并不能保证“线程安全” ( thread safety)，若要实现“线程安全”的操作，还需采用更为深层的锁定机制才行。例如，一个线程在连续多次读取某属性值的过程中有别的线程在同时改写该值，那么即便将属性声明为 atomic，也还是会读到不同的属性值。</p>
 <p>因此，开发iOS程序时一般都会使用 nonatomic 属性。但是在开发 Mac OS X 程序时，使用<br> atomic 属性通常都不会有性能瓶颈。</p>
-<p>###5. 如何让自己的类用 copy 修饰符？如何重写带 copy 关键字的 setter？</p>
-<blockquote>
+<h3 id="5-如何让自己的类用-copy-修饰符？如何重写带-copy-关键字的-setter？"><a href="#5-如何让自己的类用-copy-修饰符？如何重写带-copy-关键字的-setter？" class="headerlink" title="5. 如何让自己的类用 copy 修饰符？如何重写带 copy 关键字的 setter？"></a>5. 如何让自己的类用 copy 修饰符？如何重写带 copy 关键字的 setter？</h3><blockquote>
 <p>若想令自己所写的对象具有拷贝功能，则需实现 NSCopying 协议。如果自定义的对象分为可变版本与不可变版本，那么就要同时实现 <code>NSCopying</code> 与 <code>NSMutableCopying</code> 协议。</p>
 </blockquote>
 <p>具体步骤：</p>
@@ -322,8 +319,7 @@
 <p>那如何确保 name 被 copy？在初始化方法(initializer)中做：</p>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">- (<span class="keyword">instancetype</span>)initWithName:(<span class="built_in">NSString</span> *)name </div><div class="line">							 age:(<span class="built_in">NSUInteger</span>)age </div><div class="line">							 sex:(CYLSex)sex &#123;</div><div class="line">     <span class="keyword">if</span>(<span class="keyword">self</span> = [<span class="keyword">super</span> init]) &#123;</div><div class="line">     	_name = [name <span class="keyword">copy</span>];</div><div class="line">     	_age = age;</div><div class="line">     	_sex = sex;</div><div class="line">     	_friends = [[<span class="built_in">NSMutableSet</span> alloc] init];</div><div class="line">     &#125;</div><div class="line">     <span class="keyword">return</span> <span class="keyword">self</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>​    </p>
-<p>###6. @property 的本质是什么？ivar、getter、setter 是如何生成并添加到这个类中的</p>
-<p><strong>@property 的本质是什么？</strong></p>
+<h3 id="6-property-的本质是什么？ivar、getter、setter-是如何生成并添加到这个类中的"><a href="#6-property-的本质是什么？ivar、getter、setter-是如何生成并添加到这个类中的" class="headerlink" title="6. @property 的本质是什么？ivar、getter、setter 是如何生成并添加到这个类中的"></a>6. @property 的本质是什么？ivar、getter、setter 是如何生成并添加到这个类中的</h3><p><strong>@property 的本质是什么？</strong></p>
 <blockquote>
 <p>@property = ivar + getter + setter;</p>
 </blockquote>
@@ -355,8 +351,7 @@
 <li><code>prop_list</code> ：属性列表</li>
 </ol>
 <p>也就是说我们每次在增加一个属性,系统都会在 <code>ivar_list</code> 中添加一个成员变量的描述,在 <code>method_list</code> 中增加 setter 与 getter 方法的描述,在属性列表中增加一个属性的描述,然后计算该属性在对象中的偏移量,然后给出 setter 与 getter 方法对应的实现,在 setter 方法中从偏移量的位置开始赋值,在 getter 方法中从偏移量开始取值,为了能够读取正确字节数,系统对象偏移量的指针类型进行了类型强转.</p>
-<p>###7. @protocol 和 category 中如何使用 @property</p>
-<ol>
+<h3 id="7-protocol-和-category-中如何使用-property"><a href="#7-protocol-和-category-中如何使用-property" class="headerlink" title="7. @protocol 和 category 中如何使用 @property"></a>7. @protocol 和 category 中如何使用 @property</h3><ol>
 <li>在 protocol 中使用 property 只会生成 setter 和 getter 方法声明,我们使用属性的目的,是希望遵守我协议的对象能实现该属性</li>
 <li><p>category 使用 @property 也是只会生成 setter 和 getter 方法的声明,如果我们真的需要给 category 增加属性的实现,需要借助于运行时的两个函数：</p>
 </li>
@@ -364,8 +359,7 @@
 </li>
 <li><code>objc_getAssociatedObject</code></li>
 </ol>
-<p>###8. runtime 如何实现 weak 属性</p>
-<p>要实现 weak 属性，首先要搞清楚 weak 属性的特点：</p>
+<h3 id="8-runtime-如何实现-weak-属性"><a href="#8-runtime-如何实现-weak-属性" class="headerlink" title="8. runtime 如何实现 weak 属性"></a>8. runtime 如何实现 weak 属性</h3><p>要实现 weak 属性，首先要搞清楚 weak 属性的特点：</p>
 <blockquote>
 <p>weak 此特质表明该属性定义了一种“非拥有关系” (nonowning relationship)。为这种属性设置新值时，设置方法既不保留新值，也不释放旧值。此特质同 assign 类似， 然而在属性所指的对象遭到摧毁时，属性值也会清空(nil out)。</p>
 </blockquote>
@@ -424,7 +418,7 @@
 <p>然后就可以使用了：</p>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">NSObject</span> *foo = [[<span class="built_in">NSObject</span> alloc] init];</div><div class="line"></div><div class="line">[foo cyl_runAtDealloc:^&#123;</div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"正在释放foo!"</span>);</div><div class="line">&#125;];</div></pre></td></tr></table></figure>
 <p>如果对 <code>cyl_runAtDealloc</code> 的实现原理有兴趣，可以看下这篇博文 <a href="http://stackoverflow.com/a/31560217/3395008" target="_blank" rel="external"><strong><em>Fun With the objc Runtime: Run Code at Deallocation of Any Object</em></strong></a></p>
-<p>###9. @property中有哪些属性关键字？/ @property 后面可以有哪些修饰符？<br>属性可以拥有的特质分为四类:</p>
+<h3 id="9-property中有哪些属性关键字？-property-后面可以有哪些修饰符？"><a href="#9-property中有哪些属性关键字？-property-后面可以有哪些修饰符？" class="headerlink" title="9. @property中有哪些属性关键字？/ @property 后面可以有哪些修饰符？"></a>9. @property中有哪些属性关键字？/ @property 后面可以有哪些修饰符？</h3><p>属性可以拥有的特质分为四类:</p>
 <ol>
 <li><p>原子性— <code>nonatomic</code> 特质</p>
 <p>在默认情况下，由编译器合成的方法会通过锁定机制确保其原子性(atomicity)。如果属性具备 nonatomic 特质，则不使用同步锁。请注意，尽管没有名为“atomic”的特质(如果某属性不具备 nonatomic 特质，那它就是“原子的” ( atomic) )，但是仍然可以在属性特质中写明这一点，编译器不会报错。若是自己定义存取方法，那么就应该遵从与属性特质相符的原子性。</p>
@@ -449,7 +443,7 @@
 <ol>
 <li>不常用的：<code>nonnull</code>,<code>null_resettable</code>,<code>nullable</code></li>
 </ol>
-<p>###10. weak属性需要在dealloc中置nil么？<br>不需要。</p>
+<h3 id="10-weak属性需要在dealloc中置nil么？"><a href="#10-weak属性需要在dealloc中置nil么？" class="headerlink" title="10. weak属性需要在dealloc中置nil么？"></a>10. weak属性需要在dealloc中置nil么？</h3><p>不需要。</p>
 <blockquote>
 <p>在ARC环境无论是强指针还是弱指针都无需在 dealloc 设置为 nil ， ARC 会自动帮我们处理</p>
 </blockquote>
@@ -461,14 +455,12 @@
 <blockquote>
 <p>在属性所指的对象遭到摧毁时，属性值也会清空(nil out)。</p>
 </blockquote>
-<p>###11. @synthesize和@dynamic分别有什么作用？</p>
-<ol>
+<h3 id="11-synthesize和-dynamic分别有什么作用？"><a href="#11-synthesize和-dynamic分别有什么作用？" class="headerlink" title="11. @synthesize和@dynamic分别有什么作用？"></a>11. @synthesize和@dynamic分别有什么作用？</h3><ol>
 <li>@property有两个对应的词，一个是 @synthesize，一个是 @dynamic。如果 @synthesize和 @dynamic都没写，那么默认的就是<code>@syntheszie var = _var;</code></li>
 <li>@synthesize 的语义是如果你没有手动实现 setter 方法和 getter 方法，那么编译器会自动为你加上这两个方法。</li>
 <li>@dynamic 告诉编译器：属性的 setter 与 getter 方法由用户自己实现，不自动生成。（当然对于 readonly 的属性只需提供 getter 即可）。假如一个属性被声明为 @dynamic var，然后你没有提供 @setter方法和 @getter 方法，编译的时候没问题，但是当程序运行到 <code>instance.var = someVar</code>，由于缺 setter 方法会导致程序崩溃；或者当运行到 <code>someVar = var</code> 时，由于缺 getter 方法同样会导致崩溃。编译时没问题，运行时才执行相应的方法，这就是所谓的动态绑定。</li>
 </ol>
-<p>###12. ARC下，不显式指定任何属性关键字时，默认的关键字都有哪些？</p>
-<ol>
+<h3 id="12-ARC下，不显式指定任何属性关键字时，默认的关键字都有哪些？"><a href="#12-ARC下，不显式指定任何属性关键字时，默认的关键字都有哪些？" class="headerlink" title="12. ARC下，不显式指定任何属性关键字时，默认的关键字都有哪些？"></a>12. ARC下，不显式指定任何属性关键字时，默认的关键字都有哪些？</h3><ol>
 <li><p>对应基本数据类型默认关键字是</p>
 <p>atomic,readwrite,assign</p>
 </li>
@@ -483,8 +475,7 @@
 <li><p><a href="http://rdcworld-iphone.blogspot.in/2012/12/variable-property-attributes-or.html" target="_blank" rel="external"> <strong><em>Variable property attributes or Modifiers in iOS</em></strong> </a></p>
 </li>
 </ol>
-<p>###13. 用@property声明的NSString（或NSArray，NSDictionary）经常使用copy关键字，为什么？如果改用strong关键字，可能造成什么问题？</p>
-<ol>
+<h3 id="13-用-property声明的NSString（或NSArray，NSDictionary）经常使用copy关键字，为什么？如果改用strong关键字，可能造成什么问题？"><a href="#13-用-property声明的NSString（或NSArray，NSDictionary）经常使用copy关键字，为什么？如果改用strong关键字，可能造成什么问题？" class="headerlink" title="13. 用@property声明的NSString（或NSArray，NSDictionary）经常使用copy关键字，为什么？如果改用strong关键字，可能造成什么问题？"></a>13. 用@property声明的NSString（或NSArray，NSDictionary）经常使用copy关键字，为什么？如果改用strong关键字，可能造成什么问题？</h3><ol>
 <li>因为父类指针可以指向子类对象,使用 copy 的目的是为了让本对象的属性不受外界影响,使用 copy 无论给我传入是一个可变对象还是不可对象,我本身持有的就是一个不可变的副本.</li>
 <li><p>如果我们使用是 strong ,那么这个属性就有可能指向一个可变对象,如果这个可变对象在外部被修改了,那么会影响该属性.</p>
 <p>copy 此特质所表达的所属关系与 strong 类似。然而设置方法并不保留新值，而是将其“拷贝” (copy)。<br>当属性类型为 NSString 时，经常用此特质来保护其封装性，因为传递给设置方法的新值有可能指向一个 NSMutableString 类的实例。这个类是 NSString 的子类，表示一种可修改其值的字符串，此时若是不拷贝字符串，那么设置完属性之后，字符串的值就可能会在对象不知情的情况下遭人更改。所以，这时就要拷贝一份“不可变” (immutable)的字符串，确保对象中的字符串值不会无意间变动。只要实现属性所用的对象是“可变的” (mutable)，就应该在设置新属性值时拷贝一份。</p>
@@ -503,8 +494,7 @@
 <li>对非集合类对象的 copy 与 mutableCopy 操作；</li>
 <li>对集合类对象的 copy 与 mutableCopy 操作。</li>
 </ol>
-<p>####1. 对非集合类对象的copy操作：</p>
-<p>在非集合类对象中：对 immutable 对象进行 copy 操作，是指针复制，mutableCopy 操作时内容复制；对 mutable 对象进行 copy 和 mutableCopy 都是内容复制。用代码简单表示如下：</p>
+<h3 id="1-对非集合类对象的copy操作："><a href="#1-对非集合类对象的copy操作：" class="headerlink" title="#1. 对非集合类对象的copy操作："></a>#1. 对非集合类对象的copy操作：</h3><p>在非集合类对象中：对 immutable 对象进行 copy 操作，是指针复制，mutableCopy 操作时内容复制；对 mutable 对象进行 copy 和 mutableCopy 都是内容复制。用代码简单表示如下：</p>
 <ul>
 <li>[immutableObject copy] // 浅复制</li>
 <li>[immutableObject mutableCopy] //深复制</li>
@@ -519,8 +509,7 @@
 <blockquote>
 <p>用 @property 声明 NSString、NSArray、NSDictionary 经常使用 copy 关键字，是因为他们有对应的可变类型：NSMutableString、NSMutableArray、NSMutableDictionary，他们之间可能进行赋值操作，为确保对象中的字符串值不会无意间变动，应该在设置新属性值时拷贝一份。</p>
 </blockquote>
-<p>####2、集合类对象的copy与mutableCopy</p>
-<p>集合类对象是指 NSArray、NSDictionary、NSSet … 之类的对象。下面先看集合类immutable对象使用 copy 和 mutableCopy 的一个例子：</p>
+<h3 id="2、集合类对象的copy与mutableCopy"><a href="#2、集合类对象的copy与mutableCopy" class="headerlink" title="#2、集合类对象的copy与mutableCopy"></a>#2、集合类对象的copy与mutableCopy</h3><p>集合类对象是指 NSArray、NSDictionary、NSSet … 之类的对象。下面先看集合类immutable对象使用 copy 和 mutableCopy 的一个例子：</p>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">NSArray</span> *array = @[@[<span class="string">@"a"</span>, <span class="string">@"b"</span>], @[<span class="string">@"c"</span>, <span class="string">@"d"</span>]];</div><div class="line"><span class="built_in">NSArray</span> *copyArray = [array <span class="keyword">copy</span>];</div><div class="line"><span class="built_in">NSMutableArray</span> *mCopyArray = [array mutableCopy];</div></pre></td></tr></table></figure>
 <p>查看内容，可以看到 copyArray 和 array 的地址是一样的，而 mCopyArray 和 array 的地址是不同的。说明 copy 操作进行了指针拷贝，mutableCopy 进行了内容拷贝。但需要强调的是：此处的内容拷贝，仅仅是拷贝 array 这个对象，array 集合内部的元素仍然是指针拷贝。这和上面的非集合 immutable 对象的拷贝还是挺相似的，那么mutable对象的拷贝会不会类似呢？我们继续往下，看 mutable 对象拷贝的例子：</p>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">NSMutableArray</span> *array = [<span class="built_in">NSMutableArray</span> arrayWithObjects:[<span class="built_in">NSMutableString</span> stringWithString:<span class="string">@"a"</span>],<span class="string">@"b"</span>,<span class="string">@"c"</span>,<span class="literal">nil</span>];</div><div class="line"><span class="built_in">NSArray</span> *copyArray = [array <span class="keyword">copy</span>];</div><div class="line"><span class="built_in">NSMutableArray</span> *mCopyArray = [array mutableCopy];</div></pre></td></tr></table></figure>
@@ -529,7 +518,7 @@
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[immutableObject <span class="keyword">copy</span>] <span class="comment">// 浅复制</span></div><div class="line">[immutableObject mutableCopy] <span class="comment">//单层深复制</span></div><div class="line">[mutableObject <span class="keyword">copy</span>] <span class="comment">//单层深复制</span></div><div class="line">[mutableObject mutableCopy] <span class="comment">//单层深复制</span></div></pre></td></tr></table></figure>
 <p>这个代码结论和非集合类的非常相似。</p>
 <p>参考链接：<a href="https://www.zybuluo.com/MicroCai/note/50592" target="_blank" rel="external">iOS 集合的深复制与浅复制</a></p>
-<p>###14. @synthesize合成实例变量的规则是什么？假如property名为foo，存在一个名为<code>_foo</code>的实例变量，那么还会自动合成新变量么？<br>在回答之前先说明下一个概念：</p>
+<h3 id="14-synthesize合成实例变量的规则是什么？假如property名为foo，存在一个名为-foo的实例变量，那么还会自动合成新变量么？"><a href="#14-synthesize合成实例变量的规则是什么？假如property名为foo，存在一个名为-foo的实例变量，那么还会自动合成新变量么？" class="headerlink" title="14. @synthesize合成实例变量的规则是什么？假如property名为foo，存在一个名为_foo的实例变量，那么还会自动合成新变量么？"></a>14. @synthesize合成实例变量的规则是什么？假如property名为foo，存在一个名为<code>_foo</code>的实例变量，那么还会自动合成新变量么？</h3><p>在回答之前先说明下一个概念：</p>
 <blockquote>
 <p>实例变量 = 成员变量 ＝ ivar</p>
 </blockquote>
@@ -557,8 +546,7 @@
 </ol>
 <p>假如 property 名为 foo，存在一个名为 <code>_foo</code> 的实例变量，那么还会自动合成新变量么？<br>不会。如下图：</p>
 <p><img src="http://i.imgur.com/t28ge4W.png" alt="enter image description here"></p>
-<p>###15. 在有了自动合成属性实例变量之后，@synthesize还有哪些使用场景？</p>
-<p>回答这个问题前，我们要搞清楚一个问题，什么情况下不会autosynthesis（自动合成）？</p>
+<h3 id="15-在有了自动合成属性实例变量之后，-synthesize还有哪些使用场景？"><a href="#15-在有了自动合成属性实例变量之后，-synthesize还有哪些使用场景？" class="headerlink" title="15. 在有了自动合成属性实例变量之后，@synthesize还有哪些使用场景？"></a>15. 在有了自动合成属性实例变量之后，@synthesize还有哪些使用场景？</h3><p>回答这个问题前，我们要搞清楚一个问题，什么情况下不会autosynthesis（自动合成）？</p>
 <ol>
 <li>同时重写了 setter 和 getter 时</li>
 <li>重写了只读属性的 getter 时</li>
@@ -584,7 +572,7 @@
 <li>要么如第17行：使用<code>@synthesize foo = _foo;</code> ，关联 @property 与 ivar。</li>
 </ol>
 <p>更多信息，请戳- 》<a href="http://stackoverflow.com/a/19821816/3395008" target="_blank" rel="external"> <strong><em>When should I use @synthesize explicitly?</em></strong> </a></p>
-<p>###16. objc中向一个nil对象发送消息将会发生什么？<br>在 objc 中向 nil 发送消息是完全有效的——只是在运行时不会有任何作用:</p>
+<h3 id="16-objc中向一个nil对象发送消息将会发生什么？"><a href="#16-objc中向一个nil对象发送消息将会发生什么？" class="headerlink" title="16. objc中向一个nil对象发送消息将会发生什么？"></a>16. objc中向一个nil对象发送消息将会发生什么？</h3><p>在 objc 中向 nil 发送消息是完全有效的——只是在运行时不会有任何作用:</p>
 <ol>
 <li>如果一个方法返回值是一个对象，那么发送给nil的消息将返回0(nil)。例如：  </li>
 </ol>
@@ -602,7 +590,7 @@
 <p>那么，为了方便理解这个内容，还是贴一个objc的源代码：</p>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// runtime.h（类在runtime中的定义）</span></div><div class="line"><span class="comment">// http://weibo.com/luohanchenyilong/</span></div><div class="line"><span class="comment">// https://github.com/ChenYilong</span></div><div class="line"></div><div class="line"><span class="keyword">struct</span> objc_class &#123;</div><div class="line">  Class isa OBJC_ISA_AVAILABILITY; <span class="comment">//isa指针指向Meta Class，因为Objc的类的本身也是一个Object，为了处理这个关系，runtime就创造了Meta Class，当给类发送[NSObject alloc]这样消息时，实际上是把这个消息发给了Class Object</span></div><div class="line">  <span class="meta">#if !__OBJC2__</span></div><div class="line">  Class super_class OBJC2_UNAVAILABLE; <span class="comment">// 父类</span></div><div class="line">  <span class="keyword">const</span> <span class="keyword">char</span> *name OBJC2_UNAVAILABLE; <span class="comment">// 类名</span></div><div class="line">  <span class="keyword">long</span> version OBJC2_UNAVAILABLE; <span class="comment">// 类的版本信息，默认为0</span></div><div class="line">  <span class="keyword">long</span> info OBJC2_UNAVAILABLE; <span class="comment">// 类信息，供运行期使用的一些位标识</span></div><div class="line">  <span class="keyword">long</span> instance_size OBJC2_UNAVAILABLE; <span class="comment">// 该类的实例变量大小</span></div><div class="line">  <span class="keyword">struct</span> objc_ivar_list *ivars OBJC2_UNAVAILABLE; <span class="comment">// 该类的成员变量链表</span></div><div class="line">  <span class="keyword">struct</span> objc_method_list **methodLists OBJC2_UNAVAILABLE; <span class="comment">// 方法定义的链表</span></div><div class="line">  <span class="keyword">struct</span> objc_cache *cache OBJC2_UNAVAILABLE; <span class="comment">// 方法缓存，对象接到一个消息会根据isa指针查找消息对象，这时会在method Lists中遍历，如果cache了，常用的方法调用时就能够提高调用的效率。</span></div><div class="line">  <span class="keyword">struct</span> objc_protocol_list *protocols OBJC2_UNAVAILABLE; <span class="comment">// 协议链表</span></div><div class="line">  <span class="meta">#endif</span></div><div class="line">  &#125; OBJC2_UNAVAILABLE;</div></pre></td></tr></table></figure>
 <p>objc在向一个对象发送消息时，runtime库会根据对象的isa指针找到该对象实际所属的类，然后在该类中的方法列表以及其父类方法列表中寻找方法运行，然后在发送消息的时候，objc_msgSend方法不会返回值，所谓的返回内容都是具体调用时执行的。<br>那么，回到本题，如果向一个nil对象发送消息，首先在寻找对象的isa指针时就是0地址返回了，所以不会出现任何错误。</p>
-<p>###17. objc中向一个对象发送消息[obj foo]和<code>objc_msgSend()</code>函数之间有什么关系？<br>具体原因同上题：该方法编译之后就是<code>objc_msgSend()</code>函数调用.</p>
+<h3 id="17-objc中向一个对象发送消息-obj-foo-和objc-msgSend-函数之间有什么关系？"><a href="#17-objc中向一个对象发送消息-obj-foo-和objc-msgSend-函数之间有什么关系？" class="headerlink" title="17. objc中向一个对象发送消息[obj foo]和objc_msgSend()函数之间有什么关系？"></a>17. objc中向一个对象发送消息[obj foo]和<code>objc_msgSend()</code>函数之间有什么关系？</h3><p>具体原因同上题：该方法编译之后就是<code>objc_msgSend()</code>函数调用.</p>
 <p>我们用 clang 分析下，clang 提供一个命令，可以将objc的源码改写成C++语言，借此可以研究下[obj foo]和<code>objc_msgSend()</code>函数之间有什么关系。</p>
 <p>以下面的代码为例，由于 clang 后的代码达到了10万多行，为了便于区分，添加了一个叫 iOSinit 方法，</p>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//</span></div><div class="line"><span class="comment">//  main.m</span></div><div class="line"><span class="comment">//  http://weibo.com/luohanchenyilong/</span></div><div class="line"><span class="comment">//  https://github.com/ChenYilong</span></div><div class="line"><span class="comment">//  Copyright (c) 2015年 微博@iOS程序犭袁. All rights reserved.</span></div><div class="line"><span class="comment">//</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="meta">#import <span class="meta-string">"CYLTest.h"</span></span></div><div class="line"></div><div class="line"><span class="keyword">int</span> main(<span class="keyword">int</span> argc, <span class="keyword">char</span> * argv[]) &#123;</div><div class="line">    <span class="keyword">@autoreleasepool</span> &#123;</div><div class="line">        CYLTest *test = [[CYLTest alloc] init];</div><div class="line">        [test performSelector:(<span class="keyword">@selector</span>(iOSinit))];</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -616,8 +604,7 @@
 <blockquote>
 <p> [obj foo];在objc动态编译时，会被转意为：<code>objc_msgSend(obj, @selector(foo));</code>。</p>
 </blockquote>
-<p>###18. 什么时候会报unrecognized selector的异常？</p>
-<p>简单来说：</p>
+<h3 id="18-什么时候会报unrecognized-selector的异常？"><a href="#18-什么时候会报unrecognized-selector的异常？" class="headerlink" title="18. 什么时候会报unrecognized selector的异常？"></a>18. 什么时候会报unrecognized selector的异常？</h3><p>简单来说：</p>
 <blockquote>
 <p>当调用该对象上某个方法,而该对象上没有实现这个方法的时候，<br>可以通过“消息转发”进行解决。</p>
 </blockquote>
@@ -638,8 +625,7 @@
 </li>
 </ol>
 <p>为了能更清晰地理解这些方法的作用，git仓库里也给出了一个Demo，名称叫“ <code>_objc_msgForward_demo</code> ”,可运行起来看看。</p>
-<p>###19. 一个objc对象如何进行内存布局？（考虑有父类的情况）</p>
-<ul>
+<h3 id="19-一个objc对象如何进行内存布局？（考虑有父类的情况）"><a href="#19-一个objc对象如何进行内存布局？（考虑有父类的情况）" class="headerlink" title="19. 一个objc对象如何进行内存布局？（考虑有父类的情况）"></a>19. 一个objc对象如何进行内存布局？（考虑有父类的情况）</h3><ul>
 <li>所有父类的成员变量和自己的成员变量都会存放在该对象所对应的存储空间中.</li>
 <li>每一个对象内部都有一个isa指针,指向他的类对象,类对象中存放着本对象的</li>
 </ul>
@@ -694,10 +680,8 @@
 </li>
 </ul>
 <p>如图:<br><img src="http://i.imgur.com/w6tzFxz.png" alt="enter image description here"></p>
-<p>###20. 一个objc对象的isa的指针指向什么？有什么作用？</p>
-<p>指向他的类对象,从而可以找到对象上的方法</p>
-<p>###21. 下面的代码输出什么？</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">Son</span> : <span class="title">Father</span></span></div><div class="line">- (<span class="keyword">id</span>)init</div><div class="line">&#123;</div><div class="line">    <span class="keyword">self</span> = [<span class="keyword">super</span> init];</div><div class="line">    <span class="keyword">if</span> (<span class="keyword">self</span>) &#123;</div><div class="line">        <span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, <span class="built_in">NSStringFromClass</span>([<span class="keyword">self</span> <span class="keyword">class</span>]));</div><div class="line">        <span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, <span class="built_in">NSStringFromClass</span>([<span class="keyword">super</span> <span class="keyword">class</span>]));</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">self</span>;</div><div class="line">&#125;</div><div class="line"><span class="keyword">@end</span></div></pre></td></tr></table></figure>
+<h3 id="20-一个objc对象的isa的指针指向什么？有什么作用？"><a href="#20-一个objc对象的isa的指针指向什么？有什么作用？" class="headerlink" title="20. 一个objc对象的isa的指针指向什么？有什么作用？"></a>20. 一个objc对象的isa的指针指向什么？有什么作用？</h3><p>指向他的类对象,从而可以找到对象上的方法</p>
+<h3 id="21-下面的代码输出什么？"><a href="#21-下面的代码输出什么？" class="headerlink" title="21. 下面的代码输出什么？"></a>21. 下面的代码输出什么？</h3><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">Son</span> : <span class="title">Father</span></span></div><div class="line">- (<span class="keyword">id</span>)init</div><div class="line">&#123;</div><div class="line">    <span class="keyword">self</span> = [<span class="keyword">super</span> init];</div><div class="line">    <span class="keyword">if</span> (<span class="keyword">self</span>) &#123;</div><div class="line">        <span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, <span class="built_in">NSStringFromClass</span>([<span class="keyword">self</span> <span class="keyword">class</span>]));</div><div class="line">        <span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, <span class="built_in">NSStringFromClass</span>([<span class="keyword">super</span> <span class="keyword">class</span>]));</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">self</span>;</div><div class="line">&#125;</div><div class="line"><span class="keyword">@end</span></div></pre></td></tr></table></figure>
 <p><strong>答案：</strong></p>
 <p>都输出 Son</p>
 <pre><code>NSStringFromClass([self class]) = Son
@@ -736,10 +720,8 @@ NSStringFromClass([super class]) = Son
 <p>第二步是去 Father这个类里去找 <code>- (Class)class</code>，没有，然后去NSObject类去找，找到了。最后内部是使用 <code>objc_msgSend(objc_super-&gt;receiver, @selector(class))</code>去调用，</p>
 <p>此时已经和<code>[self class]</code>调用相同了，故上述输出结果仍然返回 Son。</p>
 <p>参考链接：<a href="http://weibo.com/junbbcom" target="_blank" rel="external">微博@Chun_iOS</a>的博文<a href="http://chun.tips/blog/2014/11/05/bao-gen-wen-di-objective%5Bnil%5Dc-runtime(1" target="_blank" rel="external">刨根问底Objective－C Runtime（1）－ Self &amp; Super</a>%5Bnil%5D-self-and-super/)</p>
-<p>###22. runtime如何通过selector找到对应的IMP地址？（分别考虑类方法和实例方法）</p>
-<p>每一个类对象中都一个方法列表,方法列表中记录着方法的名称,方法实现,以及参数类型,其实selector本质就是方法名称,通过这个方法名称就可以在方法列表中找到对应的方法实现.</p>
-<p>###23. 使用runtime Associate方法关联的对象，需要在主对象dealloc的时候释放么？</p>
-<ul>
+<h3 id="22-runtime如何通过selector找到对应的IMP地址？（分别考虑类方法和实例方法）"><a href="#22-runtime如何通过selector找到对应的IMP地址？（分别考虑类方法和实例方法）" class="headerlink" title="22. runtime如何通过selector找到对应的IMP地址？（分别考虑类方法和实例方法）"></a>22. runtime如何通过selector找到对应的IMP地址？（分别考虑类方法和实例方法）</h3><p>每一个类对象中都一个方法列表,方法列表中记录着方法的名称,方法实现,以及参数类型,其实selector本质就是方法名称,通过这个方法名称就可以在方法列表中找到对应的方法实现.</p>
+<h3 id="23-使用runtime-Associate方法关联的对象，需要在主对象dealloc的时候释放么？"><a href="#23-使用runtime-Associate方法关联的对象，需要在主对象dealloc的时候释放么？" class="headerlink" title="23. 使用runtime Associate方法关联的对象，需要在主对象dealloc的时候释放么？"></a>23. 使用runtime Associate方法关联的对象，需要在主对象dealloc的时候释放么？</h3><ul>
 <li>在ARC下不需要。</li>
 <li><p><del> 在MRC中,对于使用retain或copy策略的需要 。</del></p>在MRC下也不需要</li>
 </ul>
@@ -780,8 +762,7 @@ NSStringFromClass([super class]) = Son
      * 解除所有 __weak 引用
      * 调用 free()
 </code></pre><p>对象的内存销毁时间表：<a href="http://stackoverflow.com/a/10843510/3395008" target="_blank" rel="external">参考链接</a>。</p>
-<p>###24. objc中的类方法和实例方法有什么本质区别和联系？</p>
-<p>类方法：</p>
+<h3 id="24-objc中的类方法和实例方法有什么本质区别和联系？"><a href="#24-objc中的类方法和实例方法有什么本质区别和联系？" class="headerlink" title="24. objc中的类方法和实例方法有什么本质区别和联系？"></a>24. objc中的类方法和实例方法有什么本质区别和联系？</h3><p>类方法：</p>
 <ol>
 <li>类方法是属于类对象的</li>
 <li>类方法只能通过类对象调用</li>
@@ -800,27 +781,7 @@ NSStringFromClass([super class]) = Son
 <li>实例方法中也可以调用类方法(通过类名)</li>
 </ol>
 <h2 id="下一篇文章将发布在这里，会对以下问题进行总结，并将本篇文章的勘误一并列出，欢迎指正！请持续关注微博-iOS程序犭袁"><a href="#下一篇文章将发布在这里，会对以下问题进行总结，并将本篇文章的勘误一并列出，欢迎指正！请持续关注微博-iOS程序犭袁" class="headerlink" title="下一篇文章将发布在这里，会对以下问题进行总结，并将本篇文章的勘误一并列出，欢迎指正！请持续关注微博@iOS程序犭袁"></a>下一篇文章将发布在<a href="https://github.com/ChenYilong/iOSInterviewQuestions" target="_blank" rel="external">这里</a>，会对以下问题进行总结，并将本篇文章的勘误一并列出，欢迎指正！请持续关注<a href="http://weibo.com/luohanchenyilong/" target="_blank" rel="external">微博@iOS程序犭袁</a></h2><p>@property部分主要参考<br><a href="https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/EncapsulatingData/EncapsulatingData.html#//apple_ref/doc/uid/TP40011210-CH5-SW2" target="_blank" rel="external">Apple官方文档：Properties Encapsulate an Object’s Values</a><br>runtime部分主要参考<a href="https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Articles/ocrtPropertyIntrospection.html" target="_blank" rel="external">Apple官方文档：Declared Properties</a></p>
-<p>###25. <code>_objc_msgForward</code>函数是做什么的，直接调用它将会发生什么？</p>
-<p>###26. runtime如何实现weak变量的自动置nil？</p>
-<p>###27. 能否向编译后得到的类中增加实例变量？能否向运行时创建的类中添加实例变量？为什么？ </p>
-<p>###28. runloop和线程有什么关系？</p>
-<p>###29. runloop的mode作用是什么？</p>
-<p>###30. 以+ scheduledTimerWithTimeInterval…的方式触发的timer，在滑动页面上的列表时，timer会暂定回调，为什么？如何解决？</p>
-<p>###31. 猜想runloop内部是如何实现的？</p>
-<p>###32. objc使用什么机制管理对象内存？</p>
-<p>###33. ARC通过什么方式帮助开发者管理内存？</p>
-<p>###34. 不手动指定autoreleasepool的前提下，一个autorealese对象在什么时刻释放？（比如在一个vc的viewDidLoad中创建）</p>
-<p>###35. <code>BAD_ACCESS</code>在什么情况下出现？</p>
-<p>###36. 苹果是如何实现autoreleasepool的？ </p>
-<p>###37. 使用block时什么情况会发生引用循环，如何解决？</p>
-<p>###38. 在block内如何修改block外部变量？</p>
-<p>###39. 使用系统的某些block api（如UIView的block版本写动画时），是否也考虑引用循环问题？ </p>
-<p>###40. GCD的队列（<code>dispatch_queue_t</code>）分哪两种类型？</p>
-<p>###41. 如何用GCD同步若干个异步调用？（如根据若干个url异步加载多张图片，然后在都下载完成后合成一张整图）</p>
-<p>###42. <code>dispatch_barrier_async</code>的作用是什么？</p>
-<p>###43. 苹果为什么要废弃<code>dispatch_get_current_queue</code>？</p>
-<p>###44. 以下代码运行结果如何？</p>
-<pre><code>- (void)viewDidLoad
+<h3 id="25-objc-msgForward函数是做什么的，直接调用它将会发生什么？"><a href="#25-objc-msgForward函数是做什么的，直接调用它将会发生什么？" class="headerlink" title="25. _objc_msgForward函数是做什么的，直接调用它将会发生什么？"></a>25. <code>_objc_msgForward</code>函数是做什么的，直接调用它将会发生什么？</h3><h3 id="26-runtime如何实现weak变量的自动置nil？"><a href="#26-runtime如何实现weak变量的自动置nil？" class="headerlink" title="26. runtime如何实现weak变量的自动置nil？"></a>26. runtime如何实现weak变量的自动置nil？</h3><h3 id="27-能否向编译后得到的类中增加实例变量？能否向运行时创建的类中添加实例变量？为什么？"><a href="#27-能否向编译后得到的类中增加实例变量？能否向运行时创建的类中添加实例变量？为什么？" class="headerlink" title="27. 能否向编译后得到的类中增加实例变量？能否向运行时创建的类中添加实例变量？为什么？"></a>27. 能否向编译后得到的类中增加实例变量？能否向运行时创建的类中添加实例变量？为什么？</h3><h3 id="28-runloop和线程有什么关系？"><a href="#28-runloop和线程有什么关系？" class="headerlink" title="28. runloop和线程有什么关系？"></a>28. runloop和线程有什么关系？</h3><h3 id="29-runloop的mode作用是什么？"><a href="#29-runloop的mode作用是什么？" class="headerlink" title="29. runloop的mode作用是什么？"></a>29. runloop的mode作用是什么？</h3><h3 id="30-以-scheduledTimerWithTimeInterval…的方式触发的timer，在滑动页面上的列表时，timer会暂定回调，为什么？如何解决？"><a href="#30-以-scheduledTimerWithTimeInterval…的方式触发的timer，在滑动页面上的列表时，timer会暂定回调，为什么？如何解决？" class="headerlink" title="30. 以+ scheduledTimerWithTimeInterval…的方式触发的timer，在滑动页面上的列表时，timer会暂定回调，为什么？如何解决？"></a>30. 以+ scheduledTimerWithTimeInterval…的方式触发的timer，在滑动页面上的列表时，timer会暂定回调，为什么？如何解决？</h3><h3 id="31-猜想runloop内部是如何实现的？"><a href="#31-猜想runloop内部是如何实现的？" class="headerlink" title="31. 猜想runloop内部是如何实现的？"></a>31. 猜想runloop内部是如何实现的？</h3><h3 id="32-objc使用什么机制管理对象内存？"><a href="#32-objc使用什么机制管理对象内存？" class="headerlink" title="32. objc使用什么机制管理对象内存？"></a>32. objc使用什么机制管理对象内存？</h3><h3 id="33-ARC通过什么方式帮助开发者管理内存？"><a href="#33-ARC通过什么方式帮助开发者管理内存？" class="headerlink" title="33. ARC通过什么方式帮助开发者管理内存？"></a>33. ARC通过什么方式帮助开发者管理内存？</h3><h3 id="34-不手动指定autoreleasepool的前提下，一个autorealese对象在什么时刻释放？（比如在一个vc的viewDidLoad中创建）"><a href="#34-不手动指定autoreleasepool的前提下，一个autorealese对象在什么时刻释放？（比如在一个vc的viewDidLoad中创建）" class="headerlink" title="34. 不手动指定autoreleasepool的前提下，一个autorealese对象在什么时刻释放？（比如在一个vc的viewDidLoad中创建）"></a>34. 不手动指定autoreleasepool的前提下，一个autorealese对象在什么时刻释放？（比如在一个vc的viewDidLoad中创建）</h3><h3 id="35-BAD-ACCESS在什么情况下出现？"><a href="#35-BAD-ACCESS在什么情况下出现？" class="headerlink" title="35. BAD_ACCESS在什么情况下出现？"></a>35. <code>BAD_ACCESS</code>在什么情况下出现？</h3><h3 id="36-苹果是如何实现autoreleasepool的？"><a href="#36-苹果是如何实现autoreleasepool的？" class="headerlink" title="36. 苹果是如何实现autoreleasepool的？"></a>36. 苹果是如何实现autoreleasepool的？</h3><h3 id="37-使用block时什么情况会发生引用循环，如何解决？"><a href="#37-使用block时什么情况会发生引用循环，如何解决？" class="headerlink" title="37. 使用block时什么情况会发生引用循环，如何解决？"></a>37. 使用block时什么情况会发生引用循环，如何解决？</h3><h3 id="38-在block内如何修改block外部变量？"><a href="#38-在block内如何修改block外部变量？" class="headerlink" title="38. 在block内如何修改block外部变量？"></a>38. 在block内如何修改block外部变量？</h3><h3 id="39-使用系统的某些block-api（如UIView的block版本写动画时），是否也考虑引用循环问题？"><a href="#39-使用系统的某些block-api（如UIView的block版本写动画时），是否也考虑引用循环问题？" class="headerlink" title="39. 使用系统的某些block api（如UIView的block版本写动画时），是否也考虑引用循环问题？"></a>39. 使用系统的某些block api（如UIView的block版本写动画时），是否也考虑引用循环问题？</h3><h3 id="40-GCD的队列（dispatch-queue-t）分哪两种类型？"><a href="#40-GCD的队列（dispatch-queue-t）分哪两种类型？" class="headerlink" title="40. GCD的队列（dispatch_queue_t）分哪两种类型？"></a>40. GCD的队列（<code>dispatch_queue_t</code>）分哪两种类型？</h3><h3 id="41-如何用GCD同步若干个异步调用？（如根据若干个url异步加载多张图片，然后在都下载完成后合成一张整图）"><a href="#41-如何用GCD同步若干个异步调用？（如根据若干个url异步加载多张图片，然后在都下载完成后合成一张整图）" class="headerlink" title="41. 如何用GCD同步若干个异步调用？（如根据若干个url异步加载多张图片，然后在都下载完成后合成一张整图）"></a>41. 如何用GCD同步若干个异步调用？（如根据若干个url异步加载多张图片，然后在都下载完成后合成一张整图）</h3><h3 id="42-dispatch-barrier-async的作用是什么？"><a href="#42-dispatch-barrier-async的作用是什么？" class="headerlink" title="42. dispatch_barrier_async的作用是什么？"></a>42. <code>dispatch_barrier_async</code>的作用是什么？</h3><h3 id="43-苹果为什么要废弃dispatch-get-current-queue？"><a href="#43-苹果为什么要废弃dispatch-get-current-queue？" class="headerlink" title="43. 苹果为什么要废弃dispatch_get_current_queue？"></a>43. 苹果为什么要废弃<code>dispatch_get_current_queue</code>？</h3><h3 id="44-以下代码运行结果如何？"><a href="#44-以下代码运行结果如何？" class="headerlink" title="44. 以下代码运行结果如何？"></a>44. 以下代码运行结果如何？</h3><pre><code>- (void)viewDidLoad
 {
     [super viewDidLoad];
     NSLog(@&quot;1&quot;);
@@ -829,18 +790,7 @@ NSStringFromClass([super class]) = Son
     });
     NSLog(@&quot;3&quot;);
 }
-</code></pre><p>###45. addObserver:forKeyPath:options:context:各个参数的作用分别是什么，observer中需要实现哪个方法才能获得KVO回调？</p>
-<p>###46. 如何手动触发一个value的KVO</p>
-<p>###47. 若一个类有实例变量<code>NSString *_foo</code>，调用setValue:forKey:时，可以以foo还是<code>_foo</code>作为key？</p>
-<p>###48. KVC的keyPath中的集合运算符如何使用？</p>
-<p>###49. KVC和KVO的keyPath一定是属性么？</p>
-<p>###50. 如何关闭默认的KVO的默认实现，并进入自定义的KVO实现？</p>
-<p>###51. apple用什么方式实现对一个对象的KVO？ </p>
-<p>###52. IBOutlet连出来的视图属性为什么可以被设置成weak?</p>
-<p>###53. IB中User Defined Runtime Attributes如何使用？ </p>
-<p>###54. 如何调试<code>BAD_ACCESS</code>错误</p>
-<p>###55. lldb（gdb）常用的调试命令？</p>
-<hr>
+</code></pre><h3 id="45-addObserver-forKeyPath-options-context-各个参数的作用分别是什么，observer中需要实现哪个方法才能获得KVO回调？"><a href="#45-addObserver-forKeyPath-options-context-各个参数的作用分别是什么，observer中需要实现哪个方法才能获得KVO回调？" class="headerlink" title="45. addObserver:forKeyPath:options:context:各个参数的作用分别是什么，observer中需要实现哪个方法才能获得KVO回调？"></a>45. addObserver:forKeyPath:options:context:各个参数的作用分别是什么，observer中需要实现哪个方法才能获得KVO回调？</h3><h3 id="46-如何手动触发一个value的KVO"><a href="#46-如何手动触发一个value的KVO" class="headerlink" title="46. 如何手动触发一个value的KVO"></a>46. 如何手动触发一个value的KVO</h3><h3 id="47-若一个类有实例变量NSString-foo，调用setValue-forKey-时，可以以foo还是-foo作为key？"><a href="#47-若一个类有实例变量NSString-foo，调用setValue-forKey-时，可以以foo还是-foo作为key？" class="headerlink" title="47. 若一个类有实例变量NSString *_foo，调用setValue:forKey:时，可以以foo还是_foo作为key？"></a>47. 若一个类有实例变量<code>NSString *_foo</code>，调用setValue:forKey:时，可以以foo还是<code>_foo</code>作为key？</h3><h3 id="48-KVC的keyPath中的集合运算符如何使用？"><a href="#48-KVC的keyPath中的集合运算符如何使用？" class="headerlink" title="48. KVC的keyPath中的集合运算符如何使用？"></a>48. KVC的keyPath中的集合运算符如何使用？</h3><h3 id="49-KVC和KVO的keyPath一定是属性么？"><a href="#49-KVC和KVO的keyPath一定是属性么？" class="headerlink" title="49. KVC和KVO的keyPath一定是属性么？"></a>49. KVC和KVO的keyPath一定是属性么？</h3><h3 id="50-如何关闭默认的KVO的默认实现，并进入自定义的KVO实现？"><a href="#50-如何关闭默认的KVO的默认实现，并进入自定义的KVO实现？" class="headerlink" title="50. 如何关闭默认的KVO的默认实现，并进入自定义的KVO实现？"></a>50. 如何关闭默认的KVO的默认实现，并进入自定义的KVO实现？</h3><h3 id="51-apple用什么方式实现对一个对象的KVO？"><a href="#51-apple用什么方式实现对一个对象的KVO？" class="headerlink" title="51. apple用什么方式实现对一个对象的KVO？"></a>51. apple用什么方式实现对一个对象的KVO？</h3><h3 id="52-IBOutlet连出来的视图属性为什么可以被设置成weak"><a href="#52-IBOutlet连出来的视图属性为什么可以被设置成weak" class="headerlink" title="52. IBOutlet连出来的视图属性为什么可以被设置成weak?"></a>52. IBOutlet连出来的视图属性为什么可以被设置成weak?</h3><h3 id="53-IB中User-Defined-Runtime-Attributes如何使用？"><a href="#53-IB中User-Defined-Runtime-Attributes如何使用？" class="headerlink" title="53. IB中User Defined Runtime Attributes如何使用？"></a>53. IB中User Defined Runtime Attributes如何使用？</h3><h3 id="54-如何调试BAD-ACCESS错误"><a href="#54-如何调试BAD-ACCESS错误" class="headerlink" title="54. 如何调试BAD_ACCESS错误"></a>54. 如何调试<code>BAD_ACCESS</code>错误</h3><h3 id="55-lldb（gdb）常用的调试命令？"><a href="#55-lldb（gdb）常用的调试命令？" class="headerlink" title="55. lldb（gdb）常用的调试命令？"></a>55. lldb（gdb）常用的调试命令？</h3><hr>
 <p>Posted by <a href="http://weibo.com/luohanchenyilong/" target="_blank" rel="external">微博@iOS程序犭袁</a><br>原创文章，版权声明：自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh" target="_blank" rel="external">Creative Commons BY-NC-ND 3.0</a></p>
 
       

@@ -31,7 +31,7 @@
 <meta property="og:image" content="http://i66.tinypic.com/ncm7th.jpg">
 <meta property="og:image" content="http://i.stack.imgur.com/ZAdi0.png">
 <meta property="og:image" content="https://developer.apple.com/library/prerelease/ios/documentation/DeveloperTools/Conceptual/WhatsNewXcode/Art/xc7-asan_2x.png">
-<meta property="og:updated_time" content="2016-08-17T03:45:33.000Z">
+<meta property="og:updated_time" content="2016-08-17T04:12:11.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《招聘一个靠谱的 iOS》—参考答案（下）">
 <meta name="twitter:description" content="《招聘一个靠谱的 iOS》—参考答案（下）
@@ -155,8 +155,7 @@
 <li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#55-lldbgdb常用的调试命令" target="_blank" rel="external">55. lldb（gdb）常用的调试命令？</a> </li>
 </ol>
 <hr>
-<p>###25. <code>_objc_msgForward</code>函数是做什么的，直接调用它将会发生什么？</p>
-<blockquote>
+<h3 id="25-objc-msgForward函数是做什么的，直接调用它将会发生什么？"><a href="#25-objc-msgForward函数是做什么的，直接调用它将会发生什么？" class="headerlink" title="25. _objc_msgForward函数是做什么的，直接调用它将会发生什么？"></a>25. <code>_objc_msgForward</code>函数是做什么的，直接调用它将会发生什么？</h3><blockquote>
 <p><code>_objc_msgForward</code>是 IMP 类型，用于消息转发的：当向一个对象发送一条消息，但它并没有实现的时候，<code>_objc_msgForward</code>会尝试做消息转发。</p>
 </blockquote>
 <p>我们可以这样创建一个<code>_objc_msgForward</code>对象：</p>
@@ -272,8 +271,7 @@
 </blockquote>
 <p>作者的博文<a href="http://blog.cnbang.net/tech/2808/" target="_blank" rel="external">《JSPatch实现原理详解》</a>详细记录了实现原理，有兴趣可以看下。</p>
 <p>同时 <a href="https://github.com/ReactiveCocoa/ReactiveCocoa" target="_blank" rel="external"> <strong><em>RAC(ReactiveCocoa)</em></strong> </a> 源码中也用到了该方法。</p>
-<p>###26. runtime如何实现weak变量的自动置nil？</p>
-<blockquote>
+<h3 id="26-runtime如何实现weak变量的自动置nil？"><a href="#26-runtime如何实现weak变量的自动置nil？" class="headerlink" title="26. runtime如何实现weak变量的自动置nil？"></a>26. runtime如何实现weak变量的自动置nil？</h3><blockquote>
 <p>runtime 对注册的类， 会进行布局，对于 weak 对象会放入一个 hash 表中。 用 weak 指向的对象内存地址作为 key，当此对象的引用计数为0的时候会 dealloc，假如 weak 指向的对象内存地址是a，那么就会以a为键， 在这个 weak 表中搜索，找到所有以a为键的 weak 对象，从而设置为 nil。</p>
 </blockquote>
 <p>在<a href="https://github.com/ChenYilong/iOSInterviewQuestions" target="_blank" rel="external">上篇</a>中的《runtime 如何实现 weak 属性》有论述。（注：在<a href="https://github.com/ChenYilong/iOSInterviewQuestions" target="_blank" rel="external">上篇</a>的《使用runtime Associate方法关联的对象，需要在主对象dealloc的时候释放么？》里给出的“对象的内存销毁时间表”也提到<code>__weak</code>引用的解除时间。）</p>
@@ -299,8 +297,7 @@
 <p>前面的源代码与下列源代码相同。</p>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 使用伪代码模拟：runtime如何实现weak属性</span></div><div class="line"><span class="comment">// http://weibo.com/luohanchenyilong/</span></div><div class="line"><span class="comment">// https://github.com/ChenYilong</span></div><div class="line"></div><div class="line"><span class="keyword">id</span> obj1;</div><div class="line">obj1 = <span class="number">0</span>;</div><div class="line">objc_storeWeak(&amp;obj1, obj);</div><div class="line"><span class="comment">/* ... obj的引用计数变为0，被置nil ... */</span></div><div class="line">objc_storeWeak(&amp;obj1, <span class="number">0</span>);</div></pre></td></tr></table></figure>
 <p><code>objc_storeWeak</code>函数把第二个参数–赋值对象（obj）的内存地址作为键值，将第一个参数–weak修饰的属性变量（obj1）的内存地址注册到 weak 表中。如果第二个参数（obj）为0（nil），那么把变量（obj1）的地址从weak表中删除。</p>
-<p>###27. 能否向编译后得到的类中增加实例变量？能否向运行时创建的类中添加实例变量？为什么？ </p>
-<ul>
+<h3 id="27-能否向编译后得到的类中增加实例变量？能否向运行时创建的类中添加实例变量？为什么？"><a href="#27-能否向编译后得到的类中增加实例变量？能否向运行时创建的类中添加实例变量？为什么？" class="headerlink" title="27. 能否向编译后得到的类中增加实例变量？能否向运行时创建的类中添加实例变量？为什么？"></a>27. 能否向编译后得到的类中增加实例变量？能否向运行时创建的类中添加实例变量？为什么？</h3><ul>
 <li>不能向编译后得到的类中增加实例变量；</li>
 <li>能向运行时创建的类中添加实例变量；</li>
 </ul>
@@ -311,8 +308,7 @@
 <li><p>运行时创建的类是可以添加实例变量，调用 <code>class_addIvar</code> 函数。但是得在调用 <code>objc_allocateClassPair</code> 之后，<code>objc_registerClassPair</code> 之前，原因同上。</p>
 </li>
 </ul>
-<p>###28. runloop和线程有什么关系？</p>
-<p>总的说来，Run loop，正如其名，loop表示某种循环，和run放在一起就表示一直在运行着的循环。实际上，run loop和线程是紧密相连的，可以这样说run loop是为了线程而生，没有线程，它就没有存在的必要。Run loops是线程的基础架构部分， Cocoa 和 CoreFundation 都提供了 run loop 对象方便配置和管理线程的 run loop （以下都以 Cocoa 为例）。每个线程，包括程序的主线程（ main thread ）都有与之相应的 run loop 对象。</p>
+<h3 id="28-runloop和线程有什么关系？"><a href="#28-runloop和线程有什么关系？" class="headerlink" title="28. runloop和线程有什么关系？"></a>28. runloop和线程有什么关系？</h3><p>总的说来，Run loop，正如其名，loop表示某种循环，和run放在一起就表示一直在运行着的循环。实际上，run loop和线程是紧密相连的，可以这样说run loop是为了线程而生，没有线程，它就没有存在的必要。Run loops是线程的基础架构部分， Cocoa 和 CoreFundation 都提供了 run loop 对象方便配置和管理线程的 run loop （以下都以 Cocoa 为例）。每个线程，包括程序的主线程（ main thread ）都有与之相应的 run loop 对象。</p>
 <p> runloop 和线程的关系：</p>
 <ol>
 <li><p>主线程的run loop默认是启动的。</p>
@@ -329,8 +325,7 @@
 </ol>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">NSRunLoop</span> *runloop = [<span class="built_in">NSRunLoop</span> currentRunLoop];</div></pre></td></tr></table></figure>
 <p>参考链接：<a href="http://blog.csdn.net/wzzvictory/article/details/9237973" target="_blank" rel="external">《objc之run loop详解》</a>。</p>
-<p>###29. runloop的mode作用是什么？</p>
-<p>model 主要是用来指定事件在运行循环中的优先级的，分为：</p>
+<h3 id="29-runloop的mode作用是什么？"><a href="#29-runloop的mode作用是什么？" class="headerlink" title="29. runloop的mode作用是什么？"></a>29. runloop的mode作用是什么？</h3><p>model 主要是用来指定事件在运行循环中的优先级的，分为：</p>
 <ul>
 <li>NSDefaultRunLoopMode（kCFRunLoopDefaultMode）：默认，空闲状态</li>
 <li>UITrackingRunLoopMode：ScrollView滑动时</li>
@@ -342,14 +337,12 @@
 <li>NSDefaultRunLoopMode（kCFRunLoopDefaultMode）</li>
 <li>NSRunLoopCommonModes（kCFRunLoopCommonModes）</li>
 </ol>
-<p>###30. 以+ scheduledTimerWithTimeInterval…的方式触发的timer，在滑动页面上的列表时，timer会暂定回调，为什么？如何解决？</p>
-<p>RunLoop只能运行在一种mode下，如果要换mode，当前的loop也需要停下重启成新的。利用这个机制，ScrollView滚动过程中NSDefaultRunLoopMode（kCFRunLoopDefaultMode）的mode会切换到UITrackingRunLoopMode来保证ScrollView的流畅滑动：只能在NSDefaultRunLoopMode模式下处理的事件会影响ScrollView的滑动。</p>
+<h3 id="30-以-scheduledTimerWithTimeInterval…的方式触发的timer，在滑动页面上的列表时，timer会暂定回调，为什么？如何解决？"><a href="#30-以-scheduledTimerWithTimeInterval…的方式触发的timer，在滑动页面上的列表时，timer会暂定回调，为什么？如何解决？" class="headerlink" title="30. 以+ scheduledTimerWithTimeInterval…的方式触发的timer，在滑动页面上的列表时，timer会暂定回调，为什么？如何解决？"></a>30. 以+ scheduledTimerWithTimeInterval…的方式触发的timer，在滑动页面上的列表时，timer会暂定回调，为什么？如何解决？</h3><p>RunLoop只能运行在一种mode下，如果要换mode，当前的loop也需要停下重启成新的。利用这个机制，ScrollView滚动过程中NSDefaultRunLoopMode（kCFRunLoopDefaultMode）的mode会切换到UITrackingRunLoopMode来保证ScrollView的流畅滑动：只能在NSDefaultRunLoopMode模式下处理的事件会影响ScrollView的滑动。</p>
 <p>如果我们把一个NSTimer对象以NSDefaultRunLoopMode（kCFRunLoopDefaultMode）添加到主运行循环中的时候,<br>ScrollView滚动过程中会因为mode的切换，而导致NSTimer将不再被调度。</p>
 <p>同时因为mode还是可定制的，所以：</p>
 <p> Timer计时会被scrollView的滑动影响的问题可以通过将timer添加到NSRunLoopCommonModes（kCFRunLoopCommonModes）来解决。代码如下：</p>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// </span></div><div class="line"><span class="comment">// http://weibo.com/luohanchenyilong/ (微博@iOS程序犭袁)</span></div><div class="line"><span class="comment">// https://github.com/ChenYilong</span></div><div class="line"></div><div class="line"><span class="comment">//将timer添加到NSDefaultRunLoopMode中</span></div><div class="line">[<span class="built_in">NSTimer</span> scheduledTimerWithTimeInterval:<span class="number">1.0</span></div><div class="line">     target:<span class="keyword">self</span></div><div class="line">     selector:<span class="keyword">@selector</span>(timerTick:)</div><div class="line">     userInfo:<span class="literal">nil</span></div><div class="line">     repeats:<span class="literal">YES</span>];</div><div class="line"><span class="comment">//然后再添加到NSRunLoopCommonModes里</span></div><div class="line"><span class="built_in">NSTimer</span> *timer = [<span class="built_in">NSTimer</span> timerWithTimeInterval:<span class="number">1.0</span></div><div class="line">     target:<span class="keyword">self</span></div><div class="line">     selector:<span class="keyword">@selector</span>(timerTick:)</div><div class="line">     userInfo:<span class="literal">nil</span></div><div class="line">     repeats:<span class="literal">YES</span>];</div><div class="line">[[<span class="built_in">NSRunLoop</span> currentRunLoop] addTimer:timer forMode:<span class="built_in">NSRunLoopCommonModes</span>];</div></pre></td></tr></table></figure>
-<p>###31. 猜想runloop内部是如何实现的？</p>
-<blockquote>
+<h3 id="31-猜想runloop内部是如何实现的？"><a href="#31-猜想runloop内部是如何实现的？" class="headerlink" title="31. 猜想runloop内部是如何实现的？"></a>31. 猜想runloop内部是如何实现的？</h3><blockquote>
 <p>一般来讲，一个线程一次只能执行一个任务，执行完成后线程就会退出。如果我们需要一个机制，让线程能随时处理事件但并不退出，通常的代码逻辑<br>是这样的：</p>
 </blockquote>
 <pre><code>function loop() {
@@ -380,11 +373,10 @@ int main(int argc, char * argv[]) {
 <li><a href="http://blog.ibireme.com/2015/05/18/runloop/#base" target="_blank" rel="external">《深入理解RunLoop》</a></li>
 <li>摘自博文<a href="https://github.com/ming1016/study/wiki/CFRunLoop" target="_blank" rel="external"><strong><em>CFRunLoop</em></strong></a>，原作者是<a href="http://weibo.com/u/1364395395" target="_blank" rel="external">微博@我就叫Sunny怎么了</a></li>
 </ol>
-<p>###32. objc使用什么机制管理对象内存？</p>
-<p>通过 retainCount 的机制来决定对象是否需要释放。<br>每次 runloop 的时候，都会检查对象的 retainCount，如果retainCount 为 0，说明该对象没有地方需要继续使用了，可以释放掉了。</p>
-<p>###33. ARC通过什么方式帮助开发者管理内存？<br> </p><p><del>编译时根据代码上下文，插入 retain/release<br></del></p><br>ARC相对于MRC，不是在编译时添加retain/release/autorelease这么简单。应该是编译期和运行期两部分共同帮助开发者管理内存。<p></p>
+<h3 id="32-objc使用什么机制管理对象内存？"><a href="#32-objc使用什么机制管理对象内存？" class="headerlink" title="32. objc使用什么机制管理对象内存？"></a>32. objc使用什么机制管理对象内存？</h3><p>通过 retainCount 的机制来决定对象是否需要释放。<br>每次 runloop 的时候，都会检查对象的 retainCount，如果retainCount 为 0，说明该对象没有地方需要继续使用了，可以释放掉了。</p>
+<h3 id="33-ARC通过什么方式帮助开发者管理内存？"><a href="#33-ARC通过什么方式帮助开发者管理内存？" class="headerlink" title="33. ARC通过什么方式帮助开发者管理内存？"></a>33. ARC通过什么方式帮助开发者管理内存？</h3><p> </p><p><del>编译时根据代码上下文，插入 retain/release<br></del></p><br>ARC相对于MRC，不是在编译时添加retain/release/autorelease这么简单。应该是编译期和运行期两部分共同帮助开发者管理内存。<p></p>
 <p>在编译期，ARC用的是更底层的C接口实现的retain/release/autorelease，这样做性能更好，也是为什么不能在ARC环境下手动retain/release/autorelease，同时对同一上下文的同一对象的成对retain/release操作进行优化（即忽略掉不必要的操作）；ARC也包含运行期组件，这个地方做的优化比较复杂，但也不能被忽略。【TODO:后续更新会详细描述下】</p>
-<p>###34. 不手动指定autoreleasepool的前提下，一个autorealese对象在什么时刻释放？（比如在一个vc的viewDidLoad中创建）<br>分两种情况：手动干预释放时机、系统自动去释放。</p>
+<h3 id="34-不手动指定autoreleasepool的前提下，一个autorealese对象在什么时刻释放？（比如在一个vc的viewDidLoad中创建）"><a href="#34-不手动指定autoreleasepool的前提下，一个autorealese对象在什么时刻释放？（比如在一个vc的viewDidLoad中创建）" class="headerlink" title="34. 不手动指定autoreleasepool的前提下，一个autorealese对象在什么时刻释放？（比如在一个vc的viewDidLoad中创建）"></a>34. 不手动指定autoreleasepool的前提下，一个autorealese对象在什么时刻释放？（比如在一个vc的viewDidLoad中创建）</h3><p>分两种情况：手动干预释放时机、系统自动去释放。</p>
 <ol>
 <li>手动干预释放时机–指定autoreleasepool<br> 就是所谓的：当前作用域大括号结束时释放。</li>
 <li><p>系统自动去释放–不手动指定autoreleasepool</p>
@@ -405,9 +397,8 @@ int main(int argc, char * argv[]) {
 <p>@autoreleasepool 当自动释放池被销毁或者耗尽时，会向自动释放池中的所有对象发送 release 消息，释放自动释放池中的所有对象。</p>
 <p> 如果在一个vc的viewDidLoad中创建一个 Autorelease对象，那么该对象会在 viewDidAppear 方法执行前就被销毁了。</p>
 <p>参考链接：<a href="http://blog.sunnyxx.com/2014/10/15/behind-autorelease/" target="_blank" rel="external">《黑幕背后的Autorelease》</a></p>
-<p>###35. BAD_ACCESS在什么情况下出现？<br>访问了野指针，比如对一个已经释放的对象执行了release、访问已经释放对象的成员变量或者发消息。<br>死循环</p>
-<p>###36. 苹果是如何实现autoreleasepool的？ </p>
-<p>autoreleasepool 以一个队列数组的形式实现,主要通过下列三个函数完成.</p>
+<h3 id="35-BAD-ACCESS在什么情况下出现？"><a href="#35-BAD-ACCESS在什么情况下出现？" class="headerlink" title="35. BAD_ACCESS在什么情况下出现？"></a>35. BAD_ACCESS在什么情况下出现？</h3><p>访问了野指针，比如对一个已经释放的对象执行了release、访问已经释放对象的成员变量或者发消息。<br>死循环</p>
+<h3 id="36-苹果是如何实现autoreleasepool的？"><a href="#36-苹果是如何实现autoreleasepool的？" class="headerlink" title="36. 苹果是如何实现autoreleasepool的？"></a>36. 苹果是如何实现autoreleasepool的？</h3><p>autoreleasepool 以一个队列数组的形式实现,主要通过下列三个函数完成.</p>
 <ol>
 <li><code>objc_autoreleasepoolPush</code></li>
 <li><code>objc_autoreleasepoolPop</code></li>
@@ -416,7 +407,7 @@ int main(int argc, char * argv[]) {
 <p>看函数名就可以知道，对 autorelease 分别执行 push，和 pop 操作。销毁对象时执行release操作。</p>
 <p>举例说明：我们都知道用类方法创建的对象都是 Autorelease 的，那么一旦 Person 出了作用域，当在 Person 的 dealloc 方法中打上断点，我们就可以看到这样的调用堆栈信息：</p>
 <p> <img src="http://i60.tinypic.com/15mfj11.jpg" alt="enter image description here"></p>
-<p>###37. 使用block时什么情况会发生引用循环，如何解决？<br>一个对象中强引用了block，在block中又强引用了该对象，就会发射循环引用。</p>
+<h3 id="37-使用block时什么情况会发生引用循环，如何解决？"><a href="#37-使用block时什么情况会发生引用循环，如何解决？" class="headerlink" title="37. 使用block时什么情况会发生引用循环，如何解决？"></a>37. 使用block时什么情况会发生引用循环，如何解决？</h3><p>一个对象中强引用了block，在block中又强引用了该对象，就会发射循环引用。</p>
 <p>解决方法是将该对象使用<strong>weak或者</strong>block修饰符修饰之后再在block中使用。</p>
 <ol>
 <li>id weak weakSelf = self;<br>或者 weak __typeof(&amp;*self)weakSelf = self该方法可以设置宏</li>
@@ -424,7 +415,7 @@ int main(int argc, char * argv[]) {
 </ol>
 <p>或者将其中一方强制制空 <code>xxx = nil</code>。</p>
 <p>检测代码中是否存在循环引用问题，可使用 Facebook 开源的一个检测工具  <a href="https://github.com/facebook/FBRetainCycleDetector" target="_blank" rel="external"><strong><em>FBRetainCycleDetector</em></strong></a> 。</p>
-<p>###38. 在block内如何修改block外部变量？<br>默认情况下，在block中访问的外部变量是复制过去的，即：<strong>写操作不对原变量生效</strong>。但是你可以加上 <code>__block</code> 来让其写操作生效，示例代码如下:</p>
+<h3 id="38-在block内如何修改block外部变量？"><a href="#38-在block内如何修改block外部变量？" class="headerlink" title="38. 在block内如何修改block外部变量？"></a>38. 在block内如何修改block外部变量？</h3><p>默认情况下，在block中访问的外部变量是复制过去的，即：<strong>写操作不对原变量生效</strong>。但是你可以加上 <code>__block</code> 来让其写操作生效，示例代码如下:</p>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">__block <span class="keyword">int</span> a = <span class="number">0</span>;</div><div class="line"><span class="keyword">void</span> (^foo)(<span class="keyword">void</span>) = ^&#123; </div><div class="line">    a = <span class="number">1</span>; </div><div class="line">&#125;;</div><div class="line">foo(); </div><div class="line"><span class="comment">//这里，a的值被修改为1</span></div></pre></td></tr></table></figure>
 <p>这是 <a href="http://weibo.com/tangqiaoboy" target="_blank" rel="external">微博@唐巧_boy</a>的《iOS开发进阶》中的第11.2.3章节中的描述。你同样可以在面试中这样回答，但你并没有答到“点子上”。真正的原因，并没有书这本书里写的这么“神奇”，而且这种说法也有点牵强。面试官肯定会追问“为什么写操作就生效了？”真正的原因是这样的：</p>
 <blockquote>
@@ -451,8 +442,7 @@ int main(int argc, char * argv[]) {
 <p> 这里的a已经由基本数据类型，变成了对象类型。block会对对象类型的指针进行copy，copy到堆中，但并不会改变该指针所指向的堆中的地址，所以在上面的示例代码中，block体内修改的实际是a指向的堆中的内容。</p>
 <p> 但如果我们尝试像上面图片中的65行那样做，结果会编译不通过，那是因为此时你在修改的就不是堆中的内容，而是栈中的内容。</p>
 <p>上文已经说过：<strong>Block不允许修改外部变量的值</strong>，这里所说的外部变量的值，指的是栈中指针的内存地址。栈区是红灯区，堆区才是绿灯区。</p>
-<p>###39. 使用系统的某些block api（如UIView的block版本写动画时），是否也考虑引用循环问题？ </p>
-<p>系统的某些block api中，UIView的block版本写动画时不需要考虑，但也有一些api 需要考虑：</p>
+<h3 id="39-使用系统的某些block-api（如UIView的block版本写动画时），是否也考虑引用循环问题？"><a href="#39-使用系统的某些block-api（如UIView的block版本写动画时），是否也考虑引用循环问题？" class="headerlink" title="39. 使用系统的某些block api（如UIView的block版本写动画时），是否也考虑引用循环问题？"></a>39. 使用系统的某些block api（如UIView的block版本写动画时），是否也考虑引用循环问题？</h3><p>系统的某些block api中，UIView的block版本写动画时不需要考虑，但也有一些api 需要考虑：</p>
 <p>所谓“引用循环”是指双向的强引用，所以那些“单向的强引用”（block 强引用 self ）没有问题，比如这些：</p>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[<span class="built_in">UIView</span> animateWithDuration:duration animations:^&#123; [<span class="keyword">self</span>.superview layoutIfNeeded]; &#125;];</div></pre></td></tr></table></figure>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[[<span class="built_in">NSOperationQueue</span> mainQueue] addOperationWithBlock:^&#123; <span class="keyword">self</span>.someProperty = xyz; &#125;];</div></pre></td></tr></table></figure>
@@ -464,21 +454,17 @@ int main(int argc, char * argv[]) {
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">__<span class="keyword">weak</span> __typeof__(<span class="keyword">self</span>) weakSelf = <span class="keyword">self</span>;</div><div class="line">_observer = [[<span class="built_in">NSNotificationCenter</span> defaultCenter] addObserverForName:<span class="string">@"testKey"</span></div><div class="line">                                                              object:<span class="literal">nil</span></div><div class="line">                                                               queue:<span class="literal">nil</span></div><div class="line">                                                          usingBlock:^(<span class="built_in">NSNotification</span> *note) &#123;</div><div class="line">    __typeof__(<span class="keyword">self</span>) strongSelf = weakSelf;</div><div class="line">    [strongSelf dismissModalViewControllerAnimated:<span class="literal">YES</span>];</div><div class="line">&#125;];</div></pre></td></tr></table></figure>
 <p>self –&gt; _observer –&gt; block –&gt; self 显然这也是一个循环引用。</p>
 <p>检测代码中是否存在循环引用问题，可使用 Facebook 开源的一个检测工具  <a href="https://github.com/facebook/FBRetainCycleDetector" target="_blank" rel="external"><strong><em>FBRetainCycleDetector</em></strong></a> 。</p>
-<p>###40. GCD的队列（<code>dispatch_queue_t</code>）分哪两种类型？</p>
-<ol>
+<h3 id="40-GCD的队列（dispatch-queue-t）分哪两种类型？"><a href="#40-GCD的队列（dispatch-queue-t）分哪两种类型？" class="headerlink" title="40. GCD的队列（dispatch_queue_t）分哪两种类型？"></a>40. GCD的队列（<code>dispatch_queue_t</code>）分哪两种类型？</h3><ol>
 <li>串行队列Serial Dispatch Queue</li>
 <li>并行队列Concurrent Dispatch Queue</li>
 </ol>
-<p>###41. 如何用GCD同步若干个异步调用？（如根据若干个url异步加载多张图片，然后在都下载完成后合成一张整图）</p>
-<p>使用Dispatch Group追加block到Global Group Queue,这些block如果全部执行完毕，就会执行Main Dispatch Queue中的结束处理的block。</p>
+<h3 id="41-如何用GCD同步若干个异步调用？（如根据若干个url异步加载多张图片，然后在都下载完成后合成一张整图）"><a href="#41-如何用GCD同步若干个异步调用？（如根据若干个url异步加载多张图片，然后在都下载完成后合成一张整图）" class="headerlink" title="41. 如何用GCD同步若干个异步调用？（如根据若干个url异步加载多张图片，然后在都下载完成后合成一张整图）"></a>41. 如何用GCD同步若干个异步调用？（如根据若干个url异步加载多张图片，然后在都下载完成后合成一张整图）</h3><p>使用Dispatch Group追加block到Global Group Queue,这些block如果全部执行完毕，就会执行Main Dispatch Queue中的结束处理的block。</p>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">dispatch_queue_t</span> queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, <span class="number">0</span>);</div><div class="line">dispatch_group_t group = dispatch_group_create();</div><div class="line">dispatch_group_async(group, queue, ^&#123; <span class="comment">/*加载图片1 */</span> &#125;);</div><div class="line">dispatch_group_async(group, queue, ^&#123; <span class="comment">/*加载图片2 */</span> &#125;);</div><div class="line">dispatch_group_async(group, queue, ^&#123; <span class="comment">/*加载图片3 */</span> &#125;); </div><div class="line">dispatch_group_notify(group, dispatch_get_main_queue(), ^&#123;</div><div class="line">        <span class="comment">// 合并图片</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<p>###42. <code>dispatch_barrier_async</code>的作用是什么？<br> 在并行队列中，为了保持某些任务的顺序，需要等待一些任务完成后才能继续进行，使用 barrier 来等待之前任务完成，避免数据竞争等问题。<br> <code>dispatch_barrier_async</code> 函数会等待追加到Concurrent Dispatch Queue并行队列中的操作全部执行完之后，然后再执行 <code>dispatch_barrier_async</code> 函数追加的处理，等 <code>dispatch_barrier_async</code> 追加的处理执行结束之后，Concurrent Dispatch Queue才恢复之前的动作继续执行。</p>
+<h3 id="42-dispatch-barrier-async的作用是什么？"><a href="#42-dispatch-barrier-async的作用是什么？" class="headerlink" title="42. dispatch_barrier_async的作用是什么？"></a>42. <code>dispatch_barrier_async</code>的作用是什么？</h3><p> 在并行队列中，为了保持某些任务的顺序，需要等待一些任务完成后才能继续进行，使用 barrier 来等待之前任务完成，避免数据竞争等问题。<br> <code>dispatch_barrier_async</code> 函数会等待追加到Concurrent Dispatch Queue并行队列中的操作全部执行完之后，然后再执行 <code>dispatch_barrier_async</code> 函数追加的处理，等 <code>dispatch_barrier_async</code> 追加的处理执行结束之后，Concurrent Dispatch Queue才恢复之前的动作继续执行。</p>
 <p>打个比方：比如你们公司周末跟团旅游，高速休息站上，司机说：大家都去上厕所，速战速决，上完厕所就上高速。超大的公共厕所，大家同时去，程序猿很快就结束了，但程序媛就可能会慢一些，即使你第一个回来，司机也不会出发，司机要等待所有人都回来后，才能出发。 <code>dispatch_barrier_async</code> 函数追加的内容就如同 “上完厕所就上高速”这个动作。</p>
 <p>（注意：使用 <code>dispatch_barrier_async</code> ，该函数只能搭配自定义并行队列 <code>dispatch_queue_t</code> 使用。不能使用： <code>dispatch_get_global_queue</code> ，否则 <code>dispatch_barrier_async</code> 的作用会和 <code>dispatch_async</code> 的作用一模一样。 ）</p>
-<p>###43. 苹果为什么要废弃<code>dispatch_get_current_queue</code>？</p>
-<p><code>dispatch_get_current_queue</code>容易造成死锁</p>
-<p>###44. 以下代码运行结果如何？</p>
-<pre><code>- (void)viewDidLoad
+<h3 id="43-苹果为什么要废弃dispatch-get-current-queue？"><a href="#43-苹果为什么要废弃dispatch-get-current-queue？" class="headerlink" title="43. 苹果为什么要废弃dispatch_get_current_queue？"></a>43. 苹果为什么要废弃<code>dispatch_get_current_queue</code>？</h3><p><code>dispatch_get_current_queue</code>容易造成死锁</p>
+<h3 id="44-以下代码运行结果如何？"><a href="#44-以下代码运行结果如何？" class="headerlink" title="44. 以下代码运行结果如何？"></a>44. 以下代码运行结果如何？</h3><pre><code>- (void)viewDidLoad
 {
     [super viewDidLoad];
     NSLog(@&quot;1&quot;);
@@ -488,12 +474,10 @@ int main(int argc, char * argv[]) {
     NSLog(@&quot;3&quot;);
 }
 </code></pre><p>只输出：1 。发生主线程锁死。</p>
-<p>###45. addObserver:forKeyPath:options:context:各个参数的作用分别是什么，observer中需要实现哪个方法才能获得KVO回调？</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 添加键值观察</span></div><div class="line"><span class="comment">/*</span></div><div class="line">1 观察者，负责处理监听事件的对象</div><div class="line">2 观察的属性</div><div class="line">3 观察的选项</div><div class="line">4 上下文</div><div class="line">*/</div><div class="line">[<span class="keyword">self</span>.person addObserver:<span class="keyword">self</span> forKeyPath:<span class="string">@"name"</span> options:<span class="built_in">NSKeyValueObservingOptionNew</span> | <span class="built_in">NSKeyValueObservingOptionOld</span> context:<span class="string">@"Person Name"</span>];</div></pre></td></tr></table></figure>
+<h3 id="45-addObserver-forKeyPath-options-context-各个参数的作用分别是什么，observer中需要实现哪个方法才能获得KVO回调？"><a href="#45-addObserver-forKeyPath-options-context-各个参数的作用分别是什么，observer中需要实现哪个方法才能获得KVO回调？" class="headerlink" title="45. addObserver:forKeyPath:options:context:各个参数的作用分别是什么，observer中需要实现哪个方法才能获得KVO回调？"></a>45. addObserver:forKeyPath:options:context:各个参数的作用分别是什么，observer中需要实现哪个方法才能获得KVO回调？</h3><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 添加键值观察</span></div><div class="line"><span class="comment">/*</span></div><div class="line">1 观察者，负责处理监听事件的对象</div><div class="line">2 观察的属性</div><div class="line">3 观察的选项</div><div class="line">4 上下文</div><div class="line">*/</div><div class="line">[<span class="keyword">self</span>.person addObserver:<span class="keyword">self</span> forKeyPath:<span class="string">@"name"</span> options:<span class="built_in">NSKeyValueObservingOptionNew</span> | <span class="built_in">NSKeyValueObservingOptionOld</span> context:<span class="string">@"Person Name"</span>];</div></pre></td></tr></table></figure>
 <p>observer中需要实现一下方法：</p>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 所有的 kvo 监听到事件，都会调用此方法</span></div><div class="line"><span class="comment">/*</span></div><div class="line"> 1. 观察的属性</div><div class="line"> 2. 观察的对象</div><div class="line"> 3. change 属性变化字典（新／旧）</div><div class="line"> 4. 上下文，与监听的时候传递的一致</div><div class="line"> */</div><div class="line">- (<span class="keyword">void</span>)observeValueForKeyPath:(<span class="built_in">NSString</span> *)keyPath ofObject:(<span class="keyword">id</span>)object change:(<span class="built_in">NSDictionary</span> *)change context:(<span class="keyword">void</span> *)context;</div></pre></td></tr></table></figure>
-<p>###46. 如何手动触发一个value的KVO</p>
-<p>所谓的“手动触发”是区别于“自动触发”：</p>
+<h3 id="46-如何手动触发一个value的KVO"><a href="#46-如何手动触发一个value的KVO" class="headerlink" title="46. 如何手动触发一个value的KVO"></a>46. 如何手动触发一个value的KVO</h3><p>所谓的“手动触发”是区别于“自动触发”：</p>
 <p>自动触发是指类似这种场景：在注册 KVO 之前设置一个初始值，注册之后，设置一个不一样的值，就可以触发了。</p>
 <p>想知道如何手动触发，必须知道自动触发 KVO 的原理：</p>
 <p>键值观察通知依赖于 NSObject 的两个方法:  <code>willChangeValueForKey:</code> 和 <code>didChangevlueForKey:</code> 。在一个被观察属性发生改变之前，  <code>willChangeValueForKey:</code> 一定会被调用，这就<br>会记录旧的值。而当改变发生后，  <code>observeValueForKey:ofObject:change:context:</code> 会被调用，继而 <code>didChangeValueForKey:</code> 也会被调用。如果可以手动实现这些调用，就可以实现“手动触发”了。</p>
@@ -510,22 +494,19 @@ int main(int argc, char * argv[]) {
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">- (<span class="keyword">void</span>)setNow:(<span class="built_in">NSDate</span> *)aDate &#123;</div><div class="line">    [<span class="keyword">self</span> willChangeValueForKey:<span class="string">@"now"</span>]; <span class="comment">// 没有必要</span></div><div class="line">    _now = aDate;</div><div class="line">    [<span class="keyword">self</span> didChangeValueForKey:<span class="string">@"now"</span>];<span class="comment">// 没有必要</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>这完全没有必要，不要这么做，这样的话，KVO代码会被调用两次。KVO在调用存取方法之前总是调用 <code>willChangeValueForKey:</code>  ，之后总是调用 <code>didChangeValueForkey:</code> 。怎么做到的呢?答案是通过 isa 混写（isa-swizzling）。下文《apple用什么方式实现对一个对象的KVO？》会有详述。</p>
 <p>参考链接： <a href="https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/KeyValueObserving/Articles/KVOCompliance.html#//apple_ref/doc/uid/20002178-SW3" target="_blank" rel="external">Manual Change Notification—Apple 官方文档</a> </p>
-<p>###47. 若一个类有实例变量 <code>NSString *_foo</code> ，调用setValue:forKey:时，可以以foo还是 <code>_foo</code> 作为key？<br>都可以。</p>
-<p>###48. KVC的keyPath中的集合运算符如何使用？</p>
-<ol>
+<h3 id="47-若一个类有实例变量-NSString-foo-，调用setValue-forKey-时，可以以foo还是-foo-作为key？"><a href="#47-若一个类有实例变量-NSString-foo-，调用setValue-forKey-时，可以以foo还是-foo-作为key？" class="headerlink" title="47. 若一个类有实例变量 NSString *_foo ，调用setValue:forKey:时，可以以foo还是 _foo 作为key？"></a>47. 若一个类有实例变量 <code>NSString *_foo</code> ，调用setValue:forKey:时，可以以foo还是 <code>_foo</code> 作为key？</h3><p>都可以。</p>
+<h3 id="48-KVC的keyPath中的集合运算符如何使用？"><a href="#48-KVC的keyPath中的集合运算符如何使用？" class="headerlink" title="48. KVC的keyPath中的集合运算符如何使用？"></a>48. KVC的keyPath中的集合运算符如何使用？</h3><ol>
 <li>必须用在集合对象上或普通对象的集合属性上</li>
 <li>简单集合运算符有@avg， @count ， @max ， @min ，@sum，</li>
 <li>格式 @”@sum.age”或 @”集合属性.@max.age”</li>
 </ol>
-<p>###49. KVC和KVO的keyPath一定是属性么？<br>KVO支持实例变量</p>
-<p>###50. 如何关闭默认的KVO的默认实现，并进入自定义的KVO实现？</p>
-<p>请参考：</p>
+<h3 id="49-KVC和KVO的keyPath一定是属性么？"><a href="#49-KVC和KVO的keyPath一定是属性么？" class="headerlink" title="49. KVC和KVO的keyPath一定是属性么？"></a>49. KVC和KVO的keyPath一定是属性么？</h3><p>KVO支持实例变量</p>
+<h3 id="50-如何关闭默认的KVO的默认实现，并进入自定义的KVO实现？"><a href="#50-如何关闭默认的KVO的默认实现，并进入自定义的KVO实现？" class="headerlink" title="50. 如何关闭默认的KVO的默认实现，并进入自定义的KVO实现？"></a>50. 如何关闭默认的KVO的默认实现，并进入自定义的KVO实现？</h3><p>请参考：</p>
 <ol>
 <li><a href="http://tech.glowing.com/cn/implement-kvo/" target="_blank" rel="external">《如何自己动手实现 KVO》</a></li>
 <li><a href="http://stackoverflow.com/a/10042641/3395008" target="_blank" rel="external"><strong>KVO for manually implemented properties</strong></a> </li>
 </ol>
-<p>###51. apple用什么方式实现对一个对象的KVO？ </p>
-<p><a href="https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/KeyValueObserving/Articles/KVOImplementation.html" target="_blank" rel="external">Apple 的文档</a>对 KVO 实现的描述：</p>
+<h3 id="51-apple用什么方式实现对一个对象的KVO？"><a href="#51-apple用什么方式实现对一个对象的KVO？" class="headerlink" title="51. apple用什么方式实现对一个对象的KVO？"></a>51. apple用什么方式实现对一个对象的KVO？</h3><p><a href="https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/KeyValueObserving/Articles/KVOImplementation.html" target="_blank" rel="external">Apple 的文档</a>对 KVO 实现的描述：</p>
 <blockquote>
 <p>Automatic key-value observing is implemented using a technique called isa-swizzling… When an observer is registered for an attribute of an object the isa pointer of the observed object is modified, pointing to an intermediate class rather than at the true class …</p>
 </blockquote>
@@ -564,17 +545,14 @@ int main(int argc, char * argv[]) {
 <p>了解到这一点很重要，正如  <a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#46-如何手动触发一个value的kvo" target="_blank" rel="external">46. 如何手动触发一个value的KVO</a>  所说的：</p>
 <p>“手动触发”的使用场景是什么？一般我们只在希望能控制“回调的调用时机”时才会这么做。</p>
 <p>而“回调的调用时机”就是在你调用 <code>didChangeValueForKey:</code> 方法时。</p>
-<p>###52. IBOutlet连出来的视图属性为什么可以被设置成weak?</p>
-<p>参考链接：<a href="http://stackoverflow.com/questions/7678469/should-iboutlets-be-strong-or-weak-under-arc" target="_blank" rel="external"> <strong><em>Should IBOutlets be strong or weak under ARC?</em></strong> </a></p>
+<h3 id="52-IBOutlet连出来的视图属性为什么可以被设置成weak"><a href="#52-IBOutlet连出来的视图属性为什么可以被设置成weak" class="headerlink" title="52. IBOutlet连出来的视图属性为什么可以被设置成weak?"></a>52. IBOutlet连出来的视图属性为什么可以被设置成weak?</h3><p>参考链接：<a href="http://stackoverflow.com/questions/7678469/should-iboutlets-be-strong-or-weak-under-arc" target="_blank" rel="external"> <strong><em>Should IBOutlets be strong or weak under ARC?</em></strong> </a></p>
 <p>文章告诉我们：</p>
 <blockquote>
 <p>因为既然有外链那么视图在xib或者storyboard中肯定存在，视图已经对它有一个强引用了。</p>
 </blockquote>
 <p>不过这个回答漏了个重要知识，使用storyboard（xib不行）创建的vc，会有一个叫_topLevelObjectsToKeepAliveFromStoryboard的私有数组强引用所有top level的对象，所以这时即便outlet声明成weak也没关系</p>
-<p>###53. IB中User Defined Runtime Attributes如何使用？ </p>
-<p>它能够通过KVC的方式配置一些你在interface builder 中不能配置的属性。当你希望在IB中作尽可能多得事情，这个特性能够帮助你编写更加轻量级的viewcontroller</p>
-<p>###54. 如何调试BAD_ACCESS错误</p>
-<ol>
+<h3 id="53-IB中User-Defined-Runtime-Attributes如何使用？"><a href="#53-IB中User-Defined-Runtime-Attributes如何使用？" class="headerlink" title="53. IB中User Defined Runtime Attributes如何使用？"></a>53. IB中User Defined Runtime Attributes如何使用？</h3><p>它能够通过KVC的方式配置一些你在interface builder 中不能配置的属性。当你希望在IB中作尽可能多得事情，这个特性能够帮助你编写更加轻量级的viewcontroller</p>
+<h3 id="54-如何调试BAD-ACCESS错误"><a href="#54-如何调试BAD-ACCESS错误" class="headerlink" title="54. 如何调试BAD_ACCESS错误"></a>54. 如何调试BAD_ACCESS错误</h3><ol>
 <li>重写object的respondsToSelector方法，现实出现EXEC_BAD_ACCESS前访问的最后一个object</li>
 <li><p>通过 Zombie<br><img src="http://i.stack.imgur.com/ZAdi0.png" alt="enter image description here"></p>
 </li>
@@ -582,8 +560,7 @@ int main(int argc, char * argv[]) {
 </li>
 <li>Xcode 7 已经集成了BAD_ACCESS捕获功能：<strong>Address Sanitizer</strong>。<br>用法如下：在配置中勾选✅Enable Address Sanitizer<br> <img src="https://developer.apple.com/library/prerelease/ios/documentation/DeveloperTools/Conceptual/WhatsNewXcode/Art/xc7-asan_2x.png" alt="enter image description here"></li>
 </ol>
-<p>###55. lldb（gdb）常用的调试命令？</p>
-<ul>
+<h3 id="55-lldb（gdb）常用的调试命令？"><a href="#55-lldb（gdb）常用的调试命令？" class="headerlink" title="55. lldb（gdb）常用的调试命令？"></a>55. lldb（gdb）常用的调试命令？</h3><ul>
 <li>breakpoint 设置断点定位到某一个函数</li>
 <li>n 断点指针下一步</li>
 <li>po打印对象</li>
