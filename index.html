@@ -110,6 +110,530 @@
 
 
   
+    <article id="post-《招聘一个靠谱的iOS》面试题参考答案（下）" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/08/16/《招聘一个靠谱的iOS》面试题参考答案（下）/" class="article-date">
+  <time datetime="2016-08-16T06:51:15.000Z" itemprop="datePublished">2016-08-16</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/面试-招聘/">面试/招聘</a>►<a class="article-category-link" href="/categories/面试-招聘/《招聘一个靠谱的iOS》/">《招聘一个靠谱的iOS》</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/08/16/《招聘一个靠谱的iOS》面试题参考答案（下）/">《招聘一个靠谱的 iOS》—参考答案（下）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://blog.sunnyxx.com/2015/07/04/ios-interview/" target="_blank" rel="external">《招聘一个靠谱的 iOS》</a>—参考答案（下）</p>
+<p>说明：面试题来源是<a href="http://weibo.com/u/1364395395" target="_blank" rel="external">微博@我就叫Sunny怎么了</a>的这篇博文：<a href="http://blog.sunnyxx.com/2015/07/04/ios-interview/" target="_blank" rel="external">《招聘一个靠谱的 iOS》</a>，其中共55题，除第一题为纠错题外，其他54道均为简答题。</p>
+<p>出题者简介： 孙源（sunnyxx），目前就职于百度，负责百度知道 iOS 客户端的开发工作，对技术喜欢刨根问底和总结最佳实践，热爱分享和开源，维护一个叫 forkingdog 的开源小组。</p>
+<p>答案为<a href="http://weibo.com/luohanchenyilong/" target="_blank" rel="external">微博@iOS程序犭袁</a>整理，未经出题者校对，如有纰漏，请向<a href="http://weibo.com/luohanchenyilong/" target="_blank" rel="external">微博@iOS程序犭袁</a>指正。</p>
+<hr>
+<h1 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h1><ol>
+<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#25-_objc_msgforward函数是做什么的直接调用它将会发生什么" target="_blank" rel="external"> 25. <code>_objc_msgForward</code> 函数是做什么的，直接调用它将会发生什么？</a></li>
+<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#26-runtime如何实现weak变量的自动置nil" target="_blank" rel="external">26. runtime如何实现weak变量的自动置nil？</a></li>
+<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#27-能否向编译后得到的类中增加实例变量能否向运行时创建的类中添加实例变量为什么" target="_blank" rel="external">27. 能否向编译后得到的类中增加实例变量？能否向运行时创建的类中添加实例变量？为什么？</a> </li>
+<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#28-runloop和线程有什么关系" target="_blank" rel="external">28. runloop和线程有什么关系？</a> </li>
+<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#29-runloop的mode作用是什么" target="_blank" rel="external">29. runloop的mode作用是什么？</a> </li>
+<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#30-以-scheduledtimerwithtimeinterval的方式触发的timer在滑动页面上的列表时timer会暂定回调为什么如何解决" target="_blank" rel="external">30. 以+ scheduledTimerWithTimeInterval…的方式触发的timer，在滑动页面上的列表时，timer会暂定回调，为什么？如何解决？</a> </li>
+<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#31-猜想runloop内部是如何实现的" target="_blank" rel="external">31. 猜想runloop内部是如何实现的？</a> </li>
+<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#32-objc使用什么机制管理对象内存" target="_blank" rel="external">32. objc使用什么机制管理对象内存？</a> </li>
+<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#33-arc通过什么方式帮助开发者管理内存" target="_blank" rel="external">33. ARC通过什么方式帮助开发者管理内存？</a> </li>
+<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#34-不手动指定autoreleasepool的前提下一个autorealese对象在什么时刻释放比如在一个vc的viewdidload中创建" target="_blank" rel="external">34. 不手动指定autoreleasepool的前提下，一个autorealese对象在什么时刻释放？（比如在一个vc的viewDidLoad中创建）</a> </li>
+<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#35-bad_access在什么情况下出现" target="_blank" rel="external">35. BAD_ACCESS在什么情况下出现？</a> </li>
+<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#36-苹果是如何实现autoreleasepool的" target="_blank" rel="external">36. 苹果是如何实现autoreleasepool的？</a> </li>
+<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#37-使用block时什么情况会发生引用循环如何解决" target="_blank" rel="external">37. 使用block时什么情况会发生引用循环，如何解决？</a></li>
+<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#38-在block内如何修改block外部变量" target="_blank" rel="external">38. 在block内如何修改block外部变量？</a> </li>
+<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#39-使用系统的某些block-api如uiview的block版本写动画时是否也考虑引用循环问题" target="_blank" rel="external">39. 使用系统的某些block api（如UIView的block版本写动画时），是否也考虑引用循环问题？</a> </li>
+<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#40-gcd的队列dispatch_queue_t分哪两种类型" target="_blank" rel="external">40. GCD的队列（dispatch_queue_t）分哪两种类型？</a> </li>
+<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#41-如何用gcd同步若干个异步调用如根据若干个url异步加载多张图片然后在都下载完成后合成一张整图" target="_blank" rel="external">41. 如何用GCD同步若干个异步调用？（如根据若干个url异步加载多张图片，然后在都下载完成后合成一张整图）</a> </li>
+<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#42-dispatch_barrier_async的作用是什么" target="_blank" rel="external">42. dispatch_barrier_async的作用是什么？</a> </li>
+<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#43-苹果为什么要废弃dispatch_get_current_queue" target="_blank" rel="external">43. 苹果为什么要废弃dispatch_get_current_queue？</a> </li>
+<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#44-以下代码运行结果如何" target="_blank" rel="external">44. 以下代码运行结果如何？</a> </li>
+</ol>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">- (<span class="keyword">void</span>)viewDidLoad</div><div class="line">&#123;</div><div class="line">    [<span class="keyword">super</span> viewDidLoad];</div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"1"</span>);</div><div class="line">    <span class="built_in">dispatch_sync</span>(dispatch_get_main_queue(), ^&#123;</div><div class="line">        <span class="built_in">NSLog</span>(<span class="string">@"2"</span>);</div><div class="line">    &#125;);</div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"3"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ol>
+<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#45-addobserverforkeypathoptionscontext各个参数的作用分别是什么observer中需要实现哪个方法才能获得kvo回调" target="_blank" rel="external">45. addObserver:forKeyPath:options:context:各个参数的作用分别是什么，observer中需要实现哪个方法才能获得KVO回调？</a> </li>
+<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#46-如何手动触发一个value的kvo" target="_blank" rel="external">46. 如何手动触发一个value的KVO</a> </li>
+<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#47-若一个类有实例变量-nsstring-_foo-调用setvalueforkey时可以以foo还是-_foo-作为key" target="_blank" rel="external">47. 若一个类有实例变量 NSString *_foo ，调用setValue:forKey:时，可以以foo还是 _foo 作为key？</a> </li>
+<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#48-kvc的keypath中的集合运算符如何使用" target="_blank" rel="external">48. KVC的keyPath中的集合运算符如何使用？</a> </li>
+<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#49-kvc和kvo的keypath一定是属性么" target="_blank" rel="external">49. KVC和KVO的keyPath一定是属性么？</a> </li>
+<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#50-如何关闭默认的kvo的默认实现并进入自定义的kvo实现" target="_blank" rel="external">50. 如何关闭默认的KVO的默认实现，并进入自定义的KVO实现？</a> </li>
+<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#51-apple用什么方式实现对一个对象的kvo" target="_blank" rel="external">51. apple用什么方式实现对一个对象的KVO？</a> </li>
+<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#52-iboutlet连出来的视图属性为什么可以被设置成weak" target="_blank" rel="external">52. IBOutlet连出来的视图属性为什么可以被设置成weak?</a> </li>
+<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#53-ib中user-defined-runtime-attributes如何使用" target="_blank" rel="external">53. IB中User Defined Runtime Attributes如何使用？</a> </li>
+<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#54-如何调试bad_access错误" target="_blank" rel="external">54. 如何调试BAD_ACCESS错误</a> </li>
+<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#55-lldbgdb常用的调试命令" target="_blank" rel="external">55. lldb（gdb）常用的调试命令？</a> </li>
+</ol>
+<hr>
+<p>###25. <code>_objc_msgForward</code>函数是做什么的，直接调用它将会发生什么？</p>
+<blockquote>
+<p><code>_objc_msgForward</code>是 IMP 类型，用于消息转发的：当向一个对象发送一条消息，但它并没有实现的时候，<code>_objc_msgForward</code>会尝试做消息转发。</p>
+</blockquote>
+<p>我们可以这样创建一个<code>_objc_msgForward</code>对象：</p>
+<pre><code>IMP msgForwardIMP = _objc_msgForward;
+</code></pre><p>在<a href="https://github.com/ChenYilong/iOSInterviewQuestions" target="_blank" rel="external">上篇</a>中的《objc中向一个对象发送消息<code>[obj foo]</code>和<code>objc_msgSend()</code>函数之间有什么关系？》曾提到<code>objc_msgSend</code>在“消息传递”中的作用。在“消息传递”过程中，<code>objc_msgSend</code>的动作比较清晰：首先在 Class 中的缓存查找 IMP （没缓存则初始化缓存），如果没找到，则向父类的 Class 查找。如果一直查找到根类仍旧没有实现，则用<code>_objc_msgForward</code>函数指针代替 IMP 。最后，执行这个 IMP 。</p>
+<p>objc运行时是开源的，所以我们可以看到它的实现。打开<a href="http://www.opensource.apple.com/tarballs/objc4/" target="_blank" rel="external"> <strong><em>Apple Open Source 里Mac代码里的obj包</em></strong> </a>下载一个最新版本，找到 <code>objc-runtime-new.mm</code>，进入之后搜索<code>_objc_msgForward</code>。</p>
+<p><img src="http://i.imgur.com/rGBfaoL.png" alt="enter image description here"></p>
+<p>里面有对<code>_objc_msgForward</code>的功能解释：</p>
+<p><img src="http://i.imgur.com/vcThcdA.png" alt="enter image description here"></p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/***********************************************************************</span></div><div class="line">* lookUpImpOrForward.</div><div class="line">* The standard IMP lookup. </div><div class="line">* initialize==NO tries to avoid +initialize (but sometimes fails)</div><div class="line">* cache==NO skips optimistic unlocked lookup (but uses cache elsewhere)</div><div class="line">* Most callers should use initialize==YES and cache==YES.</div><div class="line">* inst is an instance of cls or a subclass thereof, or nil if none is known. </div><div class="line">*   If cls is an un-initialized metaclass then a non-nil inst is faster.</div><div class="line">* May return _objc_msgForward_impcache. IMPs destined for external use </div><div class="line">*   must be converted to _objc_msgForward or _objc_msgForward_stret.</div><div class="line">*   If you don't want forwarding at all, use lookUpImpOrNil() instead.</div><div class="line">**********************************************************************/</div></pre></td></tr></table></figure>
+<p>对 <code>objc-runtime-new.mm</code>文件里与<code>_objc_msgForward</code>有关的三个函数使用伪代码展示下：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//  objc-runtime-new.mm 文件里与 _objc_msgForward 有关的三个函数使用伪代码展示</span></div><div class="line"><span class="comment">//  Created by https://github.com/ChenYilong</span></div><div class="line"><span class="comment">//  Copyright (c)  微博@iOS程序犭袁(http://weibo.com/luohanchenyilong/). All rights reserved.</span></div><div class="line"><span class="comment">//  同时，这也是 obj_msgSend 的实现过程</span></div><div class="line"></div><div class="line"><span class="keyword">id</span> objc_msgSend(<span class="keyword">id</span> <span class="keyword">self</span>, SEL op, ...) &#123;</div><div class="line">    <span class="keyword">if</span> (!<span class="keyword">self</span>) <span class="keyword">return</span> <span class="literal">nil</span>;</div><div class="line">	IMP imp = class_getMethodImplementation(<span class="keyword">self</span>-&gt;isa, SEL op);</div><div class="line">	imp(<span class="keyword">self</span>, op, ...); <span class="comment">//调用这个函数，伪代码...</span></div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="comment">//查找IMP</span></div><div class="line">IMP class_getMethodImplementation(Class cls, SEL sel) &#123;</div><div class="line">    <span class="keyword">if</span> (!cls || !sel) <span class="keyword">return</span> <span class="literal">nil</span>;</div><div class="line">    IMP imp = lookUpImpOrNil(cls, sel);</div><div class="line">    <span class="keyword">if</span> (!imp) <span class="keyword">return</span> _objc_msgForward; <span class="comment">//_objc_msgForward 用于消息转发</span></div><div class="line">    <span class="keyword">return</span> imp;</div><div class="line">&#125;</div><div class="line"> </div><div class="line">IMP lookUpImpOrNil(Class cls, SEL sel) &#123;</div><div class="line">    <span class="keyword">if</span> (!cls-&gt;initialize()) &#123;</div><div class="line">        _class_initialize(cls);</div><div class="line">    &#125;</div><div class="line"> </div><div class="line">    Class curClass = cls;</div><div class="line">    IMP imp = <span class="literal">nil</span>;</div><div class="line">    <span class="keyword">do</span> &#123; <span class="comment">//先查缓存,缓存没有时重建,仍旧没有则向父类查询</span></div><div class="line">        <span class="keyword">if</span> (!curClass) <span class="keyword">break</span>;</div><div class="line">        <span class="keyword">if</span> (!curClass-&gt;cache) fill_cache(cls, curClass);</div><div class="line">        imp = cache_getImp(curClass, sel);</div><div class="line">        <span class="keyword">if</span> (imp) <span class="keyword">break</span>;</div><div class="line">    &#125; <span class="keyword">while</span> (curClass = curClass-&gt;superclass);</div><div class="line"> </div><div class="line">    <span class="keyword">return</span> imp;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>虽然Apple没有公开<code>_objc_msgForward</code>的实现源码，但是我们还是能得出结论：</p>
+<blockquote>
+<p><code>_objc_msgForward</code>是一个函数指针（和 IMP 的类型一样），是用于消息转发的：当向一个对象发送一条消息，但它并没有实现的时候，<code>_objc_msgForward</code>会尝试做消息转发。</p>
+<p>在<a href="https://github.com/ChenYilong/iOSInterviewQuestions" target="_blank" rel="external">上篇</a>中的《objc中向一个对象发送消息<code>[obj foo]</code>和<code>objc_msgSend()</code>函数之间有什么关系？》曾提到<code>objc_msgSend</code>在“消息传递”中的作用。在“消息传递”过程中，<code>objc_msgSend</code>的动作比较清晰：首先在 Class 中的缓存查找 IMP （没缓存则初始化缓存），如果没找到，则向父类的 Class 查找。如果一直查找到根类仍旧没有实现，则用<code>_objc_msgForward</code>函数指针代替 IMP 。最后，执行这个 IMP 。</p>
+</blockquote>
+<p>为了展示消息转发的具体动作，这里尝试向一个对象发送一条错误的消息，并查看一下<code>_objc_msgForward</code>是如何进行转发的。</p>
+<p>首先开启调试模式、打印出所有运行时发送的消息：<br>可以在代码里执行下面的方法：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(<span class="keyword">void</span>)instrumentObjcMessageSends(<span class="literal">YES</span>);</div></pre></td></tr></table></figure>
+<p>或者断点暂停程序运行，并在 gdb 中输入下面的命令：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">call (<span class="keyword">void</span>)instrumentObjcMessageSends(<span class="literal">YES</span>)</div></pre></td></tr></table></figure>
+<p>以第二种为例，操作如下所示：</p>
+<p><img src="http://i.imgur.com/uEwTCC4.png" alt="enter image description here"></p>
+<p>之后，运行时发送的所有消息都会打印到<code>/tmp/msgSend-xxxx</code>文件里了。</p>
+<p>终端中输入命令前往：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">open /private/tmp</div></pre></td></tr></table></figure>
+<p><img src="http://i.imgur.com/Fh5hhCw.png" alt="enter image description here"></p>
+<p>可能看到有多条，找到最新生成的，双击打开</p>
+<p>在模拟器上执行执行以下语句（这一套调试方案仅适用于模拟器，真机不可用，关于该调试方案的拓展链接：<a href="http://stackoverflow.com/a/10750398/3395008" target="_blank" rel="external"> <strong><em>Can the messages sent to an object in objc be monitored or printed out?</em></strong> </a>），向一个对象发送一条错误的消息：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//</span></div><div class="line"><span class="comment">//  main.m</span></div><div class="line"><span class="comment">//  CYLObjcMsgForwardTest</span></div><div class="line"><span class="comment">//</span></div><div class="line"><span class="comment">//  Created by http://weibo.com/luohanchenyilong/.</span></div><div class="line"><span class="comment">//  Copyright (c) 2015年 微博@iOS程序犭袁. All rights reserved.</span></div><div class="line"><span class="comment">//</span></div><div class="line"></div><div class="line"><span class="meta">#import <span class="meta-string">&lt;UIKit/UIKit.h&gt;</span></span></div><div class="line"><span class="meta">#import <span class="meta-string">"AppDelegate.h"</span></span></div><div class="line"><span class="meta">#import <span class="meta-string">"CYLTest.h"</span></span></div><div class="line"></div><div class="line"><span class="keyword">int</span> main(<span class="keyword">int</span> argc, <span class="keyword">char</span> * argv[]) &#123;</div><div class="line">    <span class="keyword">@autoreleasepool</span> &#123;</div><div class="line">        CYLTest *test = [[CYLTest alloc] init];</div><div class="line">        [test performSelector:(<span class="keyword">@selector</span>(iOS程序犭袁))];</div><div class="line">        <span class="keyword">return</span> <span class="built_in">UIApplicationMain</span>(argc, argv, <span class="literal">nil</span>, <span class="built_in">NSStringFromClass</span>([AppDelegate <span class="keyword">class</span>]));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://i.imgur.com/UjbmVvB.png" alt="enter image description here"></p>
+<p>你可以在<code>/tmp/msgSend-xxxx</code>（我这一次是<code>/tmp/msgSend-9805</code>）文件里，看到打印出来：</p>
+<p><img src="http://i.imgur.com/AAERz1T.png" alt="enter image description here"></p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">+ CYLTest <span class="built_in">NSObject</span> initialize</div><div class="line">+ CYLTest <span class="built_in">NSObject</span> alloc</div><div class="line">- CYLTest <span class="built_in">NSObject</span> init</div><div class="line">- CYLTest <span class="built_in">NSObject</span> performSelector:</div><div class="line">+ CYLTest <span class="built_in">NSObject</span> resolveInstanceMethod:</div><div class="line">+ CYLTest <span class="built_in">NSObject</span> resolveInstanceMethod:</div><div class="line">- CYLTest <span class="built_in">NSObject</span> forwardingTargetForSelector:</div><div class="line">- CYLTest <span class="built_in">NSObject</span> forwardingTargetForSelector:</div><div class="line">- CYLTest <span class="built_in">NSObject</span> methodSignatureForSelector:</div><div class="line">- CYLTest <span class="built_in">NSObject</span> methodSignatureForSelector:</div><div class="line">- CYLTest <span class="built_in">NSObject</span> <span class="keyword">class</span></div><div class="line">- CYLTest <span class="built_in">NSObject</span> doesNotRecognizeSelector:</div><div class="line">- CYLTest <span class="built_in">NSObject</span> doesNotRecognizeSelector:</div><div class="line">- CYLTest <span class="built_in">NSObject</span> <span class="keyword">class</span></div></pre></td></tr></table></figure>
+<p>结合<a href="https://developer.apple.com/library/prerelease/watchos/documentation/Cocoa/Reference/Foundation/Classes/NSObject_Class/#//apple_ref/doc/uid/20000050-SW11" target="_blank" rel="external">《NSObject官方文档》</a>，排除掉 NSObject 做的事，剩下的就是<code>_objc_msgForward</code>消息转发做的几件事：</p>
+<ol>
+<li><p>调用<code>resolveInstanceMethod:</code>方法 (或 <code>resolveClassMethod:</code>)。允许用户在此时为该 Class 动态添加实现。如果有实现了，则调用并返回YES，那么重新开始<code>objc_msgSend</code>流程。这一次对象会响应这个选择器，一般是因为它已经调用过<code>class_addMethod</code>。如果仍没实现，继续下面的动作。</p>
+</li>
+<li><p>调用<code>forwardingTargetForSelector:</code>方法，尝试找到一个能响应该消息的对象。如果获取到，则直接把消息转发给它，返回非 nil 对象。否则返回 nil ，继续下面的动作。注意，这里不要返回 self ，否则会形成死循环。</p>
+</li>
+<li><p>调用<code>methodSignatureForSelector:</code>方法，尝试获得一个方法签名。如果获取不到，则直接调用<code>doesNotRecognizeSelector</code>抛出异常。如果能获取，则返回非nil：创建一个 NSlnvocation 并传给<code>forwardInvocation:</code>。</p>
+</li>
+<li><p>调用<code>forwardInvocation:</code>方法，将第3步获取到的方法签名包装成 Invocation 传入，如何处理就在这里面了，并返回非ni。</p>
+</li>
+<li><p>调用<code>doesNotRecognizeSelector:</code> ，默认的实现是抛出异常。如果第3步没能获得一个方法签名，执行该步骤。</p>
+</li>
+</ol>
+<p>上面前4个方法均是模板方法，开发者可以override，由 runtime 来调用。最常见的实现消息转发：就是重写方法3和4，吞掉一个消息或者代理给其他对象都是没问题的</p>
+<p>也就是说<code>_objc_msgForward</code>在进行消息转发的过程中会涉及以下这几个方法：</p>
+<ol>
+<li><p><code>resolveInstanceMethod:</code>方法 (或 <code>resolveClassMethod:</code>)。</p>
+</li>
+<li><p><code>forwardingTargetForSelector:</code>方法</p>
+</li>
+<li><p><code>methodSignatureForSelector:</code>方法</p>
+</li>
+<li><p><code>forwardInvocation:</code>方法</p>
+</li>
+<li><p><code>doesNotRecognizeSelector:</code> 方法</p>
+</li>
+</ol>
+<p>为了能更清晰地理解这些方法的作用，git仓库里也给出了一个Demo，名称叫“ <code>_objc_msgForward_demo</code> ”,可运行起来看看。</p>
+<p>下面回答下第二个问题“直接<code>_objc_msgForward</code>调用它将会发生什么？”</p>
+<p>直接调用<code>_objc_msgForward</code>是非常危险的事，如果用不好会直接导致程序Crash，但是如果用得好，能做很多非常酷的事。</p>
+<p>就好像跑酷，干得好，叫“耍酷”，干不好就叫“作死”。</p>
+<p>正如前文所说：</p>
+<blockquote>
+<p><code>_objc_msgForward</code>是 IMP 类型，用于消息转发的：当向一个对象发送一条消息，但它并没有实现的时候，<code>_objc_msgForward</code>会尝试做消息转发。</p>
+</blockquote>
+<p>如何调用<code>_objc_msgForward</code>？<br><code>_objc_msgForward</code>隶属 C 语言，有三个参数 ：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>–</th>
+<th><code>_objc_msgForward</code>参数</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> 1.</td>
+<td>所属对象</td>
+<td>id类型</td>
+</tr>
+<tr>
+<td> 2.</td>
+<td>方法名</td>
+<td>SEL类型 </td>
+</tr>
+<tr>
+<td> 3.</td>
+<td>可变参数</td>
+<td>可变参数类型</td>
+</tr>
+</tbody>
+</table>
+<p>首先了解下如何调用 IMP 类型的方法，IMP类型是如下格式：</p>
+<p>为了直观，我们可以通过如下方式定义一个 IMP类型 ：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">typedef</span> <span class="keyword">void</span> (*voidIMP)(<span class="keyword">id</span>, SEL, ...)</div></pre></td></tr></table></figure>
+<p>一旦调用<code>_objc_msgForward</code>，将跳过查找 IMP 的过程，直接触发“消息转发”，</p>
+<p>如果调用了<code>_objc_msgForward</code>，即使这个对象确实已经实现了这个方法，你也会告诉<code>objc_msgSend</code>：</p>
+<blockquote>
+<p>“我没有在这个对象里找到这个方法的实现”</p>
+</blockquote>
+<p>想象下<code>objc_msgSend</code>会怎么做？通常情况下，下面这张图就是你正常走<code>objc_msgSend</code>过程，和直接调用<code>_objc_msgForward</code>的前后差别：</p>
+<p><img src="http://ww1.sinaimg.cn/bmiddle/6628711bgw1eecx3jef23g206404tkbi.gif" alt="enter image description here"></p>
+<p>有哪些场景需要直接调用<code>_objc_msgForward</code>？最常见的场景是：你想获取某方法所对应的<code>NSInvocation</code>对象。举例说明：</p>
+<p><a href="https://github.com/bang590/JSPatch" target="_blank" rel="external">JSPatch （Github 链接）</a>就是直接调用<code>_objc_msgForward</code>来实现其核心功能的：</p>
+<blockquote>
+<p> JSPatch 以小巧的体积做到了让JS调用/替换任意OC方法，让iOS APP具备热更新的能力。</p>
+</blockquote>
+<p>作者的博文<a href="http://blog.cnbang.net/tech/2808/" target="_blank" rel="external">《JSPatch实现原理详解》</a>详细记录了实现原理，有兴趣可以看下。</p>
+<p>同时 <a href="https://github.com/ReactiveCocoa/ReactiveCocoa" target="_blank" rel="external"> <strong><em>RAC(ReactiveCocoa)</em></strong> </a> 源码中也用到了该方法。</p>
+<p>###26. runtime如何实现weak变量的自动置nil？</p>
+<blockquote>
+<p>runtime 对注册的类， 会进行布局，对于 weak 对象会放入一个 hash 表中。 用 weak 指向的对象内存地址作为 key，当此对象的引用计数为0的时候会 dealloc，假如 weak 指向的对象内存地址是a，那么就会以a为键， 在这个 weak 表中搜索，找到所有以a为键的 weak 对象，从而设置为 nil。</p>
+</blockquote>
+<p>在<a href="https://github.com/ChenYilong/iOSInterviewQuestions" target="_blank" rel="external">上篇</a>中的《runtime 如何实现 weak 属性》有论述。（注：在<a href="https://github.com/ChenYilong/iOSInterviewQuestions" target="_blank" rel="external">上篇</a>的《使用runtime Associate方法关联的对象，需要在主对象dealloc的时候释放么？》里给出的“对象的内存销毁时间表”也提到<code>__weak</code>引用的解除时间。）</p>
+<p>我们可以设计一个函数（伪代码）来表示上述机制：</p>
+<p><code>objc_storeWeak(&amp;a, b)</code>函数：</p>
+<p><code>objc_storeWeak</code>函数把第二个参数–赋值对象（b）的内存地址作为键值key，将第一个参数–weak修饰的属性变量（a）的内存地址（&amp;a）作为value，注册到 weak 表中。如果第二个参数（b）为0（nil），那么把变量（a）的内存地址（&amp;a）从weak表中删除，</p>
+<p>你可以把<code>objc_storeWeak(&amp;a, b)</code>理解为：<code>objc_storeWeak(value, key)</code>，并且当key变nil，将value置nil。</p>
+<p>在b非nil时，a和b指向同一个内存地址，在b变nil时，a变nil。此时向a发送消息不会崩溃：在objc中向nil发送消息是安全的。</p>
+<p>而如果a是由assign修饰的，则：<br>在b非nil时，a和b指向同一个内存地址，在b变nil时，a还是指向该内存地址，变野指针。此时向a发送消息极易崩溃。</p>
+<p>下面我们将基于<code>objc_storeWeak(&amp;a, b)</code>函数，使用伪代码模拟“runtime如何实现weak属性”：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 使用伪代码模拟：runtime如何实现weak属性</span></div><div class="line"><span class="comment">// http://weibo.com/luohanchenyilong/</span></div><div class="line"><span class="comment">// https://github.com/ChenYilong</span></div><div class="line"></div><div class="line"> <span class="keyword">id</span> obj1;</div><div class="line"> objc_initWeak(&amp;obj1, obj);</div><div class="line"><span class="comment">/*obj引用计数变为0，变量作用域结束*/</span></div><div class="line"> objc_destroyWeak(&amp;obj1);</div></pre></td></tr></table></figure>
+<p>下面对用到的两个方法<code>objc_initWeak</code>和<code>objc_destroyWeak</code>做下解释：</p>
+<p>总体说来，作用是：<br>通过<code>objc_initWeak</code>函数初始化“附有weak修饰符的变量（obj1）”，在变量作用域结束时通过<code>objc_destoryWeak</code>函数释放该变量（obj1）。</p>
+<p>下面分别介绍下方法的内部实现：</p>
+<p><code>objc_initWeak</code>函数的实现是这样的：在将“附有weak修饰符的变量（obj1）”初始化为0（nil）后，会将“赋值对象”（obj）作为参数，调用<code>objc_storeWeak</code>函数。</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">obj1 = <span class="number">0</span>；</div><div class="line">obj_storeWeak(&amp;obj1, obj);</div></pre></td></tr></table></figure>
+<p>也就是说：</p>
+<blockquote>
+<p> weak 修饰的指针默认值是 nil （在objc中向nil发送消息是安全的）</p>
+</blockquote>
+<p>然后<code>obj_destroyWeak</code>函数将0（nil）作为参数，调用<code>objc_storeWeak</code>函数。</p>
+<p><code>objc_storeWeak(&amp;obj1, 0);</code></p>
+<p>前面的源代码与下列源代码相同。</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 使用伪代码模拟：runtime如何实现weak属性</span></div><div class="line"><span class="comment">// http://weibo.com/luohanchenyilong/</span></div><div class="line"><span class="comment">// https://github.com/ChenYilong</span></div><div class="line"></div><div class="line"><span class="keyword">id</span> obj1;</div><div class="line">obj1 = <span class="number">0</span>;</div><div class="line">objc_storeWeak(&amp;obj1, obj);</div><div class="line"><span class="comment">/* ... obj的引用计数变为0，被置nil ... */</span></div><div class="line">objc_storeWeak(&amp;obj1, <span class="number">0</span>);</div></pre></td></tr></table></figure>
+<p><code>objc_storeWeak</code>函数把第二个参数–赋值对象（obj）的内存地址作为键值，将第一个参数–weak修饰的属性变量（obj1）的内存地址注册到 weak 表中。如果第二个参数（obj）为0（nil），那么把变量（obj1）的地址从weak表中删除。</p>
+<p>###27. 能否向编译后得到的类中增加实例变量？能否向运行时创建的类中添加实例变量？为什么？ </p>
+<ul>
+<li>不能向编译后得到的类中增加实例变量；</li>
+<li>能向运行时创建的类中添加实例变量；</li>
+</ul>
+<p>解释下：</p>
+<ul>
+<li><p>因为编译后的类已经注册在 runtime 中，类结构体中的 <code>objc_ivar_list</code> 实例变量的链表 和 <code>instance_size</code> 实例变量的内存大小已经确定，同时runtime 会调用 <code>class_setIvarLayout</code> 或 <code>class_setWeakIvarLayout</code> 来处理 strong weak 引用。所以不能向存在的类中添加实例变量；</p>
+</li>
+<li><p>运行时创建的类是可以添加实例变量，调用 <code>class_addIvar</code> 函数。但是得在调用 <code>objc_allocateClassPair</code> 之后，<code>objc_registerClassPair</code> 之前，原因同上。</p>
+</li>
+</ul>
+<p>###28. runloop和线程有什么关系？</p>
+<p>总的说来，Run loop，正如其名，loop表示某种循环，和run放在一起就表示一直在运行着的循环。实际上，run loop和线程是紧密相连的，可以这样说run loop是为了线程而生，没有线程，它就没有存在的必要。Run loops是线程的基础架构部分， Cocoa 和 CoreFundation 都提供了 run loop 对象方便配置和管理线程的 run loop （以下都以 Cocoa 为例）。每个线程，包括程序的主线程（ main thread ）都有与之相应的 run loop 对象。</p>
+<p> runloop 和线程的关系：</p>
+<ol>
+<li><p>主线程的run loop默认是启动的。</p>
+<p>iOS的应用程序里面，程序启动后会有一个如下的main()函数</p>
+</li>
+</ol>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> main(<span class="keyword">int</span> argc, <span class="keyword">char</span> * argv[]) &#123;</div><div class="line">    <span class="keyword">@autoreleasepool</span> &#123;</div><div class="line">        <span class="keyword">return</span> <span class="built_in">UIApplicationMain</span>(argc, argv, <span class="literal">nil</span>, <span class="built_in">NSStringFromClass</span>([AppDelegate <span class="keyword">class</span>]));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p> 重点是UIApplicationMain()函数，这个方法会为main thread设置一个NSRunLoop对象，这就解释了：为什么我们的应用可以在无人操作的时候休息，需要让它干活的时候又能立马响应。</p>
+<ol>
+<li><p>对其它线程来说，run loop默认是没有启动的，如果你需要更多的线程交互则可以手动配置和启动，如果线程只是去执行一个长时间的已确定的任务则不需要。</p>
+</li>
+<li><p>在任何一个 Cocoa 程序的线程中，都可以通过以下代码来获取到当前线程的 run loop 。</p>
+</li>
+</ol>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">NSRunLoop</span> *runloop = [<span class="built_in">NSRunLoop</span> currentRunLoop];</div></pre></td></tr></table></figure>
+<p>参考链接：<a href="http://blog.csdn.net/wzzvictory/article/details/9237973" target="_blank" rel="external">《objc之run loop详解》</a>。</p>
+<p>###29. runloop的mode作用是什么？</p>
+<p>model 主要是用来指定事件在运行循环中的优先级的，分为：</p>
+<ul>
+<li>NSDefaultRunLoopMode（kCFRunLoopDefaultMode）：默认，空闲状态</li>
+<li>UITrackingRunLoopMode：ScrollView滑动时</li>
+<li>UIInitializationRunLoopMode：启动时</li>
+<li>NSRunLoopCommonModes（kCFRunLoopCommonModes）：Mode集合</li>
+</ul>
+<p>苹果公开提供的 Mode 有两个：</p>
+<ol>
+<li>NSDefaultRunLoopMode（kCFRunLoopDefaultMode）</li>
+<li>NSRunLoopCommonModes（kCFRunLoopCommonModes）</li>
+</ol>
+<p>###30. 以+ scheduledTimerWithTimeInterval…的方式触发的timer，在滑动页面上的列表时，timer会暂定回调，为什么？如何解决？</p>
+<p>RunLoop只能运行在一种mode下，如果要换mode，当前的loop也需要停下重启成新的。利用这个机制，ScrollView滚动过程中NSDefaultRunLoopMode（kCFRunLoopDefaultMode）的mode会切换到UITrackingRunLoopMode来保证ScrollView的流畅滑动：只能在NSDefaultRunLoopMode模式下处理的事件会影响ScrollView的滑动。</p>
+<p>如果我们把一个NSTimer对象以NSDefaultRunLoopMode（kCFRunLoopDefaultMode）添加到主运行循环中的时候,<br>ScrollView滚动过程中会因为mode的切换，而导致NSTimer将不再被调度。</p>
+<p>同时因为mode还是可定制的，所以：</p>
+<p> Timer计时会被scrollView的滑动影响的问题可以通过将timer添加到NSRunLoopCommonModes（kCFRunLoopCommonModes）来解决。代码如下：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// </span></div><div class="line"><span class="comment">// http://weibo.com/luohanchenyilong/ (微博@iOS程序犭袁)</span></div><div class="line"><span class="comment">// https://github.com/ChenYilong</span></div><div class="line"></div><div class="line"><span class="comment">//将timer添加到NSDefaultRunLoopMode中</span></div><div class="line">[<span class="built_in">NSTimer</span> scheduledTimerWithTimeInterval:<span class="number">1.0</span></div><div class="line">     target:<span class="keyword">self</span></div><div class="line">     selector:<span class="keyword">@selector</span>(timerTick:)</div><div class="line">     userInfo:<span class="literal">nil</span></div><div class="line">     repeats:<span class="literal">YES</span>];</div><div class="line"><span class="comment">//然后再添加到NSRunLoopCommonModes里</span></div><div class="line"><span class="built_in">NSTimer</span> *timer = [<span class="built_in">NSTimer</span> timerWithTimeInterval:<span class="number">1.0</span></div><div class="line">     target:<span class="keyword">self</span></div><div class="line">     selector:<span class="keyword">@selector</span>(timerTick:)</div><div class="line">     userInfo:<span class="literal">nil</span></div><div class="line">     repeats:<span class="literal">YES</span>];</div><div class="line">[[<span class="built_in">NSRunLoop</span> currentRunLoop] addTimer:timer forMode:<span class="built_in">NSRunLoopCommonModes</span>];</div></pre></td></tr></table></figure>
+<p>###31. 猜想runloop内部是如何实现的？</p>
+<blockquote>
+<p>一般来讲，一个线程一次只能执行一个任务，执行完成后线程就会退出。如果我们需要一个机制，让线程能随时处理事件但并不退出，通常的代码逻辑<br>是这样的：</p>
+</blockquote>
+<pre><code>function loop() {
+    initialize();
+    do {
+        var message = get_next_message();
+        process_message(message);
+    } while (message != quit);
+}
+</code></pre><p>或使用伪代码来展示下:</p>
+<pre><code>// 
+// http://weibo.com/luohanchenyilong/ (微博@iOS程序犭袁)
+// https://github.com/ChenYilong
+int main(int argc, char * argv[]) {
+ //程序一直运行状态
+ while (AppIsRunning) {
+      //睡眠状态，等待唤醒事件
+      id whoWakesMe = SleepForWakingUp();
+      //得到唤醒事件
+      id event = GetEvent(whoWakesMe);
+      //开始处理事件
+      HandleEvent(event);
+ }
+ return 0;
+}
+</code></pre><p>参考链接：</p>
+<ol>
+<li><a href="http://blog.ibireme.com/2015/05/18/runloop/#base" target="_blank" rel="external">《深入理解RunLoop》</a></li>
+<li>摘自博文<a href="https://github.com/ming1016/study/wiki/CFRunLoop" target="_blank" rel="external"><strong><em>CFRunLoop</em></strong></a>，原作者是<a href="http://weibo.com/u/1364395395" target="_blank" rel="external">微博@我就叫Sunny怎么了</a></li>
+</ol>
+<p>###32. objc使用什么机制管理对象内存？</p>
+<p>通过 retainCount 的机制来决定对象是否需要释放。<br>每次 runloop 的时候，都会检查对象的 retainCount，如果retainCount 为 0，说明该对象没有地方需要继续使用了，可以释放掉了。</p>
+<p>###33. ARC通过什么方式帮助开发者管理内存？<br> </p><p><del>编译时根据代码上下文，插入 retain/release<br></del></p><br>ARC相对于MRC，不是在编译时添加retain/release/autorelease这么简单。应该是编译期和运行期两部分共同帮助开发者管理内存。<p></p>
+<p>在编译期，ARC用的是更底层的C接口实现的retain/release/autorelease，这样做性能更好，也是为什么不能在ARC环境下手动retain/release/autorelease，同时对同一上下文的同一对象的成对retain/release操作进行优化（即忽略掉不必要的操作）；ARC也包含运行期组件，这个地方做的优化比较复杂，但也不能被忽略。【TODO:后续更新会详细描述下】</p>
+<p>###34. 不手动指定autoreleasepool的前提下，一个autorealese对象在什么时刻释放？（比如在一个vc的viewDidLoad中创建）<br>分两种情况：手动干预释放时机、系统自动去释放。</p>
+<ol>
+<li>手动干预释放时机–指定autoreleasepool<br> 就是所谓的：当前作用域大括号结束时释放。</li>
+<li><p>系统自动去释放–不手动指定autoreleasepool</p>
+<p>Autorelease对象出了作用域之后，会被添加到最近一次创建的自动释放池中，并会在当前的 runloop 迭代结束时释放。</p>
+</li>
+</ol>
+<p>释放的时机总结起来，可以用下图来表示：</p>
+<p><img src="http://i61.tinypic.com/28kodwp.jpg" alt="autoreleasepool与 runloop 的关系图"></p>
+<p>下面对这张图进行详细的解释：</p>
+<p>从程序启动到加载完成是一个完整的运行循环，然后会停下来，等待用户交互，用户的每一次交互都会启动一次运行循环，来处理用户所有的点击事件、触摸事件。</p>
+<p>我们都知道：<br><strong>所有 autorelease 的对象，在出了作用域之后，会被自动添加到最近创建的自动释放池中。</strong></p>
+<p>但是如果每次都放进应用程序的 <code>main.m</code> 中的 autoreleasepool 中，迟早有被撑满的一刻。这个过程中必定有一个释放的动作。何时？</p>
+<p>在一次完整的运行循环结束之前，会被销毁。</p>
+<p>那什么时间会创建自动释放池？运行循环检测到事件并启动后，就会创建自动释放池。 </p>
+<p>子线程的 runloop 默认是不工作，无法主动创建，必须手动创建。</p>
+<p>自定义的 NSOperation 和 NSThread 需要手动创建自动释放池。比如： 自定义的 NSOperation 类中的 main 方法里就必须添加自动释放池。否则出了作用域后，自动释放对象会因为没有自动释放池去处理它，而造成内存泄露。</p>
+<p>但对于 blockOperation 和 invocationOperation 这种默认的Operation ，系统已经帮我们封装好了，不需要手动创建自动释放池。</p>
+<p>@autoreleasepool 当自动释放池被销毁或者耗尽时，会向自动释放池中的所有对象发送 release 消息，释放自动释放池中的所有对象。</p>
+<p> 如果在一个vc的viewDidLoad中创建一个 Autorelease对象，那么该对象会在 viewDidAppear 方法执行前就被销毁了。</p>
+<p>参考链接：<a href="http://blog.sunnyxx.com/2014/10/15/behind-autorelease/" target="_blank" rel="external">《黑幕背后的Autorelease》</a></p>
+<p>###35. BAD_ACCESS在什么情况下出现？<br>访问了野指针，比如对一个已经释放的对象执行了release、访问已经释放对象的成员变量或者发消息。<br>死循环</p>
+<p>###36. 苹果是如何实现autoreleasepool的？ </p>
+<p>autoreleasepool 以一个队列数组的形式实现,主要通过下列三个函数完成.</p>
+<ol>
+<li><code>objc_autoreleasepoolPush</code></li>
+<li><code>objc_autoreleasepoolPop</code></li>
+<li><code>objc_autorelease</code></li>
+</ol>
+<p>看函数名就可以知道，对 autorelease 分别执行 push，和 pop 操作。销毁对象时执行release操作。</p>
+<p>举例说明：我们都知道用类方法创建的对象都是 Autorelease 的，那么一旦 Person 出了作用域，当在 Person 的 dealloc 方法中打上断点，我们就可以看到这样的调用堆栈信息：</p>
+<p> <img src="http://i60.tinypic.com/15mfj11.jpg" alt="enter image description here"></p>
+<p>###37. 使用block时什么情况会发生引用循环，如何解决？<br>一个对象中强引用了block，在block中又强引用了该对象，就会发射循环引用。</p>
+<p>解决方法是将该对象使用<strong>weak或者</strong>block修饰符修饰之后再在block中使用。</p>
+<ol>
+<li>id weak weakSelf = self;<br>或者 weak __typeof(&amp;*self)weakSelf = self该方法可以设置宏</li>
+<li>id __block weakSelf = self;</li>
+</ol>
+<p>或者将其中一方强制制空 <code>xxx = nil</code>。</p>
+<p>检测代码中是否存在循环引用问题，可使用 Facebook 开源的一个检测工具  <a href="https://github.com/facebook/FBRetainCycleDetector" target="_blank" rel="external"><strong><em>FBRetainCycleDetector</em></strong></a> 。</p>
+<p>###38. 在block内如何修改block外部变量？<br>默认情况下，在block中访问的外部变量是复制过去的，即：<strong>写操作不对原变量生效</strong>。但是你可以加上 <code>__block</code> 来让其写操作生效，示例代码如下:</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">__block <span class="keyword">int</span> a = <span class="number">0</span>;</div><div class="line"><span class="keyword">void</span> (^foo)(<span class="keyword">void</span>) = ^&#123; </div><div class="line">    a = <span class="number">1</span>; </div><div class="line">&#125;;</div><div class="line">foo(); </div><div class="line"><span class="comment">//这里，a的值被修改为1</span></div></pre></td></tr></table></figure>
+<p>这是 <a href="http://weibo.com/tangqiaoboy" target="_blank" rel="external">微博@唐巧_boy</a>的《iOS开发进阶》中的第11.2.3章节中的描述。你同样可以在面试中这样回答，但你并没有答到“点子上”。真正的原因，并没有书这本书里写的这么“神奇”，而且这种说法也有点牵强。面试官肯定会追问“为什么写操作就生效了？”真正的原因是这样的：</p>
+<blockquote>
+<p>我们都知道：<strong>Block不允许修改外部变量的值</strong>，这里所说的外部变量的值，指的是栈中指针的内存地址。<code>__block</code> 所起到的作用就是只要观察到该变量被 block 所持有，就将“外部变量”在栈中的内存地址放到了堆中。进而在block内部也可以修改外部变量的值。</p>
+</blockquote>
+<p><strong>Block不允许修改外部变量的值</strong>。Apple这样设计，应该是考虑到了block的特殊性，block也属于“函数”的范畴，变量进入block，实际就是已经改变了作用域。在几个作用域之间进行切换时，如果不加上这样的限制，变量的可维护性将大大降低。又比如我想在block内声明了一个与外部同名的变量，此时是允许呢还是不允许呢？只有加上了这样的限制，这样的情景才能实现。于是栈区变成了红灯区，堆区变成了绿灯区。</p>
+<p>我们可以打印下内存地址来进行验证：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">__block <span class="keyword">int</span> a = <span class="number">0</span>;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"定义前：%p"</span>, &amp;a);         <span class="comment">//栈区</span></div><div class="line"><span class="keyword">void</span> (^foo)(<span class="keyword">void</span>) = ^&#123;</div><div class="line">    a = <span class="number">1</span>;</div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"block内部：%p"</span>, &amp;a);    <span class="comment">//堆区</span></div><div class="line">&#125;;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"定义后：%p"</span>, &amp;a);         <span class="comment">//堆区</span></div><div class="line">foo();</div></pre></td></tr></table></figure>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="number">2016</span><span class="number">-05</span><span class="number">-17</span> <span class="number">02</span>:<span class="number">03</span>:<span class="number">33.559</span> LeanCloudChatKit-iOS[<span class="number">1505</span>:<span class="number">713679</span>] 定义前：<span class="number">0x16fda86f8</span></div><div class="line"><span class="number">2016</span><span class="number">-05</span><span class="number">-17</span> <span class="number">02</span>:<span class="number">03</span>:<span class="number">33.559</span> LeanCloudChatKit-iOS[<span class="number">1505</span>:<span class="number">713679</span>] 定义后：<span class="number">0x155b22fc8</span></div><div class="line"><span class="number">2016</span><span class="number">-05</span><span class="number">-17</span> <span class="number">02</span>:<span class="number">03</span>:<span class="number">33.559</span> LeanCloudChatKit-iOS[<span class="number">1505</span>:<span class="number">713679</span>] block内部： <span class="number">0x155b22fc8</span></div></pre></td></tr></table></figure>
+<p>“定义后”和“block内部”两者的内存地址是一样的，我们都知道 block 内部的变量会被 copy 到堆区，“block内部”打印的是堆地址，因而也就可以知道，“定义后”打印的也是堆的地址。</p>
+<p> 那么如何证明“block内部”打印的是堆地址？</p>
+<p> 把三个16进制的内存地址转成10进制就是：</p>
+<ol>
+<li>定义后前：6171559672</li>
+<li>block内部：5732708296</li>
+<li>定义后后：5732708296</li>
+</ol>
+<p>中间相差438851376个字节，也就是 418.5M 的空间，因为堆地址要小于栈地址，又因为iOS中一个进程的栈区内存只有1M，Mac也只有8M，显然a已经是在堆区了。</p>
+<p>这也证实了：a 在定义前是栈区，但只要进入了 block 区域，就变成了堆区。这才是 <code>__block</code> 关键字的真正作用。</p>
+<p> <code>__block</code> 关键字修饰后，int类型也从4字节变成了32字节，这是 Foundation 框架 malloc 出来的。这也同样能证实上面的结论。（PS：居然比 NSObject alloc 出来的 16  字节要多一倍）。</p>
+<p>理解到这是因为堆栈地址的变更，而非所谓的“写操作生效”，这一点至关重要，要不然你如何解释下面这个现象：</p>
+<p>以下代码编译可以通过，并且在block中成功将a的从Tom修改为Jerry。<br>​<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">NSMutableString</span> *a = [<span class="built_in">NSMutableString</span> stringWithString:<span class="string">@"Tom"</span>];</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"\n 定以前：------------------------------------\n\</span></div><div class="line">      a指向的堆中地址：%p；a在栈中的指针地址：%p", a, &amp;a);               <span class="comment">//a在栈区</span></div><div class="line"><span class="keyword">void</span> (^foo)(<span class="keyword">void</span>) = ^&#123;</div><div class="line">    a.string = <span class="string">@"Jerry"</span>;</div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"\n block内部：------------------------------------\n\</span></div><div class="line">     a指向的堆中地址：%p；a在栈中的指针地址：%p", a, &amp;a);               <span class="comment">//a在栈区</span></div><div class="line">    a = [<span class="built_in">NSMutableString</span> stringWithString:<span class="string">@"William"</span>];</div><div class="line">&#125;;</div><div class="line">foo();</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"\n 定以后：------------------------------------\n\</span></div><div class="line">      a指向的堆中地址：%p；a在栈中的指针地址：%p", a, &amp;a);               <span class="comment">//a在栈区</span></div></pre></td></tr></table></figure></p>
+<p><img src="http://i66.tinypic.com/34euhcy.jpg" alt="enter image description here"></p>
+<p> 这里的a已经由基本数据类型，变成了对象类型。block会对对象类型的指针进行copy，copy到堆中，但并不会改变该指针所指向的堆中的地址，所以在上面的示例代码中，block体内修改的实际是a指向的堆中的内容。</p>
+<p> 但如果我们尝试像上面图片中的65行那样做，结果会编译不通过，那是因为此时你在修改的就不是堆中的内容，而是栈中的内容。</p>
+<p>上文已经说过：<strong>Block不允许修改外部变量的值</strong>，这里所说的外部变量的值，指的是栈中指针的内存地址。栈区是红灯区，堆区才是绿灯区。</p>
+<p>###39. 使用系统的某些block api（如UIView的block版本写动画时），是否也考虑引用循环问题？ </p>
+<p>系统的某些block api中，UIView的block版本写动画时不需要考虑，但也有一些api 需要考虑：</p>
+<p>所谓“引用循环”是指双向的强引用，所以那些“单向的强引用”（block 强引用 self ）没有问题，比如这些：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[<span class="built_in">UIView</span> animateWithDuration:duration animations:^&#123; [<span class="keyword">self</span>.superview layoutIfNeeded]; &#125;];</div></pre></td></tr></table></figure>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[[<span class="built_in">NSOperationQueue</span> mainQueue] addOperationWithBlock:^&#123; <span class="keyword">self</span>.someProperty = xyz; &#125;];</div></pre></td></tr></table></figure>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[[<span class="built_in">NSNotificationCenter</span> defaultCenter] addObserverForName:<span class="string">@"someNotification"</span> </div><div class="line">                                                  object:<span class="literal">nil</span> </div><div class="line">                           queue:[<span class="built_in">NSOperationQueue</span> mainQueue]</div><div class="line">                                              usingBlock:^(<span class="built_in">NSNotification</span> * notification) &#123;</div><div class="line">                                                    <span class="keyword">self</span>.someProperty = xyz; &#125;];</div></pre></td></tr></table></figure>
+<p>这些情况不需要考虑“引用循环”。</p>
+<p>但如果你使用一些参数中可能含有 ivar 的系统 api ，如 GCD 、NSNotificationCenter就要小心一点：比如GCD 内部如果引用了 self，而且 GCD 的其他参数是 ivar，则要考虑到循环引用：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">__<span class="keyword">weak</span> __typeof__(<span class="keyword">self</span>) weakSelf = <span class="keyword">self</span>;</div><div class="line">dispatch_group_async(_operationsGroup, _operationsQueue, ^</div><div class="line">&#123;</div><div class="line">__typeof__(<span class="keyword">self</span>) strongSelf = weakSelf;</div><div class="line">[strongSelf doSomething];</div><div class="line">[strongSelf doSomethingElse];</div><div class="line">&#125; );</div></pre></td></tr></table></figure>
+<p>类似的：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">__<span class="keyword">weak</span> __typeof__(<span class="keyword">self</span>) weakSelf = <span class="keyword">self</span>;</div><div class="line">_observer = [[<span class="built_in">NSNotificationCenter</span> defaultCenter] addObserverForName:<span class="string">@"testKey"</span></div><div class="line">                                                              object:<span class="literal">nil</span></div><div class="line">                                                               queue:<span class="literal">nil</span></div><div class="line">                                                          usingBlock:^(<span class="built_in">NSNotification</span> *note) &#123;</div><div class="line">    __typeof__(<span class="keyword">self</span>) strongSelf = weakSelf;</div><div class="line">    [strongSelf dismissModalViewControllerAnimated:<span class="literal">YES</span>];</div><div class="line">&#125;];</div></pre></td></tr></table></figure>
+<p>self –&gt; _observer –&gt; block –&gt; self 显然这也是一个循环引用。</p>
+<p>检测代码中是否存在循环引用问题，可使用 Facebook 开源的一个检测工具  <a href="https://github.com/facebook/FBRetainCycleDetector" target="_blank" rel="external"><strong><em>FBRetainCycleDetector</em></strong></a> 。</p>
+<p>###40. GCD的队列（<code>dispatch_queue_t</code>）分哪两种类型？</p>
+<ol>
+<li>串行队列Serial Dispatch Queue</li>
+<li>并行队列Concurrent Dispatch Queue</li>
+</ol>
+<p>###41. 如何用GCD同步若干个异步调用？（如根据若干个url异步加载多张图片，然后在都下载完成后合成一张整图）</p>
+<p>使用Dispatch Group追加block到Global Group Queue,这些block如果全部执行完毕，就会执行Main Dispatch Queue中的结束处理的block。</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">dispatch_queue_t</span> queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, <span class="number">0</span>);</div><div class="line">dispatch_group_t group = dispatch_group_create();</div><div class="line">dispatch_group_async(group, queue, ^&#123; <span class="comment">/*加载图片1 */</span> &#125;);</div><div class="line">dispatch_group_async(group, queue, ^&#123; <span class="comment">/*加载图片2 */</span> &#125;);</div><div class="line">dispatch_group_async(group, queue, ^&#123; <span class="comment">/*加载图片3 */</span> &#125;); </div><div class="line">dispatch_group_notify(group, dispatch_get_main_queue(), ^&#123;</div><div class="line">        <span class="comment">// 合并图片</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>###42. <code>dispatch_barrier_async</code>的作用是什么？<br> 在并行队列中，为了保持某些任务的顺序，需要等待一些任务完成后才能继续进行，使用 barrier 来等待之前任务完成，避免数据竞争等问题。<br> <code>dispatch_barrier_async</code> 函数会等待追加到Concurrent Dispatch Queue并行队列中的操作全部执行完之后，然后再执行 <code>dispatch_barrier_async</code> 函数追加的处理，等 <code>dispatch_barrier_async</code> 追加的处理执行结束之后，Concurrent Dispatch Queue才恢复之前的动作继续执行。</p>
+<p>打个比方：比如你们公司周末跟团旅游，高速休息站上，司机说：大家都去上厕所，速战速决，上完厕所就上高速。超大的公共厕所，大家同时去，程序猿很快就结束了，但程序媛就可能会慢一些，即使你第一个回来，司机也不会出发，司机要等待所有人都回来后，才能出发。 <code>dispatch_barrier_async</code> 函数追加的内容就如同 “上完厕所就上高速”这个动作。</p>
+<p>（注意：使用 <code>dispatch_barrier_async</code> ，该函数只能搭配自定义并行队列 <code>dispatch_queue_t</code> 使用。不能使用： <code>dispatch_get_global_queue</code> ，否则 <code>dispatch_barrier_async</code> 的作用会和 <code>dispatch_async</code> 的作用一模一样。 ）</p>
+<p>###43. 苹果为什么要废弃<code>dispatch_get_current_queue</code>？</p>
+<p><code>dispatch_get_current_queue</code>容易造成死锁</p>
+<p>###44. 以下代码运行结果如何？</p>
+<pre><code>- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    NSLog(@&quot;1&quot;);
+    dispatch_sync(dispatch_get_main_queue(), ^{
+        NSLog(@&quot;2&quot;);
+    });
+    NSLog(@&quot;3&quot;);
+}
+</code></pre><p>只输出：1 。发生主线程锁死。</p>
+<p>###45. addObserver:forKeyPath:options:context:各个参数的作用分别是什么，observer中需要实现哪个方法才能获得KVO回调？</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 添加键值观察</span></div><div class="line"><span class="comment">/*</span></div><div class="line">1 观察者，负责处理监听事件的对象</div><div class="line">2 观察的属性</div><div class="line">3 观察的选项</div><div class="line">4 上下文</div><div class="line">*/</div><div class="line">[<span class="keyword">self</span>.person addObserver:<span class="keyword">self</span> forKeyPath:<span class="string">@"name"</span> options:<span class="built_in">NSKeyValueObservingOptionNew</span> | <span class="built_in">NSKeyValueObservingOptionOld</span> context:<span class="string">@"Person Name"</span>];</div></pre></td></tr></table></figure>
+<p>observer中需要实现一下方法：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 所有的 kvo 监听到事件，都会调用此方法</span></div><div class="line"><span class="comment">/*</span></div><div class="line"> 1. 观察的属性</div><div class="line"> 2. 观察的对象</div><div class="line"> 3. change 属性变化字典（新／旧）</div><div class="line"> 4. 上下文，与监听的时候传递的一致</div><div class="line"> */</div><div class="line">- (<span class="keyword">void</span>)observeValueForKeyPath:(<span class="built_in">NSString</span> *)keyPath ofObject:(<span class="keyword">id</span>)object change:(<span class="built_in">NSDictionary</span> *)change context:(<span class="keyword">void</span> *)context;</div></pre></td></tr></table></figure>
+<p>###46. 如何手动触发一个value的KVO</p>
+<p>所谓的“手动触发”是区别于“自动触发”：</p>
+<p>自动触发是指类似这种场景：在注册 KVO 之前设置一个初始值，注册之后，设置一个不一样的值，就可以触发了。</p>
+<p>想知道如何手动触发，必须知道自动触发 KVO 的原理：</p>
+<p>键值观察通知依赖于 NSObject 的两个方法:  <code>willChangeValueForKey:</code> 和 <code>didChangevlueForKey:</code> 。在一个被观察属性发生改变之前，  <code>willChangeValueForKey:</code> 一定会被调用，这就<br>会记录旧的值。而当改变发生后，  <code>observeValueForKey:ofObject:change:context:</code> 会被调用，继而 <code>didChangeValueForKey:</code> 也会被调用。如果可以手动实现这些调用，就可以实现“手动触发”了。</p>
+<p>那么“手动触发”的使用场景是什么？一般我们只在希望能控制“回调的调用时机”时才会这么做。</p>
+<p>具体做法如下：</p>
+<p>如果这个  <code>value</code> 是  表示时间的 <code>self.now</code> ，那么代码如下：最后两行代码缺一不可。</p>
+<p>相关代码已放在仓库里。</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//  .m文件</span></div><div class="line"><span class="comment">//  Created by https://github.com/ChenYilong</span></div><div class="line"><span class="comment">//  微博@iOS程序犭袁(http://weibo.com/luohanchenyilong/).</span></div><div class="line"><span class="comment">//  手动触发 value 的KVO，最后两行代码缺一不可。</span></div><div class="line"></div><div class="line"><span class="comment">//@property (nonatomic, strong) NSDate *now;</span></div><div class="line">- (<span class="keyword">void</span>)viewDidLoad &#123;</div><div class="line">    [<span class="keyword">super</span> viewDidLoad];</div><div class="line">    _now = [<span class="built_in">NSDate</span> date];</div><div class="line">    [<span class="keyword">self</span> addObserver:<span class="keyword">self</span> forKeyPath:<span class="string">@"now"</span> options:<span class="built_in">NSKeyValueObservingOptionNew</span> context:<span class="literal">nil</span>];</div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"1"</span>);</div><div class="line">    [<span class="keyword">self</span> willChangeValueForKey:<span class="string">@"now"</span>]; <span class="comment">// “手动触发self.now的KVO”，必写。</span></div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"2"</span>);</div><div class="line">    [<span class="keyword">self</span> didChangeValueForKey:<span class="string">@"now"</span>]; <span class="comment">// “手动触发self.now的KVO”，必写。</span></div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"4"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>但是平时我们一般不会这么干，我们都是等系统去“自动触发”。“自动触发”的实现原理：</p>
+<blockquote>
+<p>比如调用 <code>setNow:</code> 时，系统还会以某种方式在中间插入 <code>wilChangeValueForKey:</code> 、  <code>didChangeValueForKey:</code> 和 <code>observeValueForKeyPath:ofObject:change:context:</code> 的调用。</p>
+</blockquote>
+<p>大家可能以为这是因为 <code>setNow:</code> 是合成方法，有时候我们也能看到有人这么写代码:</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">- (<span class="keyword">void</span>)setNow:(<span class="built_in">NSDate</span> *)aDate &#123;</div><div class="line">    [<span class="keyword">self</span> willChangeValueForKey:<span class="string">@"now"</span>]; <span class="comment">// 没有必要</span></div><div class="line">    _now = aDate;</div><div class="line">    [<span class="keyword">self</span> didChangeValueForKey:<span class="string">@"now"</span>];<span class="comment">// 没有必要</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这完全没有必要，不要这么做，这样的话，KVO代码会被调用两次。KVO在调用存取方法之前总是调用 <code>willChangeValueForKey:</code>  ，之后总是调用 <code>didChangeValueForkey:</code> 。怎么做到的呢?答案是通过 isa 混写（isa-swizzling）。下文《apple用什么方式实现对一个对象的KVO？》会有详述。</p>
+<p>参考链接： <a href="https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/KeyValueObserving/Articles/KVOCompliance.html#//apple_ref/doc/uid/20002178-SW3" target="_blank" rel="external">Manual Change Notification—Apple 官方文档</a> </p>
+<p>###47. 若一个类有实例变量 <code>NSString *_foo</code> ，调用setValue:forKey:时，可以以foo还是 <code>_foo</code> 作为key？<br>都可以。</p>
+<p>###48. KVC的keyPath中的集合运算符如何使用？</p>
+<ol>
+<li>必须用在集合对象上或普通对象的集合属性上</li>
+<li>简单集合运算符有@avg， @count ， @max ， @min ，@sum，</li>
+<li>格式 @”@sum.age”或 @”集合属性.@max.age”</li>
+</ol>
+<p>###49. KVC和KVO的keyPath一定是属性么？<br>KVO支持实例变量</p>
+<p>###50. 如何关闭默认的KVO的默认实现，并进入自定义的KVO实现？</p>
+<p>请参考：</p>
+<ol>
+<li><a href="http://tech.glowing.com/cn/implement-kvo/" target="_blank" rel="external">《如何自己动手实现 KVO》</a></li>
+<li><a href="http://stackoverflow.com/a/10042641/3395008" target="_blank" rel="external"><strong>KVO for manually implemented properties</strong></a> </li>
+</ol>
+<p>###51. apple用什么方式实现对一个对象的KVO？ </p>
+<p><a href="https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/KeyValueObserving/Articles/KVOImplementation.html" target="_blank" rel="external">Apple 的文档</a>对 KVO 实现的描述：</p>
+<blockquote>
+<p>Automatic key-value observing is implemented using a technique called isa-swizzling… When an observer is registered for an attribute of an object the isa pointer of the observed object is modified, pointing to an intermediate class rather than at the true class …</p>
+</blockquote>
+<p>从<a href="https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/KeyValueObserving/Articles/KVOImplementation.html" target="_blank" rel="external">Apple 的文档</a>可以看出：Apple 并不希望过多暴露 KVO 的实现细节。不过，要是借助 runtime 提供的方法去深入挖掘，所有被掩盖的细节都会原形毕露：</p>
+<blockquote>
+<p>当你观察一个对象时，一个新的类会被动态创建。这个类继承自该对象的原本的类，并重写了被观察属性的 setter 方法。重写的 setter 方法会负责在调用原 setter 方法之前和之后，通知所有观察对象：值的更改。最后通过 <code>isa 混写（isa-swizzling）</code> 把这个对象的 isa 指针 ( isa 指针告诉 Runtime 系统这个对象的类是什么 ) 指向这个新创建的子类，对象就神奇的变成了新创建的子类的实例。我画了一张示意图，如下所示：</p>
+</blockquote>
+<p><img src="http://i62.tinypic.com/sy57ur.jpg" alt="enter image description here"></p>
+<p> KVO 确实有点黑魔法：</p>
+<blockquote>
+<p>Apple 使用了 <code>isa 混写（isa-swizzling）</code>来实现 KVO 。</p>
+</blockquote>
+<p>下面做下详细解释：</p>
+<p>键值观察通知依赖于 NSObject 的两个方法:  <code>willChangeValueForKey:</code> 和 <code>didChangevlueForKey:</code> 。在一个被观察属性发生改变之前，  <code>willChangeValueForKey:</code> 一定会被调用，这就会记录旧的值。而当改变发生后， <code>observeValueForKey:ofObject:change:context:</code> 会被调用，继而  <code>didChangeValueForKey:</code> 也会被调用。可以手动实现这些调用，但很少有人这么做。一般我们只在希望能控制回调的调用时机时才会这么做。大部分情况下，改变通知会自动调用。</p>
+<p> 比如调用 <code>setNow:</code> 时，系统还会以某种方式在中间插入 <code>wilChangeValueForKey:</code> 、  <code>didChangeValueForKey:</code>  和 <code>observeValueForKeyPath:ofObject:change:context:</code> 的调用。大家可能以为这是因为 <code>setNow:</code> 是合成方法，有时候我们也能看到有人这么写代码:</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">- (<span class="keyword">void</span>)setNow:(<span class="built_in">NSDate</span> *)aDate &#123;</div><div class="line">    [<span class="keyword">self</span> willChangeValueForKey:<span class="string">@"now"</span>]; <span class="comment">// 没有必要</span></div><div class="line">    _now = aDate;</div><div class="line">    [<span class="keyword">self</span> didChangeValueForKey:<span class="string">@"now"</span>];<span class="comment">// 没有必要</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这完全没有必要，不要这么做，这样的话，KVO代码会被调用两次。KVO在调用存取方法之前总是调用 <code>willChangeValueForKey:</code>  ，之后总是调用 <code>didChangeValueForkey:</code> 。怎么做到的呢?答案是通过 isa 混写（isa-swizzling）。第一次对一个对象调用 <code>addObserver:forKeyPath:options:context:</code> 时，框架会创建这个类的新的 KVO 子类，并将被观察对象转换为新子类的对象。在这个 KVO 特殊子类中， Cocoa 创建观察属性的 setter ，大致工作原理如下:</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">- (<span class="keyword">void</span>)setNow:(<span class="built_in">NSDate</span> *)aDate &#123;</div><div class="line">    [<span class="keyword">self</span> willChangeValueForKey:<span class="string">@"now"</span>];</div><div class="line">    [<span class="keyword">super</span> setValue:aDate forKey:<span class="string">@"now"</span>];</div><div class="line">    [<span class="keyword">self</span> didChangeValueForKey:<span class="string">@"now"</span>];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这种继承和方法注入是在运行时而不是编译时实现的。这就是正确命名如此重要的原因。只有在使用KVC命名约定时，KVO才能做到这一点。</p>
+<p>KVO 在实现中通过 <code>isa 混写（isa-swizzling）</code> 把这个对象的 isa 指针 ( isa 指针告诉 Runtime 系统这个对象的类是什么 ) 指向这个新创建的子类，对象就神奇的变成了新创建的子类的实例。这在<a href="https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/KeyValueObserving/Articles/KVOImplementation.html" target="_blank" rel="external">Apple 的文档</a>可以得到印证：</p>
+<blockquote>
+<p>Automatic key-value observing is implemented using a technique called isa-swizzling… When an observer is registered for an attribute of an object the isa pointer of the observed object is modified, pointing to an intermediate class rather than at the true class …</p>
+</blockquote>
+<p>然而 KVO 在实现中使用了 <code>isa 混写（ isa-swizzling）</code> ，这个的确不是很容易发现：Apple 还重写、覆盖了 <code>-class</code> 方法并返回原来的类。 企图欺骗我们：这个类没有变，就是原本那个类。。。</p>
+<p>但是，假设“被监听的对象”的类对象是 <code>MYClass</code> ，有时候我们能看到对 <code>NSKVONotifying_MYClass</code> 的引用而不是对  <code>MYClass</code>  的引用。借此我们得以知道 Apple 使用了 <code>isa 混写（isa-swizzling）</code>。具体探究过程可参考<a href="https://www.mikeash.com/pyblog/friday-qa-2009-01-23.html" target="_blank" rel="external"> 这篇博文 </a>。</p>
+<p>那么 <code>wilChangeValueForKey:</code> 、  <code>didChangeValueForKey:</code>  和 <code>observeValueForKeyPath:ofObject:change:context:</code> 这三个方法的执行顺序是怎样的呢？</p>
+<p> <code>wilChangeValueForKey:</code> 、  <code>didChangeValueForKey:</code> 很好理解，<code>observeValueForKeyPath:ofObject:change:context:</code> 的执行时机是什么时候呢？</p>
+<p> 先看一个例子：</p>
+<p>代码已放在仓库里。</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">- (<span class="keyword">void</span>)viewDidLoad &#123;</div><div class="line">    [<span class="keyword">super</span> viewDidLoad];</div><div class="line">    [<span class="keyword">self</span> addObserver:<span class="keyword">self</span> forKeyPath:<span class="string">@"now"</span> options:<span class="built_in">NSKeyValueObservingOptionNew</span> context:<span class="literal">nil</span>];</div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"1"</span>);</div><div class="line">    [<span class="keyword">self</span> willChangeValueForKey:<span class="string">@"now"</span>]; <span class="comment">// “手动触发self.now的KVO”，必写。</span></div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"2"</span>);</div><div class="line">    [<span class="keyword">self</span> didChangeValueForKey:<span class="string">@"now"</span>]; <span class="comment">// “手动触发self.now的KVO”，必写。</span></div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"4"</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line">- (<span class="keyword">void</span>)observeValueForKeyPath:(<span class="built_in">NSString</span> *)keyPath ofObject:(<span class="keyword">id</span>)object change:(<span class="built_in">NSDictionary</span>&lt;<span class="built_in">NSString</span> *,<span class="keyword">id</span>&gt; *)change context:(<span class="keyword">void</span> *)context &#123;</div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"3"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://i66.tinypic.com/ncm7th.jpg" alt="enter image description here"></p>
+<p>如果单单从下面这个例子的打印上， </p>
+<p>顺序似乎是 <code>wilChangeValueForKey:</code> 、 <code>observeValueForKeyPath:ofObject:change:context:</code> 、 <code>didChangeValueForKey:</code> 。</p>
+<p>其实不然，这里有一个 <code>observeValueForKeyPath:ofObject:change:context:</code>  , 和 <code>didChangeValueForKey:</code> 到底谁先调用的问题：如果 <code>observeValueForKeyPath:ofObject:change:context:</code> 是在 <code>didChangeValueForKey:</code> 内部触发的操作呢？ 那么顺序就是： <code>wilChangeValueForKey:</code> 、  <code>didChangeValueForKey:</code>  和 <code>observeValueForKeyPath:ofObject:change:context:</code> </p>
+<p>不信你把 <code>didChangeValueForKey:</code> 注视掉，看下 <code>observeValueForKeyPath:ofObject:change:context:</code> 会不会执行。</p>
+<p>了解到这一点很重要，正如  <a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#46-如何手动触发一个value的kvo" target="_blank" rel="external">46. 如何手动触发一个value的KVO</a>  所说的：</p>
+<p>“手动触发”的使用场景是什么？一般我们只在希望能控制“回调的调用时机”时才会这么做。</p>
+<p>而“回调的调用时机”就是在你调用 <code>didChangeValueForKey:</code> 方法时。</p>
+<p>###52. IBOutlet连出来的视图属性为什么可以被设置成weak?</p>
+<p>参考链接：<a href="http://stackoverflow.com/questions/7678469/should-iboutlets-be-strong-or-weak-under-arc" target="_blank" rel="external"> <strong><em>Should IBOutlets be strong or weak under ARC?</em></strong> </a></p>
+<p>文章告诉我们：</p>
+<blockquote>
+<p>因为既然有外链那么视图在xib或者storyboard中肯定存在，视图已经对它有一个强引用了。</p>
+</blockquote>
+<p>不过这个回答漏了个重要知识，使用storyboard（xib不行）创建的vc，会有一个叫_topLevelObjectsToKeepAliveFromStoryboard的私有数组强引用所有top level的对象，所以这时即便outlet声明成weak也没关系</p>
+<p>###53. IB中User Defined Runtime Attributes如何使用？ </p>
+<p>它能够通过KVC的方式配置一些你在interface builder 中不能配置的属性。当你希望在IB中作尽可能多得事情，这个特性能够帮助你编写更加轻量级的viewcontroller</p>
+<p>###54. 如何调试BAD_ACCESS错误</p>
+<ol>
+<li>重写object的respondsToSelector方法，现实出现EXEC_BAD_ACCESS前访问的最后一个object</li>
+<li><p>通过 Zombie<br><img src="http://i.stack.imgur.com/ZAdi0.png" alt="enter image description here"></p>
+</li>
+<li><p>设置全局断点快速定位问题代码所在行</p>
+</li>
+<li>Xcode 7 已经集成了BAD_ACCESS捕获功能：<strong>Address Sanitizer</strong>。<br>用法如下：在配置中勾选✅Enable Address Sanitizer<br> <img src="https://developer.apple.com/library/prerelease/ios/documentation/DeveloperTools/Conceptual/WhatsNewXcode/Art/xc7-asan_2x.png" alt="enter image description here"></li>
+</ol>
+<p>###55. lldb（gdb）常用的调试命令？</p>
+<ul>
+<li>breakpoint 设置断点定位到某一个函数</li>
+<li>n 断点指针下一步</li>
+<li>po打印对象</li>
+</ul>
+<p>更多 lldb（gdb） 调试命令可查看</p>
+<ol>
+<li><a href="http://lldb.llvm.org/lldb-gdb.html" target="_blank" rel="external"> <strong><em>The LLDB Debugger</em></strong> </a>；</li>
+<li>苹果官方文档：<a href="https://developer.apple.com/library/ios/technotes/tn2239/_index.html" target="_blank" rel="external"> <strong><em>iOS Debugging Magic</em></strong> </a>。</li>
+</ol>
+<hr>
+<p>Posted by <a href="http://weibo.com/luohanchenyilong/" target="_blank" rel="external">微博@iOS程序犭袁</a><br>原创文章，版权声明：自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh" target="_blank" rel="external">Creative Commons BY-NC-ND 3.0</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+ 
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS面试-招聘/">iOS面试/招聘</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-《招聘一个靠谱的iOS》面试题参考答案（上）" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/08/16/《招聘一个靠谱的iOS》面试题参考答案（上）/" class="article-date">
@@ -143,10 +667,8 @@
 <hr>
 <p>#索引</p>
 <ol>
-<li><p><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（上）.md#1-风格纠错题" target="_blank" rel="external">风格纠错题</a> </p>
-</li>
-<li><p><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（上）.md#优化部分" target="_blank" rel="external">优化部分</a> </p>
-</li>
+<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（上）.md#1-风格纠错题" target="_blank" rel="external">风格纠错题</a> </li>
+<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（上）.md#优化部分" target="_blank" rel="external">优化部分</a> </li>
 <li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（上）.md#硬伤部分" target="_blank" rel="external">硬伤部分</a> </li>
 <li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（上）.md#2-什么情况使用-weak-关键字相比-assign-有什么不同" target="_blank" rel="external">什么情况使用 weak 关键字，相比 assign 有什么不同？</a> </li>
 <li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（上）.md#3-怎么用-copy-关键字" target="_blank" rel="external">怎么用 copy 关键字？</a> </li>
@@ -887,530 +1409,6 @@ NSStringFromClass([super class]) = Son
 
 
   
-    <article id="post-《招聘一个靠谱的iOS》面试题参考答案（下）" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/08/16/《招聘一个靠谱的iOS》面试题参考答案（下）/" class="article-date">
-  <time datetime="2016-08-16T06:51:15.000Z" itemprop="datePublished">2016-08-16</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/面试-招聘/">面试/招聘</a>►<a class="article-category-link" href="/categories/面试-招聘/《招聘一个靠谱的iOS》/">《招聘一个靠谱的iOS》</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/16/《招聘一个靠谱的iOS》面试题参考答案（下）/">《招聘一个靠谱的 iOS》—参考答案（下）</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="http://blog.sunnyxx.com/2015/07/04/ios-interview/" target="_blank" rel="external">《招聘一个靠谱的 iOS》</a>—参考答案（下）</p>
-<p>说明：面试题来源是<a href="http://weibo.com/u/1364395395" target="_blank" rel="external">微博@我就叫Sunny怎么了</a>的这篇博文：<a href="http://blog.sunnyxx.com/2015/07/04/ios-interview/" target="_blank" rel="external">《招聘一个靠谱的 iOS》</a>，其中共55题，除第一题为纠错题外，其他54道均为简答题。</p>
-<p>出题者简介： 孙源（sunnyxx），目前就职于百度，负责百度知道 iOS 客户端的开发工作，对技术喜欢刨根问底和总结最佳实践，热爱分享和开源，维护一个叫 forkingdog 的开源小组。</p>
-<p>答案为<a href="http://weibo.com/luohanchenyilong/" target="_blank" rel="external">微博@iOS程序犭袁</a>整理，未经出题者校对，如有纰漏，请向<a href="http://weibo.com/luohanchenyilong/" target="_blank" rel="external">微博@iOS程序犭袁</a>指正。</p>
-<hr>
-<h1 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h1><ol>
-<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#25-_objc_msgforward函数是做什么的直接调用它将会发生什么" target="_blank" rel="external"> 25. <code>_objc_msgForward</code> 函数是做什么的，直接调用它将会发生什么？</a></li>
-<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#26-runtime如何实现weak变量的自动置nil" target="_blank" rel="external">26. runtime如何实现weak变量的自动置nil？</a></li>
-<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#27-能否向编译后得到的类中增加实例变量能否向运行时创建的类中添加实例变量为什么" target="_blank" rel="external">27. 能否向编译后得到的类中增加实例变量？能否向运行时创建的类中添加实例变量？为什么？</a> </li>
-<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#28-runloop和线程有什么关系" target="_blank" rel="external">28. runloop和线程有什么关系？</a> </li>
-<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#29-runloop的mode作用是什么" target="_blank" rel="external">29. runloop的mode作用是什么？</a> </li>
-<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#30-以-scheduledtimerwithtimeinterval的方式触发的timer在滑动页面上的列表时timer会暂定回调为什么如何解决" target="_blank" rel="external">30. 以+ scheduledTimerWithTimeInterval…的方式触发的timer，在滑动页面上的列表时，timer会暂定回调，为什么？如何解决？</a> </li>
-<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#31-猜想runloop内部是如何实现的" target="_blank" rel="external">31. 猜想runloop内部是如何实现的？</a> </li>
-<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#32-objc使用什么机制管理对象内存" target="_blank" rel="external">32. objc使用什么机制管理对象内存？</a> </li>
-<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#33-arc通过什么方式帮助开发者管理内存" target="_blank" rel="external">33. ARC通过什么方式帮助开发者管理内存？</a> </li>
-<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#34-不手动指定autoreleasepool的前提下一个autorealese对象在什么时刻释放比如在一个vc的viewdidload中创建" target="_blank" rel="external">34. 不手动指定autoreleasepool的前提下，一个autorealese对象在什么时刻释放？（比如在一个vc的viewDidLoad中创建）</a> </li>
-<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#35-bad_access在什么情况下出现" target="_blank" rel="external">35. BAD_ACCESS在什么情况下出现？</a> </li>
-<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#36-苹果是如何实现autoreleasepool的" target="_blank" rel="external">36. 苹果是如何实现autoreleasepool的？</a> </li>
-<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#37-使用block时什么情况会发生引用循环如何解决" target="_blank" rel="external">37. 使用block时什么情况会发生引用循环，如何解决？</a></li>
-<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#38-在block内如何修改block外部变量" target="_blank" rel="external">38. 在block内如何修改block外部变量？</a> </li>
-<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#39-使用系统的某些block-api如uiview的block版本写动画时是否也考虑引用循环问题" target="_blank" rel="external">39. 使用系统的某些block api（如UIView的block版本写动画时），是否也考虑引用循环问题？</a> </li>
-<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#40-gcd的队列dispatch_queue_t分哪两种类型" target="_blank" rel="external">40. GCD的队列（dispatch_queue_t）分哪两种类型？</a> </li>
-<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#41-如何用gcd同步若干个异步调用如根据若干个url异步加载多张图片然后在都下载完成后合成一张整图" target="_blank" rel="external">41. 如何用GCD同步若干个异步调用？（如根据若干个url异步加载多张图片，然后在都下载完成后合成一张整图）</a> </li>
-<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#42-dispatch_barrier_async的作用是什么" target="_blank" rel="external">42. dispatch_barrier_async的作用是什么？</a> </li>
-<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#43-苹果为什么要废弃dispatch_get_current_queue" target="_blank" rel="external">43. 苹果为什么要废弃dispatch_get_current_queue？</a> </li>
-<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#44-以下代码运行结果如何" target="_blank" rel="external">44. 以下代码运行结果如何？</a> </li>
-</ol>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">- (<span class="keyword">void</span>)viewDidLoad</div><div class="line">&#123;</div><div class="line">    [<span class="keyword">super</span> viewDidLoad];</div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"1"</span>);</div><div class="line">    <span class="built_in">dispatch_sync</span>(dispatch_get_main_queue(), ^&#123;</div><div class="line">        <span class="built_in">NSLog</span>(<span class="string">@"2"</span>);</div><div class="line">    &#125;);</div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"3"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ol>
-<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#45-addobserverforkeypathoptionscontext各个参数的作用分别是什么observer中需要实现哪个方法才能获得kvo回调" target="_blank" rel="external">45. addObserver:forKeyPath:options:context:各个参数的作用分别是什么，observer中需要实现哪个方法才能获得KVO回调？</a> </li>
-<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#46-如何手动触发一个value的kvo" target="_blank" rel="external">46. 如何手动触发一个value的KVO</a> </li>
-<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#47-若一个类有实例变量-nsstring-_foo-调用setvalueforkey时可以以foo还是-_foo-作为key" target="_blank" rel="external">47. 若一个类有实例变量 NSString *_foo ，调用setValue:forKey:时，可以以foo还是 _foo 作为key？</a> </li>
-<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#48-kvc的keypath中的集合运算符如何使用" target="_blank" rel="external">48. KVC的keyPath中的集合运算符如何使用？</a> </li>
-<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#49-kvc和kvo的keypath一定是属性么" target="_blank" rel="external">49. KVC和KVO的keyPath一定是属性么？</a> </li>
-<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#50-如何关闭默认的kvo的默认实现并进入自定义的kvo实现" target="_blank" rel="external">50. 如何关闭默认的KVO的默认实现，并进入自定义的KVO实现？</a> </li>
-<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#51-apple用什么方式实现对一个对象的kvo" target="_blank" rel="external">51. apple用什么方式实现对一个对象的KVO？</a> </li>
-<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#52-iboutlet连出来的视图属性为什么可以被设置成weak" target="_blank" rel="external">52. IBOutlet连出来的视图属性为什么可以被设置成weak?</a> </li>
-<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#53-ib中user-defined-runtime-attributes如何使用" target="_blank" rel="external">53. IB中User Defined Runtime Attributes如何使用？</a> </li>
-<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#54-如何调试bad_access错误" target="_blank" rel="external">54. 如何调试BAD_ACCESS错误</a> </li>
-<li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#55-lldbgdb常用的调试命令" target="_blank" rel="external">55. lldb（gdb）常用的调试命令？</a> </li>
-</ol>
-<hr>
-<p>###25. <code>_objc_msgForward</code>函数是做什么的，直接调用它将会发生什么？</p>
-<blockquote>
-<p><code>_objc_msgForward</code>是 IMP 类型，用于消息转发的：当向一个对象发送一条消息，但它并没有实现的时候，<code>_objc_msgForward</code>会尝试做消息转发。</p>
-</blockquote>
-<p>我们可以这样创建一个<code>_objc_msgForward</code>对象：</p>
-<pre><code>IMP msgForwardIMP = _objc_msgForward;
-</code></pre><p>在<a href="https://github.com/ChenYilong/iOSInterviewQuestions" target="_blank" rel="external">上篇</a>中的《objc中向一个对象发送消息<code>[obj foo]</code>和<code>objc_msgSend()</code>函数之间有什么关系？》曾提到<code>objc_msgSend</code>在“消息传递”中的作用。在“消息传递”过程中，<code>objc_msgSend</code>的动作比较清晰：首先在 Class 中的缓存查找 IMP （没缓存则初始化缓存），如果没找到，则向父类的 Class 查找。如果一直查找到根类仍旧没有实现，则用<code>_objc_msgForward</code>函数指针代替 IMP 。最后，执行这个 IMP 。</p>
-<p>objc运行时是开源的，所以我们可以看到它的实现。打开<a href="http://www.opensource.apple.com/tarballs/objc4/" target="_blank" rel="external"> <strong><em>Apple Open Source 里Mac代码里的obj包</em></strong> </a>下载一个最新版本，找到 <code>objc-runtime-new.mm</code>，进入之后搜索<code>_objc_msgForward</code>。</p>
-<p><img src="http://i.imgur.com/rGBfaoL.png" alt="enter image description here"></p>
-<p>里面有对<code>_objc_msgForward</code>的功能解释：</p>
-<p><img src="http://i.imgur.com/vcThcdA.png" alt="enter image description here"></p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/***********************************************************************</span></div><div class="line">* lookUpImpOrForward.</div><div class="line">* The standard IMP lookup. </div><div class="line">* initialize==NO tries to avoid +initialize (but sometimes fails)</div><div class="line">* cache==NO skips optimistic unlocked lookup (but uses cache elsewhere)</div><div class="line">* Most callers should use initialize==YES and cache==YES.</div><div class="line">* inst is an instance of cls or a subclass thereof, or nil if none is known. </div><div class="line">*   If cls is an un-initialized metaclass then a non-nil inst is faster.</div><div class="line">* May return _objc_msgForward_impcache. IMPs destined for external use </div><div class="line">*   must be converted to _objc_msgForward or _objc_msgForward_stret.</div><div class="line">*   If you don't want forwarding at all, use lookUpImpOrNil() instead.</div><div class="line">**********************************************************************/</div></pre></td></tr></table></figure>
-<p>对 <code>objc-runtime-new.mm</code>文件里与<code>_objc_msgForward</code>有关的三个函数使用伪代码展示下：</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//  objc-runtime-new.mm 文件里与 _objc_msgForward 有关的三个函数使用伪代码展示</span></div><div class="line"><span class="comment">//  Created by https://github.com/ChenYilong</span></div><div class="line"><span class="comment">//  Copyright (c)  微博@iOS程序犭袁(http://weibo.com/luohanchenyilong/). All rights reserved.</span></div><div class="line"><span class="comment">//  同时，这也是 obj_msgSend 的实现过程</span></div><div class="line"></div><div class="line"><span class="keyword">id</span> objc_msgSend(<span class="keyword">id</span> <span class="keyword">self</span>, SEL op, ...) &#123;</div><div class="line">    <span class="keyword">if</span> (!<span class="keyword">self</span>) <span class="keyword">return</span> <span class="literal">nil</span>;</div><div class="line">	IMP imp = class_getMethodImplementation(<span class="keyword">self</span>-&gt;isa, SEL op);</div><div class="line">	imp(<span class="keyword">self</span>, op, ...); <span class="comment">//调用这个函数，伪代码...</span></div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="comment">//查找IMP</span></div><div class="line">IMP class_getMethodImplementation(Class cls, SEL sel) &#123;</div><div class="line">    <span class="keyword">if</span> (!cls || !sel) <span class="keyword">return</span> <span class="literal">nil</span>;</div><div class="line">    IMP imp = lookUpImpOrNil(cls, sel);</div><div class="line">    <span class="keyword">if</span> (!imp) <span class="keyword">return</span> _objc_msgForward; <span class="comment">//_objc_msgForward 用于消息转发</span></div><div class="line">    <span class="keyword">return</span> imp;</div><div class="line">&#125;</div><div class="line"> </div><div class="line">IMP lookUpImpOrNil(Class cls, SEL sel) &#123;</div><div class="line">    <span class="keyword">if</span> (!cls-&gt;initialize()) &#123;</div><div class="line">        _class_initialize(cls);</div><div class="line">    &#125;</div><div class="line"> </div><div class="line">    Class curClass = cls;</div><div class="line">    IMP imp = <span class="literal">nil</span>;</div><div class="line">    <span class="keyword">do</span> &#123; <span class="comment">//先查缓存,缓存没有时重建,仍旧没有则向父类查询</span></div><div class="line">        <span class="keyword">if</span> (!curClass) <span class="keyword">break</span>;</div><div class="line">        <span class="keyword">if</span> (!curClass-&gt;cache) fill_cache(cls, curClass);</div><div class="line">        imp = cache_getImp(curClass, sel);</div><div class="line">        <span class="keyword">if</span> (imp) <span class="keyword">break</span>;</div><div class="line">    &#125; <span class="keyword">while</span> (curClass = curClass-&gt;superclass);</div><div class="line"> </div><div class="line">    <span class="keyword">return</span> imp;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>虽然Apple没有公开<code>_objc_msgForward</code>的实现源码，但是我们还是能得出结论：</p>
-<blockquote>
-<p><code>_objc_msgForward</code>是一个函数指针（和 IMP 的类型一样），是用于消息转发的：当向一个对象发送一条消息，但它并没有实现的时候，<code>_objc_msgForward</code>会尝试做消息转发。</p>
-<p>在<a href="https://github.com/ChenYilong/iOSInterviewQuestions" target="_blank" rel="external">上篇</a>中的《objc中向一个对象发送消息<code>[obj foo]</code>和<code>objc_msgSend()</code>函数之间有什么关系？》曾提到<code>objc_msgSend</code>在“消息传递”中的作用。在“消息传递”过程中，<code>objc_msgSend</code>的动作比较清晰：首先在 Class 中的缓存查找 IMP （没缓存则初始化缓存），如果没找到，则向父类的 Class 查找。如果一直查找到根类仍旧没有实现，则用<code>_objc_msgForward</code>函数指针代替 IMP 。最后，执行这个 IMP 。</p>
-</blockquote>
-<p>为了展示消息转发的具体动作，这里尝试向一个对象发送一条错误的消息，并查看一下<code>_objc_msgForward</code>是如何进行转发的。</p>
-<p>首先开启调试模式、打印出所有运行时发送的消息：<br>可以在代码里执行下面的方法：</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(<span class="keyword">void</span>)instrumentObjcMessageSends(<span class="literal">YES</span>);</div></pre></td></tr></table></figure>
-<p>或者断点暂停程序运行，并在 gdb 中输入下面的命令：</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">call (<span class="keyword">void</span>)instrumentObjcMessageSends(<span class="literal">YES</span>)</div></pre></td></tr></table></figure>
-<p>以第二种为例，操作如下所示：</p>
-<p><img src="http://i.imgur.com/uEwTCC4.png" alt="enter image description here"></p>
-<p>之后，运行时发送的所有消息都会打印到<code>/tmp/msgSend-xxxx</code>文件里了。</p>
-<p>终端中输入命令前往：</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">open /private/tmp</div></pre></td></tr></table></figure>
-<p><img src="http://i.imgur.com/Fh5hhCw.png" alt="enter image description here"></p>
-<p>可能看到有多条，找到最新生成的，双击打开</p>
-<p>在模拟器上执行执行以下语句（这一套调试方案仅适用于模拟器，真机不可用，关于该调试方案的拓展链接：<a href="http://stackoverflow.com/a/10750398/3395008" target="_blank" rel="external"> <strong><em>Can the messages sent to an object in objc be monitored or printed out?</em></strong> </a>），向一个对象发送一条错误的消息：</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//</span></div><div class="line"><span class="comment">//  main.m</span></div><div class="line"><span class="comment">//  CYLObjcMsgForwardTest</span></div><div class="line"><span class="comment">//</span></div><div class="line"><span class="comment">//  Created by http://weibo.com/luohanchenyilong/.</span></div><div class="line"><span class="comment">//  Copyright (c) 2015年 微博@iOS程序犭袁. All rights reserved.</span></div><div class="line"><span class="comment">//</span></div><div class="line"></div><div class="line"><span class="meta">#import <span class="meta-string">&lt;UIKit/UIKit.h&gt;</span></span></div><div class="line"><span class="meta">#import <span class="meta-string">"AppDelegate.h"</span></span></div><div class="line"><span class="meta">#import <span class="meta-string">"CYLTest.h"</span></span></div><div class="line"></div><div class="line"><span class="keyword">int</span> main(<span class="keyword">int</span> argc, <span class="keyword">char</span> * argv[]) &#123;</div><div class="line">    <span class="keyword">@autoreleasepool</span> &#123;</div><div class="line">        CYLTest *test = [[CYLTest alloc] init];</div><div class="line">        [test performSelector:(<span class="keyword">@selector</span>(iOS程序犭袁))];</div><div class="line">        <span class="keyword">return</span> <span class="built_in">UIApplicationMain</span>(argc, argv, <span class="literal">nil</span>, <span class="built_in">NSStringFromClass</span>([AppDelegate <span class="keyword">class</span>]));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><img src="http://i.imgur.com/UjbmVvB.png" alt="enter image description here"></p>
-<p>你可以在<code>/tmp/msgSend-xxxx</code>（我这一次是<code>/tmp/msgSend-9805</code>）文件里，看到打印出来：</p>
-<p><img src="http://i.imgur.com/AAERz1T.png" alt="enter image description here"></p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">+ CYLTest <span class="built_in">NSObject</span> initialize</div><div class="line">+ CYLTest <span class="built_in">NSObject</span> alloc</div><div class="line">- CYLTest <span class="built_in">NSObject</span> init</div><div class="line">- CYLTest <span class="built_in">NSObject</span> performSelector:</div><div class="line">+ CYLTest <span class="built_in">NSObject</span> resolveInstanceMethod:</div><div class="line">+ CYLTest <span class="built_in">NSObject</span> resolveInstanceMethod:</div><div class="line">- CYLTest <span class="built_in">NSObject</span> forwardingTargetForSelector:</div><div class="line">- CYLTest <span class="built_in">NSObject</span> forwardingTargetForSelector:</div><div class="line">- CYLTest <span class="built_in">NSObject</span> methodSignatureForSelector:</div><div class="line">- CYLTest <span class="built_in">NSObject</span> methodSignatureForSelector:</div><div class="line">- CYLTest <span class="built_in">NSObject</span> <span class="keyword">class</span></div><div class="line">- CYLTest <span class="built_in">NSObject</span> doesNotRecognizeSelector:</div><div class="line">- CYLTest <span class="built_in">NSObject</span> doesNotRecognizeSelector:</div><div class="line">- CYLTest <span class="built_in">NSObject</span> <span class="keyword">class</span></div></pre></td></tr></table></figure>
-<p>结合<a href="https://developer.apple.com/library/prerelease/watchos/documentation/Cocoa/Reference/Foundation/Classes/NSObject_Class/#//apple_ref/doc/uid/20000050-SW11" target="_blank" rel="external">《NSObject官方文档》</a>，排除掉 NSObject 做的事，剩下的就是<code>_objc_msgForward</code>消息转发做的几件事：</p>
-<ol>
-<li><p>调用<code>resolveInstanceMethod:</code>方法 (或 <code>resolveClassMethod:</code>)。允许用户在此时为该 Class 动态添加实现。如果有实现了，则调用并返回YES，那么重新开始<code>objc_msgSend</code>流程。这一次对象会响应这个选择器，一般是因为它已经调用过<code>class_addMethod</code>。如果仍没实现，继续下面的动作。</p>
-</li>
-<li><p>调用<code>forwardingTargetForSelector:</code>方法，尝试找到一个能响应该消息的对象。如果获取到，则直接把消息转发给它，返回非 nil 对象。否则返回 nil ，继续下面的动作。注意，这里不要返回 self ，否则会形成死循环。</p>
-</li>
-<li><p>调用<code>methodSignatureForSelector:</code>方法，尝试获得一个方法签名。如果获取不到，则直接调用<code>doesNotRecognizeSelector</code>抛出异常。如果能获取，则返回非nil：创建一个 NSlnvocation 并传给<code>forwardInvocation:</code>。</p>
-</li>
-<li><p>调用<code>forwardInvocation:</code>方法，将第3步获取到的方法签名包装成 Invocation 传入，如何处理就在这里面了，并返回非ni。</p>
-</li>
-<li><p>调用<code>doesNotRecognizeSelector:</code> ，默认的实现是抛出异常。如果第3步没能获得一个方法签名，执行该步骤。</p>
-</li>
-</ol>
-<p>上面前4个方法均是模板方法，开发者可以override，由 runtime 来调用。最常见的实现消息转发：就是重写方法3和4，吞掉一个消息或者代理给其他对象都是没问题的</p>
-<p>也就是说<code>_objc_msgForward</code>在进行消息转发的过程中会涉及以下这几个方法：</p>
-<ol>
-<li><p><code>resolveInstanceMethod:</code>方法 (或 <code>resolveClassMethod:</code>)。</p>
-</li>
-<li><p><code>forwardingTargetForSelector:</code>方法</p>
-</li>
-<li><p><code>methodSignatureForSelector:</code>方法</p>
-</li>
-<li><p><code>forwardInvocation:</code>方法</p>
-</li>
-<li><p><code>doesNotRecognizeSelector:</code> 方法</p>
-</li>
-</ol>
-<p>为了能更清晰地理解这些方法的作用，git仓库里也给出了一个Demo，名称叫“ <code>_objc_msgForward_demo</code> ”,可运行起来看看。</p>
-<p>下面回答下第二个问题“直接<code>_objc_msgForward</code>调用它将会发生什么？”</p>
-<p>直接调用<code>_objc_msgForward</code>是非常危险的事，如果用不好会直接导致程序Crash，但是如果用得好，能做很多非常酷的事。</p>
-<p>就好像跑酷，干得好，叫“耍酷”，干不好就叫“作死”。</p>
-<p>正如前文所说：</p>
-<blockquote>
-<p><code>_objc_msgForward</code>是 IMP 类型，用于消息转发的：当向一个对象发送一条消息，但它并没有实现的时候，<code>_objc_msgForward</code>会尝试做消息转发。</p>
-</blockquote>
-<p>如何调用<code>_objc_msgForward</code>？<br><code>_objc_msgForward</code>隶属 C 语言，有三个参数 ：</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>–</th>
-<th><code>_objc_msgForward</code>参数</th>
-<th>类型</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td> 1.</td>
-<td>所属对象</td>
-<td>id类型</td>
-</tr>
-<tr>
-<td> 2.</td>
-<td>方法名</td>
-<td>SEL类型 </td>
-</tr>
-<tr>
-<td> 3.</td>
-<td>可变参数</td>
-<td>可变参数类型</td>
-</tr>
-</tbody>
-</table>
-<p>首先了解下如何调用 IMP 类型的方法，IMP类型是如下格式：</p>
-<p>为了直观，我们可以通过如下方式定义一个 IMP类型 ：</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">typedef</span> <span class="keyword">void</span> (*voidIMP)(<span class="keyword">id</span>, SEL, ...)</div></pre></td></tr></table></figure>
-<p>一旦调用<code>_objc_msgForward</code>，将跳过查找 IMP 的过程，直接触发“消息转发”，</p>
-<p>如果调用了<code>_objc_msgForward</code>，即使这个对象确实已经实现了这个方法，你也会告诉<code>objc_msgSend</code>：</p>
-<blockquote>
-<p>“我没有在这个对象里找到这个方法的实现”</p>
-</blockquote>
-<p>想象下<code>objc_msgSend</code>会怎么做？通常情况下，下面这张图就是你正常走<code>objc_msgSend</code>过程，和直接调用<code>_objc_msgForward</code>的前后差别：</p>
-<p><img src="http://ww1.sinaimg.cn/bmiddle/6628711bgw1eecx3jef23g206404tkbi.gif" alt="enter image description here"></p>
-<p>有哪些场景需要直接调用<code>_objc_msgForward</code>？最常见的场景是：你想获取某方法所对应的<code>NSInvocation</code>对象。举例说明：</p>
-<p><a href="https://github.com/bang590/JSPatch" target="_blank" rel="external">JSPatch （Github 链接）</a>就是直接调用<code>_objc_msgForward</code>来实现其核心功能的：</p>
-<blockquote>
-<p> JSPatch 以小巧的体积做到了让JS调用/替换任意OC方法，让iOS APP具备热更新的能力。</p>
-</blockquote>
-<p>作者的博文<a href="http://blog.cnbang.net/tech/2808/" target="_blank" rel="external">《JSPatch实现原理详解》</a>详细记录了实现原理，有兴趣可以看下。</p>
-<p>同时 <a href="https://github.com/ReactiveCocoa/ReactiveCocoa" target="_blank" rel="external"> <strong><em>RAC(ReactiveCocoa)</em></strong> </a> 源码中也用到了该方法。</p>
-<p>###26. runtime如何实现weak变量的自动置nil？</p>
-<blockquote>
-<p>runtime 对注册的类， 会进行布局，对于 weak 对象会放入一个 hash 表中。 用 weak 指向的对象内存地址作为 key，当此对象的引用计数为0的时候会 dealloc，假如 weak 指向的对象内存地址是a，那么就会以a为键， 在这个 weak 表中搜索，找到所有以a为键的 weak 对象，从而设置为 nil。</p>
-</blockquote>
-<p>在<a href="https://github.com/ChenYilong/iOSInterviewQuestions" target="_blank" rel="external">上篇</a>中的《runtime 如何实现 weak 属性》有论述。（注：在<a href="https://github.com/ChenYilong/iOSInterviewQuestions" target="_blank" rel="external">上篇</a>的《使用runtime Associate方法关联的对象，需要在主对象dealloc的时候释放么？》里给出的“对象的内存销毁时间表”也提到<code>__weak</code>引用的解除时间。）</p>
-<p>我们可以设计一个函数（伪代码）来表示上述机制：</p>
-<p><code>objc_storeWeak(&amp;a, b)</code>函数：</p>
-<p><code>objc_storeWeak</code>函数把第二个参数–赋值对象（b）的内存地址作为键值key，将第一个参数–weak修饰的属性变量（a）的内存地址（&amp;a）作为value，注册到 weak 表中。如果第二个参数（b）为0（nil），那么把变量（a）的内存地址（&amp;a）从weak表中删除，</p>
-<p>你可以把<code>objc_storeWeak(&amp;a, b)</code>理解为：<code>objc_storeWeak(value, key)</code>，并且当key变nil，将value置nil。</p>
-<p>在b非nil时，a和b指向同一个内存地址，在b变nil时，a变nil。此时向a发送消息不会崩溃：在objc中向nil发送消息是安全的。</p>
-<p>而如果a是由assign修饰的，则：<br>在b非nil时，a和b指向同一个内存地址，在b变nil时，a还是指向该内存地址，变野指针。此时向a发送消息极易崩溃。</p>
-<p>下面我们将基于<code>objc_storeWeak(&amp;a, b)</code>函数，使用伪代码模拟“runtime如何实现weak属性”：</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 使用伪代码模拟：runtime如何实现weak属性</span></div><div class="line"><span class="comment">// http://weibo.com/luohanchenyilong/</span></div><div class="line"><span class="comment">// https://github.com/ChenYilong</span></div><div class="line"></div><div class="line"> <span class="keyword">id</span> obj1;</div><div class="line"> objc_initWeak(&amp;obj1, obj);</div><div class="line"><span class="comment">/*obj引用计数变为0，变量作用域结束*/</span></div><div class="line"> objc_destroyWeak(&amp;obj1);</div></pre></td></tr></table></figure>
-<p>下面对用到的两个方法<code>objc_initWeak</code>和<code>objc_destroyWeak</code>做下解释：</p>
-<p>总体说来，作用是：<br>通过<code>objc_initWeak</code>函数初始化“附有weak修饰符的变量（obj1）”，在变量作用域结束时通过<code>objc_destoryWeak</code>函数释放该变量（obj1）。</p>
-<p>下面分别介绍下方法的内部实现：</p>
-<p><code>objc_initWeak</code>函数的实现是这样的：在将“附有weak修饰符的变量（obj1）”初始化为0（nil）后，会将“赋值对象”（obj）作为参数，调用<code>objc_storeWeak</code>函数。</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">obj1 = <span class="number">0</span>；</div><div class="line">obj_storeWeak(&amp;obj1, obj);</div></pre></td></tr></table></figure>
-<p>也就是说：</p>
-<blockquote>
-<p> weak 修饰的指针默认值是 nil （在objc中向nil发送消息是安全的）</p>
-</blockquote>
-<p>然后<code>obj_destroyWeak</code>函数将0（nil）作为参数，调用<code>objc_storeWeak</code>函数。</p>
-<p><code>objc_storeWeak(&amp;obj1, 0);</code></p>
-<p>前面的源代码与下列源代码相同。</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 使用伪代码模拟：runtime如何实现weak属性</span></div><div class="line"><span class="comment">// http://weibo.com/luohanchenyilong/</span></div><div class="line"><span class="comment">// https://github.com/ChenYilong</span></div><div class="line"></div><div class="line"><span class="keyword">id</span> obj1;</div><div class="line">obj1 = <span class="number">0</span>;</div><div class="line">objc_storeWeak(&amp;obj1, obj);</div><div class="line"><span class="comment">/* ... obj的引用计数变为0，被置nil ... */</span></div><div class="line">objc_storeWeak(&amp;obj1, <span class="number">0</span>);</div></pre></td></tr></table></figure>
-<p><code>objc_storeWeak</code>函数把第二个参数–赋值对象（obj）的内存地址作为键值，将第一个参数–weak修饰的属性变量（obj1）的内存地址注册到 weak 表中。如果第二个参数（obj）为0（nil），那么把变量（obj1）的地址从weak表中删除。</p>
-<p>###27. 能否向编译后得到的类中增加实例变量？能否向运行时创建的类中添加实例变量？为什么？ </p>
-<ul>
-<li>不能向编译后得到的类中增加实例变量；</li>
-<li>能向运行时创建的类中添加实例变量；</li>
-</ul>
-<p>解释下：</p>
-<ul>
-<li><p>因为编译后的类已经注册在 runtime 中，类结构体中的 <code>objc_ivar_list</code> 实例变量的链表 和 <code>instance_size</code> 实例变量的内存大小已经确定，同时runtime 会调用 <code>class_setIvarLayout</code> 或 <code>class_setWeakIvarLayout</code> 来处理 strong weak 引用。所以不能向存在的类中添加实例变量；</p>
-</li>
-<li><p>运行时创建的类是可以添加实例变量，调用 <code>class_addIvar</code> 函数。但是得在调用 <code>objc_allocateClassPair</code> 之后，<code>objc_registerClassPair</code> 之前，原因同上。</p>
-</li>
-</ul>
-<p>###28. runloop和线程有什么关系？</p>
-<p>总的说来，Run loop，正如其名，loop表示某种循环，和run放在一起就表示一直在运行着的循环。实际上，run loop和线程是紧密相连的，可以这样说run loop是为了线程而生，没有线程，它就没有存在的必要。Run loops是线程的基础架构部分， Cocoa 和 CoreFundation 都提供了 run loop 对象方便配置和管理线程的 run loop （以下都以 Cocoa 为例）。每个线程，包括程序的主线程（ main thread ）都有与之相应的 run loop 对象。</p>
-<p> runloop 和线程的关系：</p>
-<ol>
-<li><p>主线程的run loop默认是启动的。</p>
-<p>iOS的应用程序里面，程序启动后会有一个如下的main()函数</p>
-</li>
-</ol>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> main(<span class="keyword">int</span> argc, <span class="keyword">char</span> * argv[]) &#123;</div><div class="line">    <span class="keyword">@autoreleasepool</span> &#123;</div><div class="line">        <span class="keyword">return</span> <span class="built_in">UIApplicationMain</span>(argc, argv, <span class="literal">nil</span>, <span class="built_in">NSStringFromClass</span>([AppDelegate <span class="keyword">class</span>]));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p> 重点是UIApplicationMain()函数，这个方法会为main thread设置一个NSRunLoop对象，这就解释了：为什么我们的应用可以在无人操作的时候休息，需要让它干活的时候又能立马响应。</p>
-<ol>
-<li><p>对其它线程来说，run loop默认是没有启动的，如果你需要更多的线程交互则可以手动配置和启动，如果线程只是去执行一个长时间的已确定的任务则不需要。</p>
-</li>
-<li><p>在任何一个 Cocoa 程序的线程中，都可以通过以下代码来获取到当前线程的 run loop 。</p>
-</li>
-</ol>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">NSRunLoop</span> *runloop = [<span class="built_in">NSRunLoop</span> currentRunLoop];</div></pre></td></tr></table></figure>
-<p>参考链接：<a href="http://blog.csdn.net/wzzvictory/article/details/9237973" target="_blank" rel="external">《objc之run loop详解》</a>。</p>
-<p>###29. runloop的mode作用是什么？</p>
-<p>model 主要是用来指定事件在运行循环中的优先级的，分为：</p>
-<ul>
-<li>NSDefaultRunLoopMode（kCFRunLoopDefaultMode）：默认，空闲状态</li>
-<li>UITrackingRunLoopMode：ScrollView滑动时</li>
-<li>UIInitializationRunLoopMode：启动时</li>
-<li>NSRunLoopCommonModes（kCFRunLoopCommonModes）：Mode集合</li>
-</ul>
-<p>苹果公开提供的 Mode 有两个：</p>
-<ol>
-<li>NSDefaultRunLoopMode（kCFRunLoopDefaultMode）</li>
-<li>NSRunLoopCommonModes（kCFRunLoopCommonModes）</li>
-</ol>
-<p>###30. 以+ scheduledTimerWithTimeInterval…的方式触发的timer，在滑动页面上的列表时，timer会暂定回调，为什么？如何解决？</p>
-<p>RunLoop只能运行在一种mode下，如果要换mode，当前的loop也需要停下重启成新的。利用这个机制，ScrollView滚动过程中NSDefaultRunLoopMode（kCFRunLoopDefaultMode）的mode会切换到UITrackingRunLoopMode来保证ScrollView的流畅滑动：只能在NSDefaultRunLoopMode模式下处理的事件会影响ScrollView的滑动。</p>
-<p>如果我们把一个NSTimer对象以NSDefaultRunLoopMode（kCFRunLoopDefaultMode）添加到主运行循环中的时候,<br>ScrollView滚动过程中会因为mode的切换，而导致NSTimer将不再被调度。</p>
-<p>同时因为mode还是可定制的，所以：</p>
-<p> Timer计时会被scrollView的滑动影响的问题可以通过将timer添加到NSRunLoopCommonModes（kCFRunLoopCommonModes）来解决。代码如下：</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// </span></div><div class="line"><span class="comment">// http://weibo.com/luohanchenyilong/ (微博@iOS程序犭袁)</span></div><div class="line"><span class="comment">// https://github.com/ChenYilong</span></div><div class="line"></div><div class="line"><span class="comment">//将timer添加到NSDefaultRunLoopMode中</span></div><div class="line">[<span class="built_in">NSTimer</span> scheduledTimerWithTimeInterval:<span class="number">1.0</span></div><div class="line">     target:<span class="keyword">self</span></div><div class="line">     selector:<span class="keyword">@selector</span>(timerTick:)</div><div class="line">     userInfo:<span class="literal">nil</span></div><div class="line">     repeats:<span class="literal">YES</span>];</div><div class="line"><span class="comment">//然后再添加到NSRunLoopCommonModes里</span></div><div class="line"><span class="built_in">NSTimer</span> *timer = [<span class="built_in">NSTimer</span> timerWithTimeInterval:<span class="number">1.0</span></div><div class="line">     target:<span class="keyword">self</span></div><div class="line">     selector:<span class="keyword">@selector</span>(timerTick:)</div><div class="line">     userInfo:<span class="literal">nil</span></div><div class="line">     repeats:<span class="literal">YES</span>];</div><div class="line">[[<span class="built_in">NSRunLoop</span> currentRunLoop] addTimer:timer forMode:<span class="built_in">NSRunLoopCommonModes</span>];</div></pre></td></tr></table></figure>
-<p>###31. 猜想runloop内部是如何实现的？</p>
-<blockquote>
-<p>一般来讲，一个线程一次只能执行一个任务，执行完成后线程就会退出。如果我们需要一个机制，让线程能随时处理事件但并不退出，通常的代码逻辑<br>是这样的：</p>
-</blockquote>
-<pre><code>function loop() {
-    initialize();
-    do {
-        var message = get_next_message();
-        process_message(message);
-    } while (message != quit);
-}
-</code></pre><p>或使用伪代码来展示下:</p>
-<pre><code>// 
-// http://weibo.com/luohanchenyilong/ (微博@iOS程序犭袁)
-// https://github.com/ChenYilong
-int main(int argc, char * argv[]) {
- //程序一直运行状态
- while (AppIsRunning) {
-      //睡眠状态，等待唤醒事件
-      id whoWakesMe = SleepForWakingUp();
-      //得到唤醒事件
-      id event = GetEvent(whoWakesMe);
-      //开始处理事件
-      HandleEvent(event);
- }
- return 0;
-}
-</code></pre><p>参考链接：</p>
-<ol>
-<li><a href="http://blog.ibireme.com/2015/05/18/runloop/#base" target="_blank" rel="external">《深入理解RunLoop》</a></li>
-<li>摘自博文<a href="https://github.com/ming1016/study/wiki/CFRunLoop" target="_blank" rel="external"><strong><em>CFRunLoop</em></strong></a>，原作者是<a href="http://weibo.com/u/1364395395" target="_blank" rel="external">微博@我就叫Sunny怎么了</a></li>
-</ol>
-<p>###32. objc使用什么机制管理对象内存？</p>
-<p>通过 retainCount 的机制来决定对象是否需要释放。<br>每次 runloop 的时候，都会检查对象的 retainCount，如果retainCount 为 0，说明该对象没有地方需要继续使用了，可以释放掉了。</p>
-<p>###33. ARC通过什么方式帮助开发者管理内存？<br> </p><p><del>编译时根据代码上下文，插入 retain/release<br></del></p><br>ARC相对于MRC，不是在编译时添加retain/release/autorelease这么简单。应该是编译期和运行期两部分共同帮助开发者管理内存。<p></p>
-<p>在编译期，ARC用的是更底层的C接口实现的retain/release/autorelease，这样做性能更好，也是为什么不能在ARC环境下手动retain/release/autorelease，同时对同一上下文的同一对象的成对retain/release操作进行优化（即忽略掉不必要的操作）；ARC也包含运行期组件，这个地方做的优化比较复杂，但也不能被忽略。【TODO:后续更新会详细描述下】</p>
-<p>###34. 不手动指定autoreleasepool的前提下，一个autorealese对象在什么时刻释放？（比如在一个vc的viewDidLoad中创建）<br>分两种情况：手动干预释放时机、系统自动去释放。</p>
-<ol>
-<li>手动干预释放时机–指定autoreleasepool<br> 就是所谓的：当前作用域大括号结束时释放。</li>
-<li><p>系统自动去释放–不手动指定autoreleasepool</p>
-<p>Autorelease对象出了作用域之后，会被添加到最近一次创建的自动释放池中，并会在当前的 runloop 迭代结束时释放。</p>
-</li>
-</ol>
-<p>释放的时机总结起来，可以用下图来表示：</p>
-<p><img src="http://i61.tinypic.com/28kodwp.jpg" alt="autoreleasepool与 runloop 的关系图"></p>
-<p>下面对这张图进行详细的解释：</p>
-<p>从程序启动到加载完成是一个完整的运行循环，然后会停下来，等待用户交互，用户的每一次交互都会启动一次运行循环，来处理用户所有的点击事件、触摸事件。</p>
-<p>我们都知道：<br><strong>所有 autorelease 的对象，在出了作用域之后，会被自动添加到最近创建的自动释放池中。</strong></p>
-<p>但是如果每次都放进应用程序的 <code>main.m</code> 中的 autoreleasepool 中，迟早有被撑满的一刻。这个过程中必定有一个释放的动作。何时？</p>
-<p>在一次完整的运行循环结束之前，会被销毁。</p>
-<p>那什么时间会创建自动释放池？运行循环检测到事件并启动后，就会创建自动释放池。 </p>
-<p>子线程的 runloop 默认是不工作，无法主动创建，必须手动创建。</p>
-<p>自定义的 NSOperation 和 NSThread 需要手动创建自动释放池。比如： 自定义的 NSOperation 类中的 main 方法里就必须添加自动释放池。否则出了作用域后，自动释放对象会因为没有自动释放池去处理它，而造成内存泄露。</p>
-<p>但对于 blockOperation 和 invocationOperation 这种默认的Operation ，系统已经帮我们封装好了，不需要手动创建自动释放池。</p>
-<p>@autoreleasepool 当自动释放池被销毁或者耗尽时，会向自动释放池中的所有对象发送 release 消息，释放自动释放池中的所有对象。</p>
-<p> 如果在一个vc的viewDidLoad中创建一个 Autorelease对象，那么该对象会在 viewDidAppear 方法执行前就被销毁了。</p>
-<p>参考链接：<a href="http://blog.sunnyxx.com/2014/10/15/behind-autorelease/" target="_blank" rel="external">《黑幕背后的Autorelease》</a></p>
-<p>###35. BAD_ACCESS在什么情况下出现？<br>访问了野指针，比如对一个已经释放的对象执行了release、访问已经释放对象的成员变量或者发消息。<br>死循环</p>
-<p>###36. 苹果是如何实现autoreleasepool的？ </p>
-<p>autoreleasepool 以一个队列数组的形式实现,主要通过下列三个函数完成.</p>
-<ol>
-<li><code>objc_autoreleasepoolPush</code></li>
-<li><code>objc_autoreleasepoolPop</code></li>
-<li><code>objc_autorelease</code></li>
-</ol>
-<p>看函数名就可以知道，对 autorelease 分别执行 push，和 pop 操作。销毁对象时执行release操作。</p>
-<p>举例说明：我们都知道用类方法创建的对象都是 Autorelease 的，那么一旦 Person 出了作用域，当在 Person 的 dealloc 方法中打上断点，我们就可以看到这样的调用堆栈信息：</p>
-<p> <img src="http://i60.tinypic.com/15mfj11.jpg" alt="enter image description here"></p>
-<p>###37. 使用block时什么情况会发生引用循环，如何解决？<br>一个对象中强引用了block，在block中又强引用了该对象，就会发射循环引用。</p>
-<p>解决方法是将该对象使用<strong>weak或者</strong>block修饰符修饰之后再在block中使用。</p>
-<ol>
-<li>id weak weakSelf = self;<br>或者 weak __typeof(&amp;*self)weakSelf = self该方法可以设置宏</li>
-<li>id __block weakSelf = self;</li>
-</ol>
-<p>或者将其中一方强制制空 <code>xxx = nil</code>。</p>
-<p>检测代码中是否存在循环引用问题，可使用 Facebook 开源的一个检测工具  <a href="https://github.com/facebook/FBRetainCycleDetector" target="_blank" rel="external"><strong><em>FBRetainCycleDetector</em></strong></a> 。</p>
-<p>###38. 在block内如何修改block外部变量？<br>默认情况下，在block中访问的外部变量是复制过去的，即：<strong>写操作不对原变量生效</strong>。但是你可以加上 <code>__block</code> 来让其写操作生效，示例代码如下:</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">__block <span class="keyword">int</span> a = <span class="number">0</span>;</div><div class="line"><span class="keyword">void</span> (^foo)(<span class="keyword">void</span>) = ^&#123; </div><div class="line">    a = <span class="number">1</span>; </div><div class="line">&#125;;</div><div class="line">foo(); </div><div class="line"><span class="comment">//这里，a的值被修改为1</span></div></pre></td></tr></table></figure>
-<p>这是 <a href="http://weibo.com/tangqiaoboy" target="_blank" rel="external">微博@唐巧_boy</a>的《iOS开发进阶》中的第11.2.3章节中的描述。你同样可以在面试中这样回答，但你并没有答到“点子上”。真正的原因，并没有书这本书里写的这么“神奇”，而且这种说法也有点牵强。面试官肯定会追问“为什么写操作就生效了？”真正的原因是这样的：</p>
-<blockquote>
-<p>我们都知道：<strong>Block不允许修改外部变量的值</strong>，这里所说的外部变量的值，指的是栈中指针的内存地址。<code>__block</code> 所起到的作用就是只要观察到该变量被 block 所持有，就将“外部变量”在栈中的内存地址放到了堆中。进而在block内部也可以修改外部变量的值。</p>
-</blockquote>
-<p><strong>Block不允许修改外部变量的值</strong>。Apple这样设计，应该是考虑到了block的特殊性，block也属于“函数”的范畴，变量进入block，实际就是已经改变了作用域。在几个作用域之间进行切换时，如果不加上这样的限制，变量的可维护性将大大降低。又比如我想在block内声明了一个与外部同名的变量，此时是允许呢还是不允许呢？只有加上了这样的限制，这样的情景才能实现。于是栈区变成了红灯区，堆区变成了绿灯区。</p>
-<p>我们可以打印下内存地址来进行验证：</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">__block <span class="keyword">int</span> a = <span class="number">0</span>;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"定义前：%p"</span>, &amp;a);         <span class="comment">//栈区</span></div><div class="line"><span class="keyword">void</span> (^foo)(<span class="keyword">void</span>) = ^&#123;</div><div class="line">    a = <span class="number">1</span>;</div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"block内部：%p"</span>, &amp;a);    <span class="comment">//堆区</span></div><div class="line">&#125;;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"定义后：%p"</span>, &amp;a);         <span class="comment">//堆区</span></div><div class="line">foo();</div></pre></td></tr></table></figure>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="number">2016</span><span class="number">-05</span><span class="number">-17</span> <span class="number">02</span>:<span class="number">03</span>:<span class="number">33.559</span> LeanCloudChatKit-iOS[<span class="number">1505</span>:<span class="number">713679</span>] 定义前：<span class="number">0x16fda86f8</span></div><div class="line"><span class="number">2016</span><span class="number">-05</span><span class="number">-17</span> <span class="number">02</span>:<span class="number">03</span>:<span class="number">33.559</span> LeanCloudChatKit-iOS[<span class="number">1505</span>:<span class="number">713679</span>] 定义后：<span class="number">0x155b22fc8</span></div><div class="line"><span class="number">2016</span><span class="number">-05</span><span class="number">-17</span> <span class="number">02</span>:<span class="number">03</span>:<span class="number">33.559</span> LeanCloudChatKit-iOS[<span class="number">1505</span>:<span class="number">713679</span>] block内部： <span class="number">0x155b22fc8</span></div></pre></td></tr></table></figure>
-<p>“定义后”和“block内部”两者的内存地址是一样的，我们都知道 block 内部的变量会被 copy 到堆区，“block内部”打印的是堆地址，因而也就可以知道，“定义后”打印的也是堆的地址。</p>
-<p> 那么如何证明“block内部”打印的是堆地址？</p>
-<p> 把三个16进制的内存地址转成10进制就是：</p>
-<ol>
-<li>定义后前：6171559672</li>
-<li>block内部：5732708296</li>
-<li>定义后后：5732708296</li>
-</ol>
-<p>中间相差438851376个字节，也就是 418.5M 的空间，因为堆地址要小于栈地址，又因为iOS中一个进程的栈区内存只有1M，Mac也只有8M，显然a已经是在堆区了。</p>
-<p>这也证实了：a 在定义前是栈区，但只要进入了 block 区域，就变成了堆区。这才是 <code>__block</code> 关键字的真正作用。</p>
-<p> <code>__block</code> 关键字修饰后，int类型也从4字节变成了32字节，这是 Foundation 框架 malloc 出来的。这也同样能证实上面的结论。（PS：居然比 NSObject alloc 出来的 16  字节要多一倍）。</p>
-<p>理解到这是因为堆栈地址的变更，而非所谓的“写操作生效”，这一点至关重要，要不然你如何解释下面这个现象：</p>
-<p>以下代码编译可以通过，并且在block中成功将a的从Tom修改为Jerry。<br>​<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">NSMutableString</span> *a = [<span class="built_in">NSMutableString</span> stringWithString:<span class="string">@"Tom"</span>];</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"\n 定以前：------------------------------------\n\</span></div><div class="line">      a指向的堆中地址：%p；a在栈中的指针地址：%p", a, &amp;a);               <span class="comment">//a在栈区</span></div><div class="line"><span class="keyword">void</span> (^foo)(<span class="keyword">void</span>) = ^&#123;</div><div class="line">    a.string = <span class="string">@"Jerry"</span>;</div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"\n block内部：------------------------------------\n\</span></div><div class="line">     a指向的堆中地址：%p；a在栈中的指针地址：%p", a, &amp;a);               <span class="comment">//a在栈区</span></div><div class="line">    a = [<span class="built_in">NSMutableString</span> stringWithString:<span class="string">@"William"</span>];</div><div class="line">&#125;;</div><div class="line">foo();</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"\n 定以后：------------------------------------\n\</span></div><div class="line">      a指向的堆中地址：%p；a在栈中的指针地址：%p", a, &amp;a);               <span class="comment">//a在栈区</span></div></pre></td></tr></table></figure></p>
-<p><img src="http://i66.tinypic.com/34euhcy.jpg" alt="enter image description here"></p>
-<p> 这里的a已经由基本数据类型，变成了对象类型。block会对对象类型的指针进行copy，copy到堆中，但并不会改变该指针所指向的堆中的地址，所以在上面的示例代码中，block体内修改的实际是a指向的堆中的内容。</p>
-<p> 但如果我们尝试像上面图片中的65行那样做，结果会编译不通过，那是因为此时你在修改的就不是堆中的内容，而是栈中的内容。</p>
-<p>上文已经说过：<strong>Block不允许修改外部变量的值</strong>，这里所说的外部变量的值，指的是栈中指针的内存地址。栈区是红灯区，堆区才是绿灯区。</p>
-<p>###39. 使用系统的某些block api（如UIView的block版本写动画时），是否也考虑引用循环问题？ </p>
-<p>系统的某些block api中，UIView的block版本写动画时不需要考虑，但也有一些api 需要考虑：</p>
-<p>所谓“引用循环”是指双向的强引用，所以那些“单向的强引用”（block 强引用 self ）没有问题，比如这些：</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[<span class="built_in">UIView</span> animateWithDuration:duration animations:^&#123; [<span class="keyword">self</span>.superview layoutIfNeeded]; &#125;];</div></pre></td></tr></table></figure>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[[<span class="built_in">NSOperationQueue</span> mainQueue] addOperationWithBlock:^&#123; <span class="keyword">self</span>.someProperty = xyz; &#125;];</div></pre></td></tr></table></figure>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[[<span class="built_in">NSNotificationCenter</span> defaultCenter] addObserverForName:<span class="string">@"someNotification"</span> </div><div class="line">                                                  object:<span class="literal">nil</span> </div><div class="line">                           queue:[<span class="built_in">NSOperationQueue</span> mainQueue]</div><div class="line">                                              usingBlock:^(<span class="built_in">NSNotification</span> * notification) &#123;</div><div class="line">                                                    <span class="keyword">self</span>.someProperty = xyz; &#125;];</div></pre></td></tr></table></figure>
-<p>这些情况不需要考虑“引用循环”。</p>
-<p>但如果你使用一些参数中可能含有 ivar 的系统 api ，如 GCD 、NSNotificationCenter就要小心一点：比如GCD 内部如果引用了 self，而且 GCD 的其他参数是 ivar，则要考虑到循环引用：</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">__<span class="keyword">weak</span> __typeof__(<span class="keyword">self</span>) weakSelf = <span class="keyword">self</span>;</div><div class="line">dispatch_group_async(_operationsGroup, _operationsQueue, ^</div><div class="line">&#123;</div><div class="line">__typeof__(<span class="keyword">self</span>) strongSelf = weakSelf;</div><div class="line">[strongSelf doSomething];</div><div class="line">[strongSelf doSomethingElse];</div><div class="line">&#125; );</div></pre></td></tr></table></figure>
-<p>类似的：</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">__<span class="keyword">weak</span> __typeof__(<span class="keyword">self</span>) weakSelf = <span class="keyword">self</span>;</div><div class="line">_observer = [[<span class="built_in">NSNotificationCenter</span> defaultCenter] addObserverForName:<span class="string">@"testKey"</span></div><div class="line">                                                              object:<span class="literal">nil</span></div><div class="line">                                                               queue:<span class="literal">nil</span></div><div class="line">                                                          usingBlock:^(<span class="built_in">NSNotification</span> *note) &#123;</div><div class="line">    __typeof__(<span class="keyword">self</span>) strongSelf = weakSelf;</div><div class="line">    [strongSelf dismissModalViewControllerAnimated:<span class="literal">YES</span>];</div><div class="line">&#125;];</div></pre></td></tr></table></figure>
-<p>self –&gt; _observer –&gt; block –&gt; self 显然这也是一个循环引用。</p>
-<p>检测代码中是否存在循环引用问题，可使用 Facebook 开源的一个检测工具  <a href="https://github.com/facebook/FBRetainCycleDetector" target="_blank" rel="external"><strong><em>FBRetainCycleDetector</em></strong></a> 。</p>
-<p>###40. GCD的队列（<code>dispatch_queue_t</code>）分哪两种类型？</p>
-<ol>
-<li>串行队列Serial Dispatch Queue</li>
-<li>并行队列Concurrent Dispatch Queue</li>
-</ol>
-<p>###41. 如何用GCD同步若干个异步调用？（如根据若干个url异步加载多张图片，然后在都下载完成后合成一张整图）</p>
-<p>使用Dispatch Group追加block到Global Group Queue,这些block如果全部执行完毕，就会执行Main Dispatch Queue中的结束处理的block。</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">dispatch_queue_t</span> queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, <span class="number">0</span>);</div><div class="line">dispatch_group_t group = dispatch_group_create();</div><div class="line">dispatch_group_async(group, queue, ^&#123; <span class="comment">/*加载图片1 */</span> &#125;);</div><div class="line">dispatch_group_async(group, queue, ^&#123; <span class="comment">/*加载图片2 */</span> &#125;);</div><div class="line">dispatch_group_async(group, queue, ^&#123; <span class="comment">/*加载图片3 */</span> &#125;); </div><div class="line">dispatch_group_notify(group, dispatch_get_main_queue(), ^&#123;</div><div class="line">        <span class="comment">// 合并图片</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<p>###42. <code>dispatch_barrier_async</code>的作用是什么？<br> 在并行队列中，为了保持某些任务的顺序，需要等待一些任务完成后才能继续进行，使用 barrier 来等待之前任务完成，避免数据竞争等问题。<br> <code>dispatch_barrier_async</code> 函数会等待追加到Concurrent Dispatch Queue并行队列中的操作全部执行完之后，然后再执行 <code>dispatch_barrier_async</code> 函数追加的处理，等 <code>dispatch_barrier_async</code> 追加的处理执行结束之后，Concurrent Dispatch Queue才恢复之前的动作继续执行。</p>
-<p>打个比方：比如你们公司周末跟团旅游，高速休息站上，司机说：大家都去上厕所，速战速决，上完厕所就上高速。超大的公共厕所，大家同时去，程序猿很快就结束了，但程序媛就可能会慢一些，即使你第一个回来，司机也不会出发，司机要等待所有人都回来后，才能出发。 <code>dispatch_barrier_async</code> 函数追加的内容就如同 “上完厕所就上高速”这个动作。</p>
-<p>（注意：使用 <code>dispatch_barrier_async</code> ，该函数只能搭配自定义并行队列 <code>dispatch_queue_t</code> 使用。不能使用： <code>dispatch_get_global_queue</code> ，否则 <code>dispatch_barrier_async</code> 的作用会和 <code>dispatch_async</code> 的作用一模一样。 ）</p>
-<p>###43. 苹果为什么要废弃<code>dispatch_get_current_queue</code>？</p>
-<p><code>dispatch_get_current_queue</code>容易造成死锁</p>
-<p>###44. 以下代码运行结果如何？</p>
-<pre><code>- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    NSLog(@&quot;1&quot;);
-    dispatch_sync(dispatch_get_main_queue(), ^{
-        NSLog(@&quot;2&quot;);
-    });
-    NSLog(@&quot;3&quot;);
-}
-</code></pre><p>只输出：1 。发生主线程锁死。</p>
-<p>###45. addObserver:forKeyPath:options:context:各个参数的作用分别是什么，observer中需要实现哪个方法才能获得KVO回调？</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 添加键值观察</span></div><div class="line"><span class="comment">/*</span></div><div class="line">1 观察者，负责处理监听事件的对象</div><div class="line">2 观察的属性</div><div class="line">3 观察的选项</div><div class="line">4 上下文</div><div class="line">*/</div><div class="line">[<span class="keyword">self</span>.person addObserver:<span class="keyword">self</span> forKeyPath:<span class="string">@"name"</span> options:<span class="built_in">NSKeyValueObservingOptionNew</span> | <span class="built_in">NSKeyValueObservingOptionOld</span> context:<span class="string">@"Person Name"</span>];</div></pre></td></tr></table></figure>
-<p>observer中需要实现一下方法：</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 所有的 kvo 监听到事件，都会调用此方法</span></div><div class="line"><span class="comment">/*</span></div><div class="line"> 1. 观察的属性</div><div class="line"> 2. 观察的对象</div><div class="line"> 3. change 属性变化字典（新／旧）</div><div class="line"> 4. 上下文，与监听的时候传递的一致</div><div class="line"> */</div><div class="line">- (<span class="keyword">void</span>)observeValueForKeyPath:(<span class="built_in">NSString</span> *)keyPath ofObject:(<span class="keyword">id</span>)object change:(<span class="built_in">NSDictionary</span> *)change context:(<span class="keyword">void</span> *)context;</div></pre></td></tr></table></figure>
-<p>###46. 如何手动触发一个value的KVO</p>
-<p>所谓的“手动触发”是区别于“自动触发”：</p>
-<p>自动触发是指类似这种场景：在注册 KVO 之前设置一个初始值，注册之后，设置一个不一样的值，就可以触发了。</p>
-<p>想知道如何手动触发，必须知道自动触发 KVO 的原理：</p>
-<p>键值观察通知依赖于 NSObject 的两个方法:  <code>willChangeValueForKey:</code> 和 <code>didChangevlueForKey:</code> 。在一个被观察属性发生改变之前，  <code>willChangeValueForKey:</code> 一定会被调用，这就<br>会记录旧的值。而当改变发生后，  <code>observeValueForKey:ofObject:change:context:</code> 会被调用，继而 <code>didChangeValueForKey:</code> 也会被调用。如果可以手动实现这些调用，就可以实现“手动触发”了。</p>
-<p>那么“手动触发”的使用场景是什么？一般我们只在希望能控制“回调的调用时机”时才会这么做。</p>
-<p>具体做法如下：</p>
-<p>如果这个  <code>value</code> 是  表示时间的 <code>self.now</code> ，那么代码如下：最后两行代码缺一不可。</p>
-<p>相关代码已放在仓库里。</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//  .m文件</span></div><div class="line"><span class="comment">//  Created by https://github.com/ChenYilong</span></div><div class="line"><span class="comment">//  微博@iOS程序犭袁(http://weibo.com/luohanchenyilong/).</span></div><div class="line"><span class="comment">//  手动触发 value 的KVO，最后两行代码缺一不可。</span></div><div class="line"></div><div class="line"><span class="comment">//@property (nonatomic, strong) NSDate *now;</span></div><div class="line">- (<span class="keyword">void</span>)viewDidLoad &#123;</div><div class="line">    [<span class="keyword">super</span> viewDidLoad];</div><div class="line">    _now = [<span class="built_in">NSDate</span> date];</div><div class="line">    [<span class="keyword">self</span> addObserver:<span class="keyword">self</span> forKeyPath:<span class="string">@"now"</span> options:<span class="built_in">NSKeyValueObservingOptionNew</span> context:<span class="literal">nil</span>];</div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"1"</span>);</div><div class="line">    [<span class="keyword">self</span> willChangeValueForKey:<span class="string">@"now"</span>]; <span class="comment">// “手动触发self.now的KVO”，必写。</span></div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"2"</span>);</div><div class="line">    [<span class="keyword">self</span> didChangeValueForKey:<span class="string">@"now"</span>]; <span class="comment">// “手动触发self.now的KVO”，必写。</span></div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"4"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>但是平时我们一般不会这么干，我们都是等系统去“自动触发”。“自动触发”的实现原理：</p>
-<blockquote>
-<p>比如调用 <code>setNow:</code> 时，系统还会以某种方式在中间插入 <code>wilChangeValueForKey:</code> 、  <code>didChangeValueForKey:</code> 和 <code>observeValueForKeyPath:ofObject:change:context:</code> 的调用。</p>
-</blockquote>
-<p>大家可能以为这是因为 <code>setNow:</code> 是合成方法，有时候我们也能看到有人这么写代码:</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">- (<span class="keyword">void</span>)setNow:(<span class="built_in">NSDate</span> *)aDate &#123;</div><div class="line">    [<span class="keyword">self</span> willChangeValueForKey:<span class="string">@"now"</span>]; <span class="comment">// 没有必要</span></div><div class="line">    _now = aDate;</div><div class="line">    [<span class="keyword">self</span> didChangeValueForKey:<span class="string">@"now"</span>];<span class="comment">// 没有必要</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>这完全没有必要，不要这么做，这样的话，KVO代码会被调用两次。KVO在调用存取方法之前总是调用 <code>willChangeValueForKey:</code>  ，之后总是调用 <code>didChangeValueForkey:</code> 。怎么做到的呢?答案是通过 isa 混写（isa-swizzling）。下文《apple用什么方式实现对一个对象的KVO？》会有详述。</p>
-<p>参考链接： <a href="https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/KeyValueObserving/Articles/KVOCompliance.html#//apple_ref/doc/uid/20002178-SW3" target="_blank" rel="external">Manual Change Notification—Apple 官方文档</a> </p>
-<p>###47. 若一个类有实例变量 <code>NSString *_foo</code> ，调用setValue:forKey:时，可以以foo还是 <code>_foo</code> 作为key？<br>都可以。</p>
-<p>###48. KVC的keyPath中的集合运算符如何使用？</p>
-<ol>
-<li>必须用在集合对象上或普通对象的集合属性上</li>
-<li>简单集合运算符有@avg， @count ， @max ， @min ，@sum，</li>
-<li>格式 @”@sum.age”或 @”集合属性.@max.age”</li>
-</ol>
-<p>###49. KVC和KVO的keyPath一定是属性么？<br>KVO支持实例变量</p>
-<p>###50. 如何关闭默认的KVO的默认实现，并进入自定义的KVO实现？</p>
-<p>请参考：</p>
-<ol>
-<li><a href="http://tech.glowing.com/cn/implement-kvo/" target="_blank" rel="external">《如何自己动手实现 KVO》</a></li>
-<li><a href="http://stackoverflow.com/a/10042641/3395008" target="_blank" rel="external"><strong>KVO for manually implemented properties</strong></a> </li>
-</ol>
-<p>###51. apple用什么方式实现对一个对象的KVO？ </p>
-<p><a href="https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/KeyValueObserving/Articles/KVOImplementation.html" target="_blank" rel="external">Apple 的文档</a>对 KVO 实现的描述：</p>
-<blockquote>
-<p>Automatic key-value observing is implemented using a technique called isa-swizzling… When an observer is registered for an attribute of an object the isa pointer of the observed object is modified, pointing to an intermediate class rather than at the true class …</p>
-</blockquote>
-<p>从<a href="https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/KeyValueObserving/Articles/KVOImplementation.html" target="_blank" rel="external">Apple 的文档</a>可以看出：Apple 并不希望过多暴露 KVO 的实现细节。不过，要是借助 runtime 提供的方法去深入挖掘，所有被掩盖的细节都会原形毕露：</p>
-<blockquote>
-<p>当你观察一个对象时，一个新的类会被动态创建。这个类继承自该对象的原本的类，并重写了被观察属性的 setter 方法。重写的 setter 方法会负责在调用原 setter 方法之前和之后，通知所有观察对象：值的更改。最后通过 <code>isa 混写（isa-swizzling）</code> 把这个对象的 isa 指针 ( isa 指针告诉 Runtime 系统这个对象的类是什么 ) 指向这个新创建的子类，对象就神奇的变成了新创建的子类的实例。我画了一张示意图，如下所示：</p>
-</blockquote>
-<p><img src="http://i62.tinypic.com/sy57ur.jpg" alt="enter image description here"></p>
-<p> KVO 确实有点黑魔法：</p>
-<blockquote>
-<p>Apple 使用了 <code>isa 混写（isa-swizzling）</code>来实现 KVO 。</p>
-</blockquote>
-<p>下面做下详细解释：</p>
-<p>键值观察通知依赖于 NSObject 的两个方法:  <code>willChangeValueForKey:</code> 和 <code>didChangevlueForKey:</code> 。在一个被观察属性发生改变之前，  <code>willChangeValueForKey:</code> 一定会被调用，这就会记录旧的值。而当改变发生后， <code>observeValueForKey:ofObject:change:context:</code> 会被调用，继而  <code>didChangeValueForKey:</code> 也会被调用。可以手动实现这些调用，但很少有人这么做。一般我们只在希望能控制回调的调用时机时才会这么做。大部分情况下，改变通知会自动调用。</p>
-<p> 比如调用 <code>setNow:</code> 时，系统还会以某种方式在中间插入 <code>wilChangeValueForKey:</code> 、  <code>didChangeValueForKey:</code>  和 <code>observeValueForKeyPath:ofObject:change:context:</code> 的调用。大家可能以为这是因为 <code>setNow:</code> 是合成方法，有时候我们也能看到有人这么写代码:</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">- (<span class="keyword">void</span>)setNow:(<span class="built_in">NSDate</span> *)aDate &#123;</div><div class="line">    [<span class="keyword">self</span> willChangeValueForKey:<span class="string">@"now"</span>]; <span class="comment">// 没有必要</span></div><div class="line">    _now = aDate;</div><div class="line">    [<span class="keyword">self</span> didChangeValueForKey:<span class="string">@"now"</span>];<span class="comment">// 没有必要</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>这完全没有必要，不要这么做，这样的话，KVO代码会被调用两次。KVO在调用存取方法之前总是调用 <code>willChangeValueForKey:</code>  ，之后总是调用 <code>didChangeValueForkey:</code> 。怎么做到的呢?答案是通过 isa 混写（isa-swizzling）。第一次对一个对象调用 <code>addObserver:forKeyPath:options:context:</code> 时，框架会创建这个类的新的 KVO 子类，并将被观察对象转换为新子类的对象。在这个 KVO 特殊子类中， Cocoa 创建观察属性的 setter ，大致工作原理如下:</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">- (<span class="keyword">void</span>)setNow:(<span class="built_in">NSDate</span> *)aDate &#123;</div><div class="line">    [<span class="keyword">self</span> willChangeValueForKey:<span class="string">@"now"</span>];</div><div class="line">    [<span class="keyword">super</span> setValue:aDate forKey:<span class="string">@"now"</span>];</div><div class="line">    [<span class="keyword">self</span> didChangeValueForKey:<span class="string">@"now"</span>];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>这种继承和方法注入是在运行时而不是编译时实现的。这就是正确命名如此重要的原因。只有在使用KVC命名约定时，KVO才能做到这一点。</p>
-<p>KVO 在实现中通过 <code>isa 混写（isa-swizzling）</code> 把这个对象的 isa 指针 ( isa 指针告诉 Runtime 系统这个对象的类是什么 ) 指向这个新创建的子类，对象就神奇的变成了新创建的子类的实例。这在<a href="https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/KeyValueObserving/Articles/KVOImplementation.html" target="_blank" rel="external">Apple 的文档</a>可以得到印证：</p>
-<blockquote>
-<p>Automatic key-value observing is implemented using a technique called isa-swizzling… When an observer is registered for an attribute of an object the isa pointer of the observed object is modified, pointing to an intermediate class rather than at the true class …</p>
-</blockquote>
-<p>然而 KVO 在实现中使用了 <code>isa 混写（ isa-swizzling）</code> ，这个的确不是很容易发现：Apple 还重写、覆盖了 <code>-class</code> 方法并返回原来的类。 企图欺骗我们：这个类没有变，就是原本那个类。。。</p>
-<p>但是，假设“被监听的对象”的类对象是 <code>MYClass</code> ，有时候我们能看到对 <code>NSKVONotifying_MYClass</code> 的引用而不是对  <code>MYClass</code>  的引用。借此我们得以知道 Apple 使用了 <code>isa 混写（isa-swizzling）</code>。具体探究过程可参考<a href="https://www.mikeash.com/pyblog/friday-qa-2009-01-23.html" target="_blank" rel="external"> 这篇博文 </a>。</p>
-<p>那么 <code>wilChangeValueForKey:</code> 、  <code>didChangeValueForKey:</code>  和 <code>observeValueForKeyPath:ofObject:change:context:</code> 这三个方法的执行顺序是怎样的呢？</p>
-<p> <code>wilChangeValueForKey:</code> 、  <code>didChangeValueForKey:</code> 很好理解，<code>observeValueForKeyPath:ofObject:change:context:</code> 的执行时机是什么时候呢？</p>
-<p> 先看一个例子：</p>
-<p>代码已放在仓库里。</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">- (<span class="keyword">void</span>)viewDidLoad &#123;</div><div class="line">    [<span class="keyword">super</span> viewDidLoad];</div><div class="line">    [<span class="keyword">self</span> addObserver:<span class="keyword">self</span> forKeyPath:<span class="string">@"now"</span> options:<span class="built_in">NSKeyValueObservingOptionNew</span> context:<span class="literal">nil</span>];</div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"1"</span>);</div><div class="line">    [<span class="keyword">self</span> willChangeValueForKey:<span class="string">@"now"</span>]; <span class="comment">// “手动触发self.now的KVO”，必写。</span></div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"2"</span>);</div><div class="line">    [<span class="keyword">self</span> didChangeValueForKey:<span class="string">@"now"</span>]; <span class="comment">// “手动触发self.now的KVO”，必写。</span></div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"4"</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line">- (<span class="keyword">void</span>)observeValueForKeyPath:(<span class="built_in">NSString</span> *)keyPath ofObject:(<span class="keyword">id</span>)object change:(<span class="built_in">NSDictionary</span>&lt;<span class="built_in">NSString</span> *,<span class="keyword">id</span>&gt; *)change context:(<span class="keyword">void</span> *)context &#123;</div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"3"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><img src="http://i66.tinypic.com/ncm7th.jpg" alt="enter image description here"></p>
-<p>如果单单从下面这个例子的打印上， </p>
-<p>顺序似乎是 <code>wilChangeValueForKey:</code> 、 <code>observeValueForKeyPath:ofObject:change:context:</code> 、 <code>didChangeValueForKey:</code> 。</p>
-<p>其实不然，这里有一个 <code>observeValueForKeyPath:ofObject:change:context:</code>  , 和 <code>didChangeValueForKey:</code> 到底谁先调用的问题：如果 <code>observeValueForKeyPath:ofObject:change:context:</code> 是在 <code>didChangeValueForKey:</code> 内部触发的操作呢？ 那么顺序就是： <code>wilChangeValueForKey:</code> 、  <code>didChangeValueForKey:</code>  和 <code>observeValueForKeyPath:ofObject:change:context:</code> </p>
-<p>不信你把 <code>didChangeValueForKey:</code> 注视掉，看下 <code>observeValueForKeyPath:ofObject:change:context:</code> 会不会执行。</p>
-<p>了解到这一点很重要，正如  <a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#46-如何手动触发一个value的kvo" target="_blank" rel="external">46. 如何手动触发一个value的KVO</a>  所说的：</p>
-<p>“手动触发”的使用场景是什么？一般我们只在希望能控制“回调的调用时机”时才会这么做。</p>
-<p>而“回调的调用时机”就是在你调用 <code>didChangeValueForKey:</code> 方法时。</p>
-<p>###52. IBOutlet连出来的视图属性为什么可以被设置成weak?</p>
-<p>参考链接：<a href="http://stackoverflow.com/questions/7678469/should-iboutlets-be-strong-or-weak-under-arc" target="_blank" rel="external"> <strong><em>Should IBOutlets be strong or weak under ARC?</em></strong> </a></p>
-<p>文章告诉我们：</p>
-<blockquote>
-<p>因为既然有外链那么视图在xib或者storyboard中肯定存在，视图已经对它有一个强引用了。</p>
-</blockquote>
-<p>不过这个回答漏了个重要知识，使用storyboard（xib不行）创建的vc，会有一个叫_topLevelObjectsToKeepAliveFromStoryboard的私有数组强引用所有top level的对象，所以这时即便outlet声明成weak也没关系</p>
-<p>###53. IB中User Defined Runtime Attributes如何使用？ </p>
-<p>它能够通过KVC的方式配置一些你在interface builder 中不能配置的属性。当你希望在IB中作尽可能多得事情，这个特性能够帮助你编写更加轻量级的viewcontroller</p>
-<p>###54. 如何调试BAD_ACCESS错误</p>
-<ol>
-<li>重写object的respondsToSelector方法，现实出现EXEC_BAD_ACCESS前访问的最后一个object</li>
-<li><p>通过 Zombie<br><img src="http://i.stack.imgur.com/ZAdi0.png" alt="enter image description here"></p>
-</li>
-<li><p>设置全局断点快速定位问题代码所在行</p>
-</li>
-<li>Xcode 7 已经集成了BAD_ACCESS捕获功能：<strong>Address Sanitizer</strong>。<br>用法如下：在配置中勾选✅Enable Address Sanitizer<br> <img src="https://developer.apple.com/library/prerelease/ios/documentation/DeveloperTools/Conceptual/WhatsNewXcode/Art/xc7-asan_2x.png" alt="enter image description here"></li>
-</ol>
-<p>###55. lldb（gdb）常用的调试命令？</p>
-<ul>
-<li>breakpoint 设置断点定位到某一个函数</li>
-<li>n 断点指针下一步</li>
-<li>po打印对象</li>
-</ul>
-<p>更多 lldb（gdb） 调试命令可查看</p>
-<ol>
-<li><a href="http://lldb.llvm.org/lldb-gdb.html" target="_blank" rel="external"> <strong><em>The LLDB Debugger</em></strong> </a>；</li>
-<li>苹果官方文档：<a href="https://developer.apple.com/library/ios/technotes/tn2239/_index.html" target="_blank" rel="external"> <strong><em>iOS Debugging Magic</em></strong> </a>。</li>
-</ol>
-<hr>
-<p>Posted by <a href="http://weibo.com/luohanchenyilong/" target="_blank" rel="external">微博@iOS程序犭袁</a><br>原创文章，版权声明：自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh" target="_blank" rel="external">Creative Commons BY-NC-ND 3.0</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
- 
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS面试-招聘/">iOS面试/招聘</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-关于常见的协议－归解档、深浅拷贝" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/08/14/关于常见的协议－归解档、深浅拷贝/" class="article-date">
@@ -1921,11 +1919,11 @@ int main(int argc, char * argv[]) {
           </li>
         
           <li>
-            <a href="/2016/08/16/《招聘一个靠谱的iOS》面试题参考答案（上）/">《招聘一个靠谱的 iOS》—参考答案（上）</a>
+            <a href="/2016/08/16/《招聘一个靠谱的iOS》面试题参考答案（下）/">《招聘一个靠谱的 iOS》—参考答案（下）</a>
           </li>
         
           <li>
-            <a href="/2016/08/16/《招聘一个靠谱的iOS》面试题参考答案（下）/">《招聘一个靠谱的 iOS》—参考答案（下）</a>
+            <a href="/2016/08/16/《招聘一个靠谱的iOS》面试题参考答案（上）/">《招聘一个靠谱的 iOS》—参考答案（上）</a>
           </li>
         
           <li>
