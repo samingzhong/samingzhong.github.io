@@ -31,7 +31,7 @@
 <meta property="og:image" content="http://i66.tinypic.com/ncm7th.jpg">
 <meta property="og:image" content="http://i.stack.imgur.com/ZAdi0.png">
 <meta property="og:image" content="https://developer.apple.com/library/prerelease/ios/documentation/DeveloperTools/Conceptual/WhatsNewXcode/Art/xc7-asan_2x.png">
-<meta property="og:updated_time" content="2016-08-17T04:12:11.000Z">
+<meta property="og:updated_time" content="2016-08-29T08:53:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《招聘一个靠谱的 iOS》—参考答案（下）">
 <meta name="twitter:description" content="《招聘一个靠谱的 iOS》—参考答案（下）
@@ -139,9 +139,6 @@
 <li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#42-dispatch_barrier_async的作用是什么" target="_blank" rel="external">42. dispatch_barrier_async的作用是什么？</a> </li>
 <li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#43-苹果为什么要废弃dispatch_get_current_queue" target="_blank" rel="external">43. 苹果为什么要废弃dispatch_get_current_queue？</a> </li>
 <li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#44-以下代码运行结果如何" target="_blank" rel="external">44. 以下代码运行结果如何？</a> </li>
-</ol>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">- (<span class="keyword">void</span>)viewDidLoad</div><div class="line">&#123;</div><div class="line">    [<span class="keyword">super</span> viewDidLoad];</div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"1"</span>);</div><div class="line">    <span class="built_in">dispatch_sync</span>(dispatch_get_main_queue(), ^&#123;</div><div class="line">        <span class="built_in">NSLog</span>(<span class="string">@"2"</span>);</div><div class="line">    &#125;);</div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"3"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ol>
 <li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#45-addobserverforkeypathoptionscontext各个参数的作用分别是什么observer中需要实现哪个方法才能获得kvo回调" target="_blank" rel="external">45. addObserver:forKeyPath:options:context:各个参数的作用分别是什么，observer中需要实现哪个方法才能获得KVO回调？</a> </li>
 <li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#46-如何手动触发一个value的kvo" target="_blank" rel="external">46. 如何手动触发一个value的KVO</a> </li>
 <li><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01《招聘一个靠谱的iOS》面试题参考答案/《招聘一个靠谱的iOS》面试题参考答案（下）.md#47-若一个类有实例变量-nsstring-_foo-调用setvalueforkey时可以以foo还是-_foo-作为key" target="_blank" rel="external">47. 若一个类有实例变量 NSString *_foo ，调用setValue:forKey:时，可以以foo还是 _foo 作为key？</a> </li>
