@@ -64,6 +64,147 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-开篇" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/29/开篇/" class="article-date">
+  <time datetime="2016-07-29T08:17:15.000Z" itemprop="datePublished">2016-07-29</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/杂谈集/">杂谈集</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/29/开篇/">博客诞生记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="更新－2016-8-14"><a href="#更新－2016-8-14" class="headerlink" title="更新－2016.8.14"></a>更新－2016.8.14</h3><p>折腾无止境，最后选择了Hexo来生成博客，原因是Hexo对主题的支持很方便，还有整个博客的界面、管理也是很给力。<br>唯一觉得不够方便的是：每次更新博客，整个public文件夹的东西似乎都会引起改动，比较影响上传速度。</p>
+<p>我是跟着<a href="https://hexo.io/" target="_blank" rel="external">这里</a>一步步来整起来的。另外，评论、分享等可能需要自定义，比如说<a href="http://blog.sunnyxx.com/2014/03/07/hexo_customize/" target="_blank" rel="external">这个</a>。</p>
+<hr>
+<p>嗯～是的。万能的Github里还有一个叫做Github Pages的衍生项目，我是通过它找到了Jekyll，最后打造出这个博客的。免费、无限流量、简单易用是它的优点，所以，今后有地儿写(fa)字(lao)了(sao)。</p>
+<p>关于Github Pages，官网有一句话概括很到位的话：</p>
+<blockquote>
+<p><a href="http://pages.github.com/" target="_blank" rel="external">GitHub Pages</a> <strong>基于 Jekyll 构建</strong>，你可以轻而易举地在 GitHub 上免费发布网站——<a href="https://help.github.com/articles/about-supported-custom-domains/" target="_blank" rel="external">自定义域名</a>等等。</p>
+</blockquote>
+<p>嗯～直接贴链接实在点：</p>
+<ul>
+<li><a href="https://pages.github.com/" target="_blank" rel="external">Github Pages基础教程</a></li>
+<li><a href="http://jekyllcn.com/" target="_blank" rel="external">Jekyll介绍</a></li>
+<li><a href="https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/" target="_blank" rel="external">使用Jekyll建立Github Pages个人网站</a></li>
+</ul>
+<p>ps1：关于Jekyll的一个配置文件Gemfile，建议source配置改为 ‘<a href="https://ruby.taobao.org/" target="_blank" rel="external">https://ruby.taobao.org/</a>‘ 在国内会合适些。</p>
+<p>ps2：关于Web开发相关的一些基础，我查了一些挺有帮助的资料，比如说这个<a href="https://developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web" target="_blank" rel="external">mozilla MDN－了解Web开发－Web开发入门</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+ 
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂谈/">杂谈</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-《iOS7 Programming Cookbook》第一章UIViewController与view－读书笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/06/20/《iOS7 Programming Cookbook》第一章UIViewController与view－读书笔记/" class="article-date">
+  <time datetime="2016-06-19T16:10:15.000Z" itemprop="datePublished">2016-06-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/读书笔记/">读书笔记</a>►<a class="article-category-link" href="/categories/读书笔记/《iOS7-Programing-Cookbook》/">《iOS7 Programing Cookbook》</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/20/《iOS7 Programming Cookbook》第一章UIViewController与view－读书笔记/">《iOS7 Programing Cookbook》第1章 实现控制器及其视图－笔记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-使用UIViewController呈现以及管理视图-1-9"><a href="#1-使用UIViewController呈现以及管理视图-1-9" class="headerlink" title="1. 使用UIViewController呈现以及管理视图(1.9)"></a>1. 使用UIViewController呈现以及管理视图(1.9)</h3><p>一般来说有两种方法加载视图控制器（当然其中也包含了视图）。</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 1</span></div><div class="line"><span class="keyword">self</span>.viewController = [[ViewController alloc] initWithNibName:<span class="literal">nil</span> bundle:<span class="literal">nil</span>];</div><div class="line"><span class="comment">// 不加载任何nib文件以呈现视图，相当于[ViewController new];</span></div><div class="line"></div><div class="line"><span class="comment">// 2</span></div><div class="line"><span class="keyword">self</span>.viewController = [[ViewController alloc]initWithNibName:<span class="string">@"ViewController"</span>bundle:<span class="literal">nil</span>];</div><div class="line"><span class="comment">// 如果希望controller的视图是使用Interface Builder设计的，可以使用此法。</span></div></pre></td></tr></table></figure>
+<h3 id="2-在导航栏-Navigation-Bar-上显示图片-1-14"><a href="#2-在导航栏-Navigation-Bar-上显示图片-1-14" class="headerlink" title="2. 在导航栏(Navigation Bar)上显示图片(1.14)"></a>2. 在导航栏(Navigation Bar)上显示图片(1.14)</h3><p>导航栏中间位置显示一张图片（一般情况下是显示controller的title）。</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">self</span>.navigationItem.titleView <span class="comment">// 可以在导航栏的中央显示一个自定义的视图。</span></div></pre></td></tr></table></figure>
+<p>除此之外，还可以自定义的视图有：</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">leftBarButtonItems/leftBarButtonItem (左边栏一个或多个barbuttonitem)</div><div class="line">rightBarButtonItems/rightBarButtonItem (右边栏一个或多个barbuttonitem)</div><div class="line"><span class="string">setLeftBarButtonItems:</span><span class="string">animated:</span>/<span class="string">setLeftBarButtonItem:</span><span class="string">animated:</span></div><div class="line"><span class="string">setRightBarButtonItems:</span><span class="string">animated:</span>/<span class="string">setRightBarButtonItem:</span><span class="string">animated:</span></div></pre></td></tr></table></figure>
+<h3 id="3-使用UITabBarController来呈现多个视图控制器-1-16"><a href="#3-使用UITabBarController来呈现多个视图控制器-1-16" class="headerlink" title="3.  使用UITabBarController来呈现多个视图控制器(1.16)"></a>3.  使用UITabBarController来呈现多个视图控制器(1.16)</h3><p>设置包含的控制器：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[[tabBarController setViewControllers:@[firstViewController, secondViewController]];</div></pre></td></tr></table></figure>
+<p>当然，这几个ViewController可以是UINavigationController或者其他UIViewController的子类。</p>
+<h3 id="4-构造并使用自定义风格的文本-1-26"><a href="#4-构造并使用自定义风格的文本-1-26" class="headerlink" title="4. 构造并使用自定义风格的文本(1.26)"></a>4. 构造并使用自定义风格的文本(1.26)</h3><ul>
+<li><p>问题</p>
+<p>你想要在不为每个属性创建单独的UI组件情况下能够在你的UI组件上显示丰富格式的文本。比如，你可能想要在一个UILabel里显示一个句子，这个句子里边有一个加粗的字。</p>
+</li>
+<li><p>解决办法</p>
+<p>使用 <code>NSAttributedString</code>     或者其可变的版本－<code>NSMutableAttributedString</code> ，把它设置成UI组件的文本，比如说UILabel组件的attributedString属性，或者直接使用Attributed String的内置方法把文本绘制在画板上。</p>
+</li>
+<li><p>讨论</p>
+<p>很多程序都会有这样的需求，要求能在一行文本里显示混合风格的字符串。比如第一个字是斜体，但第二个字是加粗，其它的是常规字体等。为了能实现这个效果，有些人必须使用<code>webview</code> ，但是，那并不是最优化的方案，因为 <code>webview</code> 在渲染字体的时候相当慢，这会严重影响你app的性能。iOS7里边，我们可以开始使用 <code>属性字符串</code> 。我不知道苹果在搞什么鬼，Mac开发早就能用上这个特性了，而iOS要在iOS7才能使用。</p>
+<p>构造属性字符串的最好方法就是：使用 <code>NSMutableAttributedString</code> 里的 <code>initWithString:</code> 方法，传一个NSString字符串进去。然后，对不同的部分设置不同的属性，我们使用  <code>NSMutableAttributedString</code> 中的 <code>setAttributes:range:</code> 方法。这个方法需要两个参数：</p>
+<ul>
+<li><p>setAttributes：一个字典对象，键是字符属性，值取决于对应的键。以下是一些很重要的键：</p>
+<ul>
+<li><p>NSFontAttributeName</p>
+<p>这个键的值是一个UIFont的对象，可以为指定范围的字符串定义这种字体。</p>
+</li>
+<li><p>NSForegroundColorAttributeName</p>
+<p>该键对应的值是UIColor对象。可以为指定范围的文本设置颜色。</p>
+</li>
+<li><p>NSBackgroundColorAttributeName</p>
+<p>可以为指定范围的文本设置背景颜色。</p>
+</li>
+<li><p>NSShadowAttributeName</p>
+<p>该键对应一个NSShadow对象，为指定范围的字符串定义阴影。</p>
+</li>
+</ul>
+</li>
+<li><p>range：一个NSRange对象，定义了目标字符串的范围，包括起点，长度。</p>
+</li>
+</ul>
+<p>下边举个例子：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">NSString</span> *string = <span class="string">@"小明童鞋"</span>;</div><div class="line"><span class="built_in">NSMutableAttributedString</span> *result = [[<span class="built_in">NSMutableAttributedString</span> alloc]initWithString:string];</div><div class="line"></div><div class="line"><span class="built_in">NSDictionary</span> *attributesForFirstWord = @&#123;</div><div class="line">                         <span class="built_in">NSFontAttributeName</span> : [<span class="built_in">UIFont</span> boldSystemFontOfSize:<span class="number">60.0</span>f],</div><div class="line">                         <span class="built_in">NSForegroundColorAttributeName</span> : [<span class="built_in">UIColor</span> redColor],</div><div class="line">                         <span class="built_in">NSBackgroundColorAttributeName</span> : [<span class="built_in">UIColor</span> blackColor]</div><div class="line">                         &#125;;</div><div class="line"></div><div class="line"><span class="built_in">NSShadow</span> *shadow = [[<span class="built_in">NSShadow</span> alloc] init];</div><div class="line">shadow.shadowColor = [<span class="built_in">UIColor</span> darkGrayColor];</div><div class="line">shadow.shadowOffset = <span class="built_in">CGSizeMake</span>(<span class="number">4.0</span>f, <span class="number">4.0</span>f);</div><div class="line"><span class="built_in">NSDictionary</span> *attributesForSecondWord = @&#123;</div><div class="line">                          <span class="built_in">NSFontAttributeName</span> : [<span class="built_in">UIFont</span> boldSystemFontOfSize:<span class="number">60.0</span>f],</div><div class="line">                          <span class="built_in">NSForegroundColorAttributeName</span> : [<span class="built_in">UIColor</span> whiteColor],</div><div class="line">                          <span class="built_in">NSBackgroundColorAttributeName</span> : [<span class="built_in">UIColor</span> redColor],</div><div class="line">                          <span class="built_in">NSShadowAttributeName</span> : shadow</div><div class="line">                          &#125;;</div><div class="line"><span class="comment">/* Find the string "iOS" in the whole string and sets its attribute */</span></div><div class="line">[result setAttributes:attributesForFirstWord range:[string rangeOfString:<span class="string">@"小明"</span>]];</div><div class="line"><span class="comment">/* Do the same thing for the string "SDK" */</span></div><div class="line">[result setAttributes:attributesForSecondWord range:[string rangeOfString:<span class="string">@"童鞋"</span>]];</div></pre></td></tr></table></figure>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+ 
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-视图控制器" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/03/31/视图控制器/" class="article-date">
@@ -116,6 +257,11 @@
 <p>你可以通过重载此方法去手动创建你的视图。如果你这么干了，请把创建的视图的根视图赋值给VC.view。创建出来的视图应该是个独一无二的实例，且请勿与其他VC对象共享之。里边也不应该调用父类的这个方法。</p>
 <p>如果你想对视图做一些额外的初始化工作，请在viewDidLoad方法里完成。</p>
 <p>总之：<strong>无特殊情况，视图的初始化工作，可以在viewDidLoad里完成。</strong></p>
+<hr>
+<h4 id="2016-8-30-update"><a href="#2016-8-30-update" class="headerlink" title="2016.8.30 update"></a>2016.8.30 update</h4><p>loadView只会在self.view为nil的时候调用，目的是设置视图控制器的view。然而，UIViewController的实现是设置属性view为一个自动铺满屏幕的空白UIView对象：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="built_in">UIView</span>: <span class="number">0x7fd9d3e2c400</span>; </div><div class="line">frame = (<span class="number">0</span> <span class="number">0</span>; <span class="number">375</span> <span class="number">667</span>); </div><div class="line">autoresize = W+H; <span class="comment">// 宽、高自动铺满父视图</span></div><div class="line">layer = &lt;<span class="built_in">CALayer</span>: <span class="number">0x7fd9d3e0d9b0</span>&gt;</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+<p>所以，一般情况不建议重载此方法。因为标准的UIViewController已经做的很好了，而且会根据是否关联了nib文件决定需要加载的view。</p>
+<p>常规对控制器的view的自定义（增加子视图等操作），建议放在viewDidLoad里边做。</p>
 <h2 id="UIViewController的生命周期"><a href="#UIViewController的生命周期" class="headerlink" title="UIViewController的生命周期"></a>UIViewController的生命周期</h2><p>vcA 从出现到push到vcB：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">1. A viewDidLoad  </div><div class="line">2. A viewWillAppear  </div><div class="line">3. A viewDidAppear  </div><div class="line">4. B viewDidLoad  </div><div class="line">5. A viewWillDisappear  </div><div class="line">6. B viewWillAppear  </div><div class="line">7. A viewDidDisappear</div><div class="line">8. B viewDidAppear</div></pre></td></tr></table></figure>
 <p>vcB pop回 vcA，则：</p>
@@ -229,7 +375,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/杂谈集/">杂谈集</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/能工巧匠集/">能工巧匠集</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/能工巧匠集/iOS开发/">iOS开发</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/能工巧匠集/工欲善其事必先利其器/">工欲善其事必先利其器</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/读书笔记/">读书笔记</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/读书笔记/《iOS7-Programing-Cookbook》/">《iOS7 Programing Cookbook》</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试-招聘/">面试/招聘</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/面试-招聘/《招聘一个靠谱的iOS》/">《招聘一个靠谱的iOS》</a><span class="category-list-count">2</span></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/杂谈集/">杂谈集</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/能工巧匠集/">能工巧匠集</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/能工巧匠集/iOS开发/">iOS开发</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/能工巧匠集/工欲善其事必先利其器/">工欲善其事必先利其器</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/读书笔记/">读书笔记</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/读书笔记/《iOS7-Programing-Cookbook》/">《iOS7 Programing Cookbook》</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试-招聘/">面试/招聘</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/面试-招聘/《招聘一个靠谱的iOS》/">《招聘一个靠谱的iOS》</a><span class="category-list-count">2</span></li></ul></li></ul>
     </div>
   </div>
 
@@ -240,6 +386,14 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/09/23/9月杂谈/">9月杂谈</a>
+          </li>
+        
+          <li>
+            <a href="/2016/08/30/关于UIView的translatesAutoresizingMaskIntoConstraints 属性/">关于UIView的translatesAutoresizingMaskIntoConstraints属性</a>
+          </li>
         
           <li>
             <a href="/2016/08/20/8月杂谈/">8月杂谈</a>
@@ -253,14 +407,6 @@
             <a href="/2016/08/16/《招聘一个靠谱的iOS》面试题参考答案（上）/">《招聘一个靠谱的 iOS》—参考答案（上）</a>
           </li>
         
-          <li>
-            <a href="/2016/08/14/关于常见的协议－归解档、深浅拷贝/">关于常见的协议－归/解档、深/浅拷贝</a>
-          </li>
-        
-          <li>
-            <a href="/2016/08/09/开发工具备忘/">开发工具备忘</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -270,7 +416,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NSCoding/">NSCoding</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NSCopying-NSMutableCopying/">NSCopying/NSMutableCopying</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Retain-Cycle/">Retain Cycle</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tower/">Tower</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS面试-招聘/">iOS面试/招聘</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发工具备忘/">开发工具备忘</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂谈/">杂谈</a><span class="tag-list-count">3</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Auto-Layout/">Auto Layout</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NSCoding/">NSCoding</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NSCopying-NSMutableCopying/">NSCopying/NSMutableCopying</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Retain-Cycle/">Retain Cycle</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tower/">Tower</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/autoresizing-mask/">autoresizing mask</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS面试-招聘/">iOS面试/招聘</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发工具备忘/">开发工具备忘</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂谈/">杂谈</a><span class="tag-list-count">4</span></li></ul>
     </div>
   </div>
 
@@ -280,7 +426,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/NSCoding/" style="font-size: 10px;">NSCoding</a> <a href="/tags/NSCopying-NSMutableCopying/" style="font-size: 10px;">NSCopying/NSMutableCopying</a> <a href="/tags/Retain-Cycle/" style="font-size: 10px;">Retain Cycle</a> <a href="/tags/Tower/" style="font-size: 10px;">Tower</a> <a href="/tags/iOS面试-招聘/" style="font-size: 15px;">iOS面试/招聘</a> <a href="/tags/开发工具备忘/" style="font-size: 10px;">开发工具备忘</a> <a href="/tags/杂谈/" style="font-size: 20px;">杂谈</a>
+      <a href="/tags/Auto-Layout/" style="font-size: 10px;">Auto Layout</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/NSCoding/" style="font-size: 10px;">NSCoding</a> <a href="/tags/NSCopying-NSMutableCopying/" style="font-size: 10px;">NSCopying/NSMutableCopying</a> <a href="/tags/Retain-Cycle/" style="font-size: 10px;">Retain Cycle</a> <a href="/tags/Tower/" style="font-size: 10px;">Tower</a> <a href="/tags/autoresizing-mask/" style="font-size: 10px;">autoresizing mask</a> <a href="/tags/iOS面试-招聘/" style="font-size: 15px;">iOS面试/招聘</a> <a href="/tags/开发工具备忘/" style="font-size: 10px;">开发工具备忘</a> <a href="/tags/杂谈/" style="font-size: 20px;">杂谈</a>
     </div>
   </div>
 
@@ -289,7 +435,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
