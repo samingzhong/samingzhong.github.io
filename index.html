@@ -82,7 +82,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/04/11月杂谈/">10月杂谈</a>
+      <a class="article-title" href="/2016/11/04/11月杂谈/">11月杂谈</a>
     </h1>
   
 
@@ -90,7 +90,26 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h3><h3 id="技术"><a href="#技术" class="headerlink" title="技术"></a>技术</h3><h3 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h3><h4 id="关于车子的那些事"><a href="#关于车子的那些事" class="headerlink" title="关于车子的那些事"></a>关于车子的那些事</h4>
+        <h3 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h3><h5 id="书籍"><a href="#书籍" class="headerlink" title="书籍"></a>书籍</h5><p>最近一直在找一些关于经济类的书籍来看，以弥补一下自己见短的经济学知识。比如《时寒冰说：未来20年经济大趋势》，断断续续在看，感觉还是蛮赞的一本书，观点有理有据，👍。</p>
+<h5 id="气候"><a href="#气候" class="headerlink" title="气候"></a>气候</h5><p>广州自从几个台风过后，一直在尝试入秋，这些天温度夜里下降的厉害，时常会被冷醒。</p>
+<p><a href="http://news.stnn.cc/fzsjxw/2016/1013/362810.shtml" target="_blank" rel="external">广州的平均入秋时间10.29</a>，所以，躺在衣柜里的寂寞的秋衣，已经渐渐可以派上用场啦，额哈哈哈哈😄。</p>
+<h3 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h3><h3 id="技术"><a href="#技术" class="headerlink" title="技术"></a>技术</h3><h5 id="iOS文件结构"><a href="#iOS文件结构" class="headerlink" title="iOS文件结构"></a>iOS文件结构</h5><p>iOS文件结构体系中，常常会获取应用Bundle路径、沙盒路径等各种路径，我花了点时间整理了一下（身边有一台越了狱的机器，用iFile展开各个文件夹好好看），画了下图：<img src="/assert/images/2016/iOSfile_system.png" alt="iOSfile_system"></p>
+<p>沙盒、app bundle一目了然。另外，从bundle里，本地化文件一目了然，还有各种nib资源文件（storyboard其实就是多个nib的集合）。</p>
+<h5 id="XcodeSettings"><a href="#XcodeSettings" class="headerlink" title="XcodeSettings"></a>XcodeSettings</h5><p>Xcode项目的配置繁杂，容易让人因其错乱。</p>
+<p>这里简单记录几个重点：</p>
+<ol>
+<li><p>多个target的设置</p>
+<p>很多时候，一个项目里，你需要根据情况打不一样的包（比如说，生产、测试环境），为了避免代码的改动，最好提前配置好各个环境/情况的target，这样的目的是尽量减少代码的更改，从而适应多种情况的打包需求，你需要做好几步：</p>
+<ol>
+<li><p>拷贝(Duplicate)一份target配置，buildsetting里配置预编译宏，Xcode预定义了Debug模式下DEBUG宏为1。然后可以根据这个或者自定义宏，在代码里做预处理，比如说开发环境接口地址（域名，路径）与生产环境的接口地址需要这么写：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#ifdef	DEVELOPMENT</span></div><div class="line"><span class="built_in">NSString</span> *host <span class="string">@"development_host_xxx"</span>;</div><div class="line"><span class="built_in">NSString</span> *api_xxxx	<span class="string">@"development_api_xxx"</span>;</div><div class="line"><span class="meta">#else</span></div><div class="line"><span class="built_in">NSString</span> *host <span class="string">@"release_host_xxx"</span>;</div><div class="line"><span class="built_in">NSString</span> *api_xxxx	<span class="string">@"release_api_xxx"</span>;</div><div class="line"><span class="meta">#endif</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><p>修改target名称。target名称一般对应ProductName.app的名称，当然如果你想targetName跟ProductName不一致，则可以在BuildSetting - Packaging - Product Name配置，最后executable file名称与Product Name一致。</p>
+</li>
+</ol>
+<h3 id="关于车子的那些事"><a href="#关于车子的那些事" class="headerlink" title="关于车子的那些事"></a>关于车子的那些事</h3>
       
     </div>
     <footer class="article-footer">
@@ -180,9 +199,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="最近三两事"><a href="#最近三两事" class="headerlink" title="最近三两事"></a>最近三两事</h3><h4 id="1-Core-Animation框架学习"><a href="#1-Core-Animation框架学习" class="headerlink" title="1. Core Animation框架学习"></a>1. Core Animation框架学习</h4><p>iOS UI层的结构：<br><img src="/assert/images/2016/uiframework.png" alt=""></p>
+        <h3 id="最近三两事"><a href="#最近三两事" class="headerlink" title="最近三两事"></a>最近三两事</h3><h4 id="1-Core-Animation框架学习"><a href="#1-Core-Animation框架学习" class="headerlink" title="1. Core Animation框架学习"></a>1. Core Animation框架学习</h4><p>iOS UI层的结构：<br><img src="/assert/images/2016/uiframework.png" alt="iOS UIFramework"></p>
 <h4 id="2-中秋"><a href="#2-中秋" class="headerlink" title="2. 中秋"></a>2. 中秋</h4><ol>
-<li><p>阿里安全部门的月饼事件<br>关于月饼，最近闹的比较火的一件事就是，阿里安全部门的月饼事件，可以通过<a href="https://www.zhihu.com/question/50600301" target="_blank" rel="external">这里</a>回顾一下。<br>中秋公司倒是发了盒蛮赞的月饼，不要脸的姿势上图<img src="/assert/images/2016/mooncake.png" alt=""></p>
+<li><p>阿里安全部门的月饼事件<br>关于月饼，最近闹的比较火的一件事就是，阿里安全部门的月饼事件，可以通过<a href="https://www.zhihu.com/question/50600301" target="_blank" rel="external">这里</a>回顾一下。<br>中秋公司倒是发了盒蛮赞的月饼，不要脸的姿势上图<img src="/assert/images/2016/mooncake.png" alt="mooncake"></p>
 </li>
 <li><p>准岳父岳母来穗过中秋<br>火车站接过大包小包的家乡食物的感受很奇怪，一方面觉得大老远的太麻烦太辛苦老人家，一方面觉得满满地温情，只是觉得自己应该做好更充分地准备，比如说攒足结婚用的彩礼钱，还想着买辆车，比如说<a href="http://www.civic.com.cn/" target="_blank" rel="external">思域10</a>，又或者是新品<a href="http://www.dongfeng-honda-gienia.com/#page1" target="_blank" rel="external">竞瑞</a>。另外，关注东本的车纯粹是因为有哥们就在东本做发动机测试研发相关的差事，且其最近买了思域10。不过，对汽车的钟爱，也许是每个男人的天性，就好比女人爱化妆品那样吧。。哦？看了下，扯的远些了😂。<br>另外不得不说的是，饭菜做的相当不错，就是辣了点。</p>
 </li>
@@ -1776,7 +1795,7 @@ NSStringFromClass([super class]) = Son
       <ul>
         
           <li>
-            <a href="/2016/11/04/11月杂谈/">10月杂谈</a>
+            <a href="/2016/11/04/11月杂谈/">11月杂谈</a>
           </li>
         
           <li>
