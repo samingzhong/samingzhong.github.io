@@ -17,7 +17,7 @@
 
 如果该值为 YES ，系统会创建一系列constraints来替代视图的autoresizing mask。
 请注意，autoresizing mask约束完全指定视图的尺寸和位置；因此你没法增加其他约束来修改视图的尺寸和位置。如果你想使用Auto Layout来动态计算视图大">
-<meta property="og:updated_time" content="2016-10-18T02:34:54.000Z">
+<meta property="og:updated_time" content="2016-11-05T03:23:37.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于UIView的translatesAutoresizingMaskIntoConstraints属性">
 <meta name="twitter:description" content="一个决定是否将视图的autoresizing mask转换成Auto Layout constraints的布尔值。
@@ -105,7 +105,7 @@
 <p>请注意，autoresizing mask约束完全指定视图的尺寸和位置；因此你没法增加其他约束来修改视图的尺寸和位置。如果你想使用Auto Layout来动态计算视图大小或位置，你必须要把你的视图的这个属性设置为 <code>NO</code> ，然后为你的这个视图增加完备的约束。</p>
 <p>使用代码创建的视图，该值默认设置为 <code>YES</code> 。如果是在IB里添加视图，那么视图的这个属性会被设置为 <code>NO</code> 。</p>
 <h2 id="理解"><a href="#理解" class="headerlink" title="理解"></a>理解</h2><blockquote>
-<p>如果是从代码层面开始使用<strong>Autolayout</strong>,需要对使用的<strong>View</strong>的<strong>translatesAutoresizingMaskIntoConstraints</strong>的属性设置为NO.即可开始通过代码添加Constraint,否则View还是会按照以往的autoresizingMask进行计算.<br>而在<strong>Interface Builder</strong>中勾选了<strong>Ues Autolayout</strong>,IB生成的控件的<strong>translatesAutoresizingMaskIntoConstraints</strong>属性都会被默认设置NO.    </p>
+<p>如果是从代码层面开始使用<strong>Autolayout</strong>,需要对使用的<strong>View</strong>的<strong>translatesAutoresizingMaskIntoConstraints</strong>的属性设置为NO.即可开始通过代码添加Constraint,否则View还是会按照以往的autoresizingMask进行计算.<br>而在<strong>Interface Builder</strong>中勾选了<strong>Use Autolayout</strong>,IB生成的控件的<strong>translatesAutoresizingMaskIntoConstraints</strong>属性都会被默认设置NO.    </p>
 <p>-text from <a href="http://blog.csdn.net/ysy441088327/article/details/12558097/" target="_blank" rel="external">here</a></p>
 </blockquote>
 <p>autoresizing mask与Auto Layout布局约束属于两套系统，但允许前者转换成后者。默认的YES也就是autoresizing mask将会转换auto layout。简单的布局可以考虑使用前者，但是复杂的布局那么就需要使用Auto Layout进行布局。那么，前提是把该视图的 <code>translatesAutoresizingMaskIntoConstraints</code> 属性设置成NO，以达到开启Auto Layout的效果（同时会禁用autoresizing mask）。</p>
