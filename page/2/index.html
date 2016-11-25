@@ -15,6 +15,8 @@
 <meta name="twitter:title" content="小明童鞋的窝">
 <meta name="twitter:description" content="点点滴滴">
   
+    <link rel="alternate" href="/atom.xml" title="小明童鞋的窝" type="application/atom+xml">
+  
   
     <link rel="icon" href="/favicon.png">
   
@@ -53,6 +55,8 @@
       </nav>
       <nav id="sub-nav">
         
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
         <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
       </nav>
       <div id="search-form-wrap">
@@ -63,6 +67,70 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-《iOS7 Programming Cookbook》第四章TableView－读书笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/30/《iOS7 Programming Cookbook》第四章TableView－读书笔记/" class="article-date">
+  <time datetime="2016-07-30T08:51:15.000Z" itemprop="datePublished">2016-07-30</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/读书笔记/">读书笔记</a>►<a class="article-category-link" href="/categories/读书笔记/《iOS7-Programing-Cookbook》/">《iOS7 Programing Cookbook》</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/30/《iOS7 Programming Cookbook》第四章TableView－读书笔记/">《iOS7 Programing Cookbook》第4章 构造并使用tableview－笔记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-在tableview里使用不同类型的附加说明控件"><a href="#1-在tableview里使用不同类型的附加说明控件" class="headerlink" title="1. 在tableview里使用不同类型的附加说明控件"></a>1. 在tableview里使用不同类型的附加说明控件</h3><ul>
+<li><p>问题</p>
+<p>你想通过在不同的table view cell里展示不同的附加说明控件，以达到抓住用户注意力的效果。</p>
+</li>
+<li><p>解决方案</p>
+<p> 使用UITableViewCell类里的accessoryType属性。</p>
+<p> <code>cell.accessoryType = UITableViewAccessoryDetailDisclosureButton;</code></p>
+<p> 可以通过以下的协议方法来捕捉用户对cell的accessory的点击行为：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- (<span class="keyword">void</span>) tableView:(<span class="built_in">UITableView</span> *)tableViewaccessoryButtonTappedForRowWithIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="2-创建自定义的表格视图单元附加说明控件（accessory）"><a href="#2-创建自定义的表格视图单元附加说明控件（accessory）" class="headerlink" title="2. 创建自定义的表格视图单元附加说明控件（accessory）"></a>2. 创建自定义的表格视图单元附加说明控件（accessory）</h3><ul>
+<li><p>问题</p>
+<p>系统SDK内置的accessory不合你胃口，你想自定义它。</p>
+</li>
+<li><p>解决方案</p>
+<p>利用UITableViewCell里的accessoryView属性。把你自定义的UIView对象赋值进去即可。</p>
+</li>
+<li><p>讨论</p>
+<p>关于触发自定义accessory时如何获取到相应的cell，可以通过一层层的查找自定义的accessory的父视图所属的类，直至找到UITableViewCell类的父级视图对象。代码如下：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">- (<span class="built_in">UIView</span> *) superviewOfType:(Class)paramSuperviewClass forView:(<span class="built_in">UIView</span> *)paramView&#123;</div><div class="line">    <span class="keyword">if</span> (paramView.superview != <span class="literal">nil</span>) &#123;</div><div class="line">        <span class="keyword">if</span> ([paramView.superview isKindOfClass:paramSuperviewClass])&#123;</div><div class="line">            <span class="keyword">return</span> paramView.superview;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            <span class="keyword">return</span> [<span class="keyword">self</span> superviewOfType:paramSuperviewClass forView:paramView.superview];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="keyword">return</span> <span class="literal">nil</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+ 
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-7月杂谈" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -123,70 +191,6 @@
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂谈/">杂谈</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-《iOS7 Programming Cookbook》第四章TableView－读书笔记" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/07/30/《iOS7 Programming Cookbook》第四章TableView－读书笔记/" class="article-date">
-  <time datetime="2016-07-30T08:51:15.000Z" itemprop="datePublished">2016-07-30</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/读书笔记/">读书笔记</a>►<a class="article-category-link" href="/categories/读书笔记/《iOS7-Programing-Cookbook》/">《iOS7 Programing Cookbook》</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/30/《iOS7 Programming Cookbook》第四章TableView－读书笔记/">《iOS7 Programing Cookbook》第4章 构造并使用tableview－笔记</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-在tableview里使用不同类型的附加说明控件"><a href="#1-在tableview里使用不同类型的附加说明控件" class="headerlink" title="1. 在tableview里使用不同类型的附加说明控件"></a>1. 在tableview里使用不同类型的附加说明控件</h3><ul>
-<li><p>问题</p>
-<p>你想通过在不同的table view cell里展示不同的附加说明控件，以达到抓住用户注意力的效果。</p>
-</li>
-<li><p>解决方案</p>
-<p> 使用UITableViewCell类里的accessoryType属性。</p>
-<p> <code>cell.accessoryType = UITableViewAccessoryDetailDisclosureButton;</code></p>
-<p> 可以通过以下的协议方法来捕捉用户对cell的accessory的点击行为：</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- (<span class="keyword">void</span>) tableView:(<span class="built_in">UITableView</span> *)tableViewaccessoryButtonTappedForRowWithIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="2-创建自定义的表格视图单元附加说明控件（accessory）"><a href="#2-创建自定义的表格视图单元附加说明控件（accessory）" class="headerlink" title="2. 创建自定义的表格视图单元附加说明控件（accessory）"></a>2. 创建自定义的表格视图单元附加说明控件（accessory）</h3><ul>
-<li><p>问题</p>
-<p>系统SDK内置的accessory不合你胃口，你想自定义它。</p>
-</li>
-<li><p>解决方案</p>
-<p>利用UITableViewCell里的accessoryView属性。把你自定义的UIView对象赋值进去即可。</p>
-</li>
-<li><p>讨论</p>
-<p>关于触发自定义accessory时如何获取到相应的cell，可以通过一层层的查找自定义的accessory的父视图所属的类，直至找到UITableViewCell类的父级视图对象。代码如下：</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">- (<span class="built_in">UIView</span> *) superviewOfType:(Class)paramSuperviewClass forView:(<span class="built_in">UIView</span> *)paramView&#123;</div><div class="line">    <span class="keyword">if</span> (paramView.superview != <span class="literal">nil</span>) &#123;</div><div class="line">        <span class="keyword">if</span> ([paramView.superview isKindOfClass:paramSuperviewClass])&#123;</div><div class="line">            <span class="keyword">return</span> paramView.superview;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            <span class="keyword">return</span> [<span class="keyword">self</span> superviewOfType:paramSuperviewClass forView:paramView.superview];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="keyword">return</span> <span class="literal">nil</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>​</p>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
- 
-      
-      
     </footer>
   </div>
   
