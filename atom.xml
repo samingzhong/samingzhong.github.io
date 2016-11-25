@@ -1,96 +1,28 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
   <title>小明童鞋的窝</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="点点滴滴">
-<meta property="og:type" content="website">
-<meta property="og:title" content="小明童鞋的窝">
-<meta property="og:url" content="https://samingzhong.github.io/index.html">
-<meta property="og:site_name" content="小明童鞋的窝">
-<meta property="og:description" content="点点滴滴">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小明童鞋的窝">
-<meta name="twitter:description" content="点点滴滴">
+  <subtitle>爱生活，爱编程。</subtitle>
+  <link href="/atom.xml" rel="self"/>
   
+  <link href="https://samingzhong.github.io/"/>
+  <updated>2016-11-20T15:35:26.000Z</updated>
+  <id>https://samingzhong.github.io/</id>
   
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  
-
-</head>
-
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">小明童鞋的窝</a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">爱生活，爱编程。</a>
-        </h2>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://samingzhong.github.io"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-11月杂谈" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/11/04/11月杂谈/" class="article-date">
-  <time datetime="2016-11-04T03:38:15.000Z" itemprop="datePublished">2016-11-04</time>
-</a>
+  <author>
+    <name>小明童鞋</name>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/杂谈集/">杂谈集</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+  </author>
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/04/11月杂谈/">11月杂谈</a>
-    </h1>
+  <generator uri="http://hexo.io/">Hexo</generator>
   
-
-      </header>
+  <entry>
+    <title>11月杂谈</title>
+    <link href="https://samingzhong.github.io/2016/11/04/11%E6%9C%88%E6%9D%82%E8%B0%88/"/>
+    <id>https://samingzhong.github.io/2016/11/04/11月杂谈/</id>
+    <published>2016-11-04T03:38:15.000Z</published>
+    <updated>2016-11-20T15:35:26.000Z</updated>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h3><h5 id="书籍"><a href="#书籍" class="headerlink" title="书籍"></a>书籍</h5><p>最近一直在找一些关于经济类的书籍来看，以弥补一下自己见短的经济学知识。比如《时寒冰说：未来20年经济大趋势》，断断续续在看，感觉还是蛮赞的一本书，观点有理有据，👍。</p>
+    <content type="html"><![CDATA[<h3 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h3><h5 id="书籍"><a href="#书籍" class="headerlink" title="书籍"></a>书籍</h5><p>最近一直在找一些关于经济类的书籍来看，以弥补一下自己见短的经济学知识。比如《时寒冰说：未来20年经济大趋势》，断断续续在看，感觉还是蛮赞的一本书，观点有理有据，👍。</p>
 <h5 id="气候"><a href="#气候" class="headerlink" title="气候"></a>气候</h5><p>广州自从几个台风过后，一直在尝试入秋，这些天温度夜里下降的厉害，时常会被冷醒。</p>
 <p><a href="http://news.stnn.cc/fzsjxw/2016/1013/362810.shtml" target="_blank" rel="external">广州的平均入秋时间10.29</a>，所以，躺在衣柜里的寂寞的秋衣，已经渐渐可以派上用场啦，额哈哈哈哈😄。</p>
 <h5 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h5><p>今年生日，和女票、妹妹去珠江新城唯一的大排档吃了顿很赞的饭，鸡肉、发糕超赞。</p>
@@ -293,97 +225,58 @@
 </tbody>
 </table>
 <h3 id="关于健康"><a href="#关于健康" class="headerlink" title="关于健康"></a>关于健康</h3><p>2016.11.17，周四，提前请假，中山一院，绑大点（医疗保险）、看中医，到现在，已经喝了三副中药，感觉棒棒哒！还剩三副就大功告成，从此疾病远离我～✌️。</p>
-
-      
-    </div>
-    <footer class="article-footer">
- 
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂谈/">杂谈</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-10月杂谈" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/10/18/10月杂谈/" class="article-date">
-  <time datetime="2016-10-18T03:38:15.000Z" itemprop="datePublished">2016-10-18</time>
-</a>
+]]></content>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/杂谈集/">杂谈集</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
+    <summary type="html">
+    
+      &lt;h3 id=&quot;生活&quot;&gt;&lt;a href=&quot;#生活&quot; class=&quot;headerlink&quot; title=&quot;生活&quot;&gt;&lt;/a&gt;生活&lt;/h3&gt;&lt;h5 id=&quot;书籍&quot;&gt;&lt;a href=&quot;#书籍&quot; class=&quot;headerlink&quot; title=&quot;书籍&quot;&gt;&lt;/a&gt;书籍&lt;/h5&gt;&lt;p&gt;最近一
+    
+    </summary>
+    
+      <category term="杂谈集" scheme="https://samingzhong.github.io/categories/%E6%9D%82%E8%B0%88%E9%9B%86/"/>
     
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/18/10月杂谈/">10月杂谈</a>
-    </h1>
-  
-
-      </header>
+      <category term="杂谈" scheme="https://samingzhong.github.io/tags/%E6%9D%82%E8%B0%88/"/>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h3><p>关于TagManager项目的开发时间主要是在9月份，10月份主要集中在修改BUG、完善SDK等方向。所以总的来说还是蛮轻松的。</p>
+  </entry>
+  
+  <entry>
+    <title>10月杂谈</title>
+    <link href="https://samingzhong.github.io/2016/10/18/10%E6%9C%88%E6%9D%82%E8%B0%88/"/>
+    <id>https://samingzhong.github.io/2016/10/18/10月杂谈/</id>
+    <published>2016-10-18T03:38:15.000Z</published>
+    <updated>2016-10-28T06:47:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h3><p>关于TagManager项目的开发时间主要是在9月份，10月份主要集中在修改BUG、完善SDK等方向。所以总的来说还是蛮轻松的。</p>
 <h3 id="技术"><a href="#技术" class="headerlink" title="技术"></a>技术</h3><p>iOS逆向。不接触还真不知道原来一个应用还能被这样分析，👍。<br>推荐几个链接:<a href="http://blog.csdn.net/yiyaaixuexi/article/details/29201699" target="_blank" rel="external">iOS安全攻防（二十三）：Objective-C代码混淆</a><br>这是博主的博客地址：<a href="http://my.csdn.net/yiyaaixuexi" target="_blank" rel="external">念茜的CSDN博客</a></p>
 <h3 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h3><p>除了偶发性的颈椎不舒服（内伤感），其他的还好，头也没那么晕了，感觉棒棒的。但是。。。偶尔还是熬到00:00点多，扣分扣分。。。😁</p>
 <p>女票公司体验后喉咙略感不适，中山一院排了n久的队（我当时排的是颈椎的），然后医生简单看了下，开了一大推的药，开了血液检查-甲状腺专项、以及B超-甲状腺专项，合计1200左右。如果医保能帮着报销一部分多好啊，可是，阴差阳错，愣是没用上。。。哎，每月好几百的医保白交了。。。😢。</p>
 <h4 id="关于车子的那些事"><a href="#关于车子的那些事" class="headerlink" title="关于车子的那些事"></a>关于车子的那些事</h4><p>上回说订了思域10那哥们被告知，“不好意思，你的思域10要到11月份才能到货哦，请耐心等待（因为别的哥们加钱提的车，亲你没加钱，所以只能愣着被插队了哈～）。</p>
 <p>做了一份表登记每月的收支情况，发现：持家无方。。。每月支出平均到6k了，呜呜呜。。。</p>
-
-      
-    </div>
-    <footer class="article-footer">
- 
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂谈/">杂谈</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-9月杂谈" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/09/23/9月杂谈/" class="article-date">
-  <time datetime="2016-09-23T07:00:15.000Z" itemprop="datePublished">2016-09-23</time>
-</a>
+]]></content>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/杂谈集/">杂谈集</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
+    <summary type="html">
+    
+      &lt;h3 id=&quot;工作&quot;&gt;&lt;a href=&quot;#工作&quot; class=&quot;headerlink&quot; title=&quot;工作&quot;&gt;&lt;/a&gt;工作&lt;/h3&gt;&lt;p&gt;关于TagManager项目的开发时间主要是在9月份，10月份主要集中在修改BUG、完善SDK等方向。所以总的来说还是蛮轻松的。&lt;/p&gt;
+&lt;
+    
+    </summary>
+    
+      <category term="杂谈集" scheme="https://samingzhong.github.io/categories/%E6%9D%82%E8%B0%88%E9%9B%86/"/>
     
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/09/23/9月杂谈/">9月杂谈</a>
-    </h1>
-  
-
-      </header>
+      <category term="杂谈" scheme="https://samingzhong.github.io/tags/%E6%9D%82%E8%B0%88/"/>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="最近三两事"><a href="#最近三两事" class="headerlink" title="最近三两事"></a>最近三两事</h3><h4 id="1-Core-Animation框架学习"><a href="#1-Core-Animation框架学习" class="headerlink" title="1. Core Animation框架学习"></a>1. Core Animation框架学习</h4><p>iOS UI层的结构：<br><img src="/assert/images/2016/uiframework.png" alt="iOS UIFramework"></p>
+  </entry>
+  
+  <entry>
+    <title>9月杂谈</title>
+    <link href="https://samingzhong.github.io/2016/09/23/9%E6%9C%88%E6%9D%82%E8%B0%88/"/>
+    <id>https://samingzhong.github.io/2016/09/23/9月杂谈/</id>
+    <published>2016-09-23T07:00:15.000Z</published>
+    <updated>2016-11-04T10:27:50.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="最近三两事"><a href="#最近三两事" class="headerlink" title="最近三两事"></a>最近三两事</h3><h4 id="1-Core-Animation框架学习"><a href="#1-Core-Animation框架学习" class="headerlink" title="1. Core Animation框架学习"></a>1. Core Animation框架学习</h4><p>iOS UI层的结构：<br><img src="/assert/images/2016/uiframework.png" alt="iOS UIFramework"></p>
 <h4 id="2-中秋"><a href="#2-中秋" class="headerlink" title="2. 中秋"></a>2. 中秋</h4><ol>
 <li><p>阿里安全部门的月饼事件<br>关于月饼，最近闹的比较火的一件事就是，阿里安全部门的月饼事件，可以通过<a href="https://www.zhihu.com/question/50600301" target="_blank" rel="external">这里</a>回顾一下。<br>中秋公司倒是发了盒蛮赞的月饼，不要脸的姿势上图<img src="/assert/images/2016/mooncake.png" alt="mooncake"></p>
 </li>
@@ -392,49 +285,29 @@
 </ol>
 <h4 id="3-关于颈椎病"><a href="#3-关于颈椎病" class="headerlink" title="3. 关于颈椎病"></a>3. 关于颈椎病</h4><p>可能是平时坐姿不讲究不规范，估计是落下毛病了，认真研究了下，可能是<a href="http://baike.baidu.com/view/3125547.htm" target="_blank" rel="external">交感型颈椎病</a>，然后相关的康复指南，可以看下<a href="http://www.66kangfu.com/upload/file/20160302/1456888474135809.pdf" target="_blank" rel="external">这份文档</a>。另外，除了了解清楚相关情况外，我还调整了作息时间（晚上10点睡觉、早上8点的闹钟）、以及早晚坚持做颈椎康复操，感觉略微有所好转。半月后如果还没有明显的改善，再考虑去医院做全面的检查。毕竟，身体要紧不是？</p>
 <h4 id="4-团建"><a href="#4-团建" class="headerlink" title="4. 团建"></a>4. 团建</h4><p>即将本周六出发的两天一夜自驾游，深圳华侨城－大峡谷，然后次日海边走走。嗯，如果不是特别累，应该蛮赞的。</p>
-
-      
-    </div>
-    <footer class="article-footer">
- 
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂谈/">杂谈</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-关于UIView的translatesAutoresizingMaskIntoConstraints 属性" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/08/30/关于UIView的translatesAutoresizingMaskIntoConstraints 属性/" class="article-date">
-  <time datetime="2016-08-30T08:17:15.000Z" itemprop="datePublished">2016-08-30</time>
-</a>
+]]></content>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/能工巧匠集/">能工巧匠集</a>►<a class="article-category-link" href="/categories/能工巧匠集/iOS开发/">iOS开发</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
+    <summary type="html">
+    
+      &lt;h3 id=&quot;最近三两事&quot;&gt;&lt;a href=&quot;#最近三两事&quot; class=&quot;headerlink&quot; title=&quot;最近三两事&quot;&gt;&lt;/a&gt;最近三两事&lt;/h3&gt;&lt;h4 id=&quot;1-Core-Animation框架学习&quot;&gt;&lt;a href=&quot;#1-Core-Animation框架学习&quot;
+    
+    </summary>
+    
+      <category term="杂谈集" scheme="https://samingzhong.github.io/categories/%E6%9D%82%E8%B0%88%E9%9B%86/"/>
     
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/30/关于UIView的translatesAutoresizingMaskIntoConstraints 属性/">关于UIView的translatesAutoresizingMaskIntoConstraints属性</a>
-    </h1>
-  
-
-      </header>
+      <category term="杂谈" scheme="https://samingzhong.github.io/tags/%E6%9D%82%E8%B0%88/"/>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
+  </entry>
+  
+  <entry>
+    <title>关于UIView的translatesAutoresizingMaskIntoConstraints属性</title>
+    <link href="https://samingzhong.github.io/2016/08/30/%E5%85%B3%E4%BA%8EUIView%E7%9A%84translatesAutoresizingMaskIntoConstraints%20%E5%B1%9E%E6%80%A7/"/>
+    <id>https://samingzhong.github.io/2016/08/30/关于UIView的translatesAutoresizingMaskIntoConstraints 属性/</id>
+    <published>2016-08-30T08:17:15.000Z</published>
+    <updated>2016-11-05T03:23:37.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
 <p>一个决定是否将视图的autoresizing mask转换成Auto Layout constraints的布尔值。</p>
 </blockquote>
 <p>如果该值为 <code>YES</code> ，系统会创建一系列constraints来替代视图的autoresizing mask。</p>
@@ -445,49 +318,36 @@
 <p>-text from <a href="http://blog.csdn.net/ysy441088327/article/details/12558097/" target="_blank" rel="external">here</a></p>
 </blockquote>
 <p>autoresizing mask与Auto Layout布局约束属于两套系统，但允许前者转换成后者。默认的YES也就是autoresizing mask将会转换auto layout。简单的布局可以考虑使用前者，但是复杂的布局那么就需要使用Auto Layout进行布局。那么，前提是把该视图的 <code>translatesAutoresizingMaskIntoConstraints</code> 属性设置成NO，以达到开启Auto Layout的效果（同时会禁用autoresizing mask）。</p>
-
-      
-    </div>
-    <footer class="article-footer">
- 
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Auto-Layout/">Auto Layout</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/autoresizing-mask/">autoresizing mask</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-8月杂谈" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/08/20/8月杂谈/" class="article-date">
-  <time datetime="2016-08-20T08:51:15.000Z" itemprop="datePublished">2016-08-20</time>
-</a>
+]]></content>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/杂谈集/">杂谈集</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;一个决定是否将视图的autoresizing mask转换成Auto Layout constraints的布尔值。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如果该值为 &lt;code&gt;YES&lt;/code&gt; ，系统会创建一系列constraints来
+    
+    </summary>
+    
+      <category term="能工巧匠集" scheme="https://samingzhong.github.io/categories/%E8%83%BD%E5%B7%A5%E5%B7%A7%E5%8C%A0%E9%9B%86/"/>
+    
+      <category term="iOS开发" scheme="https://samingzhong.github.io/categories/%E8%83%BD%E5%B7%A5%E5%B7%A7%E5%8C%A0%E9%9B%86/iOS%E5%BC%80%E5%8F%91/"/>
     
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/20/8月杂谈/">8月杂谈</a>
-    </h1>
-  
-
-      </header>
+      <category term="autoresizing mask" scheme="https://samingzhong.github.io/tags/autoresizing-mask/"/>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
+      <category term="Auto Layout" scheme="https://samingzhong.github.io/tags/Auto-Layout/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>8月杂谈</title>
+    <link href="https://samingzhong.github.io/2016/08/20/8%E6%9C%88%E6%9D%82%E8%B0%88/"/>
+    <id>https://samingzhong.github.io/2016/08/20/8月杂谈/</id>
+    <published>2016-08-20T08:51:15.000Z</published>
+    <updated>2016-10-18T02:34:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
 <h3 id="2016-8-15"><a href="#2016-8-15" class="headerlink" title="2016.8.15"></a>2016.8.15</h3><h4 id="体检、太古汇、正佳广场"><a href="#体检、太古汇、正佳广场" class="headerlink" title="体检、太古汇、正佳广场"></a>体检、太古汇、正佳广场</h4><p>上周六体检，低血压。自从4月份换了工作、住所之后到现在的8月，体重就从116增加到125接近10斤的涨幅，加上长时间的不科学饮食（每天都是那几样菜，出了公司的午餐偶尔有点小变化，我晚上回家都是一荤两素的做法，周末偶尔煲个汤，还不怎么放枸杞、当归这类药材。长期如此，估计对检查结果有些影响）。</p>
 <p>所以，对于身体，吃这方面不能继续这样马虎了，平时喝茶可能得泡泡红枣、枸杞等应该是一个不错的习惯。</p>
 <p>体检完之后，逛了太古汇，但很可惜没找到Sony的体验店；然后就是逛了许多家珠宝店，女票不停的试戴戒指，大体上一枚20份（1克拉＝100份，1克拉看起来已经非常的大，所以20克拉已经很不错了）左右的整钻去到7k（如果没有折扣）；中午在正佳店的探鱼吃饭，感觉上比佛山祖庙景点那家味道更赞一些，任性的点了最辣的口味，呜呜～；最后去了游戏机室，游戏币是一趟又一趟的买，几乎只是玩一个游戏－投篮球，不是很好玩，但是<strong>很带劲</strong>。</p>
@@ -497,49 +357,30 @@
 <blockquote>
 <p><em>不争不攘，平淡生活</em>。</p>
 </blockquote>
-
-      
-    </div>
-    <footer class="article-footer">
- 
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂谈/">杂谈</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-《招聘一个靠谱的iOS》面试题参考答案（下）" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/08/16/《招聘一个靠谱的iOS》面试题参考答案（下）/" class="article-date">
-  <time datetime="2016-08-16T06:51:15.000Z" itemprop="datePublished">2016-08-16</time>
-</a>
+]]></content>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/面试-招聘/">面试/招聘</a>►<a class="article-category-link" href="/categories/面试-招聘/《招聘一个靠谱的iOS》/">《招聘一个靠谱的iOS》</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;h3 id=&quot;2016-8-15&quot;&gt;&lt;a href=&quot;#2016-8-15&quot; class=&quot;headerlink&quot; title=&quot;2016.8.15&quot;&gt;&lt;/a&gt;2016.8.15&lt;/h3&gt;&lt;h4 id=&quot;体检、太古汇、正佳广场&quot;&gt;&lt;a href=&quot;#体检、太古汇、正佳
+    
+    </summary>
+    
+      <category term="杂谈集" scheme="https://samingzhong.github.io/categories/%E6%9D%82%E8%B0%88%E9%9B%86/"/>
     
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/16/《招聘一个靠谱的iOS》面试题参考答案（下）/">《招聘一个靠谱的 iOS》—参考答案（下）</a>
-    </h1>
-  
-
-      </header>
+      <category term="杂谈" scheme="https://samingzhong.github.io/tags/%E6%9D%82%E8%B0%88/"/>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="http://blog.sunnyxx.com/2015/07/04/ios-interview/" target="_blank" rel="external">《招聘一个靠谱的 iOS》</a>—参考答案（下）</p>
+  </entry>
+  
+  <entry>
+    <title>《招聘一个靠谱的 iOS》—参考答案（下）</title>
+    <link href="https://samingzhong.github.io/2016/08/16/%E3%80%8A%E6%8B%9B%E8%81%98%E4%B8%80%E4%B8%AA%E9%9D%A0%E8%B0%B1%E7%9A%84iOS%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%98%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88%EF%BC%88%E4%B8%8B%EF%BC%89/"/>
+    <id>https://samingzhong.github.io/2016/08/16/《招聘一个靠谱的iOS》面试题参考答案（下）/</id>
+    <published>2016-08-16T06:51:15.000Z</published>
+    <updated>2016-10-18T02:34:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://blog.sunnyxx.com/2015/07/04/ios-interview/" target="_blank" rel="external">《招聘一个靠谱的 iOS》</a>—参考答案（下）</p>
 <p>说明：面试题来源是<a href="http://weibo.com/u/1364395395" target="_blank" rel="external">微博@我就叫Sunny怎么了</a>的这篇博文：<a href="http://blog.sunnyxx.com/2015/07/04/ios-interview/" target="_blank" rel="external">《招聘一个靠谱的 iOS》</a>，其中共55题，除第一题为纠错题外，其他54道均为简答题。</p>
 <p>出题者简介： 孙源（sunnyxx），目前就职于百度，负责百度知道 iOS 客户端的开发工作，对技术喜欢刨根问底和总结最佳实践，热爱分享和开源，维护一个叫 forkingdog 的开源小组。</p>
 <p>答案为<a href="http://weibo.com/luohanchenyilong/" target="_blank" rel="external">微博@iOS程序犭袁</a>整理，未经出题者校对，如有纰漏，请向<a href="http://weibo.com/luohanchenyilong/" target="_blank" rel="external">微博@iOS程序犭袁</a>指正。</p>
@@ -995,49 +836,32 @@ int main(int argc, char * argv[]) {
 </ol>
 <hr>
 <p>Posted by <a href="http://weibo.com/luohanchenyilong/" target="_blank" rel="external">微博@iOS程序犭袁</a><br>原创文章，版权声明：自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh" target="_blank" rel="external">Creative Commons BY-NC-ND 3.0</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
- 
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS面试-招聘/">iOS面试/招聘</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-《招聘一个靠谱的iOS》面试题参考答案（上）" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/08/16/《招聘一个靠谱的iOS》面试题参考答案（上）/" class="article-date">
-  <time datetime="2016-08-16T06:51:15.000Z" itemprop="datePublished">2016-08-16</time>
-</a>
+]]></content>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/面试-招聘/">面试/招聘</a>►<a class="article-category-link" href="/categories/面试-招聘/《招聘一个靠谱的iOS》/">《招聘一个靠谱的iOS》</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;http://blog.sunnyxx.com/2015/07/04/ios-interview/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;《招聘一个靠谱的 iOS》&lt;/a&gt;—参考答案（下）&lt;/p&gt;
+&lt;p&gt;说明：面试题来源是&lt;a h
+    
+    </summary>
+    
+      <category term="面试/招聘" scheme="https://samingzhong.github.io/categories/%E9%9D%A2%E8%AF%95-%E6%8B%9B%E8%81%98/"/>
+    
+      <category term="《招聘一个靠谱的iOS》" scheme="https://samingzhong.github.io/categories/%E9%9D%A2%E8%AF%95-%E6%8B%9B%E8%81%98/%E3%80%8A%E6%8B%9B%E8%81%98%E4%B8%80%E4%B8%AA%E9%9D%A0%E8%B0%B1%E7%9A%84iOS%E3%80%8B/"/>
     
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/16/《招聘一个靠谱的iOS》面试题参考答案（上）/">《招聘一个靠谱的 iOS》—参考答案（上）</a>
-    </h1>
-  
-
-      </header>
+      <category term="iOS面试/招聘" scheme="https://samingzhong.github.io/tags/iOS%E9%9D%A2%E8%AF%95-%E6%8B%9B%E8%81%98/"/>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="http://blog.sunnyxx.com/2015/07/04/ios-interview/" target="_blank" rel="external">《招聘一个靠谱的 iOS》</a>—参考答案（上）</p>
+  </entry>
+  
+  <entry>
+    <title>《招聘一个靠谱的 iOS》—参考答案（上）</title>
+    <link href="https://samingzhong.github.io/2016/08/16/%E3%80%8A%E6%8B%9B%E8%81%98%E4%B8%80%E4%B8%AA%E9%9D%A0%E8%B0%B1%E7%9A%84iOS%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%98%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88%EF%BC%88%E4%B8%8A%EF%BC%89/"/>
+    <id>https://samingzhong.github.io/2016/08/16/《招聘一个靠谱的iOS》面试题参考答案（上）/</id>
+    <published>2016-08-16T06:51:15.000Z</published>
+    <updated>2016-10-18T02:34:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://blog.sunnyxx.com/2015/07/04/ios-interview/" target="_blank" rel="external">《招聘一个靠谱的 iOS》</a>—参考答案（上）</p>
 <p>说明：面试题来源是<a href="http://weibo.com/u/1364395395" target="_blank" rel="external">微博@我就叫Sunny怎么了</a>的这篇博文：<a href="http://blog.sunnyxx.com/2015/07/04/ios-interview/" target="_blank" rel="external">《招聘一个靠谱的 iOS》</a>，其中共55题，除第一题为纠错题外，其他54道均为简答题。</p>
 <p>出题者简介： 孙源（sunnyxx），目前就职于百度，负责百度知道 iOS 客户端的开发工作，对技术喜欢刨根问底和总结最佳实践，热爱分享和开源，维护一个叫 forkingdog 的开源小组。</p>
 <p>答案为<a href="http://weibo.com/luohanchenyilong/" target="_blank" rel="external">微博@iOS程序犭袁</a>整理，未经出题者校对，如有纰漏，请向<a href="http://weibo.com/luohanchenyilong/" target="_blank" rel="external">微博@iOS程序犭袁</a>指正。</p>
@@ -1717,49 +1541,32 @@ NSStringFromClass([super class]) = Son
 }
 </code></pre><h3 id="45-addObserver-forKeyPath-options-context-各个参数的作用分别是什么，observer中需要实现哪个方法才能获得KVO回调？"><a href="#45-addObserver-forKeyPath-options-context-各个参数的作用分别是什么，observer中需要实现哪个方法才能获得KVO回调？" class="headerlink" title="45. addObserver:forKeyPath:options:context:各个参数的作用分别是什么，observer中需要实现哪个方法才能获得KVO回调？"></a>45. addObserver:forKeyPath:options:context:各个参数的作用分别是什么，observer中需要实现哪个方法才能获得KVO回调？</h3><h3 id="46-如何手动触发一个value的KVO"><a href="#46-如何手动触发一个value的KVO" class="headerlink" title="46. 如何手动触发一个value的KVO"></a>46. 如何手动触发一个value的KVO</h3><h3 id="47-若一个类有实例变量NSString-foo，调用setValue-forKey-时，可以以foo还是-foo作为key？"><a href="#47-若一个类有实例变量NSString-foo，调用setValue-forKey-时，可以以foo还是-foo作为key？" class="headerlink" title="47. 若一个类有实例变量NSString *_foo，调用setValue:forKey:时，可以以foo还是_foo作为key？"></a>47. 若一个类有实例变量<code>NSString *_foo</code>，调用setValue:forKey:时，可以以foo还是<code>_foo</code>作为key？</h3><h3 id="48-KVC的keyPath中的集合运算符如何使用？"><a href="#48-KVC的keyPath中的集合运算符如何使用？" class="headerlink" title="48. KVC的keyPath中的集合运算符如何使用？"></a>48. KVC的keyPath中的集合运算符如何使用？</h3><h3 id="49-KVC和KVO的keyPath一定是属性么？"><a href="#49-KVC和KVO的keyPath一定是属性么？" class="headerlink" title="49. KVC和KVO的keyPath一定是属性么？"></a>49. KVC和KVO的keyPath一定是属性么？</h3><h3 id="50-如何关闭默认的KVO的默认实现，并进入自定义的KVO实现？"><a href="#50-如何关闭默认的KVO的默认实现，并进入自定义的KVO实现？" class="headerlink" title="50. 如何关闭默认的KVO的默认实现，并进入自定义的KVO实现？"></a>50. 如何关闭默认的KVO的默认实现，并进入自定义的KVO实现？</h3><h3 id="51-apple用什么方式实现对一个对象的KVO？"><a href="#51-apple用什么方式实现对一个对象的KVO？" class="headerlink" title="51. apple用什么方式实现对一个对象的KVO？"></a>51. apple用什么方式实现对一个对象的KVO？</h3><h3 id="52-IBOutlet连出来的视图属性为什么可以被设置成weak"><a href="#52-IBOutlet连出来的视图属性为什么可以被设置成weak" class="headerlink" title="52. IBOutlet连出来的视图属性为什么可以被设置成weak?"></a>52. IBOutlet连出来的视图属性为什么可以被设置成weak?</h3><h3 id="53-IB中User-Defined-Runtime-Attributes如何使用？"><a href="#53-IB中User-Defined-Runtime-Attributes如何使用？" class="headerlink" title="53. IB中User Defined Runtime Attributes如何使用？"></a>53. IB中User Defined Runtime Attributes如何使用？</h3><h3 id="54-如何调试BAD-ACCESS错误"><a href="#54-如何调试BAD-ACCESS错误" class="headerlink" title="54. 如何调试BAD_ACCESS错误"></a>54. 如何调试<code>BAD_ACCESS</code>错误</h3><h3 id="55-lldb（gdb）常用的调试命令？"><a href="#55-lldb（gdb）常用的调试命令？" class="headerlink" title="55. lldb（gdb）常用的调试命令？"></a>55. lldb（gdb）常用的调试命令？</h3><hr>
 <p>Posted by <a href="http://weibo.com/luohanchenyilong/" target="_blank" rel="external">微博@iOS程序犭袁</a><br>原创文章，版权声明：自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh" target="_blank" rel="external">Creative Commons BY-NC-ND 3.0</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
- 
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS面试-招聘/">iOS面试/招聘</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-关于常见的协议－归解档、深浅拷贝" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/08/14/关于常见的协议－归解档、深浅拷贝/" class="article-date">
-  <time datetime="2016-08-14T08:56:57.000Z" itemprop="datePublished">2016-08-14</time>
-</a>
+]]></content>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/能工巧匠集/">能工巧匠集</a>►<a class="article-category-link" href="/categories/能工巧匠集/iOS开发/">iOS开发</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;http://blog.sunnyxx.com/2015/07/04/ios-interview/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;《招聘一个靠谱的 iOS》&lt;/a&gt;—参考答案（上）&lt;/p&gt;
+&lt;p&gt;说明：面试题来源是&lt;a h
+    
+    </summary>
+    
+      <category term="面试/招聘" scheme="https://samingzhong.github.io/categories/%E9%9D%A2%E8%AF%95-%E6%8B%9B%E8%81%98/"/>
+    
+      <category term="《招聘一个靠谱的iOS》" scheme="https://samingzhong.github.io/categories/%E9%9D%A2%E8%AF%95-%E6%8B%9B%E8%81%98/%E3%80%8A%E6%8B%9B%E8%81%98%E4%B8%80%E4%B8%AA%E9%9D%A0%E8%B0%B1%E7%9A%84iOS%E3%80%8B/"/>
     
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/14/关于常见的协议－归解档、深浅拷贝/">关于常见的协议－归/解档、深/浅拷贝</a>
-    </h1>
-  
-
-      </header>
+      <category term="iOS面试/招聘" scheme="https://samingzhong.github.io/tags/iOS%E9%9D%A2%E8%AF%95-%E6%8B%9B%E8%81%98/"/>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="NSCoding"><a href="#NSCoding" class="headerlink" title="NSCoding"></a>NSCoding</h3><p>很多时候，我们需要将我们的处于内存里的对象保存到磁盘里，方便下次使用这个对象。其中，这个保存过程叫做归档－archive。相反，把磁盘里的数据变成对象，则称为解档－unarchive。</p>
+  </entry>
+  
+  <entry>
+    <title>关于常见的协议－归/解档、深/浅拷贝</title>
+    <link href="https://samingzhong.github.io/2016/08/14/%E5%85%B3%E4%BA%8E%E5%B8%B8%E8%A7%81%E7%9A%84%E5%8D%8F%E8%AE%AE%EF%BC%8D%E5%BD%92%E8%A7%A3%E6%A1%A3%E3%80%81%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D/"/>
+    <id>https://samingzhong.github.io/2016/08/14/关于常见的协议－归解档、深浅拷贝/</id>
+    <published>2016-08-14T08:56:57.000Z</published>
+    <updated>2016-08-16T08:38:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="NSCoding"><a href="#NSCoding" class="headerlink" title="NSCoding"></a>NSCoding</h3><p>很多时候，我们需要将我们的处于内存里的对象保存到磁盘里，方便下次使用这个对象。其中，这个保存过程叫做归档－archive。相反，把磁盘里的数据变成对象，则称为解档－unarchive。</p>
 <p>而unarchive中包含把二进制数据转化成对象的过程，称为序列化；相反，把一个对象变成磁盘里的文件这个归档过程中，对象转变成二进制数据这个过程，就就反序列化。</p>
 <p>或者这样理解：序列化是把看似凌乱的二进制数据变成有序的结构体（内存里的对象其实就是以结构体的形式存在的），反序列化就是把有序的结构体对象变成看似凌乱的二进制数据。</p>
 <p>NSCoding协议声明了一个可被归档与解档的类所必须实现的方法。遵循这个协议就必须实现里边的两个个方法:</p>
@@ -1780,49 +1587,33 @@ NSStringFromClass([super class]) = Son
 <h4 id="NSMutableCopying"><a href="#NSMutableCopying" class="headerlink" title="NSMutableCopying"></a>NSMutableCopying</h4><p>此协议仅声明了一个方法：<code>mutableCopyWithZone:</code> ，但是可变的拷贝常常是通过 <code>mutableCopy</code> 调起。这个<code>mutableCopy</code> 方法是在所有的 <code>NSObject</code> 类中定义，且只是简单的调用 <code>mutableCopyWithZone:</code> 而已。</p>
 <p>如NSCopying协议一样，如果父类实现了NSMutableCopying协议，那么在实现子类的<code>mutableCopyWithZone:</code> 方法时，需先调用父类的 <code>mutableCopyWithZone:</code> 。</p>
 <h3 id="小节"><a href="#小节" class="headerlink" title="小节"></a>小节</h3><p>感觉NSCopying协议平时在开发中使用的机会还是比较少（咳咳，其实我只是在文档、笔试题里或者技术博客里见到过一些介绍，或者常见的系统内置类型，如：NSString/NSMutableString、NSArray/NSMutableArray等）。所以具体的实战可能最好比较或者参考一下这些已有的类或者接口。</p>
-
-      
-    </div>
-    <footer class="article-footer">
- 
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NSCoding/">NSCoding</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NSCopying-NSMutableCopying/">NSCopying/NSMutableCopying</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-开发工具备忘" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/08/09/开发工具备忘/" class="article-date">
-  <time datetime="2016-08-09T08:51:15.000Z" itemprop="datePublished">2016-08-09</time>
-</a>
+]]></content>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/能工巧匠集/">能工巧匠集</a>►<a class="article-category-link" href="/categories/能工巧匠集/工欲善其事必先利其器/">工欲善其事必先利其器</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
+    <summary type="html">
+    
+      &lt;h3 id=&quot;NSCoding&quot;&gt;&lt;a href=&quot;#NSCoding&quot; class=&quot;headerlink&quot; title=&quot;NSCoding&quot;&gt;&lt;/a&gt;NSCoding&lt;/h3&gt;&lt;p&gt;很多时候，我们需要将我们的处于内存里的对象保存到磁盘里，方便下次使用这个对象。其中，这个保存
+    
+    </summary>
+    
+      <category term="能工巧匠集" scheme="https://samingzhong.github.io/categories/%E8%83%BD%E5%B7%A5%E5%B7%A7%E5%8C%A0%E9%9B%86/"/>
+    
+      <category term="iOS开发" scheme="https://samingzhong.github.io/categories/%E8%83%BD%E5%B7%A5%E5%B7%A7%E5%8C%A0%E9%9B%86/iOS%E5%BC%80%E5%8F%91/"/>
     
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/09/开发工具备忘/">开发工具备忘</a>
-    </h1>
-  
-
-      </header>
+      <category term="NSCoding" scheme="https://samingzhong.github.io/tags/NSCoding/"/>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>开发工具备忘:</p>
+      <category term="NSCopying/NSMutableCopying" scheme="https://samingzhong.github.io/tags/NSCopying-NSMutableCopying/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>开发工具备忘</title>
+    <link href="https://samingzhong.github.io/2016/08/09/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E5%A4%87%E5%BF%98/"/>
+    <id>https://samingzhong.github.io/2016/08/09/开发工具备忘/</id>
+    <published>2016-08-09T08:51:15.000Z</published>
+    <updated>2016-11-07T02:02:35.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>开发工具备忘:</p>
 <h3 id="Xcode插件"><a href="#Xcode插件" class="headerlink" title="Xcode插件:"></a>Xcode插件:</h3><ul>
 <li><a href="http://alcatraz.io/" target="_blank" rel="external">Alcatraz: Package manager for Xcode</a></li>
 <li>Comment</li>
@@ -1854,49 +1645,33 @@ NSStringFromClass([super class]) = Son
 <li>删除<br>1) command + shift + p<br>2) remove package<br>3) 输入或选择你要卸除的插件，回车即可。</li>
 <li>备忘列表<br>1）Pretty JSON<br>2) WordHightlight</li>
 </ol>
-
-      
-    </div>
-    <footer class="article-footer">
- 
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开发工具备忘/">开发工具备忘</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Git、Tower的一些使用备忘" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/08/02/Git、Tower的一些使用备忘/" class="article-date">
-  <time datetime="2016-08-02T08:17:15.000Z" itemprop="datePublished">2016-08-02</time>
-</a>
+]]></content>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/能工巧匠集/">能工巧匠集</a>►<a class="article-category-link" href="/categories/能工巧匠集/工欲善其事必先利其器/">工欲善其事必先利其器</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
+    <summary type="html">
+    
+      &lt;p&gt;开发工具备忘:&lt;/p&gt;
+&lt;h3 id=&quot;Xcode插件&quot;&gt;&lt;a href=&quot;#Xcode插件&quot; class=&quot;headerlink&quot; title=&quot;Xcode插件:&quot;&gt;&lt;/a&gt;Xcode插件:&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://alcatraz.io
+    
+    </summary>
+    
+      <category term="能工巧匠集" scheme="https://samingzhong.github.io/categories/%E8%83%BD%E5%B7%A5%E5%B7%A7%E5%8C%A0%E9%9B%86/"/>
+    
+      <category term="工欲善其事必先利其器" scheme="https://samingzhong.github.io/categories/%E8%83%BD%E5%B7%A5%E5%B7%A7%E5%8C%A0%E9%9B%86/%E5%B7%A5%E6%AC%B2%E5%96%84%E5%85%B6%E4%BA%8B%E5%BF%85%E5%85%88%E5%88%A9%E5%85%B6%E5%99%A8/"/>
     
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/02/Git、Tower的一些使用备忘/">关于Git与Tower的一些使用备忘</a>
-    </h1>
-  
-
-      </header>
+      <category term="开发工具备忘" scheme="https://samingzhong.github.io/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E5%A4%87%E5%BF%98/"/>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Git是目前最流行的版本管理工具，Git的功能相当强大，以git为核心的可视化工具有免费的Github的 Github Desktop、SourceTree以及收费<a href="http://xclient.info/s/tower.html" target="_blank" rel="external">Tower</a>等。嗯我个人对比使用过之后，觉得还是Tower比较符合我自己。本文将会介绍下我在进行项目版本管理的时候比较重要的一些操作存做备忘。</p>
+  </entry>
+  
+  <entry>
+    <title>关于Git与Tower的一些使用备忘</title>
+    <link href="https://samingzhong.github.io/2016/08/02/Git%E3%80%81Tower%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BD%BF%E7%94%A8%E5%A4%87%E5%BF%98/"/>
+    <id>https://samingzhong.github.io/2016/08/02/Git、Tower的一些使用备忘/</id>
+    <published>2016-08-02T08:17:15.000Z</published>
+    <updated>2016-08-15T03:11:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Git是目前最流行的版本管理工具，Git的功能相当强大，以git为核心的可视化工具有免费的Github的 Github Desktop、SourceTree以及收费<a href="http://xclient.info/s/tower.html" target="_blank" rel="external">Tower</a>等。嗯我个人对比使用过之后，觉得还是Tower比较符合我自己。本文将会介绍下我在进行项目版本管理的时候比较重要的一些操作存做备忘。</p>
 <h2 id="本地回滚到某一个版本。"><a href="#本地回滚到某一个版本。" class="headerlink" title="本地回滚到某一个版本。"></a>本地回滚到某一个版本。</h2><p>History，选中你希望回滚的版本，右键，Reset Head to “xxxx”。</p>
 <p>说明：若要保留旧版本到当前版本的修改内容，记得勾上Keep Changes。否则修改内容应该是会被丢弃的。</p>
 <h2 id="关于文件忽略，根据使用情境会有所不同。"><a href="#关于文件忽略，根据使用情境会有所不同。" class="headerlink" title="关于文件忽略，根据使用情境会有所不同。"></a>关于文件忽略，根据使用情境会有所不同。</h2><ul>
@@ -1939,129 +1714,342 @@ NSStringFromClass([super class]) = Son
 <p>至此，自定义commit的合并结束。</p>
 </li>
 </ul>
-
-      
-    </div>
-    <footer class="article-footer">
- 
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tower/">Tower</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-
-  <nav id="page-nav">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">向后一页 &raquo;</a>
-  </nav>
-</section>
-        
-          <aside id="sidebar">
-  
+]]></content>
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">分类</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/杂谈集/">杂谈集</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/能工巧匠集/">能工巧匠集</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/能工巧匠集/iOS开发/">iOS开发</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/能工巧匠集/工欲善其事必先利其器/">工欲善其事必先利其器</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/读书笔记/">读书笔记</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/读书笔记/《iOS7-Programing-Cookbook》/">《iOS7 Programing Cookbook》</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试-招聘/">面试/招聘</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/面试-招聘/《招聘一个靠谱的iOS》/">《招聘一个靠谱的iOS》</a><span class="category-list-count">2</span></li></ul></li></ul>
-    </div>
-  </div>
-
-
-  
+    <summary type="html">
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2016/11/04/11月杂谈/">11月杂谈</a>
-          </li>
-        
-          <li>
-            <a href="/2016/10/18/10月杂谈/">10月杂谈</a>
-          </li>
-        
-          <li>
-            <a href="/2016/09/23/9月杂谈/">9月杂谈</a>
-          </li>
-        
-          <li>
-            <a href="/2016/08/30/关于UIView的translatesAutoresizingMaskIntoConstraints 属性/">关于UIView的translatesAutoresizingMaskIntoConstraints属性</a>
-          </li>
-        
-          <li>
-            <a href="/2016/08/20/8月杂谈/">8月杂谈</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
+      &lt;p&gt;Git是目前最流行的版本管理工具，Git的功能相当强大，以git为核心的可视化工具有免费的Github的 Github Desktop、SourceTree以及收费&lt;a href=&quot;http://xclient.info/s/tower.html&quot; target=&quot;_bla
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Auto-Layout/">Auto Layout</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NSCoding/">NSCoding</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NSCopying-NSMutableCopying/">NSCopying/NSMutableCopying</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Retain-Cycle/">Retain Cycle</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tower/">Tower</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/autoresizing-mask/">autoresizing mask</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS面试-招聘/">iOS面试/招聘</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发工具备忘/">开发工具备忘</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂谈/">杂谈</a><span class="tag-list-count">6</span></li></ul>
-    </div>
-  </div>
-
-
-  
+    </summary>
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签云</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/Auto-Layout/" style="font-size: 10px;">Auto Layout</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/NSCoding/" style="font-size: 10px;">NSCoding</a> <a href="/tags/NSCopying-NSMutableCopying/" style="font-size: 10px;">NSCopying/NSMutableCopying</a> <a href="/tags/Retain-Cycle/" style="font-size: 10px;">Retain Cycle</a> <a href="/tags/Tower/" style="font-size: 10px;">Tower</a> <a href="/tags/autoresizing-mask/" style="font-size: 10px;">autoresizing mask</a> <a href="/tags/iOS面试-招聘/" style="font-size: 15px;">iOS面试/招聘</a> <a href="/tags/开发工具备忘/" style="font-size: 10px;">开发工具备忘</a> <a href="/tags/杂谈/" style="font-size: 20px;">杂谈</a>
-    </div>
-  </div>
-
-  
+      <category term="能工巧匠集" scheme="https://samingzhong.github.io/categories/%E8%83%BD%E5%B7%A5%E5%B7%A7%E5%8C%A0%E9%9B%86/"/>
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">2</span></li></ul>
-    </div>
-  </div>
-
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2016 小明童鞋<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
+      <category term="工欲善其事必先利其器" scheme="https://samingzhong.github.io/categories/%E8%83%BD%E5%B7%A5%E5%B7%A7%E5%8C%A0%E9%9B%86/%E5%B7%A5%E6%AC%B2%E5%96%84%E5%85%B6%E4%BA%8B%E5%BF%85%E5%85%88%E5%88%A9%E5%85%B6%E5%99%A8/"/>
     
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-
-<script src="/js/script.js"></script>
-
-  </div>
-</body>
-</html>
+    
+      <category term="Git" scheme="https://samingzhong.github.io/tags/Git/"/>
+    
+      <category term="Tower" scheme="https://samingzhong.github.io/tags/Tower/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>7月杂谈</title>
+    <link href="https://samingzhong.github.io/2016/07/30/7%E6%9C%88%E6%9D%82%E8%B0%88/"/>
+    <id>https://samingzhong.github.io/2016/07/30/7月杂谈/</id>
+    <published>2016-07-30T08:51:15.000Z</published>
+    <updated>2016-10-18T02:34:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="感受"><a href="#感受" class="headerlink" title="感受"></a>感受</h3><ol>
+<li><p>谈谈幸福感</p>
+<p>现如今的中国，普通民众的幸福指数相对较低，而直接影响这个指数的是：我们需要工作多长时间才能换来属于自己的车子、房子。当前的中国社会，一个普通大学生毕业后到攒足自己房子首付的钱需要多少年，我们可以大体算一算。北上广深，其中的广州是房价最低的城市，郊区黄埔、萝岗、番禺、南沙等地的楼盘均价算1.5w一方，80平的小三房，其它凌杂的不算了，就算120w。三成首付36w。好，就拿这36w说说。普通的家庭，36w可是天文数字，如果你毕业后的目标就是这笔钱，那么三五年内，你的日子将会过的很不像样。再说下去就想哭了。<br>幸福感真的低得快到马路边上了。。。</p>
+<p>不过，坦白来说，两个人一起生活、一起为我们的房子、车子、甚至是以后的孩子奋斗，相互体谅，可能这就是再平凡不过的幸福感了吧。。。</p>
+</li>
+<li><p>关于结婚</p>
+<p>如今毕业两年，业已到了成家的年纪（其实主要是女方再不结婚就已经严重晚婚晚育了）。关于结婚相关事宜比如求婚、婚纱照、酒席、婚礼等的花销，我简单算了一笔，得上到10w（当然，份子钱我没算进去）。嗯，先不说房子车子什么的，就连结个婚，感觉都很辛苦。但是，想想结婚是人生第一件大事，就算辛苦，咬咬牙也就过去了。</p>
+</li>
+</ol>
+<h3 id="一些事"><a href="#一些事" class="headerlink" title="一些事"></a>一些事</h3><ol>
+<li>身边早我毕业两三年的同事，已经付了40w的首付。想想自己，哎。。。还是不想了，还是好好敲代码，练好手艺吧。</li>
+<li><p>一哥们今天去下订思域10。不得不说的是，本田对于自家员工的购车补贴真是令人羡慕，每月1500的油费封顶补贴、1000的月供补助。嗯，关于买车的需求，还是应该好好衡量下了。但肯定是等到年后再考虑了，毕竟一个月3k的车贷，油费和停车费1.5k，加起来4.5k可不是小数目，尤其是现在差不多每月3.2k的房租水电的情况下，是万万不能想象的。。。</p>
+</li>
+<li><p>七月初，女票急性肠胃炎；七月末，急性寻麻疹。这都什么跟什么，累死我了。。。</p>
+</li>
+</ol>
+<h3 id="一些小计划"><a href="#一些小计划" class="headerlink" title="一些小计划"></a>一些小计划</h3><p>暂无。攒钱结婚算么。。。</p>
+<h3 id="一些好音乐"><a href="#一些好音乐" class="headerlink" title="一些好音乐"></a>一些好音乐</h3><ol>
+<li><a href="http://music.163.com/#/m/song?id=287002" target="_blank" rel="external">Be True</a> － 容祖儿</li>
+<li><a href="http://music.163.com/#/m/song?id=287879" target="_blank" rel="external">独照</a> － 容祖儿</li>
+</ol>
+<h3 id="其它链接"><a href="#其它链接" class="headerlink" title="其它链接"></a>其它链接</h3><ul>
+<li><a href="http://xclient.info/s/tower.html" target="_blank" rel="external">Tower</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;感受&quot;&gt;&lt;a href=&quot;#感受&quot; class=&quot;headerlink&quot; title=&quot;感受&quot;&gt;&lt;/a&gt;感受&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;谈谈幸福感&lt;/p&gt;
+&lt;p&gt;现如今的中国，普通民众的幸福指数相对较低，而直接影响这个指数的是：我们需要工作多长时间才能换来属
+    
+    </summary>
+    
+      <category term="杂谈集" scheme="https://samingzhong.github.io/categories/%E6%9D%82%E8%B0%88%E9%9B%86/"/>
+    
+    
+      <category term="杂谈" scheme="https://samingzhong.github.io/tags/%E6%9D%82%E8%B0%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《iOS7 Programing Cookbook》第4章 构造并使用tableview－笔记</title>
+    <link href="https://samingzhong.github.io/2016/07/30/%E3%80%8AiOS7%20Programming%20Cookbook%E3%80%8B%E7%AC%AC%E5%9B%9B%E7%AB%A0TableView%EF%BC%8D%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    <id>https://samingzhong.github.io/2016/07/30/《iOS7 Programming Cookbook》第四章TableView－读书笔记/</id>
+    <published>2016-07-30T08:51:15.000Z</published>
+    <updated>2016-08-14T10:16:19.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-在tableview里使用不同类型的附加说明控件"><a href="#1-在tableview里使用不同类型的附加说明控件" class="headerlink" title="1. 在tableview里使用不同类型的附加说明控件"></a>1. 在tableview里使用不同类型的附加说明控件</h3><ul>
+<li><p>问题</p>
+<p>你想通过在不同的table view cell里展示不同的附加说明控件，以达到抓住用户注意力的效果。</p>
+</li>
+<li><p>解决方案</p>
+<p> 使用UITableViewCell类里的accessoryType属性。</p>
+<p> <code>cell.accessoryType = UITableViewAccessoryDetailDisclosureButton;</code></p>
+<p> 可以通过以下的协议方法来捕捉用户对cell的accessory的点击行为：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- (<span class="keyword">void</span>) tableView:(<span class="built_in">UITableView</span> *)tableViewaccessoryButtonTappedForRowWithIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="2-创建自定义的表格视图单元附加说明控件（accessory）"><a href="#2-创建自定义的表格视图单元附加说明控件（accessory）" class="headerlink" title="2. 创建自定义的表格视图单元附加说明控件（accessory）"></a>2. 创建自定义的表格视图单元附加说明控件（accessory）</h3><ul>
+<li><p>问题</p>
+<p>系统SDK内置的accessory不合你胃口，你想自定义它。</p>
+</li>
+<li><p>解决方案</p>
+<p>利用UITableViewCell里的accessoryView属性。把你自定义的UIView对象赋值进去即可。</p>
+</li>
+<li><p>讨论</p>
+<p>关于触发自定义accessory时如何获取到相应的cell，可以通过一层层的查找自定义的accessory的父视图所属的类，直至找到UITableViewCell类的父级视图对象。代码如下：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">- (<span class="built_in">UIView</span> *) superviewOfType:(Class)paramSuperviewClass forView:(<span class="built_in">UIView</span> *)paramView&#123;</div><div class="line">    <span class="keyword">if</span> (paramView.superview != <span class="literal">nil</span>) &#123;</div><div class="line">        <span class="keyword">if</span> ([paramView.superview isKindOfClass:paramSuperviewClass])&#123;</div><div class="line">            <span class="keyword">return</span> paramView.superview;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            <span class="keyword">return</span> [<span class="keyword">self</span> superviewOfType:paramSuperviewClass forView:paramView.superview];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="keyword">return</span> <span class="literal">nil</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;1-在tableview里使用不同类型的附加说明控件&quot;&gt;&lt;a href=&quot;#1-在tableview里使用不同类型的附加说明控件&quot; class=&quot;headerlink&quot; title=&quot;1. 在tableview里使用不同类型的附加说明控件&quot;&gt;&lt;/a&gt;1. 在tab
+    
+    </summary>
+    
+      <category term="读书笔记" scheme="https://samingzhong.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="《iOS7 Programing Cookbook》" scheme="https://samingzhong.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8AiOS7-Programing-Cookbook%E3%80%8B/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>开篇</title>
+    <link href="https://samingzhong.github.io/2016/07/29/%E5%BC%80%E7%AF%87/"/>
+    <id>https://samingzhong.github.io/2016/07/29/开篇/</id>
+    <published>2016-07-29T08:17:15.000Z</published>
+    <updated>2016-11-08T01:33:47.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="更新－2016-8-14"><a href="#更新－2016-8-14" class="headerlink" title="更新－2016.8.14"></a>更新－2016.8.14</h3><p>折腾无止境，最后选择了Hexo来生成博客，原因是Hexo对主题的支持很方便，还有整个博客的界面、管理也是很给力。<br>唯一觉得不够方便的是：每次更新博客，整个public文件夹的东西似乎都会引起改动，比较影响上传速度。</p>
+<p>我是跟着<a href="https://hexo.io/" target="_blank" rel="external">这里</a>一步步来整起来的。另外，评论、分享等可能需要自定义，比如说<a href="http://blog.sunnyxx.com/2014/03/07/hexo_customize/" target="_blank" rel="external">这个</a>。</p>
+<hr>
+<p>嗯～是的。万能的Github里还有一个叫做Github Pages的衍生项目，我是通过它找到了Jekyll，最后打造出这个博客的。免费、无限流量、简单易用是它的优点，所以，今后有地儿写(fa)字(lao)了(sao)。</p>
+<p>关于Github Pages，官网有一句话概括很到位的话：</p>
+<blockquote>
+<p><a href="http://pages.github.com/" target="_blank" rel="external">GitHub Pages</a> <strong>基于 Jekyll 构建</strong>，你可以轻而易举地在 GitHub 上免费发布网站——<a href="https://help.github.com/articles/about-supported-custom-domains/" target="_blank" rel="external">自定义域名</a>等等。</p>
+</blockquote>
+<p>嗯～直接贴链接实在点：</p>
+<ul>
+<li><a href="https://pages.github.com/" target="_blank" rel="external">Github Pages基础教程</a></li>
+<li><a href="http://jekyllcn.com/" target="_blank" rel="external">Jekyll介绍</a></li>
+<li><a href="https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/" target="_blank" rel="external">使用Jekyll建立Github Pages个人网站</a></li>
+</ul>
+<p>ps1：关于Jekyll的一个配置文件Gemfile，建议source配置改为 ‘<a href="https://ruby.taobao.org/" target="_blank" rel="external">https://ruby.taobao.org/</a>‘ 在国内会合适些。</p>
+<p>ps2：关于Web开发相关的一些基础，我查了一些挺有帮助的资料，比如说这个<a href="https://developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web" target="_blank" rel="external">mozilla MDN－了解Web开发－Web开发入门</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;更新－2016-8-14&quot;&gt;&lt;a href=&quot;#更新－2016-8-14&quot; class=&quot;headerlink&quot; title=&quot;更新－2016.8.14&quot;&gt;&lt;/a&gt;更新－2016.8.14&lt;/h3&gt;&lt;p&gt;折腾无止境，最后选择了Hexo来生成博客，原因是Hexo对主
+    
+    </summary>
+    
+      <category term="杂谈集" scheme="https://samingzhong.github.io/categories/%E6%9D%82%E8%B0%88%E9%9B%86/"/>
+    
+    
+      <category term="杂谈" scheme="https://samingzhong.github.io/tags/%E6%9D%82%E8%B0%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《iOS7 Programing Cookbook》第1章 实现控制器及其视图－笔记</title>
+    <link href="https://samingzhong.github.io/2016/06/20/%E3%80%8AiOS7%20Programming%20Cookbook%E3%80%8B%E7%AC%AC%E4%B8%80%E7%AB%A0UIViewController%E4%B8%8Eview%EF%BC%8D%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    <id>https://samingzhong.github.io/2016/06/20/《iOS7 Programming Cookbook》第一章UIViewController与view－读书笔记/</id>
+    <published>2016-06-19T16:10:15.000Z</published>
+    <updated>2016-08-14T09:40:12.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-使用UIViewController呈现以及管理视图-1-9"><a href="#1-使用UIViewController呈现以及管理视图-1-9" class="headerlink" title="1. 使用UIViewController呈现以及管理视图(1.9)"></a>1. 使用UIViewController呈现以及管理视图(1.9)</h3><p>一般来说有两种方法加载视图控制器（当然其中也包含了视图）。</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 1</span></div><div class="line"><span class="keyword">self</span>.viewController = [[ViewController alloc] initWithNibName:<span class="literal">nil</span> bundle:<span class="literal">nil</span>];</div><div class="line"><span class="comment">// 不加载任何nib文件以呈现视图，相当于[ViewController new];</span></div><div class="line"></div><div class="line"><span class="comment">// 2</span></div><div class="line"><span class="keyword">self</span>.viewController = [[ViewController alloc]initWithNibName:<span class="string">@"ViewController"</span>bundle:<span class="literal">nil</span>];</div><div class="line"><span class="comment">// 如果希望controller的视图是使用Interface Builder设计的，可以使用此法。</span></div></pre></td></tr></table></figure>
+<h3 id="2-在导航栏-Navigation-Bar-上显示图片-1-14"><a href="#2-在导航栏-Navigation-Bar-上显示图片-1-14" class="headerlink" title="2. 在导航栏(Navigation Bar)上显示图片(1.14)"></a>2. 在导航栏(Navigation Bar)上显示图片(1.14)</h3><p>导航栏中间位置显示一张图片（一般情况下是显示controller的title）。</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">self</span>.navigationItem.titleView <span class="comment">// 可以在导航栏的中央显示一个自定义的视图。</span></div></pre></td></tr></table></figure>
+<p>除此之外，还可以自定义的视图有：</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">leftBarButtonItems/leftBarButtonItem (左边栏一个或多个barbuttonitem)</div><div class="line">rightBarButtonItems/rightBarButtonItem (右边栏一个或多个barbuttonitem)</div><div class="line"><span class="string">setLeftBarButtonItems:</span><span class="string">animated:</span>/<span class="string">setLeftBarButtonItem:</span><span class="string">animated:</span></div><div class="line"><span class="string">setRightBarButtonItems:</span><span class="string">animated:</span>/<span class="string">setRightBarButtonItem:</span><span class="string">animated:</span></div></pre></td></tr></table></figure>
+<h3 id="3-使用UITabBarController来呈现多个视图控制器-1-16"><a href="#3-使用UITabBarController来呈现多个视图控制器-1-16" class="headerlink" title="3.  使用UITabBarController来呈现多个视图控制器(1.16)"></a>3.  使用UITabBarController来呈现多个视图控制器(1.16)</h3><p>设置包含的控制器：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[[tabBarController setViewControllers:@[firstViewController, secondViewController]];</div></pre></td></tr></table></figure>
+<p>当然，这几个ViewController可以是UINavigationController或者其他UIViewController的子类。</p>
+<h3 id="4-构造并使用自定义风格的文本-1-26"><a href="#4-构造并使用自定义风格的文本-1-26" class="headerlink" title="4. 构造并使用自定义风格的文本(1.26)"></a>4. 构造并使用自定义风格的文本(1.26)</h3><ul>
+<li><p>问题</p>
+<p>你想要在不为每个属性创建单独的UI组件情况下能够在你的UI组件上显示丰富格式的文本。比如，你可能想要在一个UILabel里显示一个句子，这个句子里边有一个加粗的字。</p>
+</li>
+<li><p>解决办法</p>
+<p>使用 <code>NSAttributedString</code>     或者其可变的版本－<code>NSMutableAttributedString</code> ，把它设置成UI组件的文本，比如说UILabel组件的attributedString属性，或者直接使用Attributed String的内置方法把文本绘制在画板上。</p>
+</li>
+<li><p>讨论</p>
+<p>很多程序都会有这样的需求，要求能在一行文本里显示混合风格的字符串。比如第一个字是斜体，但第二个字是加粗，其它的是常规字体等。为了能实现这个效果，有些人必须使用<code>webview</code> ，但是，那并不是最优化的方案，因为 <code>webview</code> 在渲染字体的时候相当慢，这会严重影响你app的性能。iOS7里边，我们可以开始使用 <code>属性字符串</code> 。我不知道苹果在搞什么鬼，Mac开发早就能用上这个特性了，而iOS要在iOS7才能使用。</p>
+<p>构造属性字符串的最好方法就是：使用 <code>NSMutableAttributedString</code> 里的 <code>initWithString:</code> 方法，传一个NSString字符串进去。然后，对不同的部分设置不同的属性，我们使用  <code>NSMutableAttributedString</code> 中的 <code>setAttributes:range:</code> 方法。这个方法需要两个参数：</p>
+<ul>
+<li><p>setAttributes：一个字典对象，键是字符属性，值取决于对应的键。以下是一些很重要的键：</p>
+<ul>
+<li><p>NSFontAttributeName</p>
+<p>这个键的值是一个UIFont的对象，可以为指定范围的字符串定义这种字体。</p>
+</li>
+<li><p>NSForegroundColorAttributeName</p>
+<p>该键对应的值是UIColor对象。可以为指定范围的文本设置颜色。</p>
+</li>
+<li><p>NSBackgroundColorAttributeName</p>
+<p>可以为指定范围的文本设置背景颜色。</p>
+</li>
+<li><p>NSShadowAttributeName</p>
+<p>该键对应一个NSShadow对象，为指定范围的字符串定义阴影。</p>
+</li>
+</ul>
+</li>
+<li><p>range：一个NSRange对象，定义了目标字符串的范围，包括起点，长度。</p>
+</li>
+</ul>
+<p>下边举个例子：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">NSString</span> *string = <span class="string">@"小明童鞋"</span>;</div><div class="line"><span class="built_in">NSMutableAttributedString</span> *result = [[<span class="built_in">NSMutableAttributedString</span> alloc]initWithString:string];</div><div class="line"></div><div class="line"><span class="built_in">NSDictionary</span> *attributesForFirstWord = @&#123;</div><div class="line">                         <span class="built_in">NSFontAttributeName</span> : [<span class="built_in">UIFont</span> boldSystemFontOfSize:<span class="number">60.0</span>f],</div><div class="line">                         <span class="built_in">NSForegroundColorAttributeName</span> : [<span class="built_in">UIColor</span> redColor],</div><div class="line">                         <span class="built_in">NSBackgroundColorAttributeName</span> : [<span class="built_in">UIColor</span> blackColor]</div><div class="line">                         &#125;;</div><div class="line"></div><div class="line"><span class="built_in">NSShadow</span> *shadow = [[<span class="built_in">NSShadow</span> alloc] init];</div><div class="line">shadow.shadowColor = [<span class="built_in">UIColor</span> darkGrayColor];</div><div class="line">shadow.shadowOffset = <span class="built_in">CGSizeMake</span>(<span class="number">4.0</span>f, <span class="number">4.0</span>f);</div><div class="line"><span class="built_in">NSDictionary</span> *attributesForSecondWord = @&#123;</div><div class="line">                          <span class="built_in">NSFontAttributeName</span> : [<span class="built_in">UIFont</span> boldSystemFontOfSize:<span class="number">60.0</span>f],</div><div class="line">                          <span class="built_in">NSForegroundColorAttributeName</span> : [<span class="built_in">UIColor</span> whiteColor],</div><div class="line">                          <span class="built_in">NSBackgroundColorAttributeName</span> : [<span class="built_in">UIColor</span> redColor],</div><div class="line">                          <span class="built_in">NSShadowAttributeName</span> : shadow</div><div class="line">                          &#125;;</div><div class="line"><span class="comment">/* Find the string "iOS" in the whole string and sets its attribute */</span></div><div class="line">[result setAttributes:attributesForFirstWord range:[string rangeOfString:<span class="string">@"小明"</span>]];</div><div class="line"><span class="comment">/* Do the same thing for the string "SDK" */</span></div><div class="line">[result setAttributes:attributesForSecondWord range:[string rangeOfString:<span class="string">@"童鞋"</span>]];</div></pre></td></tr></table></figure>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;1-使用UIViewController呈现以及管理视图-1-9&quot;&gt;&lt;a href=&quot;#1-使用UIViewController呈现以及管理视图-1-9&quot; class=&quot;headerlink&quot; title=&quot;1. 使用UIViewController呈现以及管理视
+    
+    </summary>
+    
+      <category term="读书笔记" scheme="https://samingzhong.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="《iOS7 Programing Cookbook》" scheme="https://samingzhong.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E3%80%8AiOS7-Programing-Cookbook%E3%80%8B/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>谈谈UIViewController</title>
+    <link href="https://samingzhong.github.io/2016/03/31/%E8%A7%86%E5%9B%BE%E6%8E%A7%E5%88%B6%E5%99%A8/"/>
+    <id>https://samingzhong.github.io/2016/03/31/视图控制器/</id>
+    <published>2016-03-31T08:17:15.000Z</published>
+    <updated>2016-10-18T02:34:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="UIViewController的初始化"><a href="#UIViewController的初始化" class="headerlink" title="UIViewController的初始化"></a>UIViewController的初始化</h2><p>对于SB创建的VC，VC使用initWithCoder:进行初始化；</p>
+<p>其他情况，VC是使用init:方法进行对象初始化，系统提供的UIViewController类init:实现过程中还会调用initWithNibName:bundle:方法完成VC的。</p>
+<p>###VC.view的初始化 - loadView</p>
+<p><strong>无特殊情况，视图的初始化工作，可以在viewDidLoad里完成。</strong></p>
+<blockquote>
+<p>-(void)loadView; <em>// This is where subclasses should create their custom view hierarchy if they aren’t using a nib. Should never be called directly.</em></p>
+</blockquote>
+<p>如果子类VC不是使用nib方式定义其视图层级关系，那么应该在此自定义视图层级关系，不应直接调用。</p>
+<p><em>说明:</em> <strong>如果是使用与VC同名的xib初始化VC.view（比如使用SB、VC自动生成的xib），一定不要重写loadView方法。</strong>如果重写了，那么xib里边的视图会失效。</p>
+<p>如果真要在此自定义VC.view，一般的做法就是</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//NSLog(@&quot;self.view:%@&quot;, self.view);//千万不要这么干！！VC.view属性的getter会陷入loadView的死循环里。</div><div class="line">CustomView *customView = [[CustomView alloc]initWithFrame:[UIScreen mainScreen].bounds];</div><div class="line">//configure the customView ...</div><div class="line">self.view =view;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">@property(null_resettable, nonatomic,strong) UIView *view; // The getter first invokes [self loadView] if the view hasn&apos;t been set yet. Subclasses must call super if they override the setter or getter.</div><div class="line">//VC中的view属性的getter如果为nil时，那么就会第一时间调loadView去初始化view。</div></pre></td></tr></table></figure>
+<h3 id="API-loadView的说明"><a href="#API-loadView的说明" class="headerlink" title="API-loadView的说明"></a>API-loadView的说明</h3><blockquote>
+<p><strong>You should never call this method directly. The view controller calls this method when its view property is requested but is currently nil. This method loads or creates a view and assigns it to the view property.</strong></p>
+</blockquote>
+<p>当VC访问view属性并发现其为nil时，就会去调用loadView加载视图，此方法正是为此而创建一个view并赋值给VC.view而生的。</p>
+<blockquote>
+<p><strong>If the view controller has an associated nib file, this method loads the view from the nib file. A view controller has an associated nib file if the nibName property returns a non-nil value, which occurs if the view controller was instantiated from a storyboard, if you explicitly assigned it a nib file using the initWithNibName:bundle: method, or if iOS finds a nib file in the app bundle with a name based on the view controller’s class name. If the view controller does not have an associated nib file, this method creates a plain UIView object instead.</strong><br><strong>如果VC已经跟一个nib文件关联，loadView方法会去nib文件里加载视图作为VC的view。一个VC的nibName属性非空就说明已经关联了一个nib文件，</strong>一般出现在使用StoryBoard设计VC、明确使用 initWithNibName:bundle: 去初始化VC、或者iOS在app里发现一个nib文件跟VC类同名。** 最后，如果VC没有关联任何的nib文件，那么loadView方法就会给VC.view创建一个空白的UIView对象。</p>
+<p><strong>If you use Interface Builder to create your views and initialize the view controller, you must not override this method.</strong></p>
+<p><strong>You can override this method in order to create your views manually. If you choose to do so, assign the root view of your view hierarchy to the view property. The views you create should be unique instances and should not be shared with any other view controller object. Your custom implementation of this method should not call super.</strong></p>
+<p><strong>If you want to perform any additional initialization of your views, do so in the viewDidLoad method.</strong></p>
+</blockquote>
+<p>如果你使用IB来创建你的视图并用来初始化你的VC，切勿重载此方法。</p>
+<p>你可以通过重载此方法去手动创建你的视图。如果你这么干了，请把创建的视图的根视图赋值给VC.view。创建出来的视图应该是个独一无二的实例，且请勿与其他VC对象共享之。里边也不应该调用父类的这个方法。</p>
+<p>如果你想对视图做一些额外的初始化工作，请在viewDidLoad方法里完成。</p>
+<p>总之：<strong>无特殊情况，视图的初始化工作，可以在viewDidLoad里完成。</strong></p>
+<hr>
+<h4 id="2016-8-30-update"><a href="#2016-8-30-update" class="headerlink" title="2016.8.30 update"></a>2016.8.30 update</h4><p>loadView只会在self.view为nil的时候调用，目的是设置视图控制器的view。然而，UIViewController的实现是设置属性view为一个自动铺满屏幕的空白UIView对象：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="built_in">UIView</span>: <span class="number">0x7fd9d3e2c400</span>; </div><div class="line">frame = (<span class="number">0</span> <span class="number">0</span>; <span class="number">375</span> <span class="number">667</span>); </div><div class="line">autoresize = W+H; <span class="comment">// 宽、高自动铺满父视图</span></div><div class="line">layer = &lt;<span class="built_in">CALayer</span>: <span class="number">0x7fd9d3e0d9b0</span>&gt;</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+<p>所以，一般情况不建议重载此方法。因为标准的UIViewController已经做的很好了，而且会根据是否关联了nib文件决定需要加载的view。</p>
+<p>常规对控制器的view的自定义（增加子视图等操作），建议放在viewDidLoad里边做。</p>
+<h2 id="UIViewController的生命周期"><a href="#UIViewController的生命周期" class="headerlink" title="UIViewController的生命周期"></a>UIViewController的生命周期</h2><p>vcA 从出现到push到vcB：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">1. A viewDidLoad  </div><div class="line">2. A viewWillAppear  </div><div class="line">3. A viewDidAppear  </div><div class="line">4. B viewDidLoad  </div><div class="line">5. A viewWillDisappear  </div><div class="line">6. B viewWillAppear  </div><div class="line">7. A viewDidDisappear</div><div class="line">8. B viewDidAppear</div></pre></td></tr></table></figure>
+<p>vcB pop回 vcA，则：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1. B viewWillDisappear  </div><div class="line">2. A viewWillAppear  </div><div class="line">3. B viewDidDisappear  </div><div class="line">4. A viewDidAppear  </div><div class="line">5. B dealloc//A视图已经出现之后，vcB对象销毁。</div></pre></td></tr></table></figure>
+<p><strong>值得注意的是，B视图pop回来的时候前一个视图控制器<code>vcB</code>在A视图<code>viewDidAppear</code>后才被销毁。</strong></p>
+<h2 id="再见，viewDidUnload方法"><a href="#再见，viewDidUnload方法" class="headerlink" title="再见，viewDidUnload方法"></a>再见，viewDidUnload方法</h2><p><em>从 iOS 6 开始，viewDidUnload 方法被废弃掉了，应用收到 memory warning 时也不会再调用 viewDidUnload 方法。</em></p>
+<p>在 iOS6 时，当系统发出 MemoryWarning 时，<strong>系统会自动回收 bitmap 类</strong>。但是不回收 UIView 和 CALayer 类。这样即回收了大部分内存，又能在需要 bitmap 类时，通过调用 UIView 的 drawRect: 方法重建。如果贸贸然把self.view = nil;那么下次需要用到该视图时就需要重新做loadView的活了，而且还会触发viewDidLoad等等一系列创建视图的方法。</p>
+<p> -摘自:<br> <a href="http://blog.devtang.com/2013/05/18/goodbye-viewdidunload/" target="_blank" rel="external">唐巧的技术博客</a></p>
+<h2 id="关于self-view-frame在viewDidLoad与viewWillApear的差异"><a href="#关于self-view-frame在viewDidLoad与viewWillApear的差异" class="headerlink" title="关于self.view.frame在viewDidLoad与viewWillApear的差异"></a>关于self.view.frame在viewDidLoad与viewWillApear的差异</h2><p>基本是因为vc对xib文件的加载是原封不动的尺寸加载这种方式引起的，但是最后都能正确显示是因为self.view的autoresize = W+H，这个自动调整尺寸的属性让frame最后显示时根据屏幕尺寸做了自动调整。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;UIViewController的初始化&quot;&gt;&lt;a href=&quot;#UIViewController的初始化&quot; class=&quot;headerlink&quot; title=&quot;UIViewController的初始化&quot;&gt;&lt;/a&gt;UIViewController的初始化&lt;/h2&gt;&lt;
+    
+    </summary>
+    
+      <category term="能工巧匠集" scheme="https://samingzhong.github.io/categories/%E8%83%BD%E5%B7%A5%E5%B7%A7%E5%8C%A0%E9%9B%86/"/>
+    
+      <category term="iOS开发" scheme="https://samingzhong.github.io/categories/%E8%83%BD%E5%B7%A5%E5%B7%A7%E5%8C%A0%E9%9B%86/iOS%E5%BC%80%E5%8F%91/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>关于避免强引用循环</title>
+    <link href="https://samingzhong.github.io/2016/03/15/%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D%E5%BE%AA%E7%8E%AF%E5%BC%95%E7%94%A8/"/>
+    <id>https://samingzhong.github.io/2016/03/15/如何避免循环引用/</id>
+    <published>2016-03-15T08:17:15.000Z</published>
+    <updated>2016-08-11T08:12:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>苹果在文档《Transitioning to ARC Release Notes》中关于retain-Cycle的处理有这么一段</p>
+<h3 id="Use-Lifetime-Qualifiers-to-Avoid-Strong-Reference-Cycles"><a href="#Use-Lifetime-Qualifiers-to-Avoid-Strong-Reference-Cycles" class="headerlink" title="Use Lifetime Qualifiers to Avoid Strong Reference Cycles"></a>Use Lifetime Qualifiers to Avoid Strong Reference Cycles</h3><blockquote>
+<p>You can use lifetime qualifiers to avoid strong reference cycles. For example, typically if you have a graph of objects arranged in a parent-child hierarchy and parents need to refer to their children and vice versa, then you make the parent-to-child relationship strong and the child-to-parent relationship weak. Other situations may be more subtle, particularly when they involve block objects.</p>
+<p>大意译：你可以使用生命周期修饰符来避免保留环。比如，对于父子关系的对象，你可以让父对象强引用子对象，然后令子对象弱引用父对象。其他情况可能会比较难以察觉，特别是当他们涉及到块对象的时候。</p>
+<p>In manual reference counting mode, <strong>block id x; has the effect of not retaining x. In ARC mode, </strong>block id x; defaults to retaining x (just like all other values). To get the manual reference counting mode behavior under ARC, you could use <strong>unsafe_unretained </strong>block id x;. As the name <strong>unsafe_unretained implies, however, having a non-retained variable is dangerous (because it can dangle) and is therefore discouraged. Two better options are to either use </strong>weak (if you don’t need to support iOS 4 or OS X v10.6), or set the __block value to nil to break the retain cycle.</p>
+<p>大意译：在手动引用计数模式下， <code>__block id x;</code> 不会保留x对象，但在ARC模式下， <code>__block id x;</code> 默认会保留x对象。ARC模式下，你可以使用<code>__unsafe__unretainen __block id x;</code> 正如其名，这种指针很危险，因为对象释放了之后指针值还会指向被释放那块内存。有两个选择可以打破保留环：使用<code>__weak</code>关键字、设置<code>__block</code>对象值为nil。</p>
+<p>The following code fragment illustrates this issue using a pattern that is sometimes used in manual reference counting.</p>
+<p>下列代码阐述MRC模式中常见的情况。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">MyViewController *myController = [[MyViewController alloc] init…];</div><div class="line">// ...</div><div class="line">myController.completionHandler =  ^(NSInteger result) &#123;</div><div class="line">   [myController dismissViewControllerAnimated:YES completion:nil];</div><div class="line">&#125;;</div><div class="line">[self presentViewController:myController animated:YES completion:^&#123;</div><div class="line">   [myController release];</div><div class="line">&#125;];</div></pre></td></tr></table></figure>
+<blockquote>
+<p>As described, instead, you can use a __block qualifier and set the myController variable to nil in the completion handler:</p>
+<p>如上所述，你可以使用<code>__block</code> 修饰符，并在块对象里把对应的对象设置为nil。（这样就平衡块里对<code>MyViewController * __block myController</code>对象的retain。）</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">MyViewController * __block myController = [[MyViewController alloc] init…];</div><div class="line">// ...</div><div class="line">myController.completionHandler =  ^(NSInteger result) &#123;</div><div class="line">[myController dismissViewControllerAnimated:YES completion:nil];</div><div class="line">    myController = nil;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>Alternatively, you can use a temporary __weak variable. The following example illustrates a simple implementation:</p>
+<p>另外，你可以使用一个临时的<code>__weak</code>变量。如下：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">MyViewController *myController = [[MyViewController alloc] init…];</div><div class="line">// ...</div><div class="line">MyViewController * __weak weakMyViewController = myController;</div><div class="line">myController.completionHandler =  ^(NSInteger result) &#123;</div><div class="line">    [weakMyViewController dismissViewControllerAnimated:YES completion:nil];</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>For non-trivial cycles, however, you should use:</p>
+<p>更炫酷的是，你可以这么干（此为weak strong dance）</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">MyViewController *myController = [[MyViewController alloc] init…];</div><div class="line">// ...</div><div class="line">MyViewController * __weak weakMyController = myController;</div><div class="line">myController.completionHandler =  ^(NSInteger result) &#123;</div><div class="line">    MyViewController *strongMyController = weakMyController;</div><div class="line">    if (strongMyController) &#123;</div><div class="line">        // ...</div><div class="line">        [strongMyController dismissViewControllerAnimated:YES completion:nil];</div><div class="line">        // ...</div><div class="line">    &#125;</div><div class="line">    else &#123;</div><div class="line">        // Probably nothing...</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>In some cases you can use <strong>unsafe_unretained if the class isn’t </strong>weak compatible. This can, however, become impractical for nontrivial cycles because it can be hard or impossible to validate that the <strong>unsafe_unretained pointer is still valid and still points to the same object in question.<br>有些时候，你可以使用`</strong>unsafe_unretained`，但会有访问野指针的风险。</p>
+</blockquote>
+<hr>
+<blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&gt; MyViewController *myController = [[MyViewController alloc] init…];</div><div class="line">&gt; // ...</div><div class="line">&gt; MyViewController * __weak weakMyController = myController;</div><div class="line">&gt; myController.completionHandler =  ^(NSInteger result) &#123;</div><div class="line">&gt; MyViewController *strongMyController = weakMyController;</div><div class="line">&gt; if (strongMyController) &#123;</div><div class="line">&gt; // ...</div><div class="line">&gt; [strongMyController dismissViewControllerAnimated:YES completion:nil];</div><div class="line">&gt; // ...</div><div class="line">&gt; &#125;</div><div class="line">&gt; else &#123;</div><div class="line">&gt; // Probably nothing...</div><div class="line">&gt; &#125;</div><div class="line">&gt; &#125;;</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+</blockquote>
+<p>block外：弱类型指针指向myController对象</p>
+<p>block里：使用默认的强引用类型指针strongMyController指向弱引用的指针weakMyController，其实ARC里编译器就会自动对weakMyController指向的对象做一个retain的动作，那么在此例，myController指向的对象retainCount为2。myController出了这个方法的作用域后，使myController指向的对象retainCount减1，此时对象引用计数为1。然随着堆里的block执行完毕后，也就是strongMyController走出作用域，一般情况下，此对象才真正释放掉。之所以做了判断，就是防止有异常情况的发生，比如在myController设置完completionHandler后，执行了一些方法使其引用计数变成0，那么在执行completionHandler之前可能对象就已经被释放，那么这个判断就有些意义了。【这一推字我敲完看着都晕~~~】</p>
+<p>尝试用一句话概括一下：block内部使用强引用</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;苹果在文档《Transitioning to ARC Release Notes》中关于retain-Cycle的处理有这么一段&lt;/p&gt;
+&lt;h3 id=&quot;Use-Lifetime-Qualifiers-to-Avoid-Strong-Reference-Cycles&quot;&gt;&lt;a
+    
+    </summary>
+    
+      <category term="能工巧匠集" scheme="https://samingzhong.github.io/categories/%E8%83%BD%E5%B7%A5%E5%B7%A7%E5%8C%A0%E9%9B%86/"/>
+    
+      <category term="iOS开发" scheme="https://samingzhong.github.io/categories/%E8%83%BD%E5%B7%A5%E5%B7%A7%E5%8C%A0%E9%9B%86/iOS%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Retain Cycle" scheme="https://samingzhong.github.io/tags/Retain-Cycle/"/>
+    
+  </entry>
+  
+</feed>
