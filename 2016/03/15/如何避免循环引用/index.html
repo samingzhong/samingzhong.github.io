@@ -6,19 +6,25 @@
   
   <title>关于避免强引用循环 | 小明童鞋的窝</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="&amp;#x82F9;&amp;#x679C;&amp;#x5728;&amp;#x6587;&amp;#x6863;&amp;#x300A;Transitioning to ARC Release Notes&amp;#x300B;&amp;#x4E2D;&amp;#x5173;&amp;#x4E8E;retain-Cycle&amp;#x7684;&amp;#x5904;&amp;#x7406;&amp;#x6709;&amp;#x8FD9;&amp;#x4E48;&amp;#x4E00;&amp;#x6BB5;
-Use Lifet">
+  <meta name="description" content="Use Lifetime Qualifiers to Avoid Strong Reference Cycles
+
+
+&amp;#x82F9;&amp;#x679C;&amp;#x5728;&amp;#x6587;&amp;#x6863;&amp;#x300A;Transitioning to ARC Release Notes&amp;#x300B;&amp;#x4E2D;&amp;#x5173;&amp;#x4E8E;retain-Cycle&amp;#x7684;&amp;#x59">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于避免强引用循环">
 <meta property="og:url" content="https://samingzhong.github.io/2016/03/15/如何避免循环引用/index.html">
 <meta property="og:site_name" content="小明童鞋的窝">
-<meta property="og:description" content="&amp;#x82F9;&amp;#x679C;&amp;#x5728;&amp;#x6587;&amp;#x6863;&amp;#x300A;Transitioning to ARC Release Notes&amp;#x300B;&amp;#x4E2D;&amp;#x5173;&amp;#x4E8E;retain-Cycle&amp;#x7684;&amp;#x5904;&amp;#x7406;&amp;#x6709;&amp;#x8FD9;&amp;#x4E48;&amp;#x4E00;&amp;#x6BB5;
-Use Lifet">
-<meta property="og:updated_time" content="2016-08-11T08:12:43.000Z">
+<meta property="og:description" content="Use Lifetime Qualifiers to Avoid Strong Reference Cycles
+
+
+&amp;#x82F9;&amp;#x679C;&amp;#x5728;&amp;#x6587;&amp;#x6863;&amp;#x300A;Transitioning to ARC Release Notes&amp;#x300B;&amp;#x4E2D;&amp;#x5173;&amp;#x4E8E;retain-Cycle&amp;#x7684;&amp;#x59">
+<meta property="og:updated_time" content="2016-12-05T03:31:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于避免强引用循环">
-<meta name="twitter:description" content="&amp;#x82F9;&amp;#x679C;&amp;#x5728;&amp;#x6587;&amp;#x6863;&amp;#x300A;Transitioning to ARC Release Notes&amp;#x300B;&amp;#x4E2D;&amp;#x5173;&amp;#x4E8E;retain-Cycle&amp;#x7684;&amp;#x5904;&amp;#x7406;&amp;#x6709;&amp;#x8FD9;&amp;#x4E48;&amp;#x4E00;&amp;#x6BB5;
-Use Lifet">
+<meta name="twitter:description" content="Use Lifetime Qualifiers to Avoid Strong Reference Cycles
+
+
+&amp;#x82F9;&amp;#x679C;&amp;#x5728;&amp;#x6587;&amp;#x6863;&amp;#x300A;Transitioning to ARC Release Notes&amp;#x300B;&amp;#x4E2D;&amp;#x5173;&amp;#x4E8E;retain-Cycle&amp;#x7684;&amp;#x59">
   
     <link rel="alternate" href="/atom.xml" title="小明童鞋的窝" type="application/atom+xml">
   
@@ -97,7 +103,12 @@ Use Lifet">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>&#x82F9;&#x679C;&#x5728;&#x6587;&#x6863;&#x300A;Transitioning to ARC Release Notes&#x300B;&#x4E2D;&#x5173;&#x4E8E;retain-Cycle&#x7684;&#x5904;&#x7406;&#x6709;&#x8FD9;&#x4E48;&#x4E00;&#x6BB5;</p>
+        <!-- toc -->
+<ul>
+<li><a href="#use-lifetime-qualifiers-to-avoid-strong-reference-cycles">Use Lifetime Qualifiers to Avoid Strong Reference Cycles</a></li>
+</ul>
+<!-- tocstop -->
+<p>&#x82F9;&#x679C;&#x5728;&#x6587;&#x6863;&#x300A;Transitioning to ARC Release Notes&#x300B;&#x4E2D;&#x5173;&#x4E8E;retain-Cycle&#x7684;&#x5904;&#x7406;&#x6709;&#x8FD9;&#x4E48;&#x4E00;&#x6BB5;</p>
 <h3 id="use-lifetime-qualifiers-to-avoid-strong-reference-cycles"><a href="#Use-Lifetime-Qualifiers-to-Avoid-Strong-Reference-Cycles" class="headerlink" title="Use Lifetime Qualifiers to Avoid Strong Reference Cycles"></a>Use Lifetime Qualifiers to Avoid Strong Reference Cycles</h3><blockquote>
 <p>You can use lifetime qualifiers to avoid strong reference cycles. For example, typically if you have a graph of objects arranged in a parent-child hierarchy and parents need to refer to their children and vice versa, then you make the parent-to-child relationship strong and the child-to-parent relationship weak. Other situations may be more subtle, particularly when they involve block objects.</p>
 <p>&#x5927;&#x610F;&#x8BD1;&#xFF1A;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x751F;&#x547D;&#x5468;&#x671F;&#x4FEE;&#x9970;&#x7B26;&#x6765;&#x907F;&#x514D;&#x4FDD;&#x7559;&#x73AF;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x5BF9;&#x4E8E;&#x7236;&#x5B50;&#x5173;&#x7CFB;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x8BA9;&#x7236;&#x5BF9;&#x8C61;&#x5F3A;&#x5F15;&#x7528;&#x5B50;&#x5BF9;&#x8C61;&#xFF0C;&#x7136;&#x540E;&#x4EE4;&#x5B50;&#x5BF9;&#x8C61;&#x5F31;&#x5F15;&#x7528;&#x7236;&#x5BF9;&#x8C61;&#x3002;&#x5176;&#x4ED6;&#x60C5;&#x51B5;&#x53EF;&#x80FD;&#x4F1A;&#x6BD4;&#x8F83;&#x96BE;&#x4EE5;&#x5BDF;&#x89C9;&#xFF0C;&#x7279;&#x522B;&#x662F;&#x5F53;&#x4ED6;&#x4EEC;&#x6D89;&#x53CA;&#x5230;&#x5757;&#x5BF9;&#x8C61;&#x7684;&#x65F6;&#x5019;&#x3002;</p>
@@ -170,7 +181,7 @@ Use Lifet">
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/杂谈集/">杂谈集</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/能工巧匠集/">能工巧匠集</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/能工巧匠集/iOS开发/">iOS开发</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/能工巧匠集/工欲善其事必先利其器/">工欲善其事必先利其器</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/读书笔记/">读书笔记</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/读书笔记/《iOS7-Programing-Cookbook》/">《iOS7 Programing Cookbook》</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试-招聘/">面试/招聘</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/面试-招聘/《招聘一个靠谱的iOS》/">《招聘一个靠谱的iOS》</a><span class="category-list-count">2</span></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/杂谈集/">杂谈集</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/能工巧匠集/">能工巧匠集</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/能工巧匠集/iOS开发/">iOS开发</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/能工巧匠集/工欲善其事必先利其器/">工欲善其事必先利其器</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/读书笔记/">读书笔记</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/读书笔记/《iOS7-Programing-Cookbook》/">《iOS7 Programing Cookbook》</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试-招聘/">面试/招聘</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/面试-招聘/《招聘一个靠谱的iOS》/">《招聘一个靠谱的iOS》</a><span class="category-list-count">2</span></li></ul></li></ul>
     </div>
   </div>
 
@@ -181,6 +192,10 @@ Use Lifet">
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/12/05/12月杂谈/">12月杂谈</a>
+          </li>
         
           <li>
             <a href="/2016/11/04/11月杂谈/">11月杂谈</a>
@@ -198,10 +213,6 @@ Use Lifet">
             <a href="/2016/08/30/关于UIView的translatesAutoresizingMaskIntoConstraints 属性/">关于UIView的translatesAutoresizingMaskIntoConstraints属性</a>
           </li>
         
-          <li>
-            <a href="/2016/08/20/8月杂谈/">8月杂谈</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -211,7 +222,7 @@ Use Lifet">
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Auto-Layout/">Auto Layout</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NSCoding/">NSCoding</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NSCopying-NSMutableCopying/">NSCopying/NSMutableCopying</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Retain-Cycle/">Retain Cycle</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tower/">Tower</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/autoresizing-mask/">autoresizing mask</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS面试-招聘/">iOS面试/招聘</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发工具备忘/">开发工具备忘</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂谈/">杂谈</a><span class="tag-list-count">6</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Auto-Layout/">Auto Layout</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NSCoding/">NSCoding</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NSCopying-NSMutableCopying/">NSCopying/NSMutableCopying</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Retain-Cycle/">Retain Cycle</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tower/">Tower</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/autoresizing-mask/">autoresizing mask</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS面试-招聘/">iOS面试/招聘</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发工具备忘/">开发工具备忘</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂谈/">杂谈</a><span class="tag-list-count">7</span></li></ul>
     </div>
   </div>
 
@@ -230,7 +241,7 @@ Use Lifet">
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
