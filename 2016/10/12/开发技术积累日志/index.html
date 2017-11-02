@@ -1,0 +1,838 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>开发技术积累日志 | 晓明童鞋的窝</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="晓明童鞋">
+    
+
+    
+    <meta name="description" content="&amp;#x5F00;&amp;#x53D1;&amp;#x6280;&amp;#x672F;&amp;#x79EF;&amp;#x7D2F;&amp;#x65E5;&amp;#x5FD7;
+TODO LIST
+1. &amp;#x6C47;&amp;#x7F16;&amp;#x76F8;&amp;#x5173;
+2. JSPatch&amp;#x4F7F;&amp;#x7528;
+3. &amp;#x4E00;&amp;#x4E9B;&amp;#x5173;&amp;#x8054;
+4. &amp;#x5E94;&amp;#x7528;&amp;#x67">
+<meta property="og:type" content="article">
+<meta property="og:title" content="开发技术积累日志">
+<meta property="og:url" content="https://samingzhong.github.io/2016/10/12/开发技术积累日志/index.html">
+<meta property="og:site_name" content="晓明童鞋的窝">
+<meta property="og:description" content="&amp;#x5F00;&amp;#x53D1;&amp;#x6280;&amp;#x672F;&amp;#x79EF;&amp;#x7D2F;&amp;#x65E5;&amp;#x5FD7;
+TODO LIST
+1. &amp;#x6C47;&amp;#x7F16;&amp;#x76F8;&amp;#x5173;
+2. JSPatch&amp;#x4F7F;&amp;#x7528;
+3. &amp;#x4E00;&amp;#x4E9B;&amp;#x5173;&amp;#x8054;
+4. &amp;#x5E94;&amp;#x7528;&amp;#x67">
+<meta property="og:image" content="https://samingzhong.github.io/../assert/images/2017/provisioning-profile.png">
+<meta property="og:updated_time" content="2017-06-16T03:59:42.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="开发技术积累日志">
+<meta name="twitter:description" content="&amp;#x5F00;&amp;#x53D1;&amp;#x6280;&amp;#x672F;&amp;#x79EF;&amp;#x7D2F;&amp;#x65E5;&amp;#x5FD7;
+TODO LIST
+1. &amp;#x6C47;&amp;#x7F16;&amp;#x76F8;&amp;#x5173;
+2. JSPatch&amp;#x4F7F;&amp;#x7528;
+3. &amp;#x4E00;&amp;#x4E9B;&amp;#x5173;&amp;#x8054;
+4. &amp;#x5E94;&amp;#x7528;&amp;#x67">
+<meta name="twitter:image" content="https://samingzhong.github.io/../assert/images/2017/provisioning-profile.png">
+
+    
+    <link rel="alternative" href="/atom.xml" title="晓明童鞋的窝" type="application/atom+xml">
+    
+    
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="晓明童鞋的窝">晓明童鞋的窝</a></h1>
+				<h2 class="blog-motto">勿忘初心，方得始终。</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">首页</a></li>
+					
+						<li><a href="/archives">归档</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:samingzhong.github.io">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/10/12/开发技术积累日志/" title="开发技术积累日志" itemprop="url">开发技术积累日志</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="晓明童鞋" target="_blank" itemprop="author">晓明童鞋</a>
+		
+  <p class="article-time">
+    <time datetime="2016-10-12T08:17:15.000Z" itemprop="datePublished"> 发表于 2016-10-12</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#开发技术积累日志"><span class="toc-number">1.</span> <span class="toc-text">开发技术积累日志</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#todo-list"><span class="toc-number">1.1.</span> <span class="toc-text">TODO LIST</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-汇编相关"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 汇编相关</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-jspatch使用"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. JSPatch使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-一些关联"><span class="toc-number">1.1.3.</span> <span class="toc-text">3. 一些关联</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-应用本地化"><span class="toc-number">1.1.4.</span> <span class="toc-text">4. 应用本地化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-作图相关技能"><span class="toc-number">1.1.5.</span> <span class="toc-text">5. 作图相关技能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-jspatch安全设置"><span class="toc-number">1.1.6.</span> <span class="toc-text">6. JSPatch安全设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7编写一些适合多数应用使用的公共组件内容包括但不仅限于"><span class="toc-number">1.1.7.</span> <span class="toc-text">7.编写一些适合多数应用使用的公共组件，内容包括但不仅限于：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ideas"><span class="toc-number">1.2.</span> <span class="toc-text">IDEAS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-如何进行广告刷量"><span class="toc-number">1.2.1.</span> <span class="toc-text">1. 如何进行广告刷量？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2关于广告行业中dsp角色的一些思考"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.关于广告行业中DSP角色的一些思考</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-客户端如何进行本地rsa加密使用公钥加密如支付宝app"><span class="toc-number">1.2.3.</span> <span class="toc-text">3. 客户端如何进行本地RSA加密（使用公钥加密，如支付宝app）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4写一个番茄工作法app"><span class="toc-number">1.2.4.</span> <span class="toc-text">4.写一个“番茄工作法”App</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5写一个-v2ex网站客户端"><span class="toc-number">1.2.5.</span> <span class="toc-text">5.写一个 V2EX网站客户端</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#tech-log"><span class="toc-number">1.3.</span> <span class="toc-text">TECH LOG</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1方法调用的记录"><span class="toc-number">1.3.1.</span> <span class="toc-text">1.方法调用的记录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2could-not-build-module-uikit"><span class="toc-number">1.3.2.</span> <span class="toc-text">2.Could not build module “UIKit”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-日志的高级使用"><span class="toc-number">1.3.3.</span> <span class="toc-text">3. 日志的高级使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4几个重要协议nsobject-nscopy-nsmutablecopy"><span class="toc-number">1.3.4.</span> <span class="toc-text">4.几个重要协议：NSObject, NSCopy, NSMutableCopy</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5关于数据写进文件"><span class="toc-number">1.3.5.</span> <span class="toc-text">5.关于数据写进文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6由-voidsetvalueidvalue-forkeynsstring-方法想到的"><span class="toc-number">1.3.6.</span> <span class="toc-text">6.由 - (void)setValue:(id)value forKey:(NSString *) 方法想到的</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7nsoperation-vs-grand-central-dispatch"><span class="toc-number">1.3.7.</span> <span class="toc-text">7.NSOperation vs Grand Central Dispatch</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#tools"><span class="toc-number">1.4.</span> <span class="toc-text">TOOLS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1hosts文件修改"><span class="toc-number">1.4.1.</span> <span class="toc-text">1.Hosts文件修改</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2ios使用charles抓包并篡改返回数据"><span class="toc-number">1.4.2.</span> <span class="toc-text">2.iOS使用Charles抓包并篡改返回数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3一些备忘"><span class="toc-number">1.4.3.</span> <span class="toc-text">3.一些备忘</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4coredata学习"><span class="toc-number">1.4.4.</span> <span class="toc-text">4.CoreData学习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5xcode-server"><span class="toc-number">1.4.5.</span> <span class="toc-text">5.Xcode Server</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#error-log"><span class="toc-number">1.5.</span> <span class="toc-text">ERROR LOG</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1arc相关"><span class="toc-number">1.5.1.</span> <span class="toc-text">1.ARC相关</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-预编译头文件pch"><span class="toc-number">1.5.2.</span> <span class="toc-text">2. 预编译头文件.pch</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3符号重复"><span class="toc-number">1.5.3.</span> <span class="toc-text">3.符号重复</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#31-剔除静态库的某些目标文件"><span class="toc-number">1.5.3.1.</span> <span class="toc-text">3.1 剔除静态库的某些目标文件</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#简要"><span class="toc-number">1.5.3.1.1.</span> <span class="toc-text">简要</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4符号找不到"><span class="toc-number">1.5.4.</span> <span class="toc-text">4.符号找不到</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5xcode-signing-error"><span class="toc-number">1.5.5.</span> <span class="toc-text">5.Xcode Signing Error!!</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#xcode-signing选项"><span class="toc-number">1.5.5.1.</span> <span class="toc-text">Xcode Signing选项</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#配置一个provision-profile文件"><span class="toc-number">1.5.5.2.</span> <span class="toc-text">配置一个provision profile文件</span></a></li></ol></li></ol></li></ol></li></ol>
+		
+		</div>
+		
+		<!-- toc -->
+<ul>
+<li><a href="#&#x5F00;&#x53D1;&#x6280;&#x672F;&#x79EF;&#x7D2F;&#x65E5;&#x5FD7;">&#x5F00;&#x53D1;&#x6280;&#x672F;&#x79EF;&#x7D2F;&#x65E5;&#x5FD7;</a><ul>
+<li><a href="#todo-list">TODO LIST</a><ul>
+<li><a href="#1-&#x6C47;&#x7F16;&#x76F8;&#x5173;">1. &#x6C47;&#x7F16;&#x76F8;&#x5173;</a></li>
+<li><a href="#2-jspatch&#x4F7F;&#x7528;">2. JSPatch&#x4F7F;&#x7528;</a></li>
+<li><a href="#3-&#x4E00;&#x4E9B;&#x5173;&#x8054;">3. &#x4E00;&#x4E9B;&#x5173;&#x8054;</a></li>
+<li><a href="#4-&#x5E94;&#x7528;&#x672C;&#x5730;&#x5316;">4. &#x5E94;&#x7528;&#x672C;&#x5730;&#x5316;</a></li>
+<li><a href="#5-&#x4F5C;&#x56FE;&#x76F8;&#x5173;&#x6280;&#x80FD;">5. &#x4F5C;&#x56FE;&#x76F8;&#x5173;&#x6280;&#x80FD;</a></li>
+<li><a href="#6-jspatch&#x5B89;&#x5168;&#x8BBE;&#x7F6E;">6. JSPatch&#x5B89;&#x5168;&#x8BBE;&#x7F6E;</a></li>
+<li><a href="#7&#x7F16;&#x5199;&#x4E00;&#x4E9B;&#x9002;&#x5408;&#x591A;&#x6570;&#x5E94;&#x7528;&#x4F7F;&#x7528;&#x7684;&#x516C;&#x5171;&#x7EC4;&#x4EF6;&#x5185;&#x5BB9;&#x5305;&#x62EC;&#x4F46;&#x4E0D;&#x4EC5;&#x9650;&#x4E8E;">7.&#x7F16;&#x5199;&#x4E00;&#x4E9B;&#x9002;&#x5408;&#x591A;&#x6570;&#x5E94;&#x7528;&#x4F7F;&#x7528;&#x7684;&#x516C;&#x5171;&#x7EC4;&#x4EF6;&#xFF0C;&#x5185;&#x5BB9;&#x5305;&#x62EC;&#x4F46;&#x4E0D;&#x4EC5;&#x9650;&#x4E8E;&#xFF1A;</a></li>
+</ul>
+</li>
+<li><a href="#ideas">IDEAS</a><ul>
+<li><a href="#1-&#x5982;&#x4F55;&#x8FDB;&#x884C;&#x5E7F;&#x544A;&#x5237;&#x91CF;">1. &#x5982;&#x4F55;&#x8FDB;&#x884C;&#x5E7F;&#x544A;&#x5237;&#x91CF;&#xFF1F;</a></li>
+<li><a href="#2&#x5173;&#x4E8E;&#x5E7F;&#x544A;&#x884C;&#x4E1A;&#x4E2D;dsp&#x89D2;&#x8272;&#x7684;&#x4E00;&#x4E9B;&#x601D;&#x8003;">2.&#x5173;&#x4E8E;&#x5E7F;&#x544A;&#x884C;&#x4E1A;&#x4E2D;DSP&#x89D2;&#x8272;&#x7684;&#x4E00;&#x4E9B;&#x601D;&#x8003;</a></li>
+<li><a href="#3-&#x5BA2;&#x6237;&#x7AEF;&#x5982;&#x4F55;&#x8FDB;&#x884C;&#x672C;&#x5730;rsa&#x52A0;&#x5BC6;&#x4F7F;&#x7528;&#x516C;&#x94A5;&#x52A0;&#x5BC6;&#x5982;&#x652F;&#x4ED8;&#x5B9D;app">3. &#x5BA2;&#x6237;&#x7AEF;&#x5982;&#x4F55;&#x8FDB;&#x884C;&#x672C;&#x5730;RSA&#x52A0;&#x5BC6;&#xFF08;&#x4F7F;&#x7528;&#x516C;&#x94A5;&#x52A0;&#x5BC6;&#xFF0C;&#x5982;&#x652F;&#x4ED8;&#x5B9D;app&#xFF09;</a></li>
+<li><a href="#4&#x5199;&#x4E00;&#x4E2A;&#x756A;&#x8304;&#x5DE5;&#x4F5C;&#x6CD5;app">4.&#x5199;&#x4E00;&#x4E2A;&#x201C;&#x756A;&#x8304;&#x5DE5;&#x4F5C;&#x6CD5;&#x201D;App</a></li>
+<li><a href="#5&#x5199;&#x4E00;&#x4E2A;-v2ex&#x7F51;&#x7AD9;&#x5BA2;&#x6237;&#x7AEF;">5.&#x5199;&#x4E00;&#x4E2A; V2EX&#x7F51;&#x7AD9;&#x5BA2;&#x6237;&#x7AEF;</a></li>
+</ul>
+</li>
+<li><a href="#tech-log">TECH LOG</a><ul>
+<li><a href="#1&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x7684;&#x8BB0;&#x5F55;">1.&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x7684;&#x8BB0;&#x5F55;</a></li>
+<li><a href="#2could-not-build-module-uikit">2.Could not build module &#x201C;UIKit&#x201D;</a></li>
+<li><a href="#3-&#x65E5;&#x5FD7;&#x7684;&#x9AD8;&#x7EA7;&#x4F7F;&#x7528;">3. &#x65E5;&#x5FD7;&#x7684;&#x9AD8;&#x7EA7;&#x4F7F;&#x7528;</a></li>
+<li><a href="#4&#x51E0;&#x4E2A;&#x91CD;&#x8981;&#x534F;&#x8BAE;nsobject-nscopy-nsmutablecopy">4.&#x51E0;&#x4E2A;&#x91CD;&#x8981;&#x534F;&#x8BAE;&#xFF1A;NSObject, NSCopy, NSMutableCopy</a></li>
+<li><a href="#5&#x5173;&#x4E8E;&#x6570;&#x636E;&#x5199;&#x8FDB;&#x6587;&#x4EF6;">5.&#x5173;&#x4E8E;&#x6570;&#x636E;&#x5199;&#x8FDB;&#x6587;&#x4EF6;</a></li>
+<li><a href="#6&#x7531;-voidsetvalueidvalue-forkeynsstring-&#x65B9;&#x6CD5;&#x60F3;&#x5230;&#x7684;">6.&#x7531; - (void)setValue:(id)value forKey:(NSString *) &#x65B9;&#x6CD5;&#x60F3;&#x5230;&#x7684;</a></li>
+<li><a href="#7nsoperation-vs-grand-central-dispatch">7.NSOperation vs Grand Central Dispatch</a></li>
+</ul>
+</li>
+<li><a href="#tools">TOOLS</a><ul>
+<li><a href="#1hosts&#x6587;&#x4EF6;&#x4FEE;&#x6539;">1.Hosts&#x6587;&#x4EF6;&#x4FEE;&#x6539;</a></li>
+<li><a href="#2ios&#x4F7F;&#x7528;charles&#x6293;&#x5305;&#x5E76;&#x7BE1;&#x6539;&#x8FD4;&#x56DE;&#x6570;&#x636E;">2.iOS&#x4F7F;&#x7528;Charles&#x6293;&#x5305;&#x5E76;&#x7BE1;&#x6539;&#x8FD4;&#x56DE;&#x6570;&#x636E;</a></li>
+<li><a href="#3&#x4E00;&#x4E9B;&#x5907;&#x5FD8;">3.&#x4E00;&#x4E9B;&#x5907;&#x5FD8;</a></li>
+<li><a href="#4coredata&#x5B66;&#x4E60;">4.CoreData&#x5B66;&#x4E60;</a></li>
+<li><a href="#5xcode-server">5.Xcode Server</a></li>
+</ul>
+</li>
+<li><a href="#error-log">ERROR LOG</a><ul>
+<li><a href="#1arc&#x76F8;&#x5173;">1.ARC&#x76F8;&#x5173;</a></li>
+<li><a href="#2-&#x9884;&#x7F16;&#x8BD1;&#x5934;&#x6587;&#x4EF6;pch">2. &#x9884;&#x7F16;&#x8BD1;&#x5934;&#x6587;&#x4EF6;.pch</a></li>
+<li><a href="#3&#x7B26;&#x53F7;&#x91CD;&#x590D;">3.&#x7B26;&#x53F7;&#x91CD;&#x590D;</a><ul>
+<li><a href="#31-&#x5254;&#x9664;&#x9759;&#x6001;&#x5E93;&#x7684;&#x67D0;&#x4E9B;&#x76EE;&#x6807;&#x6587;&#x4EF6;">3.1 &#x5254;&#x9664;&#x9759;&#x6001;&#x5E93;&#x7684;&#x67D0;&#x4E9B;&#x76EE;&#x6807;&#x6587;&#x4EF6;</a><ul>
+<li><a href="#&#x7B80;&#x8981;">&#x7B80;&#x8981;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#4&#x7B26;&#x53F7;&#x627E;&#x4E0D;&#x5230;">4.&#x7B26;&#x53F7;&#x627E;&#x4E0D;&#x5230;</a></li>
+<li><a href="#5xcode-signing-error">5.Xcode Signing Error!!</a><ul>
+<li><a href="#xcode-signing&#x9009;&#x9879;">Xcode Signing&#x9009;&#x9879;</a></li>
+<li><a href="#&#x914D;&#x7F6E;&#x4E00;&#x4E2A;provision-profile&#x6587;&#x4EF6;">&#x914D;&#x7F6E;&#x4E00;&#x4E2A;provision profile&#x6587;&#x4EF6;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+<h1 id="&#x5F00;&#x53D1;&#x6280;&#x672F;&#x79EF;&#x7D2F;&#x65E5;&#x5FD7;"><a href="#&#x5F00;&#x53D1;&#x6280;&#x672F;&#x79EF;&#x7D2F;&#x65E5;&#x5FD7;" class="headerlink" title="&#x5F00;&#x53D1;&#x6280;&#x672F;&#x79EF;&#x7D2F;&#x65E5;&#x5FD7;"></a>&#x5F00;&#x53D1;&#x6280;&#x672F;&#x79EF;&#x7D2F;&#x65E5;&#x5FD7;</h1><p>now date: 2016.10.12</p>
+<p>[TOC]</p>
+<table>
+<thead>
+<tr>
+<th>TODO LIST</th>
+<th>IDEAS</th>
+<th>TECH NOTE</th>
+<th>TOOLS</th>
+<th>ERROR LOG</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x8BA1;&#x5212;&#x5217;&#x8868;</td>
+<td>&#x7075;&#x611F;</td>
+<td>&#x6280;&#x672F;&#x7B14;&#x8BB0;</td>
+<td>&#x5DE5;&#x5177;&#x4F7F;&#x7528;</td>
+<td>&#x5751; * &#x62A5;&#x9519;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="todo-list"><a href="#TODO-LIST" class="headerlink" title="TODO LIST"></a>TODO LIST</h2><h3 id="1-&#x6C47;&#x7F16;&#x76F8;&#x5173;"><a href="#1-&#x6C47;&#x7F16;&#x76F8;&#x5173;" class="headerlink" title="1. &#x6C47;&#x7F16;&#x76F8;&#x5173;"></a>1. &#x6C47;&#x7F16;&#x76F8;&#x5173;</h3><p><a href="http://baike.baidu.com/view/14983064.htm#1" target="_blank" rel="external">http://baike.baidu.com/view/14983064.htm#1</a></p>
+<hr>
+<p>2016.10.12</p>
+<h3 id="2-jspatch&#x4F7F;&#x7528;"><a href="#2-JSPatch&#x4F7F;&#x7528;" class="headerlink" title="2. JSPatch&#x4F7F;&#x7528;"></a>2. JSPatch&#x4F7F;&#x7528;</h3><p>&#x8463;&#x94C2;&#x7136;&#x7684;&#x535A;&#x5BA2;&#xFF1A;<br><a href="http://www.cnblogs.com/dsxniubility/p/4264777.html" target="_blank" rel="external">http://www.cnblogs.com/dsxniubility/p/4264777.html</a></p>
+<hr>
+<p>2016.10.14</p>
+<hr>
+<h3 id="3-&#x4E00;&#x4E9B;&#x5173;&#x8054;"><a href="#3-&#x4E00;&#x4E9B;&#x5173;&#x8054;" class="headerlink" title="3. &#x4E00;&#x4E9B;&#x5173;&#x8054;"></a>3. &#x4E00;&#x4E9B;&#x5173;&#x8054;</h3><p><a href="https://leancloud.cn/" target="_blank" rel="external">https://leancloud.cn/</a><br> <a href="https://ios.bugly.qq.com" target="_blank" rel="external">https://ios.bugly.qq.com</a></p>
+<hr>
+<p>2016.10.27</p>
+<h3 id="4-&#x5E94;&#x7528;&#x672C;&#x5730;&#x5316;"><a href="#4-&#x5E94;&#x7528;&#x672C;&#x5730;&#x5316;" class="headerlink" title="4. &#x5E94;&#x7528;&#x672C;&#x5730;&#x5316;"></a>4. &#x5E94;&#x7528;&#x672C;&#x5730;&#x5316;</h3><h3 id="5-&#x4F5C;&#x56FE;&#x76F8;&#x5173;&#x6280;&#x80FD;"><a href="#5-&#x4F5C;&#x56FE;&#x76F8;&#x5173;&#x6280;&#x80FD;" class="headerlink" title="5. &#x4F5C;&#x56FE;&#x76F8;&#x5173;&#x6280;&#x80FD;"></a>5. &#x4F5C;&#x56FE;&#x76F8;&#x5173;&#x6280;&#x80FD;</h3><p>&#x6BD4;&#x5982;&#xFF0C;sketch&#x5236;&#x4F5C;app &#x56FE;&#x6807;&#x7B49;&#x6280;&#x80FD;&#x3002;</p>
+<hr>
+<p>2016.11.08</p>
+<h3 id="6-jspatch&#x5B89;&#x5168;&#x8BBE;&#x7F6E;"><a href="#6-JSPatch&#x5B89;&#x5168;&#x8BBE;&#x7F6E;" class="headerlink" title="6. JSPatch&#x5B89;&#x5168;&#x8BBE;&#x7F6E;"></a>6. JSPatch&#x5B89;&#x5168;&#x8BBE;&#x7F6E;</h3><p><a href="http://jspatch.com/Docs/rsa" target="_blank" rel="external">http://jspatch.com/Docs/rsa</a><br>&#x5176;&#x5B83;demo: <a href="http://gold.xitu.io/post/57c00e18a633bd005d609a26" target="_blank" rel="external">http://gold.xitu.io/post/57c00e18a633bd005d609a26</a></p>
+<hr>
+<p>2017.6.14</p>
+<h3 id="7&#x7F16;&#x5199;&#x4E00;&#x4E9B;&#x9002;&#x5408;&#x591A;&#x6570;&#x5E94;&#x7528;&#x4F7F;&#x7528;&#x7684;&#x516C;&#x5171;&#x7EC4;&#x4EF6;&#x5185;&#x5BB9;&#x5305;&#x62EC;&#x4F46;&#x4E0D;&#x4EC5;&#x9650;&#x4E8E;"><a href="#7-&#x7F16;&#x5199;&#x4E00;&#x4E9B;&#x9002;&#x5408;&#x591A;&#x6570;&#x5E94;&#x7528;&#x4F7F;&#x7528;&#x7684;&#x516C;&#x5171;&#x7EC4;&#x4EF6;&#xFF0C;&#x5185;&#x5BB9;&#x5305;&#x62EC;&#x4F46;&#x4E0D;&#x4EC5;&#x9650;&#x4E8E;&#xFF1A;" class="headerlink" title="7.&#x7F16;&#x5199;&#x4E00;&#x4E9B;&#x9002;&#x5408;&#x591A;&#x6570;&#x5E94;&#x7528;&#x4F7F;&#x7528;&#x7684;&#x516C;&#x5171;&#x7EC4;&#x4EF6;&#xFF0C;&#x5185;&#x5BB9;&#x5305;&#x62EC;&#x4F46;&#x4E0D;&#x4EC5;&#x9650;&#x4E8E;&#xFF1A;"></a>7.&#x7F16;&#x5199;&#x4E00;&#x4E9B;&#x9002;&#x5408;&#x591A;&#x6570;&#x5E94;&#x7528;&#x4F7F;&#x7528;&#x7684;&#x516C;&#x5171;&#x7EC4;&#x4EF6;&#xFF0C;&#x5185;&#x5BB9;&#x5305;&#x62EC;&#x4F46;&#x4E0D;&#x4EC5;&#x9650;&#x4E8E;&#xFF1A;</h3><ul>
+<li>app&#x4FE1;&#x606F;<ul>
+<li>app&#x7248;&#x672C;</li>
+<li>app feature&#x652F;&#x6301;&#x60C5;&#x51B5;</li>
+</ul>
+</li>
+<li>&#x8BBE;&#x5907;&#x4FE1;&#x606F;<ul>
+<li>&#x8BBE;&#x5907;&#x5C4F;&#x5E55;</li>
+<li>&#x8BBE;&#x5907;&#x786C;&#x4EF6;&#x529F;&#x80FD;&#x652F;&#x6301;<ul>
+<li>&#x76F8;&#x673A;&#xFF08;&#x8FD8;&#x6709;&#x6CA1;&#x76F8;&#x673A;&#x7684;iOS&#x8BBE;&#x5907;&#xFF1F;&#xFF09;</li>
+<li>3D Touch</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>&#x652F;&#x4ED8;<ul>
+<li>In-App-Purchase</li>
+<li>AliPay&#x3001;Wechat Pay&#xFF1F;</li>
+</ul>
+</li>
+<li>App Store</li>
+<li>ARKit&#xFF1F;</li>
+<li>&#x5671;&#x5934;&#xFF1F;</li>
+</ul>
+<h2 id="ideas"><a href="#IDEAS" class="headerlink" title="IDEAS"></a>IDEAS</h2><h3 id="1-&#x5982;&#x4F55;&#x8FDB;&#x884C;&#x5E7F;&#x544A;&#x5237;&#x91CF;"><a href="#1-&#x5982;&#x4F55;&#x8FDB;&#x884C;&#x5E7F;&#x544A;&#x5237;&#x91CF;&#xFF1F;" class="headerlink" title="1. &#x5982;&#x4F55;&#x8FDB;&#x884C;&#x5E7F;&#x544A;&#x5237;&#x91CF;&#xFF1F;"></a>1. &#x5982;&#x4F55;&#x8FDB;&#x884C;&#x5E7F;&#x544A;&#x5237;&#x91CF;&#xFF1F;</h3><p>&#x8BBE;&#x60F3;&#xFF1A;</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&#x539F;&#x7406;&#xFF1A;</div><div class="line">	&#x5E7F;&#x544A;&#x5A92;&#x4F53;&#xFF08;&#x7F51;&#x7AD9;&#x6216;&#x8005;<span class="keyword">app</span>&#xFF09;&#x53D1;&#x8D77;&#x5E7F;&#x544A;&#x7533;&#x8BF7;&#xFF0C;&#x5E7F;&#x544A;&#x5C55;&#x793A;&#x540E;&#x5C31;&#x6709;&#x94B1;&#x6536;&#xFF08;<span class="keyword">app</span>&#x5BF9;&#x5E94;&#x7684;&#x8D26;&#x6237;&#xFF09;&#x3002;</div><div class="line">	&#x5173;&#x952E;&#x70B9;&#x5728;&#x4E8E;&#xFF1A;&#x5E7F;&#x544A;&#x7684;&#x7533;&#x8BF7;&#x6709;&#x6548;&#xFF0C;&#x7136;&#x540E;&#x89E6;&#x53D1;SDK&#x7684;&#x56DE;&#x8C03;&#xFF08;&#x6210;&#x529F;&#x5C55;&#x793A;&#x5E7F;&#x544A;&#x7684;&#x56DE;&#x8C03;&#xFF09;&#x3002;ps&#xFF1A;&#x6B64;&#x5904;&#x9700;&#x6E05;&#x695A;&#x6574;&#x4E2A;&#x5E7F;&#x544A;&#x7684;&#x8BF7;&#x6C42;&#x63A5;&#x53E3;&#x53CA;&#x5176;&#x56DE;&#x8C03;&#x63A5;&#x53E3;&#x7B49;&#x3002;</div><div class="line"></div><div class="line">	&#x4E00;&#x5929;&#x4E00;&#x4E2A;<span class="keyword">app</span>&#x5237;&#x91CF;</div><div class="line">&#x65B9;&#x6CD5;&#xFF1A;</div><div class="line">	&#x9996;&#x5148;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;<span class="keyword">app</span>&#xFF0C;&#x7ED1;&#x5B9A;&#x597D;&#x8D26;&#x6237;&#x3002;</div></pre></td></tr></table></figure>
+<p>&#x76F8;&#x5173;&#x94FE;&#x63A5;:<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">http</span>://www.rtbchina.com/how-<span class="keyword">not</span>-<span class="built_in">to</span>-<span class="built_in">get</span>-screwed-<span class="keyword">by</span>-shuashuashua.html</div></pre></td></tr></table></figure></p>
+<hr>
+<h3 id="2&#x5173;&#x4E8E;&#x5E7F;&#x544A;&#x884C;&#x4E1A;&#x4E2D;dsp&#x89D2;&#x8272;&#x7684;&#x4E00;&#x4E9B;&#x601D;&#x8003;"><a href="#2-&#x5173;&#x4E8E;&#x5E7F;&#x544A;&#x884C;&#x4E1A;&#x4E2D;DSP&#x89D2;&#x8272;&#x7684;&#x4E00;&#x4E9B;&#x601D;&#x8003;" class="headerlink" title="2.&#x5173;&#x4E8E;&#x5E7F;&#x544A;&#x884C;&#x4E1A;&#x4E2D;DSP&#x89D2;&#x8272;&#x7684;&#x4E00;&#x4E9B;&#x601D;&#x8003;"></a>2.&#x5173;&#x4E8E;&#x5E7F;&#x544A;&#x884C;&#x4E1A;&#x4E2D;DSP&#x89D2;&#x8272;&#x7684;&#x4E00;&#x4E9B;&#x601D;&#x8003;</h3><ol>
+<li>DSP&#x4ECB;&#x7ECD;<br><a href="http://baike.baidu.com/view/8103074.htm" target="_blank" rel="external">http://baike.baidu.com/view/8103074.htm</a>, <a href="https://www.zhihu.com/question/23463700" target="_blank" rel="external">https://www.zhihu.com/question/23463700</a><br> &#x7B80;&#x5355;&#x6765;&#x8BF4;&#x5C31;&#x662F;&#x670D;&#x52A1;&#x4E8E;&#x5E7F;&#x544A;&#x4E3B;&#x7684;&#x5E73;&#x53F0;&#xFF0C;&#x5E2E;&#x52A9;&#x5E7F;&#x544A;&#x4E3B;&#x627E;&#x5230;&#x6700;&#x5408;&#x9002;&#x6295;&#x653E;&#x76EE;&#x6807;&#xFF08;&#x67D0;app&#x3001;&#x5E74;&#x9F84;&#x4E3A;x&#x3001;&#x559C;&#x597D;&#x4E3A;y&#x3001;&#x6027;&#x522B;&#x4E3A;s&#x7684;banner&#xFF08;&#x6216;&#x8005;&#x89C6;&#x9891;&#xFF09;&#x5E7F;&#x544A;&#xFF09;&#x3002;</li>
+<li>&#x4E92;&#x8054;&#x7F51;&#x5E7F;&#x544A;&#x7684;&#x5B9E;&#x65F6;&#x7ADE;&#x4EF7;&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x5176;&#x4E2D;DSP&#x626E;&#x6F14;&#x7684;&#x89D2;&#x8272;&#x5F88;&#x91CD;&#x8981;&#xFF0C;&#x56E0;&#x4E3A;&#x662F;&#x5E7F;&#x544A;&#x4E3B;&#x76F4;&#x63A5;&#x6295;&#x94B1;&#x7684;&#x5730;&#x65B9;&#x3002;</li>
+<li>&#x6700;&#x91CD;&#x8981;&#x7684;&#x662F;: &#x5982;&#x4F55;&#x8BA9;&#x522B;&#x4EBA;&#x6536;&#x76CA;&#x7684;&#x540C;&#x65F6;&#xFF0C;&#x81EA;&#x5DF1;&#x4E5F;&#x53D7;&#x76CA;&#xFF08;&#x6216;&#x8005;&#x53CD;&#x8FC7;&#x6765;&#xFF09;&#x3002;&#x53CC;&#x8D62;&#x624D;&#x662F;&#x6700;&#x4F73;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x3002;&#x6BD4;&#x5982;&#x8BF4;&#x6DD8;&#x5B9D;&#xFF0C;&#x5BF9;&#x5E73;&#x53F0;&#x7684;&#x5546;&#x5BB6;&#x6709;&#x5E7F;&#x544A;&#x7684;&#x63D0;&#x4F9B;&#x3001;&#x6280;&#x672F;&#x652F;&#x6301;&#x8D39;&#x7528;&#x7B49;&#x3002;<br>&#x90A3;&#x4E48;&#xFF0C;&#x8FD8;&#x6709;&#x4EC0;&#x4E48;&#x65B9;&#x5411;&#x80FD;&#x8BA9;&#x81EA;&#x5DF1;&#x8D5A;&#x94B1;&#x7684;&#x65F6;&#x5019;&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x4E5F;&#x8DDF;&#x7740;&#x8D5A;&#x94B1;&#xFF1F;</li>
+</ol>
+<hr>
+<p>2016.10.14</p>
+<h3 id="3-&#x5BA2;&#x6237;&#x7AEF;&#x5982;&#x4F55;&#x8FDB;&#x884C;&#x672C;&#x5730;rsa&#x52A0;&#x5BC6;&#x4F7F;&#x7528;&#x516C;&#x94A5;&#x52A0;&#x5BC6;&#x5982;&#x652F;&#x4ED8;&#x5B9D;app"><a href="#3-&#x5BA2;&#x6237;&#x7AEF;&#x5982;&#x4F55;&#x8FDB;&#x884C;&#x672C;&#x5730;RSA&#x52A0;&#x5BC6;&#xFF08;&#x4F7F;&#x7528;&#x516C;&#x94A5;&#x52A0;&#x5BC6;&#xFF0C;&#x5982;&#x652F;&#x4ED8;&#x5B9D;app&#xFF09;" class="headerlink" title="3. &#x5BA2;&#x6237;&#x7AEF;&#x5982;&#x4F55;&#x8FDB;&#x884C;&#x672C;&#x5730;RSA&#x52A0;&#x5BC6;&#xFF08;&#x4F7F;&#x7528;&#x516C;&#x94A5;&#x52A0;&#x5BC6;&#xFF0C;&#x5982;&#x652F;&#x4ED8;&#x5B9D;app&#xFF09;"></a>3. &#x5BA2;&#x6237;&#x7AEF;&#x5982;&#x4F55;&#x8FDB;&#x884C;&#x672C;&#x5730;RSA&#x52A0;&#x5BC6;&#xFF08;&#x4F7F;&#x7528;&#x516C;&#x94A5;&#x52A0;&#x5BC6;&#xFF0C;&#x5982;&#x652F;&#x4ED8;&#x5B9D;app&#xFF09;</h3><p>&#x9996;&#x5148;&#xFF0C;&#x672C;&#x5730;&#x91CC;&#x9700;&#x6709;RSA&#x516C;&#x94A5;&#xFF0C;&#x654F;&#x611F;&#x6570;&#x636E;&#x53D1;&#x9001;&#x524D;&#xFF0C;&#x9700;&#x7528;&#x6B64;&#x516C;&#x94A5;&#x8FDB;&#x884C;&#x52A0;&#x5BC6;&#x5904;&#x7406;&#x3002;<br>&#x670D;&#x52A1;&#x5668;&#x6536;&#x5230;&#x5DF2;&#x88AB;&#x52A0;&#x5BC6;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x4F7F;&#x7528;&#x79C1;&#x94A5;&#x8FDB;&#x884C;&#x89E3;&#x5BC6;&#x3002;&#x5904;&#x7406;&#x4E1A;&#x52A1;&#x3002;</p>
+<p>&#x95EE;&#x9898;&#xFF1A;&#x5982;&#x4F55;</p>
+<h3 id="4&#x5199;&#x4E00;&#x4E2A;&#x756A;&#x8304;&#x5DE5;&#x4F5C;&#x6CD5;app"><a href="#4-&#x5199;&#x4E00;&#x4E2A;&#x201C;&#x756A;&#x8304;&#x5DE5;&#x4F5C;&#x6CD5;&#x201D;App" class="headerlink" title="4.&#x5199;&#x4E00;&#x4E2A;&#x201C;&#x756A;&#x8304;&#x5DE5;&#x4F5C;&#x6CD5;&#x201D;App"></a>4.&#x5199;&#x4E00;&#x4E2A;&#x201C;&#x756A;&#x8304;&#x5DE5;&#x4F5C;&#x6CD5;&#x201D;App</h3><p>&#x521D;&#x8877;</p>
+<p>&#x529F;&#x80FD;&#x8BBE;&#x8BA1;</p>
+<p>&#x5F00;&#x53D1;&#x8BA1;&#x5212;</p>
+<h3 id="5&#x5199;&#x4E00;&#x4E2A;-v2ex&#x7F51;&#x7AD9;&#x5BA2;&#x6237;&#x7AEF;"><a href="#5-&#x5199;&#x4E00;&#x4E2A;-V2EX&#x7F51;&#x7AD9;&#x5BA2;&#x6237;&#x7AEF;" class="headerlink" title="5.&#x5199;&#x4E00;&#x4E2A; V2EX&#x7F51;&#x7AD9;&#x5BA2;&#x6237;&#x7AEF;"></a>5.&#x5199;&#x4E00;&#x4E2A; V2EX&#x7F51;&#x7AD9;&#x5BA2;&#x6237;&#x7AEF;</h3><p>&#x53C2;&#x8003;&#x6587;&#x6863;</p>
+<p><a href="https://www.v2ex.com/p/7v9TEc53" target="_blank" rel="external">https://www.v2ex.com/p/7v9TEc53</a></p>
+<p>&#x521D;&#x8877;</p>
+<p>&#x529F;&#x80FD;&#x8BBE;&#x8BA1;</p>
+<p>&#x5F00;&#x53D1;&#x8BA1;&#x5212;</p>
+<h2 id="tech-log"><a href="#TECH-LOG" class="headerlink" title="TECH LOG"></a>TECH LOG</h2><h3 id="1&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x7684;&#x8BB0;&#x5F55;"><a href="#1-&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x7684;&#x8BB0;&#x5F55;" class="headerlink" title="1.&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x7684;&#x8BB0;&#x5F55;"></a>1.&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x7684;&#x8BB0;&#x5F55;</h3><p>from: <a href="http://blog.ibireme.com/2013/11/26/objective-c-messaging/" target="_blank" rel="external">http://blog.ibireme.com/2013/11/26/objective-c-messaging/</a></p>
+<p>&#x6A21;&#x62DF;&#x5668;&#x8FDB;&#x884C;&#x65AD;&#x70B9;&#x8C03;&#x8BD5;&#x3001;&#x8C03;&#x8BD5;&#x7EC8;&#x7AEF;&#x91CC;&#x8F93;&#x5165;<br>call (void)instrumentObjcMessageSends(YES)<br>&#x76F8;&#x5E94;&#x7684;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x5386;&#x53F2;&#x5728;/tmp/msgSends-xxxx(app&#x8FDB;&#x7A0B;&#x53F7;).</p>
+<p>&#x5185;&#x5BB9;&#x5982;&#x4E0B;:</p>
+<ul>
+<li>NSObject NSObject new</li>
+</ul>
+<ul>
+<li>NSObject NSObject init</li>
+<li>NSObject NSObject performSelector:</li>
+</ul>
+<ul>
+<li>NSObject NSObject resolveInstanceMethod:</li>
+<li>NSObject NSObject resolveInstanceMethod:</li>
+</ul>
+<ul>
+<li>NSObject NSObject forwardingTargetForSelector:</li>
+<li>NSObject NSObject forwardingTargetForSelector:</li>
+<li>NSObject NSObject methodSignatureForSelector:</li>
+<li>NSObject NSObject methodSignatureForSelector:</li>
+<li>NSObject NSObject class</li>
+<li>NSObject NSObject doesNotRecognizeSelector:</li>
+<li>NSObject NSObject doesNotRecognizeSelector:</li>
+<li>NSObject NSObject class<br>&#x2026;</li>
+</ul>
+<p>&#x770B;&#x6CD5;&#xFF1A;&#x9488;&#x5BF9;&#x6D88;&#x606F;&#x4F20;&#x9012;&#x3001;&#x8F6C;&#x53D1;&#x6D41;&#x7A0B;&#xFF0C;&#x8FD8;&#x662F;&#x6709;&#x4E00;&#x5B9A;&#x7684;&#x63ED;&#x9732;&#x4F5C;&#x7528;&#x3002;<br>&#x671F;&#x95F4;&#x4F1A;&#x6D89;&#x53CA;&#x5230;&#x4E00;&#x4E9B;&#x6C47;&#x7F16;&#x4EE3;&#x7801;&#x3002;&#x53EF;&#x4EE5;&#x5BF9;&#x6C47;&#x7F16;&#x8FD9;&#x95E8;&#x8BED;&#x8A00;&#x505A;&#x4E00;&#x4E0B;&#x5165;&#x95E8;:<br><a href="http://baike.baidu.com/view/14983064.htm#1" target="_blank" rel="external">http://baike.baidu.com/view/14983064.htm#1</a><br>[&#x672A;&#x9605;&#x5B8C;]<br>&#x5173;&#x4E8E;&#x6D88;&#x606F;&#x4F20;&#x9012;&#x3001;&#x8F6C;&#x53D1;&#x6D41;&#x7A0B;&#xFF0C;&#x82F9;&#x679C;&#x5B98;&#x65B9;&#x6587;&#x6863;&#x4E5F;&#x505A;&#x4E86;&#x4E00;&#x4E9B;&#x63CF;&#x8FF0;&#xFF1A;</p>
+<hr>
+<h3 id="2could-not-build-module-uikit"><a href="#2-Could-not-build-module-&#x201C;UIKit&#x201D;" class="headerlink" title="2.Could not build module &#x201C;UIKit&#x201D;"></a>2.Could not build module &#x201C;UIKit&#x201D;</h3><p>from: <a href="http://www.jianshu.com/p/b3c0249aafad" target="_blank" rel="external">http://www.jianshu.com/p/b3c0249aafad</a></p>
+<hr>
+<p>2016.10.12</p>
+<h3 id="3-&#x65E5;&#x5FD7;&#x7684;&#x9AD8;&#x7EA7;&#x4F7F;&#x7528;"><a href="#3-&#x65E5;&#x5FD7;&#x7684;&#x9AD8;&#x7EA7;&#x4F7F;&#x7528;" class="headerlink" title="3. &#x65E5;&#x5FD7;&#x7684;&#x9AD8;&#x7EA7;&#x4F7F;&#x7528;"></a>3. &#x65E5;&#x5FD7;&#x7684;&#x9AD8;&#x7EA7;&#x4F7F;&#x7528;</h3><ol>
+<li>&#x83B7;&#x53D6;&#x51FD;&#x6570;&#x7B7E;&#x540D;&#x3001;&#x6E90;&#x7801;&#x4F4D;&#x7F6E;&#x3001;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x3001;&#x8C03;&#x7528;&#x6808;&#x4FE1;&#x606F;&#xFF0C;&#x53EF;&#x4F7F;&#x7528;<strong>func</strong>, <strong>LINE</strong>, <strong>FILE</strong>&#x3002;<br>&#x901A;&#x8FC7;[NSThread callStackSymbols]&#x53EF;&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x6808;&#x4FE1;&#x606F;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x8C03;&#x8BD5;&#x7A0B;&#x5E8F;&#xFF0C;&#x4F46;&#x662F;&#x6B63;&#x5F0F;&#x53D1;&#x5E03;&#x65F6;&#xFF0C;&#x6700;&#x597D;&#x522B;&#x7528;&#xFF08;&#x8017;&#x8D44;&#x6E90;&#x4EC0;&#x4E48;&#x7684;&#xFF09;&#x3002;<br> &#x5982;:<br> 2016-10-13 09:42:07.703 test[2238:20818] callStackSymbols:(<br> 0   test                                0x0000000109ad187c -[ViewController viewDidLoad] + 76<br> 1   UIKit                               0x000000010aaaf984 -[UIViewController loadViewIfRequired] + 1198<br> 2   UIKit                               0x000000010aaafcd3 -[UIViewController view] + 27<br> 3   UIKit                               0x000000010a985fb4 -[UIWindow addRootViewControllerViewIfPossible] + 61<br> 4   UIKit                               0x000000010a98669d -[UIWindow _setHidden:forced:] + 282<br> 5   UIKit                               0x000000010a998180 -[UIWindow makeKeyAndVisible] + 42<br> 6   UIKit                               0x000000010a90ced9 -[UIApplication _callInitializationDelegatesForMainScene:transitionContext:] + 4131<br> 7   UIKit                               0x000000010a913568 -[UIApplication _runWithMainScene:transitionContext:completion:] + 1769<br> 8   UIKit                               0x000000010a910714 -[UIApplication workspaceDidEndTransaction:] + 188<br> 9   FrontBoardServices                  0x000000010d37d8c8 <strong>FBSSERIALQUEUE_IS_CALLING_OUT_TO_A_BLOCK</strong> + 24<br> 10  FrontBoardServices                  0x000000010d37d741 -[FBSSerialQueue _performNext] + 178<br> 11  FrontBoardServices                  0x000000010d37daca -[FBSSerialQueue _performNextFromRunLoopSource] + 45<br> 12  CoreFoundation                      0x000000010a484301 <strong>CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION</strong> + 17<br> 13  CoreFoundation                      0x000000010a47a22c <strong>CFRunLoopDoSources0 + 556<br> 14  CoreFoundation                      0x000000010a4796e3 </strong>CFRunLoopRun + 867<br> 15  CoreFoundation                      0x000000010a4790f8 CFRunLoopRunSpecific + 488<br> 16  UIKit                               0x000000010a90ff21 -[UIApplication _run] + 402<br> 17  UIKit                               0x000000010a914f09 UIApplicationMain + 171<br> 18  test                                0x0000000109ad1c1f main + 111<br> 19  libdyld.dylib                       0x000000010cd3892d start + 1<br> 20  ???                                 0x0000000000000001 0x0 + 1<br> ),&#x7531;&#x6B64;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x6808;&#x4FE1;&#x606F;:start-&gt;main-&gt;UIApplicationMain-&gt;-[UIApplication _run]-&gt;&#x2026;(runloop&#x76F8;&#x5173;)-&gt;&#x51C6;&#x5907;&#x7A97;&#x53E3;-&gt;<a href="&#x6DFB;&#x52A0;&#x7A97;&#x53E3;&#x7684;&#x6839;&#x89C6;&#x56FE;&#x63A7;&#x5236;&#x5668;&#x5BF9;&#x5E94;&#x7684;&#x89C6;&#x56FE;">UIWindow addRootViewControllerViewIfPossible</a> -&gt;&#x2026; &#x53EF;&#x5F97;&#x77E5;&#x9053;&#x4E00;&#x4E9B;&#x660E;&#x663E;&#x4E9B;&#x7684;&#x4FE1;&#x606F;&#xFF1A;<br> &#x9879;&#x76EE;&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E86;Main Interface&#x4E3A;&#x67D0;&#x4E2A;storyboard, &#x90A3;&#x4E48;&#x4F60;&#x9700;&#x8981;&#x5728;&#x8BE5;storyboard&#x8BBE;&#x7F6E;&#x597D;</li>
+</ol>
+<hr>
+<h3 id="4&#x51E0;&#x4E2A;&#x91CD;&#x8981;&#x534F;&#x8BAE;nsobject-nscopy-nsmutablecopy"><a href="#4-&#x51E0;&#x4E2A;&#x91CD;&#x8981;&#x534F;&#x8BAE;&#xFF1A;NSObject-NSCopy-NSMutableCopy" class="headerlink" title="4.&#x51E0;&#x4E2A;&#x91CD;&#x8981;&#x534F;&#x8BAE;&#xFF1A;NSObject, NSCopy, NSMutableCopy"></a>4.&#x51E0;&#x4E2A;&#x91CD;&#x8981;&#x534F;&#x8BAE;&#xFF1A;NSObject, NSCopy, NSMutableCopy</h3><p>NSObject Protocal</p>
+<hr>
+<h3 id="5&#x5173;&#x4E8E;&#x6570;&#x636E;&#x5199;&#x8FDB;&#x6587;&#x4EF6;"><a href="#5-&#x5173;&#x4E8E;&#x6570;&#x636E;&#x5199;&#x8FDB;&#x6587;&#x4EF6;" class="headerlink" title="5.&#x5173;&#x4E8E;&#x6570;&#x636E;&#x5199;&#x8FDB;&#x6587;&#x4EF6;"></a>5.&#x5173;&#x4E8E;&#x6570;&#x636E;&#x5199;&#x8FDB;&#x6587;&#x4EF6;</h3><ol>
+<li><p>&#x7591;&#x60D1;<br>NSString <em>cacheDir = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];<br> NSString </em>cacheContainerPath = [[cacheDir stringByAppendingPathComponent:kTagManagerCacheDirectory] stringByAppendingPathComponent:containerId];<br> [containerJsonData writeToFile:cacheContainerPath atomically:YES];</p>
+<pre><code>&#x8FD9;&#x79CD;&#x5199;&#x6CD5;&#x6CA1;&#x6709;&#x76F8;&#x5173;&#x6587;&#x4EF6;&#x3001;&#x6587;&#x4EF6;&#x5939;&#x751F;&#x6210;&#x3002;&#x9700;&#x8981;&#x6362;&#x6210;NSFileManager&#x53BB;&#x521B;&#x5EFA;&#x6587;&#x4EF6;&#x5939;&#x65B9;&#x53EF;&#x3002;&#x5982;:
+</code></pre><p> NSString <em>cacheDir = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];<br> NSString </em>containerDir = [cacheDir stringByAppendingPathComponent:kTagManagerCacheDirectory];<br> if (![[NSFileManager defaultManager] fileExistsAtPath:containerDir]) {</p>
+<pre><code>[[NSFileManager defaultManager] createDirectoryAtPath:containerDir
+                          withIntermediateDirectories:YES
+                                           attributes:nil
+                                                error:NULL];
+</code></pre><p> }<br> NSString *containerPath = [containerDir stringByAppendingPathComponent:containerId];<br> [containerJsonData writeToFile:containerPath atomically:YES];</p>
+</li>
+<li><p>&#x731C;&#x6D4B;<br><code>NSData</code> &#x7684; <code>writeToFile</code> &#x65B9;&#x6CD5;&#x4E0D;&#x4F1A;&#x81EA;&#x52A8;&#x521B;&#x5EFA;&#x76EE;&#x5F55;&#xFF1F;</p>
+</li>
+<li><p>&#x771F;&#x76F8;-</p>
+</li>
+<li><p>&#x76F8;&#x5173;&#x6587;&#x7AE0;: <a href="http://www.jianshu.com/p/fbb997eb032d" target="_blank" rel="external">http://www.jianshu.com/p/fbb997eb032d</a></p>
+</li>
+</ol>
+<hr>
+<h3 id="6&#x7531;-voidsetvalueidvalue-forkeynsstring-&#x65B9;&#x6CD5;&#x60F3;&#x5230;&#x7684;"><a href="#6-&#x7531;-void-setValue-id-value-forKey-NSString-&#x65B9;&#x6CD5;&#x60F3;&#x5230;&#x7684;" class="headerlink" title="6.&#x7531; - (void)setValue:(id)value forKey:(NSString *) &#x65B9;&#x6CD5;&#x60F3;&#x5230;&#x7684;"></a>6.&#x7531; - (void)setValue:(id)value forKey:(NSString *) &#x65B9;&#x6CD5;&#x60F3;&#x5230;&#x7684;</h3><p>&#x5982;&#x679C;&#x5E0C;&#x671B;&#x4F7F;&#x7528;&#x5B57;&#x5178;&#x53BB;&#x4E3A;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x5BF9;&#x8C61;&#x505A;&#x521D;&#x59CB;&#x5316;&#x5DE5;&#x4F5C;&#xFF0C;&#x6CA1;&#x95EE;&#x9898;&#x3002;NSKeyValueCoding &#x534F;&#x8BAE;&#x4E13;&#x95E8;&#x4E3A;&#x6B64;&#x800C;&#x751F;&#x3002;&#x4E3B;&#x8981;&#x6709;&#xFF1A;</p>
+<ul>
+<li>(void)setAttributesFromDictionary:(NSDictionary *)aDictionary</li>
+<li>(void)updateAttributesFromDictionary:(NSDictionary *)aDictionary</li>
+<li><p>(BOOL)shouldUpdateCurrentContainerWithContainerDic:(NSDictionary *)containerDic </p>
+</li>
+<li><p>(void)setValue:(id)value forKey:(NSString *)key</p>
+</li>
+<li>(void)setValue:(id)value forUndefinedKey:(NSString *)key// Invoked by setValue:forKey: when it finds no property for a given key.</li>
+</ul>
+<hr>
+<p>2016.10.14</p>
+<h3 id="7nsoperation-vs-grand-central-dispatch"><a href="#7-NSOperation-vs-Grand-Central-Dispatch" class="headerlink" title="7.NSOperation vs Grand Central Dispatch"></a>7.NSOperation vs Grand Central Dispatch</h3><table>
+<thead>
+<tr>
+<th></th>
+<th>NSOperation</th>
+<th>GCD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>API&#x7EA7;&#x522B;</td>
+<td>OC&#x7EA7;&#x522B;API</td>
+<td>&#x57FA;&#x4E8E;C&#x7684;&#x4F4E;&#x7EA7;&#x522B;&#x7684;API</td>
+</tr>
+<tr>
+<td>API&#x5F15;&#x5165;&#x65F6;&#x671F;</td>
+<td>iOS2.0&#xFF0C;macOS10.5&#x3002;iOS4+&#x7531;GCD&#x5B9E;&#x73B0;</td>
+<td>iOS4.0, macOS10.6</td>
+</tr>
+<tr>
+<td>&#x901A;&#x5E38;&#x63A8;&#x8350;&#x4F18;&#x5148;&#x4F7F;&#x7528;&#x9AD8;&#x7EA7;API</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&#x4F18;&#x52BF;</td>
+<td>&#x5EFA;&#x7ACB;&#x64CD;&#x4F5C;&#x7684;&#x4F9D;&#x8D56;&#x975E;&#x5E38;&#x65B9;&#x4FBF;&#x3002;&#x7531;GCD&#x5B9E;&#x73B0;&#x7684;&#x7248;&#x672C;&#xFF0C;&#x66F4;&#x5FEB;&#xFF0C;&#x66F4;&#x9177;&#xFF01;</td>
+<td>API&#x53CB;&#x597D;&#x4F18;&#x96C5;&#x3001;&#x901F;&#x5EA6;&#x5FEB;&#xFF01;</td>
+</tr>
+<tr>
+<td>&#x52A3;&#x52BF;</td>
+<td>&#x5BF9;&#x8C61;&#x7EA7;&#x522B;&#xFF0C;&#x521B;&#x5EFA;&#x4E0E;&#x9500;&#x6BC1;&#x6709;&#x5F00;&#x9500;&#xFF08;&#x5BF9;&#x4E8E;&#x6E32;&#x67D3;&#x8981;&#x6C42;&#x9AD8;&#x7684;app&#x6765;&#x8BF4;&#x6709;&#x538B;&#x529B;&#xFF09;&#x3002;API&#x4E0D;&#x591F;GCD&#x4F18;&#x96C5;</td>
+<td></td>
+</tr>
+<tr>
+<td>&#x63D0;&#x9192;</td>
+<td></td>
+<td>&#x53EA;&#x9700;&#x8981;&#x7B80;&#x5355;&#x7684;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;block&#x5C01;&#x88C5;&#x4EFB;&#x52A1;&#xFF0C;&#x4E14;&#x4E0D;&#x9700;&#x8981;NS Operation&#x7684;&#x4EFB;&#x4F55;&#x9644;&#x52A0;&#x529F;&#x80FD;&#xFF08;&#x6BD4;&#x5982;&#x8BF4;&#x53EF;&#x4EE5;&#x5EFA;&#x7ACB;&#x8D1F;&#x8D23;&#x7684;&#x4EFB;&#x52A1;&#x4F9D;&#x8D56;&#xFF1F;&#xFF09;&#x65F6;&#x5019;</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>&#x603B;&#x7ED3;</strong></td>
+<td>&#x4F46;&#x64CD;&#x4F5C;&#x3010;&#x4F9D;&#x8D56;&#x590D;&#x6742;&#x3011;&#x7684;&#x65F6;&#x5019;&#x4F7F;&#x7528;</td>
+<td>&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#x4F7F;&#x7528;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tools"><a href="#TOOLS" class="headerlink" title="TOOLS"></a>TOOLS</h2><h3 id="1hosts&#x6587;&#x4EF6;&#x4FEE;&#x6539;"><a href="#1-Hosts&#x6587;&#x4EF6;&#x4FEE;&#x6539;" class="headerlink" title="1.Hosts&#x6587;&#x4EF6;&#x4FEE;&#x6539;"></a>1.Hosts&#x6587;&#x4EF6;&#x4FEE;&#x6539;</h3><p>macOS: /etc/hosts or /private/etc/hosts vi&#x6253;&#x5F00;&#x4FEE;&#x6539;&#x5373;&#x53EF;<br>iOS:(&#x9700;&#x8981;&#x8D8A;&#x72F1;) iFile, /etc/hosts ,&#x4F7F;&#x7528;&#x6587;&#x672C;&#x7F16;&#x8F91;&#x5668;&#x6253;&#x5F00;&#x4FEE;&#x6539;&#x5373;&#x53EF;</p>
+<hr>
+<h3 id="2ios&#x4F7F;&#x7528;charles&#x6293;&#x5305;&#x5E76;&#x7BE1;&#x6539;&#x8FD4;&#x56DE;&#x6570;&#x636E;"><a href="#2-iOS&#x4F7F;&#x7528;Charles&#x6293;&#x5305;&#x5E76;&#x7BE1;&#x6539;&#x8FD4;&#x56DE;&#x6570;&#x636E;" class="headerlink" title="2.iOS&#x4F7F;&#x7528;Charles&#x6293;&#x5305;&#x5E76;&#x7BE1;&#x6539;&#x8FD4;&#x56DE;&#x6570;&#x636E;"></a>2.iOS&#x4F7F;&#x7528;Charles&#x6293;&#x5305;&#x5E76;&#x7BE1;&#x6539;&#x8FD4;&#x56DE;&#x6570;&#x636E;</h3><p>from:</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http:<span class="regexp">//</span>www.cnblogs.com<span class="regexp">/dsxniubility/</span>p<span class="regexp">/4621314.html</span></div></pre></td></tr></table></figure>
+<h3 id="3&#x4E00;&#x4E9B;&#x5907;&#x5FD8;"><a href="#3-&#x4E00;&#x4E9B;&#x5907;&#x5FD8;" class="headerlink" title="3.&#x4E00;&#x4E9B;&#x5907;&#x5FD8;"></a>3.&#x4E00;&#x4E9B;&#x5907;&#x5FD8;</h3><ol>
+<li><p>Xcode&#x7528;&#x6237;&#x914D;&#x7F6E;&#x76F8;&#x5173;&#x8DEF;&#x5F84;&#xFF1A;</p>
+<blockquote>
+<p>~/Library/Developer/Xcode</p>
+<ol>
+<li>&#x5173;&#x4E8E;&#x7528;&#x6237;&#x7684;&#x4E00;&#x4E9B;&#x81EA;&#x5B9A;&#x4E49;&#x914D;&#x7F6E;&#xFF08;CodeSnippets&#x3001;&#x4E3B;&#x9898;&#x3001;&#x5FEB;&#x6377;&#x952E;&#x7B49;&#xFF09;&#x6587;&#x4EF6;&#xFF0C;&#x4FDD;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;</li>
+</ol>
+<p><code>UserData</code></p>
+<p>~/Library/Developer/Xcode/UserData</p>
+</blockquote>
+<ol>
+<li><p>&#x8FDB;&#x884C;codeSign&#x7684;profile&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#xFF1A;</p>
+<blockquote>
+<p>~/Library/MobileDevice/Provisioning Profiles</p>
+</blockquote>
+</li>
+<li><p>building&#x65F6;&#x4EA7;&#x751F;&#x7684;&#x7F16;&#x8BD1;&#x76F8;&#x5173;&#x6587;&#x4EF6;&#x4FDD;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;</p>
+<blockquote>
+<p><code>DerivedData</code></p>
+<p>~/Library/Developer/Xcode/DerivedData</p>
+</blockquote>
+</li>
+<li><p>&#x53D6;&#x51B3;&#x4E8E;Xcode&#x652F;&#x6301;&#x7684;iOS&#x7248;&#x672C;&#x76F8;&#x5173;&#x6587;&#x4EF6;&#x7684;&#x4FDD;&#x5B58;&#x8DEF;&#x5F84;&#xFF1A;</p>
+<blockquote>
+<p><code>iOS DeviceSupport</code></p>
+<p>~/Library/Developer/Xcode/iOS DeviceSupport</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p>&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;</p>
+<ol>
+<li><p>Beta&#x7248;&#x672C;&#x7684;Xcode&#x3001;iOS&#x3001;macOS&#x7B49;&#x4E0B;&#x8F7D;&#x5730;&#x5740;&#xFF1A;</p>
+<blockquote>
+<p><a href="https://developer.apple.com/download/" target="_blank" rel="external">https://developer.apple.com/download/</a></p>
+</blockquote>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="4coredata&#x5B66;&#x4E60;"><a href="#4-CoreData&#x5B66;&#x4E60;" class="headerlink" title="4.CoreData&#x5B66;&#x4E60;"></a>4.CoreData&#x5B66;&#x4E60;</h3><h3 id="5xcode-server"><a href="#5-Xcode-Server" class="headerlink" title="5.Xcode Server"></a>5.Xcode Server</h3><p>&#x53EF;&#x6301;&#x7EED;&#x96C6;&#x6210;</p>
+<h2 id="error-log"><a href="#ERROR-LOG" class="headerlink" title="ERROR LOG"></a>ERROR LOG</h2><h3 id="1arc&#x76F8;&#x5173;"><a href="#1-ARC&#x76F8;&#x5173;" class="headerlink" title="1.ARC&#x76F8;&#x5173;"></a>1.ARC&#x76F8;&#x5173;</h3><p>&#x73B0;&#x8C61;&#xFF1A;<code>&apos;retain&apos; is unavailable: not available in automatic reference counting mode</code></p>
+<p>&#x5206;&#x6790;&#xFF1A;&#x5728;&#x9ED8;&#x8BA4;&#x652F;&#x6301;ARC&#x7684;&#x9879;&#x76EE;&#x91CC;&#x4F7F;&#x7528;&#x4E86;&#x975E;ARC&#x4E0B;&#x7684;&#x5BF9;&#x8C61;&#x5F15;&#x7528;&#x3001;&#x91CA;&#x653E;&#x7B49;&#x76F8;&#x5173;&#x64CD;&#x4F5C;&#xFF08;retain&#x3001;release&#x7B49;&#xFF09;&#x3002;</p>
+<p>&#x89E3;&#x51B3;&#xFF1A;&#x5BF9;&#x6307;&#x5B9A;&#x6E90;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x975E;ARC&#x7684;&#x7F16;&#x8BD1;&#x6807;&#x5FD7; <code>-fno-objc-arc</code>&#x3002;</p>
+<h3 id="2-&#x9884;&#x7F16;&#x8BD1;&#x5934;&#x6587;&#x4EF6;pch"><a href="#2-&#x9884;&#x7F16;&#x8BD1;&#x5934;&#x6587;&#x4EF6;-pch" class="headerlink" title="2. &#x9884;&#x7F16;&#x8BD1;&#x5934;&#x6587;&#x4EF6;.pch"></a>2. &#x9884;&#x7F16;&#x8BD1;&#x5934;&#x6587;&#x4EF6;.pch</h3><p>&#x73B0;&#x8C61;&#xFF1A;</p>
+<blockquote>
+<p>XXX/Foundation.framework/Headers/NSObjCRuntime.h:492:1: Expected identifier or &#x2018;(&#x2018;</p>
+<p>XXX/Foundation.framework/Headers/NSObjCRuntime.h:494:9: Unknown type name &#x2018;NSString&#x2019;</p>
+<p>XXX/Foundation.framework/Headers/NSObjCRuntime.h:503:50: Declaration of &#x2018;Protocol&#x2019; must be imported from module &#x2018;ObjectiveC.runtime&#x2019; before it is required</p>
+<p>/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.2.sdk/usr/include/objc/module.map:8:10: Module &#x2018;ObjectiveC.NSObject&#x2019; requires feature &#x2018;objc&#x2019;</p>
+<p>XXX/UIKit.framework/Headers/UIAccelerometer.h:8:9: Could not build module &#x2018;Foundation&#x2019;</p>
+<p>/Users/samingzhong/sunteng/&#x9879;&#x76EE;-s/le173_zx/Le173/Le173.pch:21:9: Could not build module &#x2018;UIKit&#x2019;</p>
+</blockquote>
+<p>&#x5206;&#x6790;&#xFF1A;&#x9884;&#x7F16;&#x8BD1;&#x5934;&#x6587;&#x4EF6;&#x7F16;&#x5199;&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x89E3;&#x51B3;&#xFF1A;</p>
+<h3 id="3&#x7B26;&#x53F7;&#x91CD;&#x590D;"><a href="#3-&#x7B26;&#x53F7;&#x91CD;&#x590D;" class="headerlink" title="3.&#x7B26;&#x53F7;&#x91CD;&#x590D;"></a>3.&#x7B26;&#x53F7;&#x91CD;&#x590D;</h3><p>&#x73B0;&#x8C61;&#xFF1A;</p>
+<blockquote>
+<p>duplicate symbol _OBJC<em>CLASS</em>$_HttpRequest in:</p>
+<p>&#x200B;    /Users/samingzhong/sunteng/&#x9879;&#x76EE;-s/le173_zx/AdViewSDK-3.4.1/AdNetworks/Waps/lib/apilib.a(HttpRequest.o)</p>
+<p>&#x200B;    /Users/samingzhong/sunteng/&#x9879;&#x76EE;-s/le173_zx/AdViewSDK-3.4.1/AdNetworks/Adwo/lib/iflyMSC.framework/iflyMSC(HttpRequest.o)</p>
+<p>duplicate symbol _OBJC<em>METACLASS</em>$_HttpRequest in:</p>
+<p>&#x200B;    /Users/samingzhong/sunteng/&#x9879;&#x76EE;-s/le173_zx/AdViewSDK-3.4.1/AdNetworks/Waps/lib/apilib.a(HttpRequest.o)</p>
+<p>&#x200B;    /Users/samingzhong/sunteng/&#x9879;&#x76EE;-s/le173_zx/AdViewSDK-3.4.1/AdNetworks/Adwo/lib/iflyMSC.framework/iflyMSC(HttpRequest.o)</p>
+<p>ld: 2 duplicate symbols for architecture arm64</p>
+</blockquote>
+<p>&#x89E3;&#x51B3;&#xFF1A;</p>
+<ol>
+<li>&#x5220;&#x9664;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x9759;&#x6001;&#x5E93;&#x3002;&#xFF08;&#x6B64;&#x6848;&#x4F8B;&#x53EF;&#x4EE5;&#x5220;&#x6389;apilib.a&#xFF09;</li>
+<li>&#x5254;&#x9664;&#x4E00;&#x4EFD;&#x91CD;&#x590D;&#x7B26;&#x53F7;&#x7684;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x3002;&#xFF08;&#x6B64;&#x6848;&#x4F8B;&#x53EF;&#x4EE5;&#x5254;&#x9664;HttpRequest.o&#xFF09;</li>
+</ol>
+<h4 id="31-&#x5254;&#x9664;&#x9759;&#x6001;&#x5E93;&#x7684;&#x67D0;&#x4E9B;&#x76EE;&#x6807;&#x6587;&#x4EF6;"><a href="#3-1-&#x5254;&#x9664;&#x9759;&#x6001;&#x5E93;&#x7684;&#x67D0;&#x4E9B;&#x76EE;&#x6807;&#x6587;&#x4EF6;" class="headerlink" title="3.1 &#x5254;&#x9664;&#x9759;&#x6001;&#x5E93;&#x7684;&#x67D0;&#x4E9B;&#x76EE;&#x6807;&#x6587;&#x4EF6;"></a>3.1 &#x5254;&#x9664;&#x9759;&#x6001;&#x5E93;&#x7684;&#x67D0;&#x4E9B;&#x76EE;&#x6807;&#x6587;&#x4EF6;</h4><h5 id="&#x7B80;&#x8981;"><a href="#&#x7B80;&#x8981;" class="headerlink" title="&#x7B80;&#x8981;"></a>&#x7B80;&#x8981;</h5><ol>
+<li><blockquote>
+<p> lipo -thin arm64 libA_universal.a -o lib_A_arm64.a</p>
+<p> lipo -thin armv7 libA_universal.a -o lib_A_armv7.a</p>
+</blockquote>
+</li>
+<li><p>&#x7528; <code>lipo</code> &#x5C06;&#x901A;&#x7528;&#x67B6;&#x6784;&#x7684;&#x9759;&#x6001;&#x5E93;&#x5206;&#x79BB;&#x51FA;&#x5404;&#x4E2A;&#x67B6;&#x6784;&#x7684;&#x9759;&#x6001;&#x5E93;</p>
+</li>
+<li><p>&#x200B;</p>
+</li>
+</ol>
+<p>&#x9759;&#x6001;&#x5E93;&#x6587;&#x4EF6;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x538B;&#x7F29;&#x5305;&#xFF0C;&#x672C;&#x8D28;&#x4E0A;&#x6765;&#x8BF4;&#x662F;&#x6240;&#x6709;&#x7684;&#x76EE;&#x6807;&#x6587;&#x4EF6;(.o&#x540E;&#x7F00;)&#x6253;&#x5305;&#x540E;&#x7684;&#x96C6;&#x5408;&#x6587;&#x4EF6;&#x3002;</p>
+<p>iOS&#x5F00;&#x53D1;&#x4E2D;&#xFF0C;&#x901A;&#x5E38;&#x4F1A;&#x6D89;&#x53CA;&#x5230;&#x51E0;&#x4E2A;&#x673A;&#x5668;&#x67B6;&#x6784;&#xFF08;&#x5982;armv64&#x5BF9;&#x5E94;iPhone5s/iPad Air, iPad mini2&#x4EE5;&#x540E;&#x7684;&#x673A;&#x5668;, &#x5173;&#x4E8E;iOS&#x67B6;&#x6784;&#x76F8;&#x5173;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x8BE6;&#x60C5;&#x53EF;&#x4EE5;&#x53C2;&#x8003;<a href="https://samingzhong.github.io/2016/12/09/%E5%85%B3%E4%BA%8E%E4%BA%8C%E8%BF%9B%E5%88%B6%E3%80%81%E5%BA%93%E7%B1%BB%E5%9E%8B%E6%96%87%E4%BB%B6/#11-&#x4EC0;&#x4E48;&#x662F;&#x67B6;&#x6784;">&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;</a>&#xFF09;&#xFF0C;&#x800C;Xcode&#x5728;&#x4E3A;&#x4E00;&#x4E2A;Generic iOS Device&#xFF08;&#x901A;&#x7528;&#x7684;iOS&#x8BBE;&#x5907;&#xFF0C;&#x5982;iPhone&#xFF0C;iPad&#x6216;&#x8005;iPod&#x8BBE;&#x5907;&#xFF0C;&#x4E14;&#x5305;&#x62EC;&#x5B83;&#x4EEC;&#x7684;&#x65B0;&#x6B3E;&#x3001;&#x65E7;&#x6B3E;&#xFF09;&#x7F16;&#x8BD1;&#x4E00;&#x4E2A;&#x5E94;&#x7528;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x901A;&#x5E38;&#x4F1A;&#x7ECF;&#x8FC7;&#x8BB8;&#x591A;&#x590D;&#x6742;&#x7684;&#x6B65;&#x9AA4;&#xFF0C;&#x8BE6;&#x7EC6;&#x53EF;&#x67E5;&#x770B;<a href="https://objccn.io/issue-6-1/" target="_blank" rel="external">&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;</a>&#x3002;</p>
+<p>Linux&#x4E0A;&#x5F52;&#x6863;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x4E3A;&#x9759;&#x6001;&#x5E93;(&#x521B;&#x5EFA;&#x9759;&#x6001;&#x5E93;)&#x7528;&#x7684;&#x662F; <code>ar</code> &#x547D;&#x4EE4;&#xFF0C;&#x89E3;&#x5F52;&#x6863;&#x4E5F;&#x662F;&#x8FD9;&#x4E2A;&#x3002;</p>
+<p>macOS&#x4E0A;&#x76F4;&#x63A5;&#x7528; <code>libtool</code> &#x547D;&#x4EE4;&#x521B;&#x5EFA;&#x9759;&#x6001;&#x5E93;&#xFF08;&#x6216;&#x8005;&#x52A8;&#x6001;&#x5E93;&#xFF09;&#x3001;&#x6216;&#x8005;&#x5408;&#x5E76;&#x591A;&#x4E2A;&#x67B6;&#x6784;&#x7684;&#x9759;&#x6001;&#x5E93;&#xFF08;lib_armv7.a + lib_arm64.a -&gt; lib_universal.a &#xFF09;&#xFF1B;&#x591A;&#x67B6;&#x6784;&#x62C6;&#x5206;/&#x5206;&#x79BB;&#x5355;&#x67B6;&#x6784;&#x4E5F;&#x662F;&#x7528; <code>libtool</code> &#xFF0C;&#x4F46;&#x5355;&#x4E2A;&#x67B6;&#x6784;&#x7684;&#x9759;&#x6001;&#x5E93;&#x7684;&#x89E3;&#x5F52;&#x6863;&#xFF08;<em>.a -&gt; </em>.o&#xFF09;&#x3002;</p>
+<h3 id="4&#x7B26;&#x53F7;&#x627E;&#x4E0D;&#x5230;"><a href="#4-&#x7B26;&#x53F7;&#x627E;&#x4E0D;&#x5230;" class="headerlink" title="4.&#x7B26;&#x53F7;&#x627E;&#x4E0D;&#x5230;"></a>4.&#x7B26;&#x53F7;&#x627E;&#x4E0D;&#x5230;</h3><p>&#x73B0;&#x8C61;&#xFF1A;</p>
+<blockquote>
+<p>  &#x201C;_OBJC<em>CLASS</em>$_EADBannerView&#x201D;, referenced from:</p>
+<p>  &#x200B;      objc-class-ref in AdViewAdapterYJF.o</p>
+<p>  &#x201C;_OBJC<em>CLASS</em>$_EADSplashAd&#x201D;, referenced from:</p>
+<p>  &#x200B;      objc-class-ref in AdSplashAdapterYJF.o</p>
+<p>  &#x201C;_OBJC<em>CLASS</em>$_EADInterstitialAd&#x201D;, referenced from:</p>
+<p>  &#x200B;      objc-class-ref in AdInstlAdapterYJF.o</p>
+<p>  &#x201C;_OBJC<em>CLASS</em>$_EADConfig&#x201D;, referenced from:</p>
+<p>  &#x200B;      objc-class-ref in AdInstlAdapterYJF.o</p>
+<p>  &#x200B;      objc-class-ref in AdSplashAdapterYJF.o</p>
+<p>  &#x200B;      objc-class-ref in AdViewAdapterYJF.o</p>
+<p>  ld: symbol(s) not found for architecture arm64</p>
+<p>  clang: error: linker command failed with exit code 1 (use -v to see invocation)</p>
+</blockquote>
+<p><strong>ld: symbol(s) not found for architecture arm64</strong></p>
+<h3 id="5xcode-signing-error"><a href="#5-Xcode-Signing-Error" class="headerlink" title="5.Xcode Signing Error!!"></a>5.Xcode Signing Error!!</h3><blockquote>
+<p>&#x5982;&#x679C;&#x4E0D;&#x60F3;&#x592A;&#x7EA0;&#x7ED3;&#xFF0C;&#x8FD8;&#x662F;&#x76F4;&#x63A5;&#x52FE;&#x9009; <code>Automatically manage signing</code> &#x597D;&#x4E9B;&#x3002;</p>
+</blockquote>
+<h4 id="xcode-signing&#x9009;&#x9879;"><a href="#Xcode-Signing&#x9009;&#x9879;" class="headerlink" title="Xcode Signing&#x9009;&#x9879;"></a>Xcode Signing&#x9009;&#x9879;</h4><p>Xcode&#x8981;&#x6C42;&#x771F;&#x673A;&#x6D4B;&#x8BD5;&#x3001;&#x6253;&#x5305;&#x53D1;&#x5E03;&#x90FD;&#x5FC5;&#x987B;&#x8981;&#x5BF9;&#x5E94;&#x7528;&#x8FDB;&#x884C;&#x7B7E;&#x540D;&#xFF0C;&#x4EE5;&#x9632;&#x5E94;&#x7528;&#x88AB;&#x4EFB;&#x610F;&#x8BBE;&#x5907;&#x5B89;&#x88C5;&#x3002;</p>
+<p>Xcode Signing&#x9009;&#x9879;&#x91CC;&#xFF0C;&#x4E00;&#x822C;&#x662F;&#x8FD9;&#x6837;&#x7684;&#xFF1A;</p>
+<blockquote>
+<p>&#xFF08;1&#xFF09;Provisioning Profile&#xFF1A;</p>
+<p>&#xFF08;2&#xFF09;Team&#xFF1A;</p>
+<p>&#xFF08;3&#xFF09;Signing Certificate&#xFF1A;</p>
+</blockquote>
+<p>&#xFF08;1&#xFF09;&#x8BA9;&#x4F60;&#x9009;&#x62E9;&#x7B7E;&#x540D;&#x76F8;&#x5173;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x901A;&#x5E38;&#x6765;&#x8BF4;&#xFF0C;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x914D;&#x7F6E;&#x6B63;&#x786E;&#xFF0C;&#x5C31;&#x6CA1;&#x4EC0;&#x4E48;&#x95EE;&#x9898;&#x4E86;&#x3002;</p>
+<p>&#x200B;    &#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x4E3B;&#x8981;&#x662F;&#x5BF9; <code>&#x5E94;&#x7528;&#x552F;&#x4E00;&#x6807;&#x8BC6;</code>&#x3001;<code>&#x8BC1;&#x4E66;</code>&#x3001;<code>&#x5141;&#x8BB8;&#x5B89;&#x88C5;&#x7684;&#x8BBE;&#x5907;&#x7F16;&#x7801;&#x5217;&#x8868;</code> &#x505A;&#x4E00;&#x4E2A;&#x7ED1;&#x5B9A;&#xFF0C;&#x5982;&#xFF1A;</p>
+<p><img src="../assert/images/2017/provisioning-profile.png" alt="provisioning-profile"></p>
+<p>&#x8FD9;&#x7C7B; <code>*.mobileprovision</code> &#x7684;&#x6587;&#x4EF6;&#x4F4D;&#x4E8E; <code>~/Library/MobileDevice/Provisioning Profiles</code>&#xFF0C;&#x5728;Apple Develop&#x7F51;&#x7AD9;&#x540E;&#x53F0;&#x914D;&#x7F6E;&#x597D;&#x8FD9;&#x4E2A;Provision Profile&#x540E;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;:</p>
+<ul>
+<li>&#x624B;&#x52A8;&#x4E0B;&#x8F7D;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x76EE;&#x5F55; -<code>~/Library/MobileDevice/Provisioning Profiles</code> &#x3002;Xcode&#x5C31;&#x80FD;&#x81EA;&#x52A8;&#x53D1;&#x73B0;&#x8BE5;&#x6587;&#x4EF6;&#x3002;&#x6216;&#x8005;&#x76F4;&#x63A5;&#x70B9;&#x51FB;import profile&#x2026; &#x627E;&#x5230;&#x76EE;&#x6807;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5373;&#x53EF;&#x5BFC;&#x5165;&#x4F7F;&#x7528;&#x3002;</li>
+<li>&#x5230;preference - Apple IDs&#x91CC;&#x8BA9;Xcode&#x81EA;&#x5DF1;&#x4E0B;&#x8F7D;&#xFF08;&#x5F53;&#x7136;&#xFF0C;&#x524D;&#x63D0;&#x4E5F;&#x662F;&#x8981;&#x63D0;&#x524D;&#x914D;&#x7F6E;&#x597D;&#x8FD9;&#x4E2A;provision profile&#x6587;&#x4EF6;&#xFF09;&#x3002;</li>
+</ul>
+<h4 id="&#x914D;&#x7F6E;&#x4E00;&#x4E2A;provision-profile&#x6587;&#x4EF6;"><a href="#&#x914D;&#x7F6E;&#x4E00;&#x4E2A;provision-profile&#x6587;&#x4EF6;" class="headerlink" title="&#x914D;&#x7F6E;&#x4E00;&#x4E2A;provision profile&#x6587;&#x4EF6;"></a>&#x914D;&#x7F6E;&#x4E00;&#x4E2A;provision profile&#x6587;&#x4EF6;</h4><p>&#x53EF;&#x4EE5;&#x7B80;&#x5355;&#x7C97;&#x66B4;&#x7684;&#x7406;&#x89E3;&#x4E3A;&#xFF1A;</p>
+<blockquote>
+<p><code>provision profile</code>  = <code>(1)Certificates</code> + <code>(2)App ID</code> + <code>(3)Type</code> + <code>(4)Devices</code></p>
+</blockquote>
+<ol>
+<li>&#x8BC1;&#x4E66;&#x3002;&#x4E0D;&#x540C;&#x7528;&#x9014;&#x7684;provision profile&#x7528;&#x4E0D;&#x540C;&#x7684;&#x8BC1;&#x4E66;&#x3002;<ol>
+<li>&#x6D4B;&#x8BD5;&#xFF0C;&#x7528;&#x5F00;&#x53D1;&#x8BC1;&#x4E66;&#x3002;</li>
+<li>&#x4E0A;&#x7EBF;&#x53D1;&#x5E03;&#xFF0C;&#x7528;&#x53D1;&#x5E03;&#x8BC1;&#x4E66;&#x3002;</li>
+</ol>
+</li>
+<li>&#x9700;&#x8981;&#x7ED1;&#x5B9A;&#x4E00;&#x4E2A;AppID&#x3002;</li>
+<li>&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7528;&#x9014;/&#x7C7B;&#x578B;&#x3002;&#x5F00;&#x53D1; or &#x53D1;&#x5E03;&#x3002;</li>
+<li>&#x652F;&#x6301;&#x7684;&#x6D4B;&#x8BD5;&#x8BBE;&#x5907;&#x5217;&#x8868;&#x3002;&#x5982;&#x679C;&#x4F60;&#x9700;&#x8981;&#x6253;&#x5305;&#x51FA;&#x6765;&#xFF0C;&#x7ED9;&#x6D4B;&#x8BD5;&#x4EBA;&#x5458;&#x6D4B;&#x8BD5;&#x4F7F;&#x7528;&#xFF0C;&#x90A3;&#x4E48;&#x8BF7;&#x6CE8;&#x610F;&#x786E;&#x4FDD;&#x6D4B;&#x8BD5;&#x7684;&#x8BBE;&#x5907;&#x5728;&#x5217;&#x8868;&#x91CC;&#xFF0C;&#x5F53;&#x7136;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x5728;&#x7684;&#x8BDD;&#xFF0C;&#x66F4;&#x65B0;&#x4E00;&#x4E0B;&#x5217;&#x8868;&#xFF0C;&#x91CD;&#x65B0;&#x751F;&#x6210;provision profile&#x6587;&#x4EF6;&#xFF0C;&#x7136;&#x540E;Xcode&#x91CD;&#x65B0;&#x4E0B;&#x8F7D;&#x4E00;&#x4E0B;&#x5373;&#x53EF;&#x3002;</li>
+</ol>
+<p>&#x8FD9;&#x91CC;&#x8FB9;&#xFF0C;&#x6700;&#x91CD;&#x8981;&#x7684;&#x53EF;&#x80FD;&#x662F;&#x8BC1;&#x4E66;&#x4E86;&#x3002;&#x786E;&#x5B9A;&#x4E00;&#x4E0B;&#x51E0;&#x9879;&#xFF0C;&#x4F60;&#x5C31;&#x53EF;&#x4EE5;&#x83B7;&#x5F97;&#x4E00;&#x4E2A;&#x6307;&#x5B9A;&#x529F;&#x80FD;&#x7684;&#x8BC1;&#x4E66;&#xFF1A;</p>
+<ol>
+<li>&#x54EA;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x8BC1;&#x4E66;&#x3002;<ol>
+<li>&#x5F00;&#x53D1;<ol>
+<li>&#x7528;&#x4E8E;&#x7B7E;&#x540D;&#x5F00;&#x53D1;&#x7248;&#x672C;&#x7684;&#x5E94;&#x7528;&#x3002;</li>
+<li>&#x7528;&#x4E8E;&#x82F9;&#x679C;&#x63A8;&#x9001;&#x6D88;&#x606F;&#x3002;</li>
+</ol>
+</li>
+<li>&#x53D1;&#x5E03;<ol>
+<li>&#x53D1;&#x5E03;&#x5230;App Store&#x6216;&#x8005;Ad Hoc&#x3002;</li>
+<li>&#x7528;&#x4E8E;&#x82F9;&#x679C;&#x63A8;&#x9001;&#x6D88;&#x606F;&#x3002;</li>
+<li>&#x94B1;&#x5305;&#x76F8;&#x5173;&#x3002;</li>
+<li>Apple Pay&#x3002;</li>
+<li>&#x5546;&#x54C1;&#x6807;&#x8BC6;&#x3002;</li>
+<li>&#x5176;&#x4ED6;&#x3002;</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>&#x521B;&#x5EFA;&#x8BC1;&#x4E66;&#x7B7E;&#x540D;&#x8BF7;&#x6C42;&#x6587;&#x4EF6;-CSR&#x3002;</li>
+<li>&#x4E0A;&#x4F20;CSR&#x6587;&#x4EF6;&#xFF0C;&#x83B7;&#x5F97;&#x8BC1;&#x4E66;&#xFF08;&#x5185;&#x9644;&#x5E26;&#x79C1;&#x94A5;&#xFF09;&#x3002;</li>
+</ol>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/能工巧匠集/">能工巧匠集</a>►<a class="article-category-link" href="/categories/能工巧匠集/iOS开发/">iOS开发</a>
+</div>
+
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="https://samingzhong.github.io/2016/10/12/开发技术积累日志/" data-title="开发技术积累日志 | 晓明童鞋的窝" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2016/12/05/Foundation/Foundation框架介绍/" title="Foundation框架介绍">
+  <strong>上一篇：</strong><br/>
+  <span>
+  Foundation框架介绍</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2016/08/30/UIKit/关于UIView的translatesAutoresizingMaskIntoConstraints 属性/"  title="关于UIView的translatesAutoresizingMaskIntoConstraints属性">
+ <strong>下一篇：</strong><br/> 
+ <span>关于UIView的translatesAutoresizingMaskIntoConstraints属性
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#开发技术积累日志"><span class="toc-number">1.</span> <span class="toc-text">开发技术积累日志</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#todo-list"><span class="toc-number">1.1.</span> <span class="toc-text">TODO LIST</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-汇编相关"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 汇编相关</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-jspatch使用"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. JSPatch使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-一些关联"><span class="toc-number">1.1.3.</span> <span class="toc-text">3. 一些关联</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-应用本地化"><span class="toc-number">1.1.4.</span> <span class="toc-text">4. 应用本地化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-作图相关技能"><span class="toc-number">1.1.5.</span> <span class="toc-text">5. 作图相关技能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-jspatch安全设置"><span class="toc-number">1.1.6.</span> <span class="toc-text">6. JSPatch安全设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7编写一些适合多数应用使用的公共组件内容包括但不仅限于"><span class="toc-number">1.1.7.</span> <span class="toc-text">7.编写一些适合多数应用使用的公共组件，内容包括但不仅限于：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ideas"><span class="toc-number">1.2.</span> <span class="toc-text">IDEAS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-如何进行广告刷量"><span class="toc-number">1.2.1.</span> <span class="toc-text">1. 如何进行广告刷量？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2关于广告行业中dsp角色的一些思考"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.关于广告行业中DSP角色的一些思考</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-客户端如何进行本地rsa加密使用公钥加密如支付宝app"><span class="toc-number">1.2.3.</span> <span class="toc-text">3. 客户端如何进行本地RSA加密（使用公钥加密，如支付宝app）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4写一个番茄工作法app"><span class="toc-number">1.2.4.</span> <span class="toc-text">4.写一个“番茄工作法”App</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5写一个-v2ex网站客户端"><span class="toc-number">1.2.5.</span> <span class="toc-text">5.写一个 V2EX网站客户端</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#tech-log"><span class="toc-number">1.3.</span> <span class="toc-text">TECH LOG</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1方法调用的记录"><span class="toc-number">1.3.1.</span> <span class="toc-text">1.方法调用的记录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2could-not-build-module-uikit"><span class="toc-number">1.3.2.</span> <span class="toc-text">2.Could not build module “UIKit”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-日志的高级使用"><span class="toc-number">1.3.3.</span> <span class="toc-text">3. 日志的高级使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4几个重要协议nsobject-nscopy-nsmutablecopy"><span class="toc-number">1.3.4.</span> <span class="toc-text">4.几个重要协议：NSObject, NSCopy, NSMutableCopy</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5关于数据写进文件"><span class="toc-number">1.3.5.</span> <span class="toc-text">5.关于数据写进文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6由-voidsetvalueidvalue-forkeynsstring-方法想到的"><span class="toc-number">1.3.6.</span> <span class="toc-text">6.由 - (void)setValue:(id)value forKey:(NSString *) 方法想到的</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7nsoperation-vs-grand-central-dispatch"><span class="toc-number">1.3.7.</span> <span class="toc-text">7.NSOperation vs Grand Central Dispatch</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#tools"><span class="toc-number">1.4.</span> <span class="toc-text">TOOLS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1hosts文件修改"><span class="toc-number">1.4.1.</span> <span class="toc-text">1.Hosts文件修改</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2ios使用charles抓包并篡改返回数据"><span class="toc-number">1.4.2.</span> <span class="toc-text">2.iOS使用Charles抓包并篡改返回数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3一些备忘"><span class="toc-number">1.4.3.</span> <span class="toc-text">3.一些备忘</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4coredata学习"><span class="toc-number">1.4.4.</span> <span class="toc-text">4.CoreData学习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5xcode-server"><span class="toc-number">1.4.5.</span> <span class="toc-text">5.Xcode Server</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#error-log"><span class="toc-number">1.5.</span> <span class="toc-text">ERROR LOG</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1arc相关"><span class="toc-number">1.5.1.</span> <span class="toc-text">1.ARC相关</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-预编译头文件pch"><span class="toc-number">1.5.2.</span> <span class="toc-text">2. 预编译头文件.pch</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3符号重复"><span class="toc-number">1.5.3.</span> <span class="toc-text">3.符号重复</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#31-剔除静态库的某些目标文件"><span class="toc-number">1.5.3.1.</span> <span class="toc-text">3.1 剔除静态库的某些目标文件</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#简要"><span class="toc-number">1.5.3.1.1.</span> <span class="toc-text">简要</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4符号找不到"><span class="toc-number">1.5.4.</span> <span class="toc-text">4.符号找不到</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5xcode-signing-error"><span class="toc-number">1.5.5.</span> <span class="toc-text">5.Xcode Signing Error!!</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#xcode-signing选项"><span class="toc-number">1.5.5.1.</span> <span class="toc-text">Xcode Signing选项</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#配置一个provision-profile文件"><span class="toc-number">1.5.5.2.</span> <span class="toc-text">配置一个provision profile文件</span></a></li></ol></li></ol></li></ol></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Foundation框架/" title="Foundation框架">Foundation框架<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/能工巧匠集/iOS开发/" title="iOS开发">iOS开发<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/读书笔记/《iOS7-Programing-Cookbook》/" title="《iOS7 Programing Cookbook》">《iOS7 Programing Cookbook》<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/面试-招聘/《招聘一个靠谱的iOS》/" title="《招聘一个靠谱的iOS》">《招聘一个靠谱的iOS》<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/能工巧匠集/工欲善其事必先利其器/" title="工欲善其事必先利其器">工欲善其事必先利其器<sup>3</sup></a></li>
+		  
+		
+		  
+		
+		  
+			<li><a href="/categories/能工巧匠集/" title="能工巧匠集">能工巧匠集<sup>9</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/读书笔记/" title="读书笔记">读书笔记<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/面试-招聘/" title="面试/招聘">面试/招聘<sup>2</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2017 
+		
+		<a href="/about" target="_blank" title="晓明童鞋">晓明童鞋</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>

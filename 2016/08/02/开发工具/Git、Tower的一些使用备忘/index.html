@@ -1,17 +1,22 @@
-<!DOCTYPE html>
-<html>
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
 <head>
-  <meta name="google-site-verification" content="qeWBy0QV746gNuVXr3WdHp3o9sqxW7QTVEiBDG336IU" />
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   
-  <title>关于Git与Tower的一些使用备忘 | 小明童鞋的窝</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="&amp;#x672C;&amp;#x5730;&amp;#x56DE;&amp;#x6EDA;&amp;#x5230;&amp;#x67D0;&amp;#x4E00;&amp;#x4E2A;&amp;#x7248;&amp;#x672C;&amp;#x3002;
+    <title>关于Git与Tower的一些使用备忘 | 晓明童鞋的窝</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="晓明童鞋">
+    
+
+    
+    <meta name="description" content="&amp;#x672C;&amp;#x5730;&amp;#x56DE;&amp;#x6EDA;&amp;#x5230;&amp;#x67D0;&amp;#x4E00;&amp;#x4E2A;&amp;#x7248;&amp;#x672C;&amp;#x3002;
 &amp;#x5173;&amp;#x4E8E;&amp;#x6587;&amp;#x4EF6;&amp;#x5FFD;&amp;#x7565;&amp;#xFF0C;&amp;#x6839;&amp;#x636E;&amp;#x4F7F;&amp;#x7528;&amp;#x60C5;&amp;#x5883;&amp;#x4F">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于Git与Tower的一些使用备忘">
 <meta property="og:url" content="https://samingzhong.github.io/2016/08/02/开发工具/Git、Tower的一些使用备忘/index.html">
-<meta property="og:site_name" content="小明童鞋的窝">
+<meta property="og:site_name" content="晓明童鞋的窝">
 <meta property="og:description" content="&amp;#x672C;&amp;#x5730;&amp;#x56DE;&amp;#x6EDA;&amp;#x5230;&amp;#x67D0;&amp;#x4E00;&amp;#x4E2A;&amp;#x7248;&amp;#x672C;&amp;#x3002;
 &amp;#x5173;&amp;#x4E8E;&amp;#x6587;&amp;#x4EF6;&amp;#x5FFD;&amp;#x7565;&amp;#xFF0C;&amp;#x6839;&amp;#x636E;&amp;#x4F7F;&amp;#x7528;&amp;#x60C5;&amp;#x5883;&amp;#x4F">
 <meta property="og:image" content="https://samingzhong.github.io/assert/images/2016/messCommits.png">
@@ -26,85 +31,75 @@
 <meta name="twitter:description" content="&amp;#x672C;&amp;#x5730;&amp;#x56DE;&amp;#x6EDA;&amp;#x5230;&amp;#x67D0;&amp;#x4E00;&amp;#x4E2A;&amp;#x7248;&amp;#x672C;&amp;#x3002;
 &amp;#x5173;&amp;#x4E8E;&amp;#x6587;&amp;#x4EF6;&amp;#x5FFD;&amp;#x7565;&amp;#xFF0C;&amp;#x6839;&amp;#x636E;&amp;#x4F7F;&amp;#x7528;&amp;#x60C5;&amp;#x5883;&amp;#x4F">
 <meta name="twitter:image" content="https://samingzhong.github.io/assert/images/2016/messCommits.png">
-  
-    <link rel="alternate" href="/atom.xml" title="小明童鞋的窝" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="favicon.ico">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  
 
+    
+    <link rel="alternative" href="/atom.xml" title="晓明童鞋的窝" type="application/atom+xml">
+    
+    
+    
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">小明童鞋的窝</a>
-      </h1>
+  <body>
+    <header>
       
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">爱生活，爱编程。</a>
-        </h2>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://samingzhong.github.io"></form>
-      </div>
-    </div>
-  </div>
+<div>
+		
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="晓明童鞋的窝">晓明童鞋的窝</a></h1>
+				<h2 class="blog-motto">勿忘初心，方得始终。</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">首页</a></li>
+					
+						<li><a href="/archives">归档</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:samingzhong.github.io">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/08/02/开发工具/Git、Tower的一些使用备忘/" title="关于Git与Tower的一些使用备忘" itemprop="url">关于Git与Tower的一些使用备忘</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="晓明童鞋" target="_blank" itemprop="author">晓明童鞋</a>
+		
+  <p class="article-time">
+    <time datetime="2016-08-02T08:17:15.000Z" itemprop="datePublished"> 发表于 2016-08-02</time>
+    
+  </p>
 </header>
-      <div class="outer">
-        <section id="main"><article id="post-开发工具/Git、Tower的一些使用备忘" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/08/02/开发工具/Git、Tower的一些使用备忘/" class="article-date">
-  <time datetime="2016-08-02T08:17:15.000Z" itemprop="datePublished">2016-08-02</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/能工巧匠集/">能工巧匠集</a>►<a class="article-category-link" href="/categories/能工巧匠集/工欲善其事必先利其器/">工欲善其事必先利其器</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      关于Git与Tower的一些使用备忘
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <!-- toc -->
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#本地回滚到某一个版本"><span class="toc-number">1.</span> <span class="toc-text">本地回滚到某一个版本。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于文件忽略根据使用情境会有所不同"><span class="toc-number">2.</span> <span class="toc-text">关于文件忽略，根据使用情境会有所不同。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#纠正上一次的提交日志"><span class="toc-number">3.</span> <span class="toc-text">纠正上一次的提交日志。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#合并多个commit"><span class="toc-number">4.</span> <span class="toc-text">合并多个commit。</span></a></li></ol>
+		
+		</div>
+		
+		<!-- toc -->
 <ul>
 <li><a href="#&#x672C;&#x5730;&#x56DE;&#x6EDA;&#x5230;&#x67D0;&#x4E00;&#x4E2A;&#x7248;&#x672C;">&#x672C;&#x5730;&#x56DE;&#x6EDA;&#x5230;&#x67D0;&#x4E00;&#x4E2A;&#x7248;&#x672C;&#x3002;</a></li>
 <li><a href="#&#x5173;&#x4E8E;&#x6587;&#x4EF6;&#x5FFD;&#x7565;&#x6839;&#x636E;&#x4F7F;&#x7528;&#x60C5;&#x5883;&#x4F1A;&#x6709;&#x6240;&#x4E0D;&#x540C;">&#x5173;&#x4E8E;&#x6587;&#x4EF6;&#x5FFD;&#x7565;&#xFF0C;&#x6839;&#x636E;&#x4F7F;&#x7528;&#x60C5;&#x5883;&#x4F1A;&#x6709;&#x6240;&#x4E0D;&#x540C;&#x3002;</a></li>
@@ -155,143 +150,319 @@
 <p>&#x81F3;&#x6B64;&#xFF0C;&#x81EA;&#x5B9A;&#x4E49;commit&#x7684;&#x5408;&#x5E76;&#x7ED3;&#x675F;&#x3002;</p>
 </li>
 </ul>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
 
-      
-    </div>
-    <footer class="article-footer">
- 
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tower/">Tower</a></li></ul>
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/能工巧匠集/">能工巧匠集</a>►<a class="article-category-link" href="/categories/能工巧匠集/工欲善其事必先利其器/">工欲善其事必先利其器</a>
+</div>
 
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2016/08/09/开发工具/开发工具备忘/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          开发工具备忘
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2016/07/30/iOS7 Programming Cookbook/《iOS7 Programming Cookbook》第四章TableView－读书笔记/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">《iOS7 Programing Cookbook》第4章 构造并使用tableview－笔记</div>
-    </a>
-  
-</nav>
 
+  <div class="article-tags">
   
-</article>
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">分类</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Foundation框架/">Foundation框架</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/能工巧匠集/">能工巧匠集</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/能工巧匠集/iOS开发/">iOS开发</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/能工巧匠集/工欲善其事必先利其器/">工欲善其事必先利其器</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/读书笔记/">读书笔记</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/读书笔记/《iOS7-Programing-Cookbook》/">《iOS7 Programing Cookbook》</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试-招聘/">面试/招聘</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/面试-招聘/《招聘一个靠谱的iOS》/">《招聘一个靠谱的iOS》</a><span class="category-list-count">2</span></li></ul></li></ul>
-    </div>
+  <span></span> <a href="/tags/Git/">Git</a><a href="/tags/Tower/">Tower</a>
   </div>
 
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2016/12/14/如何不升级Xcode支持真机测试/">如何不升级Xcode支持对最新iOS的真机测试</a>
-          </li>
-        
-          <li>
-            <a href="/2016/12/09/关于二进制、库类型文件/">关于二进制、库类型文件架构相关信息</a>
-          </li>
-        
-          <li>
-            <a href="/2016/12/05/Foundation/Foundation框架介绍/">Foundation框架介绍</a>
-          </li>
-        
-          <li>
-            <a href="/2016/08/30/UIKit/关于UIView的translatesAutoresizingMaskIntoConstraints 属性/">关于UIView的translatesAutoresizingMaskIntoConstraints属性</a>
-          </li>
-        
-          <li>
-            <a href="/2016/08/16/招聘:应聘/《招聘一个靠谱的iOS》面试题参考答案（下）/">《招聘一个靠谱的 iOS》—参考答案（下）</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Auto-Layout/">Auto Layout</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Foundation/">Foundation</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NSCoding/">NSCoding</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NSCopying-NSMutableCopying/">NSCopying/NSMutableCopying</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Retain-Cycle/">Retain Cycle</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tower/">Tower</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Xcode/">Xcode</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/autoresizing-mask/">autoresizing mask</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS面试-招聘/">iOS面试/招聘</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/关于二进制/">关于二进制</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/库/">库</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发工具备忘/">开发工具备忘</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/文件架构/">文件架构</a><span class="tag-list-count">1</span></li></ul>
-    </div>
-  </div>
+</div>
 
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签云</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/Auto-Layout/" style="font-size: 10px;">Auto Layout</a> <a href="/tags/Foundation/" style="font-size: 10px;">Foundation</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/NSCoding/" style="font-size: 10px;">NSCoding</a> <a href="/tags/NSCopying-NSMutableCopying/" style="font-size: 10px;">NSCopying/NSMutableCopying</a> <a href="/tags/Retain-Cycle/" style="font-size: 10px;">Retain Cycle</a> <a href="/tags/Tower/" style="font-size: 10px;">Tower</a> <a href="/tags/Xcode/" style="font-size: 10px;">Xcode</a> <a href="/tags/autoresizing-mask/" style="font-size: 10px;">autoresizing mask</a> <a href="/tags/iOS面试-招聘/" style="font-size: 20px;">iOS面试/招聘</a> <a href="/tags/关于二进制/" style="font-size: 10px;">关于二进制</a> <a href="/tags/库/" style="font-size: 10px;">库</a> <a href="/tags/开发工具备忘/" style="font-size: 10px;">开发工具备忘</a> <a href="/tags/文件架构/" style="font-size: 10px;">文件架构</a>
-    </div>
-  </div>
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">2</span></li></ul>
-    </div>
-  </div>
+	<div class="article-share" id="share">
+	
+	  <div data-url="https://samingzhong.github.io/2016/08/02/开发工具/Git、Tower的一些使用备忘/" data-title="关于Git与Tower的一些使用备忘 | 晓明童鞋的窝" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
 
 
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2017 小明童鞋<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
 </footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2016/08/09/开发工具/开发工具备忘/" title="开发工具备忘">
+  <strong>上一篇：</strong><br/>
+  <span>
+  开发工具备忘</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2016/07/30/iOS7 Programming Cookbook/《iOS7 Programming Cookbook》第四章TableView－读书笔记/"  title="《iOS7 Programing Cookbook》第4章 构造并使用tableview－笔记">
+ <strong>下一篇：</strong><br/> 
+ <span>《iOS7 Programing Cookbook》第4章 构造并使用tableview－笔记
+</span>
+</a>
+</div>
+
 </nav>
-    
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
+	
 
 
-<script src="/js/script.js"></script>
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
 
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#本地回滚到某一个版本"><span class="toc-number">1.</span> <span class="toc-text">本地回滚到某一个版本。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于文件忽略根据使用情境会有所不同"><span class="toc-number">2.</span> <span class="toc-text">关于文件忽略，根据使用情境会有所不同。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#纠正上一次的提交日志"><span class="toc-number">3.</span> <span class="toc-text">纠正上一次的提交日志。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#合并多个commit"><span class="toc-number">4.</span> <span class="toc-text">合并多个commit。</span></a></li></ol>
+ 
   </div>
-</body>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Foundation框架/" title="Foundation框架">Foundation框架<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/能工巧匠集/iOS开发/" title="iOS开发">iOS开发<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/读书笔记/《iOS7-Programing-Cookbook》/" title="《iOS7 Programing Cookbook》">《iOS7 Programing Cookbook》<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/面试-招聘/《招聘一个靠谱的iOS》/" title="《招聘一个靠谱的iOS》">《招聘一个靠谱的iOS》<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/能工巧匠集/工欲善其事必先利其器/" title="工欲善其事必先利其器">工欲善其事必先利其器<sup>3</sup></a></li>
+		  
+		
+		  
+		
+		  
+			<li><a href="/categories/能工巧匠集/" title="能工巧匠集">能工巧匠集<sup>9</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/读书笔记/" title="读书笔记">读书笔记<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/面试-招聘/" title="面试/招聘">面试/招聘<sup>2</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2017 
+		
+		<a href="/about" target="_blank" title="晓明童鞋">晓明童鞋</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
 </html>
